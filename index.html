@@ -127,7 +127,7 @@
 
                         areas[area][acertos].forEach(([impacto, numero]) => {
                             const questionKey = `${ano}|${area}|${numero}`;
-                            const isDone = localStorage.getItem(questionKey) === 'true';
+                            let isDone = localStorage.getItem(questionKey) === 'true';
 
                             const questionDiv = document.createElement('div');
                             questionDiv.className = `question-item ${isDone ? 'done' : ''}`;
@@ -140,8 +140,9 @@
 
                             questionDiv.onclick = () => {
                                 const newState = !isDone;
-                                localStorage.setItem(questionKey, newState);
+                                localStorage.setItem(questionKey, newState ? 'true' : 'false');
                                 questionDiv.classList.toggle('done', newState);
+                                isDone = newState;
                             };
 
                             questionsList.appendChild(questionDiv);
