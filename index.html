@@ -1,165 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questões de Alto Impacto</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-
-        .filters {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        select, button {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .results {
-            display: grid;
-            gap: 20px;
-        }
-
-        .year-section {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .question-item {
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .question-item:hover {
-            background-color: #f0f0f0;
-        }
-
-        .question-item.done {
-            background-color: #d4edda;
-            border-color: #c3e6cb;
-        }
-
-        .question-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .impact-percent {
-            color: #666;
-            font-size: 0.9em;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="filters">
-        <select id="area">
-            <option value="LC0">Linguagens e Códigos - Inglês</option>
-            <option value="LC1">Linguagens e Códigos - Espanhol</option>
-            <option value="CH">Ciências Humanas</option>
-            <option value="CN">Ciências da Natureza</option>
-            <option value="MT">Matemática</option>
-        </select>
-
-        <select id="acertos">
-            <option value="20">20 acertos</option>
-            <option value="25">25 acertos</option>
-            <option value="30">30 acertos</option>
-            <option value="35">35 acertos</option>
-            <option value="40">40 acertos</option>
-        </select>
-
-        <button onclick="carregarQuestoes()">Carregar Questões</button>
-    </div>
-
-    <div class="results" id="results"></div>
-
-    <script>
-        async function carregarQuestoes() {
-            const area = document.getElementById('area').value;
-            const acertos = document.getElementById('acertos').value;
-            const results = document.getElementById('results');
-            results.innerHTML = '';
-
-            try {
-                const response = await fetch('questions.json');
-                const data = await response.json();
-
-                const sortedData = Object.entries(data).sort(([anoA], [anoB]) => anoB - anoA);
-
-                for (const [ano, areas] of sortedData) {
-                    if (areas[area] && areas[area][acertos]) {
-                        const section = document.createElement('div');
-                        section.className = 'year-section';
-                        section.innerHTML = `<h2>${ano} Caderno Azul</h2>`;
-                        
-                        const questionsList = document.createElement('div');
-                        questionsList.className = 'questions-list';
-
-                        areas[area][acertos].forEach(([impacto, numero]) => {
-                            const questionKey = `${ano}|${area}|${numero}`;
-                            let isDone = localStorage.getItem(questionKey) === 'true';
-
-                            const questionDiv = document.createElement('div');
-                            questionDiv.className = `question-item ${isDone ? 'done' : ''}`;
-                            questionDiv.innerHTML = `
-                                <div class="question-info">
-                                    <span>Questão ${numero}</span>
-                                    <span class="impact-percent">${impacto.toFixed(2)}% de impacto</span>
+    <!-- Botão de menu para mobile -->
+    <button id="menuToggleBtn" class="menu-toggle">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div class="layout">
+        <!-- Menu lateral -->
+        <aside id="sidebar" class="sidebar">
+            <h2 class="menu-title">Menu</h2>
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="#" class="menu-link"><i class="fa fa-cog"></i> Configurações</a></li>
+                    <li><a href="#" id="toggleTheme" class="menu-link"><i class="fa fa-adjust"></i> Tema Light/Dark</a></li>
+                    <li><a href="#" class="menu-link"><i class="fa fa-question-circle"></i> Ajuda</a></li>
+                    <li><a href="#" class="menu-link"><i class="fa fa-info-circle"></i> Sobre</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- Conteúdo principal -->
+        <div class="content" id="content">
+            <header>
+                <div class="container">
+                    <div class="filter-header">
+                        <div id="filter-container" class="filter-container">
+                            <div class="filter-group">
+                                <strong>Anos</strong>
+								<br>
+								<button class="btn btn-outline-primary" type="button" data-filter="ano" data-value="2017">2017</button>
+								<button class="btn btn-outline-primary" type="button" data-filter="ano" data-value="2018">2018</button>
+								<button class="btn btn-outline-primary" type="button" data-filter="ano" data-value="2019">2019</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="ano" data-value="2020">2020</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="ano" data-value="2021">2021</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="ano" data-value="2022">2022</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="ano" data-value="2023">2023</button>
+                            </div>
+                            <div class="filter-group">
+                                <strong>Área</strong>
+								<br>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="LC0">Linguagens e Códigos - Inglês</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="LC1">Linguagens e Códigos - Espanhol</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="CH">Ciências Humanas</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="CN">Ciências da Natureza</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="MT">Matemática</button>
+                            </div>
+                            <div class="filter-group">
+                                <strong>Acertos (só 1)</strong>
+								<br>
+                                <button class="btn btn-outline-primary active" type="button" data-filter="acertos" data-value="20">20 acertos</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="acertos" data-value="25">25 acertos</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="acertos" data-value="30">30 acertos</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="acertos" data-value="35">35 acertos</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="acertos" data-value="40">40 acertos</button>
+                            </div>
+                            <!-- Adicionado: grupo de busca -->
+                            <div class="filter-group">
+                                <strong>Buscar</strong>
+								<br>
+                                <div class="filter-search">
+                                    <input id="search" type="text" placeholder="Pesquisar questão...">
+                                    <span class="input-icon"><i class="fa fa-search"></i></span>
                                 </div>
-                            `;
-
-                            questionDiv.onclick = () => {
-                                const newState = !isDone;
-                                localStorage.setItem(questionKey, newState ? 'true' : 'false');
-                                questionDiv.classList.toggle('done', newState);
-                                isDone = newState;
-                            };
-
-                            questionsList.appendChild(questionDiv);
-                        });
-
-                        section.appendChild(questionsList);
-                        results.appendChild(section);
-                    }
-                }
-            } catch (error) {
-                results.innerHTML = '<p>Erro ao carregar os dados.</p>';
-                console.error(error);
-            }
-        }
-
-        // Carrega questões ao iniciar se houver parâmetros salvos
-        window.onload = carregarQuestoes;
-    </script>
+                            </div>
+                            <!-- Botão para carregar questões -->
+                            <button id="carregarBtn" class="load-btn">
+                                <i class="fa fa-sync-alt"></i> Carregar Questões
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <div id="results" class="results"></div>
+                </div>
+            </main>
+            <footer>
+                <div class="container">
+                    <!-- conteúdo -->
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
