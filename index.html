@@ -114,7 +114,9 @@
                 const response = await fetch('questions.json');
                 const data = await response.json();
 
-                for (const [ano, areas] of Object.entries(data)) {
+                const sortedData = Object.entries(data).sort(([anoA], [anoB]) => anoB - anoA);
+
+                for (const [ano, areas] of sortedData) {
                     if (areas[area] && areas[area][acertos]) {
                         const section = document.createElement('div');
                         section.className = 'year-section';
