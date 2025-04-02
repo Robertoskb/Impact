@@ -4,6 +4,30 @@ async function fetchQuestions() {
     return response.json();
 }
 
+// Nova função para popular os filtros de anos dinamicamente
+async function populateYearFilters() {
+    try {
+        const data = await fetchQuestions();
+        // Extraí os anos (chaves do JSON) e ordena decrescente
+        const anos = Object.keys(data).sort((a, b) => b - a);
+        const yearContainer = document.getElementById('year-filters');
+        let html = '<strong>Anos</strong><br>';
+        anos.forEach(ano => {
+            html += `<button class="btn btn-outline-primary" type="button" data-filter="ano" data-value="${ano}">${ano}</button>`;
+        });
+        yearContainer.innerHTML = html;
+        // Adiciona listener aos botões de ano
+        yearContainer.querySelectorAll('button[data-filter="ano"]').forEach(btn => {
+            btn.addEventListener('click', function () {
+                btn.classList.toggle('active');
+                loadAndRenderQuestions();
+            });
+        });
+    } catch (error) {
+        console.error("Erro ao popular filtros de anos:", error);
+    }
+}
+
 // Atualizado: Obtém os filtros selecionados incluindo busca
 function getSelectedFilters() {
     const anos = Array.from(document.querySelectorAll('button[data-filter="ano"].active'))
@@ -140,8 +164,8 @@ async function loadAndRenderQuestions() {
 function bindEvents() {
     document.getElementById('carregarBtn').addEventListener('click', loadAndRenderQuestions);
     
-    // Listener para os botões de filtros
-    document.querySelectorAll('button[data-filter]').forEach(btn => {
+    // Listener para os botões de filtros (exceto anos, que já foram configurados)
+    document.querySelectorAll('button[data-filter="area"], button[data-filter="acertos"]').forEach(btn => {
         btn.addEventListener('click', function () {
             const filter = btn.getAttribute('data-filter');
             if (filter === 'acertos') {
@@ -198,8 +222,9 @@ function bindMenuToggle() {
 }
 
 // Inicializa a aplicação ao carregar a página
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
     initTheme();
+    await populateYearFilters();
     bindEvents();
     loadAndRenderQuestions();
 });
