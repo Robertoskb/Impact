@@ -1,6 +1,6 @@
 # Impact
 
-Questões de maior impacto na TRI ao errar no Exame Nacional do Ensino médio (ENEM).
+Questões de maior impacto na TRI ao errar no Exame Nacional do Ensino Médio (ENEM).
 
 ## Autores
 
