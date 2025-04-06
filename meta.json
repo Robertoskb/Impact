@@ -1,0 +1,7841 @@
+{
+  "2017": {
+    "LC0": {
+      "34": {
+        "discrimination": 2.56,
+        "difficulty": 448.6,
+        "casual hit": 8.06
+      },
+      "21": {
+        "discrimination": 1.16,
+        "difficulty": 452.79,
+        "casual hit": 0.89
+      },
+      "27": {
+        "discrimination": 3.16,
+        "difficulty": 477.88,
+        "casual hit": 10.68
+      },
+      "6": {
+        "discrimination": 1.74,
+        "difficulty": 483.46,
+        "casual hit": 3.59
+      },
+      "23": {
+        "discrimination": 2.16,
+        "difficulty": 488.77,
+        "casual hit": 2.55
+      },
+      "28": {
+        "discrimination": 1.24,
+        "difficulty": 489.62,
+        "casual hit": 2.62
+      },
+      "11": {
+        "discrimination": 2.61,
+        "difficulty": 496.99,
+        "casual hit": 20.09
+      },
+      "43": {
+        "discrimination": 1.33,
+        "difficulty": 497.41,
+        "casual hit": 0.73
+      },
+      "37": {
+        "discrimination": 1.37,
+        "difficulty": 502.92,
+        "casual hit": 2.13
+      },
+      "31": {
+        "discrimination": 2.06,
+        "difficulty": 503.01,
+        "casual hit": 21.74
+      },
+      "19": {
+        "discrimination": 2.69,
+        "difficulty": 510.05,
+        "casual hit": 4.25
+      },
+      "15": {
+        "discrimination": 0.77,
+        "difficulty": 526.78,
+        "casual hit": 1.94
+      },
+      "9": {
+        "discrimination": 2.09,
+        "difficulty": 533.32,
+        "casual hit": 10.32
+      },
+      "26": {
+        "discrimination": 0.7,
+        "difficulty": 537.62,
+        "casual hit": 1.31
+      },
+      "42": {
+        "discrimination": 2.57,
+        "difficulty": 542.02,
+        "casual hit": 15.8
+      },
+      "17": {
+        "discrimination": 2.09,
+        "difficulty": 548.83,
+        "casual hit": 20.93
+      },
+      "4": {
+        "discrimination": 3.1,
+        "difficulty": 550.32,
+        "casual hit": 23.82
+      },
+      "40": {
+        "discrimination": 3.12,
+        "difficulty": 551.24,
+        "casual hit": 23.31
+      },
+      "32": {
+        "discrimination": 3.51,
+        "difficulty": 553.79,
+        "casual hit": 16.76
+      },
+      "1": {
+        "discrimination": 4.52,
+        "difficulty": 553.97,
+        "casual hit": 24.46
+      },
+      "14": {
+        "discrimination": 3.9,
+        "difficulty": 557.07,
+        "casual hit": 16.43
+      },
+      "44": {
+        "discrimination": 4.51,
+        "difficulty": 561.45,
+        "casual hit": 19.57
+      },
+      "7": {
+        "discrimination": 2.14,
+        "difficulty": 564.55,
+        "casual hit": 9.54
+      },
+      "22": {
+        "discrimination": 2.11,
+        "difficulty": 566.03,
+        "casual hit": 15.18
+      },
+      "2": {
+        "discrimination": 3.21,
+        "difficulty": 568.68,
+        "casual hit": 15.38
+      },
+      "24": {
+        "discrimination": 2.01,
+        "difficulty": 570.41,
+        "casual hit": 7.07
+      },
+      "5": {
+        "discrimination": 2.84,
+        "difficulty": 571.55,
+        "casual hit": 20.16
+      },
+      "38": {
+        "discrimination": 1.97,
+        "difficulty": 574.87,
+        "casual hit": 12.6
+      },
+      "3": {
+        "discrimination": 4.14,
+        "difficulty": 587.67,
+        "casual hit": 8.48
+      },
+      "45": {
+        "discrimination": 3.48,
+        "difficulty": 589.06,
+        "casual hit": 11.98
+      },
+      "10": {
+        "discrimination": 2.14,
+        "difficulty": 593.99,
+        "casual hit": 11.25
+      },
+      "30": {
+        "discrimination": 2.04,
+        "difficulty": 595.39,
+        "casual hit": 16.04
+      },
+      "8": {
+        "discrimination": 1.05,
+        "difficulty": 607.42,
+        "casual hit": 25.13
+      },
+      "18": {
+        "discrimination": 1.96,
+        "difficulty": 613.7,
+        "casual hit": 10.86
+      },
+      "16": {
+        "discrimination": 1.59,
+        "difficulty": 620.52,
+        "casual hit": 23.91
+      },
+      "12": {
+        "discrimination": 1.88,
+        "difficulty": 622.14,
+        "casual hit": 9.51
+      },
+      "20": {
+        "discrimination": 3.06,
+        "difficulty": 626.18,
+        "casual hit": 8.98
+      },
+      "35": {
+        "discrimination": 2.11,
+        "difficulty": 636.58,
+        "casual hit": 19.05
+      },
+      "29": {
+        "discrimination": 3.64,
+        "difficulty": 638.38,
+        "casual hit": 12.72
+      },
+      "25": {
+        "discrimination": 3.12,
+        "difficulty": 651.98,
+        "casual hit": 13.82
+      },
+      "39": {
+        "discrimination": 2.55,
+        "difficulty": 654.95,
+        "casual hit": 14.43
+      },
+      "13": {
+        "discrimination": 1.56,
+        "difficulty": 655.46,
+        "casual hit": 11.68
+      },
+      "33": {
+        "discrimination": 3.16,
+        "difficulty": 720.45,
+        "casual hit": 15.29
+      },
+      "41": {
+        "discrimination": 0.71,
+        "difficulty": 733.55,
+        "casual hit": 13.04
+      },
+      "36": {
+        "discrimination": 1.09,
+        "difficulty": 812.89,
+        "casual hit": 23.79
+      }
+    },
+    "LC1": {
+      "34": {
+        "discrimination": 2.56,
+        "difficulty": 448.6,
+        "casual hit": 8.06
+      },
+      "21": {
+        "discrimination": 1.16,
+        "difficulty": 452.79,
+        "casual hit": 0.89
+      },
+      "27": {
+        "discrimination": 3.16,
+        "difficulty": 477.88,
+        "casual hit": 10.68
+      },
+      "6": {
+        "discrimination": 1.74,
+        "difficulty": 483.46,
+        "casual hit": 3.59
+      },
+      "23": {
+        "discrimination": 2.16,
+        "difficulty": 488.77,
+        "casual hit": 2.55
+      },
+      "28": {
+        "discrimination": 1.24,
+        "difficulty": 489.62,
+        "casual hit": 2.62
+      },
+      "11": {
+        "discrimination": 2.61,
+        "difficulty": 496.99,
+        "casual hit": 20.09
+      },
+      "43": {
+        "discrimination": 1.33,
+        "difficulty": 497.41,
+        "casual hit": 0.73
+      },
+      "37": {
+        "discrimination": 1.37,
+        "difficulty": 502.92,
+        "casual hit": 2.13
+      },
+      "31": {
+        "discrimination": 2.06,
+        "difficulty": 503.01,
+        "casual hit": 21.74
+      },
+      "19": {
+        "discrimination": 2.69,
+        "difficulty": 510.05,
+        "casual hit": 4.25
+      },
+      "15": {
+        "discrimination": 0.77,
+        "difficulty": 526.78,
+        "casual hit": 1.94
+      },
+      "9": {
+        "discrimination": 2.09,
+        "difficulty": 533.32,
+        "casual hit": 10.32
+      },
+      "26": {
+        "discrimination": 0.7,
+        "difficulty": 537.62,
+        "casual hit": 1.31
+      },
+      "3": {
+        "discrimination": 1.85,
+        "difficulty": 538.14,
+        "casual hit": 13.36
+      },
+      "42": {
+        "discrimination": 2.57,
+        "difficulty": 542.02,
+        "casual hit": 15.8
+      },
+      "17": {
+        "discrimination": 2.09,
+        "difficulty": 548.83,
+        "casual hit": 20.93
+      },
+      "40": {
+        "discrimination": 3.12,
+        "difficulty": 551.24,
+        "casual hit": 23.31
+      },
+      "32": {
+        "discrimination": 3.51,
+        "difficulty": 553.79,
+        "casual hit": 16.76
+      },
+      "2": {
+        "discrimination": 1.94,
+        "difficulty": 555.95,
+        "casual hit": 20.57
+      },
+      "14": {
+        "discrimination": 3.9,
+        "difficulty": 557.07,
+        "casual hit": 16.43
+      },
+      "44": {
+        "discrimination": 4.51,
+        "difficulty": 561.45,
+        "casual hit": 19.57
+      },
+      "7": {
+        "discrimination": 2.14,
+        "difficulty": 564.55,
+        "casual hit": 9.54
+      },
+      "22": {
+        "discrimination": 2.11,
+        "difficulty": 566.03,
+        "casual hit": 15.18
+      },
+      "24": {
+        "discrimination": 2.01,
+        "difficulty": 570.41,
+        "casual hit": 7.07
+      },
+      "38": {
+        "discrimination": 1.97,
+        "difficulty": 574.87,
+        "casual hit": 12.6
+      },
+      "5": {
+        "discrimination": 3.13,
+        "difficulty": 577.88,
+        "casual hit": 16.21
+      },
+      "1": {
+        "discrimination": 2.49,
+        "difficulty": 583.64,
+        "casual hit": 14.54
+      },
+      "45": {
+        "discrimination": 3.48,
+        "difficulty": 589.06,
+        "casual hit": 11.98
+      },
+      "10": {
+        "discrimination": 2.14,
+        "difficulty": 593.99,
+        "casual hit": 11.25
+      },
+      "30": {
+        "discrimination": 2.04,
+        "difficulty": 595.39,
+        "casual hit": 16.04
+      },
+      "8": {
+        "discrimination": 1.05,
+        "difficulty": 607.42,
+        "casual hit": 25.13
+      },
+      "18": {
+        "discrimination": 1.96,
+        "difficulty": 613.7,
+        "casual hit": 10.86
+      },
+      "16": {
+        "discrimination": 1.59,
+        "difficulty": 620.52,
+        "casual hit": 23.91
+      },
+      "12": {
+        "discrimination": 1.88,
+        "difficulty": 622.14,
+        "casual hit": 9.51
+      },
+      "20": {
+        "discrimination": 3.06,
+        "difficulty": 626.18,
+        "casual hit": 8.98
+      },
+      "35": {
+        "discrimination": 2.11,
+        "difficulty": 636.58,
+        "casual hit": 19.05
+      },
+      "29": {
+        "discrimination": 3.64,
+        "difficulty": 638.38,
+        "casual hit": 12.72
+      },
+      "25": {
+        "discrimination": 3.12,
+        "difficulty": 651.98,
+        "casual hit": 13.82
+      },
+      "39": {
+        "discrimination": 2.55,
+        "difficulty": 654.95,
+        "casual hit": 14.43
+      },
+      "13": {
+        "discrimination": 1.56,
+        "difficulty": 655.46,
+        "casual hit": 11.68
+      },
+      "4": {
+        "discrimination": 1.86,
+        "difficulty": 670.24,
+        "casual hit": 25.07
+      },
+      "33": {
+        "discrimination": 3.16,
+        "difficulty": 720.45,
+        "casual hit": 15.29
+      },
+      "41": {
+        "discrimination": 0.71,
+        "difficulty": 733.55,
+        "casual hit": 13.04
+      },
+      "36": {
+        "discrimination": 1.09,
+        "difficulty": 812.89,
+        "casual hit": 23.79
+      }
+    },
+    "MT": {
+      "154": {
+        "discrimination": 0.74,
+        "difficulty": 513.56,
+        "casual hit": 20.3
+      },
+      "153": {
+        "discrimination": 1.79,
+        "difficulty": 520.97,
+        "casual hit": 13.57
+      },
+      "178": {
+        "discrimination": 1.45,
+        "difficulty": 558.11,
+        "casual hit": 32.77
+      },
+      "163": {
+        "discrimination": 2.28,
+        "difficulty": 597.57,
+        "casual hit": 19.63
+      },
+      "150": {
+        "discrimination": 2.23,
+        "difficulty": 602.87,
+        "casual hit": 13.44
+      },
+      "156": {
+        "discrimination": 1.7,
+        "difficulty": 627.71,
+        "casual hit": 14.11
+      },
+      "167": {
+        "discrimination": 2.24,
+        "difficulty": 633.78,
+        "casual hit": 13.82
+      },
+      "148": {
+        "discrimination": 0.96,
+        "difficulty": 634.66,
+        "casual hit": 1.12
+      },
+      "139": {
+        "discrimination": 2.28,
+        "difficulty": 644.15,
+        "casual hit": 30.75
+      },
+      "172": {
+        "discrimination": 1.39,
+        "difficulty": 655.64,
+        "casual hit": 17.03
+      },
+      "138": {
+        "discrimination": 2.52,
+        "difficulty": 659.12,
+        "casual hit": 16.6
+      },
+      "143": {
+        "discrimination": 2.43,
+        "difficulty": 674.78,
+        "casual hit": 22.34
+      },
+      "177": {
+        "discrimination": 2.03,
+        "difficulty": 676.21,
+        "casual hit": 19.95
+      },
+      "158": {
+        "discrimination": 1.92,
+        "difficulty": 680.84,
+        "casual hit": 15.25
+      },
+      "147": {
+        "discrimination": 2.04,
+        "difficulty": 681.1,
+        "casual hit": 22.73
+      },
+      "160": {
+        "discrimination": 1.73,
+        "difficulty": 681.58,
+        "casual hit": 18.26
+      },
+      "169": {
+        "discrimination": 3.29,
+        "difficulty": 689.56,
+        "casual hit": 7.46
+      },
+      "173": {
+        "discrimination": 1.66,
+        "difficulty": 689.83,
+        "casual hit": 15.13
+      },
+      "170": {
+        "discrimination": 2.76,
+        "difficulty": 694.32,
+        "casual hit": 25.84
+      },
+      "145": {
+        "discrimination": 1.35,
+        "difficulty": 703.9,
+        "casual hit": 9.91
+      },
+      "146": {
+        "discrimination": 2.16,
+        "difficulty": 704.61,
+        "casual hit": 18.37
+      },
+      "151": {
+        "discrimination": 2.48,
+        "difficulty": 707.64,
+        "casual hit": 19.84
+      },
+      "141": {
+        "discrimination": 2.75,
+        "difficulty": 715.59,
+        "casual hit": 6.97
+      },
+      "152": {
+        "discrimination": 2.23,
+        "difficulty": 733.71,
+        "casual hit": 10.37
+      },
+      "168": {
+        "discrimination": 2.3,
+        "difficulty": 740.15,
+        "casual hit": 7.1
+      },
+      "149": {
+        "discrimination": 1.67,
+        "difficulty": 741.73,
+        "casual hit": 24.8
+      },
+      "171": {
+        "discrimination": 1.03,
+        "difficulty": 741.84,
+        "casual hit": 24.52
+      },
+      "144": {
+        "discrimination": 1.55,
+        "difficulty": 744.32,
+        "casual hit": 17.99
+      },
+      "180": {
+        "discrimination": 1.62,
+        "difficulty": 744.59,
+        "casual hit": 11.19
+      },
+      "162": {
+        "discrimination": 0.95,
+        "difficulty": 751.06,
+        "casual hit": 16.51
+      },
+      "161": {
+        "discrimination": 1.93,
+        "difficulty": 759.59,
+        "casual hit": 26.71
+      },
+      "157": {
+        "discrimination": 6.2,
+        "difficulty": 765.82,
+        "casual hit": 20.97
+      },
+      "179": {
+        "discrimination": 1.61,
+        "difficulty": 768.71,
+        "casual hit": 25.41
+      },
+      "164": {
+        "discrimination": 3.21,
+        "difficulty": 777.17,
+        "casual hit": 21.68
+      },
+      "166": {
+        "discrimination": 2.82,
+        "difficulty": 785.11,
+        "casual hit": 15.01
+      },
+      "159": {
+        "discrimination": 2.15,
+        "difficulty": 790.71,
+        "casual hit": 5.07
+      },
+      "176": {
+        "discrimination": 1.1,
+        "difficulty": 801.65,
+        "casual hit": 4.7
+      },
+      "175": {
+        "discrimination": 1.61,
+        "difficulty": 804.33,
+        "casual hit": 21.8
+      },
+      "142": {
+        "discrimination": 0.92,
+        "difficulty": 824.73,
+        "casual hit": 18.47
+      },
+      "165": {
+        "discrimination": 1.57,
+        "difficulty": 862.85,
+        "casual hit": 17.74
+      },
+      "140": {
+        "discrimination": 1.92,
+        "difficulty": 870.51,
+        "casual hit": 8.7
+      },
+      "155": {
+        "discrimination": 2.07,
+        "difficulty": 880.13,
+        "casual hit": 12.85
+      },
+      "136": {
+        "discrimination": 0.8,
+        "difficulty": 914.32,
+        "casual hit": 11.81
+      },
+      "137": {
+        "discrimination": 0.76,
+        "difficulty": 965.56,
+        "casual hit": 13.23
+      },
+      "174": {
+        "discrimination": 0.34,
+        "difficulty": 1292.09,
+        "casual hit": 19.27
+      }
+    },
+    "CN": {
+      "101": {
+        "discrimination": 0.86,
+        "difficulty": 512.59,
+        "casual hit": 4.27
+      },
+      "115": {
+        "discrimination": 1.96,
+        "difficulty": 549.31,
+        "casual hit": 2.47
+      },
+      "131": {
+        "discrimination": 4.27,
+        "difficulty": 556.76,
+        "casual hit": 22.04
+      },
+      "100": {
+        "discrimination": 2.13,
+        "difficulty": 569.74,
+        "casual hit": 13.98
+      },
+      "117": {
+        "discrimination": 3.45,
+        "difficulty": 581.75,
+        "casual hit": 26.19
+      },
+      "94": {
+        "discrimination": 4.31,
+        "difficulty": 581.9,
+        "casual hit": 15.68
+      },
+      "109": {
+        "discrimination": 1.35,
+        "difficulty": 585.07,
+        "casual hit": 1.21
+      },
+      "99": {
+        "discrimination": 1.48,
+        "difficulty": 591.19,
+        "casual hit": 34.31
+      },
+      "125": {
+        "discrimination": 5.0,
+        "difficulty": 592.95,
+        "casual hit": 15.26
+      },
+      "105": {
+        "discrimination": 2.04,
+        "difficulty": 601.16,
+        "casual hit": 21.54
+      },
+      "106": {
+        "discrimination": 4.31,
+        "difficulty": 603.5,
+        "casual hit": 27.75
+      },
+      "92": {
+        "discrimination": 3.63,
+        "difficulty": 611.22,
+        "casual hit": 11.19
+      },
+      "110": {
+        "discrimination": 3.73,
+        "difficulty": 618.77,
+        "casual hit": 12.78
+      },
+      "127": {
+        "discrimination": 4.94,
+        "difficulty": 620.2,
+        "casual hit": 19.22
+      },
+      "129": {
+        "discrimination": 2.16,
+        "difficulty": 626.97,
+        "casual hit": 22.32
+      },
+      "130": {
+        "discrimination": 3.57,
+        "difficulty": 633.76,
+        "casual hit": 27.35
+      },
+      "119": {
+        "discrimination": 3.12,
+        "difficulty": 634.4,
+        "casual hit": 12.34
+      },
+      "97": {
+        "discrimination": 2.52,
+        "difficulty": 635.26,
+        "casual hit": 14.17
+      },
+      "134": {
+        "discrimination": 2.7,
+        "difficulty": 641.04,
+        "casual hit": 14.99
+      },
+      "133": {
+        "discrimination": 2.9,
+        "difficulty": 645.29,
+        "casual hit": 15.17
+      },
+      "91": {
+        "discrimination": 4.16,
+        "difficulty": 660.6,
+        "casual hit": 17.34
+      },
+      "96": {
+        "discrimination": 1.49,
+        "difficulty": 661.04,
+        "casual hit": 26.68
+      },
+      "112": {
+        "discrimination": 4.33,
+        "difficulty": 662.07,
+        "casual hit": 21.27
+      },
+      "135": {
+        "discrimination": 3.58,
+        "difficulty": 663.4,
+        "casual hit": 8.79
+      },
+      "93": {
+        "discrimination": 2.24,
+        "difficulty": 665.62,
+        "casual hit": 24.69
+      },
+      "114": {
+        "discrimination": 2.56,
+        "difficulty": 666.14,
+        "casual hit": 12.89
+      },
+      "95": {
+        "discrimination": 4.51,
+        "difficulty": 666.77,
+        "casual hit": 12.15
+      },
+      "128": {
+        "discrimination": 2.78,
+        "difficulty": 667.21,
+        "casual hit": 20.19
+      },
+      "121": {
+        "discrimination": 2.89,
+        "difficulty": 673.48,
+        "casual hit": 11.6
+      },
+      "104": {
+        "discrimination": 1.9,
+        "difficulty": 687.85,
+        "casual hit": 27.17
+      },
+      "116": {
+        "discrimination": 3.34,
+        "difficulty": 692.45,
+        "casual hit": 17.73
+      },
+      "98": {
+        "discrimination": 0.9,
+        "difficulty": 703.18,
+        "casual hit": 6.96
+      },
+      "132": {
+        "discrimination": 1.3,
+        "difficulty": 703.25,
+        "casual hit": 5.24
+      },
+      "118": {
+        "discrimination": 3.62,
+        "difficulty": 704.06,
+        "casual hit": 13.44
+      },
+      "124": {
+        "discrimination": 1.76,
+        "difficulty": 712.06,
+        "casual hit": 13.71
+      },
+      "102": {
+        "discrimination": 2.89,
+        "difficulty": 723.37,
+        "casual hit": 10.29
+      },
+      "123": {
+        "discrimination": 3.64,
+        "difficulty": 725.85,
+        "casual hit": 23.49
+      },
+      "126": {
+        "discrimination": 1.9,
+        "difficulty": 739.75,
+        "casual hit": 20.38
+      },
+      "107": {
+        "discrimination": 2.43,
+        "difficulty": 743.13,
+        "casual hit": 10.86
+      },
+      "108": {
+        "discrimination": 2.9,
+        "difficulty": 746.79,
+        "casual hit": 8.32
+      },
+      "103": {
+        "discrimination": 1.67,
+        "difficulty": 746.94,
+        "casual hit": 13.64
+      },
+      "113": {
+        "discrimination": 1.46,
+        "difficulty": 760.78,
+        "casual hit": 11.34
+      },
+      "122": {
+        "discrimination": 2.36,
+        "difficulty": 768.15,
+        "casual hit": 19.74
+      },
+      "111": {
+        "discrimination": 1.05,
+        "difficulty": 777.18,
+        "casual hit": 14.75
+      },
+      "120": {
+        "discrimination": 1.58,
+        "difficulty": 791.53,
+        "casual hit": 5.13
+      }
+    },
+    "CH": {
+      "84": {
+        "discrimination": 2.19,
+        "difficulty": 539.57,
+        "casual hit": 19.17
+      },
+      "90": {
+        "discrimination": 2.76,
+        "difficulty": 540.71,
+        "casual hit": 15.17
+      },
+      "61": {
+        "discrimination": 1.32,
+        "difficulty": 545.81,
+        "casual hit": 22.04
+      },
+      "70": {
+        "discrimination": 1.36,
+        "difficulty": 548.87,
+        "casual hit": 1.88
+      },
+      "47": {
+        "discrimination": 3.01,
+        "difficulty": 549.17,
+        "casual hit": 13.88
+      },
+      "82": {
+        "discrimination": 0.72,
+        "difficulty": 554.03,
+        "casual hit": 23.76
+      },
+      "55": {
+        "discrimination": 0.68,
+        "difficulty": 555.19,
+        "casual hit": 0.8
+      },
+      "58": {
+        "discrimination": 3.76,
+        "difficulty": 557.24,
+        "casual hit": 22.48
+      },
+      "49": {
+        "discrimination": 1.85,
+        "difficulty": 557.92,
+        "casual hit": 11.34
+      },
+      "77": {
+        "discrimination": 3.69,
+        "difficulty": 563.39,
+        "casual hit": 16.42
+      },
+      "71": {
+        "discrimination": 3.3,
+        "difficulty": 572.32,
+        "casual hit": 13.56
+      },
+      "51": {
+        "discrimination": 2.05,
+        "difficulty": 574.14,
+        "casual hit": 20.81
+      },
+      "89": {
+        "discrimination": 1.94,
+        "difficulty": 575.43,
+        "casual hit": 10.12
+      },
+      "67": {
+        "discrimination": 1.37,
+        "difficulty": 575.84,
+        "casual hit": 7.02
+      },
+      "50": {
+        "discrimination": 2.46,
+        "difficulty": 576.31,
+        "casual hit": 17.67
+      },
+      "56": {
+        "discrimination": 1.42,
+        "difficulty": 579.08,
+        "casual hit": 3.12
+      },
+      "65": {
+        "discrimination": 1.59,
+        "difficulty": 579.89,
+        "casual hit": 2.27
+      },
+      "86": {
+        "discrimination": 2.16,
+        "difficulty": 587.82,
+        "casual hit": 17.85
+      },
+      "60": {
+        "discrimination": 3.09,
+        "difficulty": 590.3,
+        "casual hit": 16.44
+      },
+      "54": {
+        "discrimination": 3.16,
+        "difficulty": 592.46,
+        "casual hit": 9.5
+      },
+      "75": {
+        "discrimination": 2.27,
+        "difficulty": 594.29,
+        "casual hit": 14.53
+      },
+      "79": {
+        "discrimination": 4.42,
+        "difficulty": 596.74,
+        "casual hit": 16.35
+      },
+      "52": {
+        "discrimination": 4.02,
+        "difficulty": 596.77,
+        "casual hit": 17.55
+      },
+      "46": {
+        "discrimination": 3.44,
+        "difficulty": 597.83,
+        "casual hit": 10.85
+      },
+      "62": {
+        "discrimination": 4.15,
+        "difficulty": 599.68,
+        "casual hit": 17.25
+      },
+      "73": {
+        "discrimination": 1.57,
+        "difficulty": 606.51,
+        "casual hit": 12.22
+      },
+      "85": {
+        "discrimination": 2.04,
+        "difficulty": 611.66,
+        "casual hit": 20.86
+      },
+      "63": {
+        "discrimination": 3.12,
+        "difficulty": 614.45,
+        "casual hit": 21.84
+      },
+      "76": {
+        "discrimination": 3.66,
+        "difficulty": 622.45,
+        "casual hit": 23.86
+      },
+      "72": {
+        "discrimination": 3.05,
+        "difficulty": 630.96,
+        "casual hit": 19.39
+      },
+      "59": {
+        "discrimination": 0.98,
+        "difficulty": 631.33,
+        "casual hit": 9.39
+      },
+      "64": {
+        "discrimination": 0.54,
+        "difficulty": 655.69,
+        "casual hit": 3.89
+      },
+      "57": {
+        "discrimination": 2.2,
+        "difficulty": 662.62,
+        "casual hit": 15.36
+      },
+      "83": {
+        "discrimination": 2.3,
+        "difficulty": 665.19,
+        "casual hit": 15.99
+      },
+      "81": {
+        "discrimination": 1.16,
+        "difficulty": 672.11,
+        "casual hit": 5.12
+      },
+      "68": {
+        "discrimination": 0.78,
+        "difficulty": 680.3,
+        "casual hit": 14.2
+      },
+      "87": {
+        "discrimination": 3.0,
+        "difficulty": 683.49,
+        "casual hit": 10.36
+      },
+      "66": {
+        "discrimination": 1.15,
+        "difficulty": 688.12,
+        "casual hit": 10.27
+      },
+      "78": {
+        "discrimination": 1.5,
+        "difficulty": 689.25,
+        "casual hit": 14.21
+      },
+      "80": {
+        "discrimination": 1.7,
+        "difficulty": 719.19,
+        "casual hit": 21.6
+      },
+      "74": {
+        "discrimination": 3.07,
+        "difficulty": 740.18,
+        "casual hit": 20.83
+      },
+      "69": {
+        "discrimination": 2.12,
+        "difficulty": 768.48,
+        "casual hit": 25.87
+      },
+      "53": {
+        "discrimination": 1.34,
+        "difficulty": 780.12,
+        "casual hit": 16.66
+      },
+      "88": {
+        "discrimination": 1.31,
+        "difficulty": 780.28,
+        "casual hit": 5.92
+      },
+      "48": {
+        "discrimination": 0.6,
+        "difficulty": 825.99,
+        "casual hit": 8.8
+      }
+    }
+  },
+  "2018": {
+    "LC0": {
+      "22": {
+        "discrimination": 1.43,
+        "difficulty": 504.64,
+        "casual hit": 8.56
+      },
+      "11": {
+        "discrimination": 1.44,
+        "difficulty": 528.21,
+        "casual hit": 1.06
+      },
+      "27": {
+        "discrimination": 1.66,
+        "difficulty": 536.75,
+        "casual hit": 1.48
+      },
+      "19": {
+        "discrimination": 1.56,
+        "difficulty": 545.0,
+        "casual hit": 11.33
+      },
+      "13": {
+        "discrimination": 3.04,
+        "difficulty": 545.02,
+        "casual hit": 10.91
+      },
+      "2": {
+        "discrimination": 4.0,
+        "difficulty": 548.02,
+        "casual hit": 34.65
+      },
+      "39": {
+        "discrimination": 1.03,
+        "difficulty": 548.04,
+        "casual hit": 0.77
+      },
+      "25": {
+        "discrimination": 1.88,
+        "difficulty": 549.83,
+        "casual hit": 20.47
+      },
+      "31": {
+        "discrimination": 3.93,
+        "difficulty": 557.5,
+        "casual hit": 12.3
+      },
+      "28": {
+        "discrimination": 1.81,
+        "difficulty": 558.88,
+        "casual hit": 31.44
+      },
+      "36": {
+        "discrimination": 3.98,
+        "difficulty": 559.12,
+        "casual hit": 20.81
+      },
+      "18": {
+        "discrimination": 0.98,
+        "difficulty": 567.63,
+        "casual hit": 1.23
+      },
+      "6": {
+        "discrimination": 2.81,
+        "difficulty": 569.75,
+        "casual hit": 11.36
+      },
+      "9": {
+        "discrimination": 3.72,
+        "difficulty": 571.0,
+        "casual hit": 19.43
+      },
+      "32": {
+        "discrimination": 0.94,
+        "difficulty": 571.35,
+        "casual hit": 1.82
+      },
+      "1": {
+        "discrimination": 4.51,
+        "difficulty": 573.17,
+        "casual hit": 22.27
+      },
+      "23": {
+        "discrimination": 0.95,
+        "difficulty": 578.24,
+        "casual hit": 1.26
+      },
+      "3": {
+        "discrimination": 4.33,
+        "difficulty": 580.67,
+        "casual hit": 21.31
+      },
+      "24": {
+        "discrimination": 3.0,
+        "difficulty": 586.55,
+        "casual hit": 12.72
+      },
+      "5": {
+        "discrimination": 3.01,
+        "difficulty": 591.17,
+        "casual hit": 45.57
+      },
+      "7": {
+        "discrimination": 1.63,
+        "difficulty": 593.89,
+        "casual hit": 7.54
+      },
+      "4": {
+        "discrimination": 2.43,
+        "difficulty": 594.27,
+        "casual hit": 15.1
+      },
+      "45": {
+        "discrimination": 1.69,
+        "difficulty": 599.46,
+        "casual hit": 20.25
+      },
+      "12": {
+        "discrimination": 2.83,
+        "difficulty": 600.48,
+        "casual hit": 20.72
+      },
+      "30": {
+        "discrimination": 2.22,
+        "difficulty": 606.68,
+        "casual hit": 8.84
+      },
+      "8": {
+        "discrimination": 2.36,
+        "difficulty": 611.4,
+        "casual hit": 23.43
+      },
+      "44": {
+        "discrimination": 1.22,
+        "difficulty": 621.23,
+        "casual hit": 1.7
+      },
+      "37": {
+        "discrimination": 1.69,
+        "difficulty": 627.47,
+        "casual hit": 5.12
+      },
+      "10": {
+        "discrimination": 0.84,
+        "difficulty": 629.18,
+        "casual hit": 2.23
+      },
+      "16": {
+        "discrimination": 1.29,
+        "difficulty": 631.73,
+        "casual hit": 14.01
+      },
+      "17": {
+        "discrimination": 1.38,
+        "difficulty": 632.76,
+        "casual hit": 7.49
+      },
+      "40": {
+        "discrimination": 1.3,
+        "difficulty": 639.48,
+        "casual hit": 11.93
+      },
+      "21": {
+        "discrimination": 2.41,
+        "difficulty": 641.05,
+        "casual hit": 6.05
+      },
+      "33": {
+        "discrimination": 2.41,
+        "difficulty": 642.85,
+        "casual hit": 15.9
+      },
+      "43": {
+        "discrimination": 1.2,
+        "difficulty": 658.37,
+        "casual hit": 12.87
+      },
+      "41": {
+        "discrimination": 0.85,
+        "difficulty": 663.35,
+        "casual hit": 0.59
+      },
+      "29": {
+        "discrimination": 2.85,
+        "difficulty": 669.33,
+        "casual hit": 9.95
+      },
+      "34": {
+        "discrimination": 1.95,
+        "difficulty": 669.45,
+        "casual hit": 18.0
+      },
+      "26": {
+        "discrimination": 1.28,
+        "difficulty": 682.14,
+        "casual hit": 16.27
+      },
+      "14": {
+        "discrimination": 1.85,
+        "difficulty": 709.71,
+        "casual hit": 6.23
+      },
+      "42": {
+        "discrimination": 2.64,
+        "difficulty": 710.79,
+        "casual hit": 25.23
+      },
+      "35": {
+        "discrimination": 1.21,
+        "difficulty": 730.27,
+        "casual hit": 14.62
+      },
+      "38": {
+        "discrimination": 1.53,
+        "difficulty": 807.0,
+        "casual hit": 19.86
+      },
+      "15": {
+        "discrimination": 0.5,
+        "difficulty": 832.75,
+        "casual hit": 4.95
+      },
+      "20": {
+        "discrimination": 0.95,
+        "difficulty": 935.48,
+        "casual hit": 25.85
+      }
+    },
+    "LC1": {
+      "22": {
+        "discrimination": 1.43,
+        "difficulty": 504.64,
+        "casual hit": 8.56
+      },
+      "5": {
+        "discrimination": 1.18,
+        "difficulty": 518.9,
+        "casual hit": 5.64
+      },
+      "11": {
+        "discrimination": 1.44,
+        "difficulty": 528.21,
+        "casual hit": 1.06
+      },
+      "27": {
+        "discrimination": 1.66,
+        "difficulty": 536.75,
+        "casual hit": 1.48
+      },
+      "19": {
+        "discrimination": 1.56,
+        "difficulty": 545.0,
+        "casual hit": 11.33
+      },
+      "13": {
+        "discrimination": 3.04,
+        "difficulty": 545.02,
+        "casual hit": 10.91
+      },
+      "39": {
+        "discrimination": 1.03,
+        "difficulty": 548.04,
+        "casual hit": 0.77
+      },
+      "25": {
+        "discrimination": 1.88,
+        "difficulty": 549.83,
+        "casual hit": 20.47
+      },
+      "31": {
+        "discrimination": 3.93,
+        "difficulty": 557.5,
+        "casual hit": 12.3
+      },
+      "28": {
+        "discrimination": 1.81,
+        "difficulty": 558.88,
+        "casual hit": 31.44
+      },
+      "36": {
+        "discrimination": 3.98,
+        "difficulty": 559.12,
+        "casual hit": 20.81
+      },
+      "3": {
+        "discrimination": 2.6,
+        "difficulty": 565.17,
+        "casual hit": 18.13
+      },
+      "18": {
+        "discrimination": 0.98,
+        "difficulty": 567.63,
+        "casual hit": 1.23
+      },
+      "6": {
+        "discrimination": 2.81,
+        "difficulty": 569.75,
+        "casual hit": 11.36
+      },
+      "9": {
+        "discrimination": 3.72,
+        "difficulty": 571.0,
+        "casual hit": 19.43
+      },
+      "32": {
+        "discrimination": 0.94,
+        "difficulty": 571.35,
+        "casual hit": 1.82
+      },
+      "23": {
+        "discrimination": 0.95,
+        "difficulty": 578.24,
+        "casual hit": 1.26
+      },
+      "4": {
+        "discrimination": 1.8,
+        "difficulty": 580.21,
+        "casual hit": 20.29
+      },
+      "24": {
+        "discrimination": 3.0,
+        "difficulty": 586.55,
+        "casual hit": 12.72
+      },
+      "7": {
+        "discrimination": 1.63,
+        "difficulty": 593.89,
+        "casual hit": 7.54
+      },
+      "45": {
+        "discrimination": 1.69,
+        "difficulty": 599.46,
+        "casual hit": 20.25
+      },
+      "12": {
+        "discrimination": 2.83,
+        "difficulty": 600.48,
+        "casual hit": 20.72
+      },
+      "1": {
+        "discrimination": 1.77,
+        "difficulty": 603.66,
+        "casual hit": 21.3
+      },
+      "30": {
+        "discrimination": 2.22,
+        "difficulty": 606.68,
+        "casual hit": 8.84
+      },
+      "8": {
+        "discrimination": 2.36,
+        "difficulty": 611.4,
+        "casual hit": 23.43
+      },
+      "44": {
+        "discrimination": 1.22,
+        "difficulty": 621.23,
+        "casual hit": 1.7
+      },
+      "37": {
+        "discrimination": 1.69,
+        "difficulty": 627.47,
+        "casual hit": 5.12
+      },
+      "10": {
+        "discrimination": 0.84,
+        "difficulty": 629.18,
+        "casual hit": 2.23
+      },
+      "16": {
+        "discrimination": 1.29,
+        "difficulty": 631.73,
+        "casual hit": 14.01
+      },
+      "17": {
+        "discrimination": 1.38,
+        "difficulty": 632.76,
+        "casual hit": 7.49
+      },
+      "40": {
+        "discrimination": 1.3,
+        "difficulty": 639.48,
+        "casual hit": 11.93
+      },
+      "21": {
+        "discrimination": 2.41,
+        "difficulty": 641.05,
+        "casual hit": 6.05
+      },
+      "33": {
+        "discrimination": 2.41,
+        "difficulty": 642.85,
+        "casual hit": 15.9
+      },
+      "2": {
+        "discrimination": 1.17,
+        "difficulty": 653.95,
+        "casual hit": 11.22
+      },
+      "43": {
+        "discrimination": 1.2,
+        "difficulty": 658.37,
+        "casual hit": 12.87
+      },
+      "41": {
+        "discrimination": 0.85,
+        "difficulty": 663.35,
+        "casual hit": 0.59
+      },
+      "29": {
+        "discrimination": 2.85,
+        "difficulty": 669.33,
+        "casual hit": 9.95
+      },
+      "34": {
+        "discrimination": 1.95,
+        "difficulty": 669.45,
+        "casual hit": 18.0
+      },
+      "26": {
+        "discrimination": 1.28,
+        "difficulty": 682.14,
+        "casual hit": 16.27
+      },
+      "14": {
+        "discrimination": 1.85,
+        "difficulty": 709.71,
+        "casual hit": 6.23
+      },
+      "42": {
+        "discrimination": 2.64,
+        "difficulty": 710.79,
+        "casual hit": 25.23
+      },
+      "35": {
+        "discrimination": 1.21,
+        "difficulty": 730.27,
+        "casual hit": 14.62
+      },
+      "38": {
+        "discrimination": 1.53,
+        "difficulty": 807.0,
+        "casual hit": 19.86
+      },
+      "15": {
+        "discrimination": 0.5,
+        "difficulty": 832.75,
+        "casual hit": 4.95
+      },
+      "20": {
+        "discrimination": 0.95,
+        "difficulty": 935.48,
+        "casual hit": 25.85
+      }
+    },
+    "MT": {
+      "159": {
+        "discrimination": 1.91,
+        "difficulty": 512.17,
+        "casual hit": 34.26
+      },
+      "172": {
+        "discrimination": 1.25,
+        "difficulty": 588.38,
+        "casual hit": 13.31
+      },
+      "144": {
+        "discrimination": 1.36,
+        "difficulty": 615.64,
+        "casual hit": 2.62
+      },
+      "168": {
+        "discrimination": 2.95,
+        "difficulty": 627.29,
+        "casual hit": 19.3
+      },
+      "147": {
+        "discrimination": 3.06,
+        "difficulty": 634.94,
+        "casual hit": 10.81
+      },
+      "146": {
+        "discrimination": 3.86,
+        "difficulty": 636.14,
+        "casual hit": 14.92
+      },
+      "177": {
+        "discrimination": 3.17,
+        "difficulty": 644.94,
+        "casual hit": 19.09
+      },
+      "171": {
+        "discrimination": 2.44,
+        "difficulty": 650.31,
+        "casual hit": 9.52
+      },
+      "142": {
+        "discrimination": 4.69,
+        "difficulty": 650.6,
+        "casual hit": 12.01
+      },
+      "160": {
+        "discrimination": 3.54,
+        "difficulty": 655.0,
+        "casual hit": 19.73
+      },
+      "164": {
+        "discrimination": 1.16,
+        "difficulty": 657.02,
+        "casual hit": 17.44
+      },
+      "162": {
+        "discrimination": 2.44,
+        "difficulty": 663.32,
+        "casual hit": 12.17
+      },
+      "155": {
+        "discrimination": 2.66,
+        "difficulty": 664.98,
+        "casual hit": 9.54
+      },
+      "145": {
+        "discrimination": 2.18,
+        "difficulty": 680.2,
+        "casual hit": 15.12
+      },
+      "166": {
+        "discrimination": 3.07,
+        "difficulty": 686.55,
+        "casual hit": 14.64
+      },
+      "143": {
+        "discrimination": 3.33,
+        "difficulty": 686.9,
+        "casual hit": 21.64
+      },
+      "167": {
+        "discrimination": 2.93,
+        "difficulty": 687.77,
+        "casual hit": 13.71
+      },
+      "140": {
+        "discrimination": 1.42,
+        "difficulty": 688.08,
+        "casual hit": 16.68
+      },
+      "179": {
+        "discrimination": 2.1,
+        "difficulty": 689.08,
+        "casual hit": 11.93
+      },
+      "157": {
+        "discrimination": 2.44,
+        "difficulty": 698.2,
+        "casual hit": 8.63
+      },
+      "176": {
+        "discrimination": 1.89,
+        "difficulty": 703.26,
+        "casual hit": 9.96
+      },
+      "148": {
+        "discrimination": 2.15,
+        "difficulty": 705.26,
+        "casual hit": 19.27
+      },
+      "170": {
+        "discrimination": 2.43,
+        "difficulty": 708.89,
+        "casual hit": 13.96
+      },
+      "149": {
+        "discrimination": 1.33,
+        "difficulty": 732.16,
+        "casual hit": 20.36
+      },
+      "136": {
+        "discrimination": 1.75,
+        "difficulty": 741.94,
+        "casual hit": 14.8
+      },
+      "141": {
+        "discrimination": 2.55,
+        "difficulty": 766.77,
+        "casual hit": 22.81
+      },
+      "153": {
+        "discrimination": 1.07,
+        "difficulty": 789.34,
+        "casual hit": 16.39
+      },
+      "158": {
+        "discrimination": 1.46,
+        "difficulty": 790.4,
+        "casual hit": 16.93
+      },
+      "152": {
+        "discrimination": 3.58,
+        "difficulty": 794.24,
+        "casual hit": 18.75
+      },
+      "138": {
+        "discrimination": 1.86,
+        "difficulty": 795.0,
+        "casual hit": 17.21
+      },
+      "165": {
+        "discrimination": 1.79,
+        "difficulty": 797.45,
+        "casual hit": 24.78
+      },
+      "178": {
+        "discrimination": 1.93,
+        "difficulty": 800.8,
+        "casual hit": 18.5
+      },
+      "175": {
+        "discrimination": 2.61,
+        "difficulty": 802.37,
+        "casual hit": 30.71
+      },
+      "169": {
+        "discrimination": 1.67,
+        "difficulty": 802.42,
+        "casual hit": 21.85
+      },
+      "139": {
+        "discrimination": 1.47,
+        "difficulty": 831.31,
+        "casual hit": 14.24
+      },
+      "151": {
+        "discrimination": 2.78,
+        "difficulty": 831.89,
+        "casual hit": 28.67
+      },
+      "154": {
+        "discrimination": 1.18,
+        "difficulty": 844.27,
+        "casual hit": 13.65
+      },
+      "161": {
+        "discrimination": 1.49,
+        "difficulty": 845.73,
+        "casual hit": 9.6
+      },
+      "150": {
+        "discrimination": 0.25,
+        "difficulty": 847.77,
+        "casual hit": 2.65
+      },
+      "174": {
+        "discrimination": 0.89,
+        "difficulty": 858.17,
+        "casual hit": 22.42
+      },
+      "156": {
+        "discrimination": 2.16,
+        "difficulty": 872.56,
+        "casual hit": 14.7
+      },
+      "137": {
+        "discrimination": 0.83,
+        "difficulty": 885.38,
+        "casual hit": 16.72
+      },
+      "173": {
+        "discrimination": 1.24,
+        "difficulty": 886.55,
+        "casual hit": 18.94
+      },
+      "180": {
+        "discrimination": 0.32,
+        "difficulty": 977.91,
+        "casual hit": 2.11
+      }
+    },
+    "CN": {
+      "113": {
+        "discrimination": 1.11,
+        "difficulty": 537.9,
+        "casual hit": 9.39
+      },
+      "100": {
+        "discrimination": 2.39,
+        "difficulty": 544.91,
+        "casual hit": 13.38
+      },
+      "97": {
+        "discrimination": 1.62,
+        "difficulty": 555.7,
+        "casual hit": 27.89
+      },
+      "124": {
+        "discrimination": 4.95,
+        "difficulty": 577.7,
+        "casual hit": 26.2
+      },
+      "126": {
+        "discrimination": 1.26,
+        "difficulty": 579.6,
+        "casual hit": 19.39
+      },
+      "115": {
+        "discrimination": 3.35,
+        "difficulty": 581.75,
+        "casual hit": 28.07
+      },
+      "127": {
+        "discrimination": 1.87,
+        "difficulty": 591.26,
+        "casual hit": 12.52
+      },
+      "132": {
+        "discrimination": 2.89,
+        "difficulty": 597.87,
+        "casual hit": 15.83
+      },
+      "98": {
+        "discrimination": 1.88,
+        "difficulty": 601.56,
+        "casual hit": 7.27
+      },
+      "117": {
+        "discrimination": 2.34,
+        "difficulty": 605.07,
+        "casual hit": 27.38
+      },
+      "93": {
+        "discrimination": 2.07,
+        "difficulty": 612.82,
+        "casual hit": 24.08
+      },
+      "128": {
+        "discrimination": 1.6,
+        "difficulty": 616.87,
+        "casual hit": 11.84
+      },
+      "106": {
+        "discrimination": 3.21,
+        "difficulty": 625.77,
+        "casual hit": 17.32
+      },
+      "119": {
+        "discrimination": 2.04,
+        "difficulty": 628.02,
+        "casual hit": 14.88
+      },
+      "111": {
+        "discrimination": 1.71,
+        "difficulty": 629.66,
+        "casual hit": 10.17
+      },
+      "112": {
+        "discrimination": 3.92,
+        "difficulty": 631.69,
+        "casual hit": 14.69
+      },
+      "101": {
+        "discrimination": 4.53,
+        "difficulty": 635.73,
+        "casual hit": 8.29
+      },
+      "96": {
+        "discrimination": 1.85,
+        "difficulty": 638.2,
+        "casual hit": 14.09
+      },
+      "102": {
+        "discrimination": 3.92,
+        "difficulty": 641.41,
+        "casual hit": 11.73
+      },
+      "133": {
+        "discrimination": 1.82,
+        "difficulty": 642.38,
+        "casual hit": 13.25
+      },
+      "103": {
+        "discrimination": 4.09,
+        "difficulty": 642.92,
+        "casual hit": 18.67
+      },
+      "99": {
+        "discrimination": 1.25,
+        "difficulty": 646.13,
+        "casual hit": 8.25
+      },
+      "108": {
+        "discrimination": 2.77,
+        "difficulty": 650.27,
+        "casual hit": 18.59
+      },
+      "95": {
+        "discrimination": 1.45,
+        "difficulty": 654.2,
+        "casual hit": 9.72
+      },
+      "94": {
+        "discrimination": 1.86,
+        "difficulty": 654.52,
+        "casual hit": 17.66
+      },
+      "92": {
+        "discrimination": 2.19,
+        "difficulty": 654.8,
+        "casual hit": 13.67
+      },
+      "123": {
+        "discrimination": 2.66,
+        "difficulty": 659.51,
+        "casual hit": 15.06
+      },
+      "114": {
+        "discrimination": 3.49,
+        "difficulty": 661.17,
+        "casual hit": 17.52
+      },
+      "118": {
+        "discrimination": 1.89,
+        "difficulty": 673.07,
+        "casual hit": 23.53
+      },
+      "91": {
+        "discrimination": 0.92,
+        "difficulty": 676.48,
+        "casual hit": 8.43
+      },
+      "135": {
+        "discrimination": 1.51,
+        "difficulty": 677.7,
+        "casual hit": 6.85
+      },
+      "134": {
+        "discrimination": 2.35,
+        "difficulty": 681.93,
+        "casual hit": 5.9
+      },
+      "116": {
+        "discrimination": 3.27,
+        "difficulty": 682.42,
+        "casual hit": 9.32
+      },
+      "130": {
+        "discrimination": 2.41,
+        "difficulty": 689.28,
+        "casual hit": 12.09
+      },
+      "121": {
+        "discrimination": 2.04,
+        "difficulty": 692.5,
+        "casual hit": 21.77
+      },
+      "110": {
+        "discrimination": 1.5,
+        "difficulty": 693.82,
+        "casual hit": 8.46
+      },
+      "129": {
+        "discrimination": 1.67,
+        "difficulty": 696.58,
+        "casual hit": 24.19
+      },
+      "122": {
+        "discrimination": 2.03,
+        "difficulty": 698.01,
+        "casual hit": 20.36
+      },
+      "120": {
+        "discrimination": 1.74,
+        "difficulty": 700.25,
+        "casual hit": 12.82
+      },
+      "107": {
+        "discrimination": 1.17,
+        "difficulty": 703.47,
+        "casual hit": 14.09
+      },
+      "105": {
+        "discrimination": 2.58,
+        "difficulty": 706.28,
+        "casual hit": 24.54
+      },
+      "125": {
+        "discrimination": 1.73,
+        "difficulty": 707.7,
+        "casual hit": 24.84
+      },
+      "131": {
+        "discrimination": 8.0,
+        "difficulty": 709.57,
+        "casual hit": 33.63
+      },
+      "104": {
+        "discrimination": 1.37,
+        "difficulty": 755.86,
+        "casual hit": 8.69
+      },
+      "109": {
+        "discrimination": 1.58,
+        "difficulty": 757.26,
+        "casual hit": 33.11
+      }
+    },
+    "CH": {
+      "87": {
+        "discrimination": 2.0,
+        "difficulty": 571.98,
+        "casual hit": 11.14
+      },
+      "74": {
+        "discrimination": 2.84,
+        "difficulty": 577.57,
+        "casual hit": 10.91
+      },
+      "76": {
+        "discrimination": 2.17,
+        "difficulty": 579.67,
+        "casual hit": 3.45
+      },
+      "60": {
+        "discrimination": 4.81,
+        "difficulty": 585.97,
+        "casual hit": 15.21
+      },
+      "85": {
+        "discrimination": 4.54,
+        "difficulty": 594.71,
+        "casual hit": 22.96
+      },
+      "84": {
+        "discrimination": 2.64,
+        "difficulty": 597.08,
+        "casual hit": 10.44
+      },
+      "57": {
+        "discrimination": 3.15,
+        "difficulty": 599.61,
+        "casual hit": 6.13
+      },
+      "54": {
+        "discrimination": 4.22,
+        "difficulty": 601.52,
+        "casual hit": 18.94
+      },
+      "64": {
+        "discrimination": 4.29,
+        "difficulty": 605.97,
+        "casual hit": 13.15
+      },
+      "73": {
+        "discrimination": 3.93,
+        "difficulty": 608.8,
+        "casual hit": 9.24
+      },
+      "59": {
+        "discrimination": 1.42,
+        "difficulty": 611.46,
+        "casual hit": 5.28
+      },
+      "80": {
+        "discrimination": 3.52,
+        "difficulty": 615.94,
+        "casual hit": 19.46
+      },
+      "62": {
+        "discrimination": 3.85,
+        "difficulty": 622.48,
+        "casual hit": 17.18
+      },
+      "55": {
+        "discrimination": 4.8,
+        "difficulty": 623.91,
+        "casual hit": 18.54
+      },
+      "61": {
+        "discrimination": 1.6,
+        "difficulty": 630.02,
+        "casual hit": 5.84
+      },
+      "48": {
+        "discrimination": 3.47,
+        "difficulty": 630.74,
+        "casual hit": 15.6
+      },
+      "56": {
+        "discrimination": 5.32,
+        "difficulty": 631.28,
+        "casual hit": 17.99
+      },
+      "52": {
+        "discrimination": 4.42,
+        "difficulty": 634.32,
+        "casual hit": 14.59
+      },
+      "51": {
+        "discrimination": 2.86,
+        "difficulty": 635.29,
+        "casual hit": 32.62
+      },
+      "72": {
+        "discrimination": 6.69,
+        "difficulty": 639.54,
+        "casual hit": 11.95
+      },
+      "86": {
+        "discrimination": 3.47,
+        "difficulty": 639.81,
+        "casual hit": 16.47
+      },
+      "50": {
+        "discrimination": 4.0,
+        "difficulty": 639.94,
+        "casual hit": 16.07
+      },
+      "68": {
+        "discrimination": 1.05,
+        "difficulty": 641.03,
+        "casual hit": 12.77
+      },
+      "70": {
+        "discrimination": 6.64,
+        "difficulty": 644.49,
+        "casual hit": 19.73
+      },
+      "71": {
+        "discrimination": 3.43,
+        "difficulty": 644.73,
+        "casual hit": 18.08
+      },
+      "67": {
+        "discrimination": 3.41,
+        "difficulty": 645.14,
+        "casual hit": 13.92
+      },
+      "49": {
+        "discrimination": 2.68,
+        "difficulty": 647.68,
+        "casual hit": 11.39
+      },
+      "46": {
+        "discrimination": 5.1,
+        "difficulty": 651.1,
+        "casual hit": 13.96
+      },
+      "78": {
+        "discrimination": 2.34,
+        "difficulty": 651.38,
+        "casual hit": 17.55
+      },
+      "90": {
+        "discrimination": 2.42,
+        "difficulty": 658.61,
+        "casual hit": 13.28
+      },
+      "79": {
+        "discrimination": 2.47,
+        "difficulty": 663.04,
+        "casual hit": 11.59
+      },
+      "47": {
+        "discrimination": 3.22,
+        "difficulty": 665.99,
+        "casual hit": 14.83
+      },
+      "82": {
+        "discrimination": 2.42,
+        "difficulty": 666.0,
+        "casual hit": 18.25
+      },
+      "81": {
+        "discrimination": 2.83,
+        "difficulty": 676.87,
+        "casual hit": 8.14
+      },
+      "63": {
+        "discrimination": 2.26,
+        "difficulty": 679.64,
+        "casual hit": 22.05
+      },
+      "65": {
+        "discrimination": 1.62,
+        "difficulty": 680.12,
+        "casual hit": 14.92
+      },
+      "53": {
+        "discrimination": 3.66,
+        "difficulty": 690.18,
+        "casual hit": 9.1
+      },
+      "89": {
+        "discrimination": 2.14,
+        "difficulty": 701.0,
+        "casual hit": 17.87
+      },
+      "75": {
+        "discrimination": 4.48,
+        "difficulty": 702.42,
+        "casual hit": 12.9
+      },
+      "58": {
+        "discrimination": 2.53,
+        "difficulty": 702.65,
+        "casual hit": 23.96
+      },
+      "69": {
+        "discrimination": 3.26,
+        "difficulty": 704.58,
+        "casual hit": 17.47
+      },
+      "88": {
+        "discrimination": 1.45,
+        "difficulty": 704.78,
+        "casual hit": 21.79
+      },
+      "66": {
+        "discrimination": 2.05,
+        "difficulty": 746.66,
+        "casual hit": 19.72
+      },
+      "77": {
+        "discrimination": 1.97,
+        "difficulty": 755.36,
+        "casual hit": 17.71
+      },
+      "83": {
+        "discrimination": 0.6,
+        "difficulty": 821.46,
+        "casual hit": 4.22
+      }
+    }
+  },
+  "2019": {
+    "LC0": {
+      "17": {
+        "discrimination": 1.75,
+        "difficulty": 475.04,
+        "casual hit": 17.32
+      },
+      "19": {
+        "discrimination": 3.23,
+        "difficulty": 481.16,
+        "casual hit": 16.19
+      },
+      "8": {
+        "discrimination": 1.41,
+        "difficulty": 482.93,
+        "casual hit": 1.19
+      },
+      "35": {
+        "discrimination": 2.5,
+        "difficulty": 483.16,
+        "casual hit": 5.35
+      },
+      "37": {
+        "discrimination": 4.09,
+        "difficulty": 484.41,
+        "casual hit": 18.84
+      },
+      "7": {
+        "discrimination": 1.78,
+        "difficulty": 504.7,
+        "casual hit": 5.81
+      },
+      "27": {
+        "discrimination": 2.52,
+        "difficulty": 519.31,
+        "casual hit": 22.91
+      },
+      "23": {
+        "discrimination": 1.88,
+        "difficulty": 520.84,
+        "casual hit": 3.36
+      },
+      "20": {
+        "discrimination": 2.3,
+        "difficulty": 521.94,
+        "casual hit": 8.45
+      },
+      "16": {
+        "discrimination": 1.82,
+        "difficulty": 522.83,
+        "casual hit": 0.71
+      },
+      "32": {
+        "discrimination": 4.5,
+        "difficulty": 523.21,
+        "casual hit": 20.66
+      },
+      "4": {
+        "discrimination": 2.02,
+        "difficulty": 534.87,
+        "casual hit": 20.97
+      },
+      "3": {
+        "discrimination": 4.08,
+        "difficulty": 541.26,
+        "casual hit": 20.54
+      },
+      "12": {
+        "discrimination": 1.61,
+        "difficulty": 541.55,
+        "casual hit": 0.23
+      },
+      "30": {
+        "discrimination": 3.34,
+        "difficulty": 544.97,
+        "casual hit": 20.12
+      },
+      "43": {
+        "discrimination": 2.58,
+        "difficulty": 547.49,
+        "casual hit": 17.88
+      },
+      "36": {
+        "discrimination": 0.66,
+        "difficulty": 548.08,
+        "casual hit": 2.48
+      },
+      "5": {
+        "discrimination": 5.61,
+        "difficulty": 549.58,
+        "casual hit": 14.57
+      },
+      "1": {
+        "discrimination": 2.66,
+        "difficulty": 561.13,
+        "casual hit": 19.63
+      },
+      "29": {
+        "discrimination": 3.5,
+        "difficulty": 562.54,
+        "casual hit": 17.9
+      },
+      "2": {
+        "discrimination": 2.82,
+        "difficulty": 563.69,
+        "casual hit": 16.71
+      },
+      "9": {
+        "discrimination": 3.0,
+        "difficulty": 566.25,
+        "casual hit": 15.75
+      },
+      "40": {
+        "discrimination": 3.62,
+        "difficulty": 575.06,
+        "casual hit": 23.76
+      },
+      "41": {
+        "discrimination": 2.6,
+        "difficulty": 575.08,
+        "casual hit": 13.73
+      },
+      "18": {
+        "discrimination": 3.89,
+        "difficulty": 576.25,
+        "casual hit": 11.96
+      },
+      "31": {
+        "discrimination": 3.58,
+        "difficulty": 576.48,
+        "casual hit": 9.49
+      },
+      "24": {
+        "discrimination": 3.11,
+        "difficulty": 576.81,
+        "casual hit": 16.62
+      },
+      "15": {
+        "discrimination": 3.99,
+        "difficulty": 586.88,
+        "casual hit": 18.68
+      },
+      "10": {
+        "discrimination": 3.6,
+        "difficulty": 595.34,
+        "casual hit": 15.08
+      },
+      "13": {
+        "discrimination": 3.82,
+        "difficulty": 597.59,
+        "casual hit": 19.23
+      },
+      "11": {
+        "discrimination": 1.28,
+        "difficulty": 598.54,
+        "casual hit": 11.9
+      },
+      "34": {
+        "discrimination": 3.35,
+        "difficulty": 604.0,
+        "casual hit": 20.22
+      },
+      "22": {
+        "discrimination": 2.85,
+        "difficulty": 604.2,
+        "casual hit": 12.61
+      },
+      "25": {
+        "discrimination": 3.01,
+        "difficulty": 613.5,
+        "casual hit": 10.1
+      },
+      "42": {
+        "discrimination": 3.77,
+        "difficulty": 613.54,
+        "casual hit": 8.4
+      },
+      "28": {
+        "discrimination": 2.48,
+        "difficulty": 615.45,
+        "casual hit": 8.97
+      },
+      "38": {
+        "discrimination": 2.78,
+        "difficulty": 621.06,
+        "casual hit": 13.94
+      },
+      "6": {
+        "discrimination": 0.92,
+        "difficulty": 622.47,
+        "casual hit": 9.01
+      },
+      "26": {
+        "discrimination": 1.45,
+        "difficulty": 642.76,
+        "casual hit": 14.06
+      },
+      "21": {
+        "discrimination": 1.92,
+        "difficulty": 654.99,
+        "casual hit": 12.39
+      },
+      "14": {
+        "discrimination": 0.79,
+        "difficulty": 666.06,
+        "casual hit": 7.84
+      },
+      "44": {
+        "discrimination": 2.39,
+        "difficulty": 725.31,
+        "casual hit": 15.05
+      },
+      "45": {
+        "discrimination": 3.37,
+        "difficulty": 731.53,
+        "casual hit": 19.74
+      },
+      "39": {
+        "discrimination": 0.99,
+        "difficulty": 790.06,
+        "casual hit": 22.56
+      }
+    },
+    "LC1": {
+      "17": {
+        "discrimination": 1.75,
+        "difficulty": 475.04,
+        "casual hit": 17.32
+      },
+      "19": {
+        "discrimination": 3.23,
+        "difficulty": 481.16,
+        "casual hit": 16.19
+      },
+      "8": {
+        "discrimination": 1.41,
+        "difficulty": 482.93,
+        "casual hit": 1.19
+      },
+      "35": {
+        "discrimination": 2.5,
+        "difficulty": 483.16,
+        "casual hit": 5.35
+      },
+      "37": {
+        "discrimination": 4.09,
+        "difficulty": 484.41,
+        "casual hit": 18.84
+      },
+      "7": {
+        "discrimination": 1.78,
+        "difficulty": 504.7,
+        "casual hit": 5.81
+      },
+      "27": {
+        "discrimination": 2.52,
+        "difficulty": 519.31,
+        "casual hit": 22.91
+      },
+      "23": {
+        "discrimination": 1.88,
+        "difficulty": 520.84,
+        "casual hit": 3.36
+      },
+      "20": {
+        "discrimination": 2.3,
+        "difficulty": 521.94,
+        "casual hit": 8.45
+      },
+      "16": {
+        "discrimination": 1.82,
+        "difficulty": 522.83,
+        "casual hit": 0.71
+      },
+      "32": {
+        "discrimination": 4.5,
+        "difficulty": 523.21,
+        "casual hit": 20.66
+      },
+      "12": {
+        "discrimination": 1.61,
+        "difficulty": 541.55,
+        "casual hit": 0.23
+      },
+      "30": {
+        "discrimination": 3.34,
+        "difficulty": 544.97,
+        "casual hit": 20.12
+      },
+      "43": {
+        "discrimination": 2.58,
+        "difficulty": 547.49,
+        "casual hit": 17.88
+      },
+      "36": {
+        "discrimination": 0.66,
+        "difficulty": 548.08,
+        "casual hit": 2.48
+      },
+      "4": {
+        "discrimination": 2.46,
+        "difficulty": 548.1,
+        "casual hit": 9.89
+      },
+      "2": {
+        "discrimination": 4.32,
+        "difficulty": 549.17,
+        "casual hit": 25.23
+      },
+      "29": {
+        "discrimination": 3.5,
+        "difficulty": 562.54,
+        "casual hit": 17.9
+      },
+      "9": {
+        "discrimination": 3.0,
+        "difficulty": 566.25,
+        "casual hit": 15.75
+      },
+      "5": {
+        "discrimination": 2.74,
+        "difficulty": 568.16,
+        "casual hit": 13.77
+      },
+      "40": {
+        "discrimination": 3.62,
+        "difficulty": 575.06,
+        "casual hit": 23.76
+      },
+      "41": {
+        "discrimination": 2.6,
+        "difficulty": 575.08,
+        "casual hit": 13.73
+      },
+      "18": {
+        "discrimination": 3.89,
+        "difficulty": 576.25,
+        "casual hit": 11.96
+      },
+      "31": {
+        "discrimination": 3.58,
+        "difficulty": 576.48,
+        "casual hit": 9.49
+      },
+      "24": {
+        "discrimination": 3.11,
+        "difficulty": 576.81,
+        "casual hit": 16.62
+      },
+      "1": {
+        "discrimination": 3.63,
+        "difficulty": 579.27,
+        "casual hit": 10.43
+      },
+      "15": {
+        "discrimination": 3.99,
+        "difficulty": 586.88,
+        "casual hit": 18.68
+      },
+      "3": {
+        "discrimination": 3.76,
+        "difficulty": 592.83,
+        "casual hit": 14.06
+      },
+      "10": {
+        "discrimination": 3.6,
+        "difficulty": 595.34,
+        "casual hit": 15.08
+      },
+      "13": {
+        "discrimination": 3.82,
+        "difficulty": 597.59,
+        "casual hit": 19.23
+      },
+      "11": {
+        "discrimination": 1.28,
+        "difficulty": 598.54,
+        "casual hit": 11.9
+      },
+      "34": {
+        "discrimination": 3.35,
+        "difficulty": 604.0,
+        "casual hit": 20.22
+      },
+      "22": {
+        "discrimination": 2.85,
+        "difficulty": 604.2,
+        "casual hit": 12.61
+      },
+      "25": {
+        "discrimination": 3.01,
+        "difficulty": 613.5,
+        "casual hit": 10.1
+      },
+      "42": {
+        "discrimination": 3.77,
+        "difficulty": 613.54,
+        "casual hit": 8.4
+      },
+      "28": {
+        "discrimination": 2.48,
+        "difficulty": 615.45,
+        "casual hit": 8.97
+      },
+      "38": {
+        "discrimination": 2.78,
+        "difficulty": 621.06,
+        "casual hit": 13.94
+      },
+      "6": {
+        "discrimination": 0.92,
+        "difficulty": 622.47,
+        "casual hit": 9.01
+      },
+      "26": {
+        "discrimination": 1.45,
+        "difficulty": 642.76,
+        "casual hit": 14.06
+      },
+      "21": {
+        "discrimination": 1.92,
+        "difficulty": 654.99,
+        "casual hit": 12.39
+      },
+      "14": {
+        "discrimination": 0.79,
+        "difficulty": 666.06,
+        "casual hit": 7.84
+      },
+      "44": {
+        "discrimination": 2.39,
+        "difficulty": 725.31,
+        "casual hit": 15.05
+      },
+      "45": {
+        "discrimination": 3.37,
+        "difficulty": 731.53,
+        "casual hit": 19.74
+      },
+      "39": {
+        "discrimination": 0.99,
+        "difficulty": 790.06,
+        "casual hit": 22.56
+      }
+    },
+    "MT": {
+      "144": {
+        "discrimination": 1.12,
+        "difficulty": 537.21,
+        "casual hit": 26.88
+      },
+      "140": {
+        "discrimination": 1.87,
+        "difficulty": 542.93,
+        "casual hit": 12.55
+      },
+      "148": {
+        "discrimination": 1.65,
+        "difficulty": 547.93,
+        "casual hit": 18.81
+      },
+      "143": {
+        "discrimination": 3.06,
+        "difficulty": 580.68,
+        "casual hit": 8.03
+      },
+      "136": {
+        "discrimination": 1.84,
+        "difficulty": 588.64,
+        "casual hit": 35.05
+      },
+      "179": {
+        "discrimination": 1.57,
+        "difficulty": 615.35,
+        "casual hit": 11.07
+      },
+      "180": {
+        "discrimination": 1.78,
+        "difficulty": 616.67,
+        "casual hit": 4.55
+      },
+      "152": {
+        "discrimination": 2.28,
+        "difficulty": 624.45,
+        "casual hit": 12.12
+      },
+      "158": {
+        "discrimination": 3.18,
+        "difficulty": 631.58,
+        "casual hit": 14.49
+      },
+      "164": {
+        "discrimination": 2.3,
+        "difficulty": 640.1,
+        "casual hit": 13.79
+      },
+      "159": {
+        "discrimination": 2.32,
+        "difficulty": 641.65,
+        "casual hit": 7.19
+      },
+      "165": {
+        "discrimination": 3.96,
+        "difficulty": 647.02,
+        "casual hit": 11.92
+      },
+      "168": {
+        "discrimination": 2.26,
+        "difficulty": 651.76,
+        "casual hit": 9.6
+      },
+      "150": {
+        "discrimination": 1.78,
+        "difficulty": 653.79,
+        "casual hit": 14.81
+      },
+      "138": {
+        "discrimination": 2.47,
+        "difficulty": 661.61,
+        "casual hit": 4.67
+      },
+      "177": {
+        "discrimination": 2.58,
+        "difficulty": 663.35,
+        "casual hit": 16.36
+      },
+      "161": {
+        "discrimination": 3.11,
+        "difficulty": 687.88,
+        "casual hit": 18.72
+      },
+      "173": {
+        "discrimination": 2.59,
+        "difficulty": 691.18,
+        "casual hit": 7.74
+      },
+      "146": {
+        "discrimination": 2.73,
+        "difficulty": 692.87,
+        "casual hit": 23.19
+      },
+      "171": {
+        "discrimination": 1.26,
+        "difficulty": 693.45,
+        "casual hit": 6.68
+      },
+      "147": {
+        "discrimination": 1.65,
+        "difficulty": 694.55,
+        "casual hit": 20.72
+      },
+      "160": {
+        "discrimination": 2.18,
+        "difficulty": 695.29,
+        "casual hit": 13.82
+      },
+      "163": {
+        "discrimination": 3.42,
+        "difficulty": 695.82,
+        "casual hit": 16.94
+      },
+      "169": {
+        "discrimination": 1.62,
+        "difficulty": 698.14,
+        "casual hit": 18.08
+      },
+      "142": {
+        "discrimination": 2.9,
+        "difficulty": 698.68,
+        "casual hit": 8.71
+      },
+      "170": {
+        "discrimination": 1.97,
+        "difficulty": 701.62,
+        "casual hit": 15.47
+      },
+      "154": {
+        "discrimination": 1.72,
+        "difficulty": 705.34,
+        "casual hit": 18.6
+      },
+      "149": {
+        "discrimination": 1.21,
+        "difficulty": 711.12,
+        "casual hit": 6.51
+      },
+      "137": {
+        "discrimination": 2.29,
+        "difficulty": 721.7,
+        "casual hit": 8.5
+      },
+      "175": {
+        "discrimination": 2.24,
+        "difficulty": 730.0,
+        "casual hit": 20.66
+      },
+      "153": {
+        "discrimination": 3.18,
+        "difficulty": 735.7,
+        "casual hit": 27.29
+      },
+      "157": {
+        "discrimination": 3.77,
+        "difficulty": 742.06,
+        "casual hit": 20.83
+      },
+      "162": {
+        "discrimination": 3.81,
+        "difficulty": 748.43,
+        "casual hit": 9.19
+      },
+      "156": {
+        "discrimination": 2.46,
+        "difficulty": 761.22,
+        "casual hit": 15.91
+      },
+      "166": {
+        "discrimination": 1.52,
+        "difficulty": 772.2,
+        "casual hit": 36.5
+      },
+      "141": {
+        "discrimination": 1.94,
+        "difficulty": 778.77,
+        "casual hit": 16.24
+      },
+      "178": {
+        "discrimination": 4.13,
+        "difficulty": 788.94,
+        "casual hit": 12.63
+      },
+      "167": {
+        "discrimination": 2.66,
+        "difficulty": 795.7,
+        "casual hit": 6.8
+      },
+      "172": {
+        "discrimination": 1.51,
+        "difficulty": 800.3,
+        "casual hit": 14.7
+      },
+      "151": {
+        "discrimination": 2.45,
+        "difficulty": 801.27,
+        "casual hit": 14.32
+      },
+      "139": {
+        "discrimination": 2.06,
+        "difficulty": 805.2,
+        "casual hit": 11.85
+      },
+      "174": {
+        "discrimination": 5.31,
+        "difficulty": 834.34,
+        "casual hit": 16.05
+      },
+      "155": {
+        "discrimination": 3.94,
+        "difficulty": 878.06,
+        "casual hit": 19.83
+      },
+      "176": {
+        "discrimination": 0.18,
+        "difficulty": 1741.66,
+        "casual hit": 11.62
+      }
+    },
+    "CN": {
+      "107": {
+        "discrimination": 2.07,
+        "difficulty": 488.03,
+        "casual hit": 19.74
+      },
+      "104": {
+        "discrimination": 1.03,
+        "difficulty": 499.69,
+        "casual hit": 1.16
+      },
+      "123": {
+        "discrimination": 2.79,
+        "difficulty": 515.61,
+        "casual hit": 14.1
+      },
+      "96": {
+        "discrimination": 1.72,
+        "difficulty": 525.5,
+        "casual hit": 14.5
+      },
+      "98": {
+        "discrimination": 3.48,
+        "difficulty": 529.66,
+        "casual hit": 15.62
+      },
+      "115": {
+        "discrimination": 1.02,
+        "difficulty": 529.76,
+        "casual hit": 1.67
+      },
+      "94": {
+        "discrimination": 3.77,
+        "difficulty": 541.53,
+        "casual hit": 10.71
+      },
+      "97": {
+        "discrimination": 1.9,
+        "difficulty": 548.42,
+        "casual hit": 21.29
+      },
+      "134": {
+        "discrimination": 2.96,
+        "difficulty": 558.27,
+        "casual hit": 11.18
+      },
+      "93": {
+        "discrimination": 2.81,
+        "difficulty": 558.4,
+        "casual hit": 21.21
+      },
+      "100": {
+        "discrimination": 2.27,
+        "difficulty": 562.26,
+        "casual hit": 16.62
+      },
+      "101": {
+        "discrimination": 2.39,
+        "difficulty": 570.9,
+        "casual hit": 16.5
+      },
+      "99": {
+        "discrimination": 3.12,
+        "difficulty": 580.48,
+        "casual hit": 8.56
+      },
+      "114": {
+        "discrimination": 2.0,
+        "difficulty": 586.84,
+        "casual hit": 16.45
+      },
+      "116": {
+        "discrimination": 0.55,
+        "difficulty": 597.95,
+        "casual hit": 5.88
+      },
+      "119": {
+        "discrimination": 1.85,
+        "difficulty": 599.69,
+        "casual hit": 12.4
+      },
+      "103": {
+        "discrimination": 1.75,
+        "difficulty": 602.2,
+        "casual hit": 23.37
+      },
+      "133": {
+        "discrimination": 1.93,
+        "difficulty": 607.47,
+        "casual hit": 22.01
+      },
+      "91": {
+        "discrimination": 2.43,
+        "difficulty": 613.77,
+        "casual hit": 22.23
+      },
+      "130": {
+        "discrimination": 3.41,
+        "difficulty": 615.72,
+        "casual hit": 16.83
+      },
+      "105": {
+        "discrimination": 2.77,
+        "difficulty": 628.6,
+        "casual hit": 13.62
+      },
+      "113": {
+        "discrimination": 1.66,
+        "difficulty": 637.67,
+        "casual hit": 17.47
+      },
+      "92": {
+        "discrimination": 1.88,
+        "difficulty": 645.21,
+        "casual hit": 7.5
+      },
+      "132": {
+        "discrimination": 1.79,
+        "difficulty": 658.56,
+        "casual hit": 13.6
+      },
+      "124": {
+        "discrimination": 2.38,
+        "difficulty": 659.19,
+        "casual hit": 20.92
+      },
+      "129": {
+        "discrimination": 0.68,
+        "difficulty": 659.6,
+        "casual hit": 2.17
+      },
+      "135": {
+        "discrimination": 2.43,
+        "difficulty": 666.71,
+        "casual hit": 29.84
+      },
+      "128": {
+        "discrimination": 2.33,
+        "difficulty": 667.31,
+        "casual hit": 14.99
+      },
+      "108": {
+        "discrimination": 3.21,
+        "difficulty": 667.41,
+        "casual hit": 16.38
+      },
+      "117": {
+        "discrimination": 3.15,
+        "difficulty": 667.86,
+        "casual hit": 32.64
+      },
+      "125": {
+        "discrimination": 1.63,
+        "difficulty": 670.52,
+        "casual hit": 16.28
+      },
+      "131": {
+        "discrimination": 1.79,
+        "difficulty": 678.12,
+        "casual hit": 20.47
+      },
+      "109": {
+        "discrimination": 0.75,
+        "difficulty": 683.64,
+        "casual hit": 10.67
+      },
+      "106": {
+        "discrimination": 4.61,
+        "difficulty": 694.11,
+        "casual hit": 12.46
+      },
+      "111": {
+        "discrimination": 5.93,
+        "difficulty": 698.88,
+        "casual hit": 13.19
+      },
+      "121": {
+        "discrimination": 1.19,
+        "difficulty": 704.67,
+        "casual hit": 26.04
+      },
+      "120": {
+        "discrimination": 3.21,
+        "difficulty": 714.9,
+        "casual hit": 8.07
+      },
+      "110": {
+        "discrimination": 3.9,
+        "difficulty": 719.78,
+        "casual hit": 5.8
+      },
+      "95": {
+        "discrimination": 1.21,
+        "difficulty": 721.43,
+        "casual hit": 9.92
+      },
+      "112": {
+        "discrimination": 1.15,
+        "difficulty": 736.4,
+        "casual hit": 11.48
+      },
+      "126": {
+        "discrimination": 7.1,
+        "difficulty": 742.38,
+        "casual hit": 23.69
+      },
+      "102": {
+        "discrimination": 0.38,
+        "difficulty": 836.47,
+        "casual hit": 6.87
+      },
+      "127": {
+        "discrimination": 0.54,
+        "difficulty": 879.85,
+        "casual hit": 17.37
+      },
+      "118": {
+        "discrimination": 0.06,
+        "difficulty": 1396.19,
+        "casual hit": 22.07
+      }
+    },
+    "CH": {
+      "64": {
+        "discrimination": 1.57,
+        "difficulty": 474.88,
+        "casual hit": 0.81
+      },
+      "52": {
+        "discrimination": 1.69,
+        "difficulty": 483.72,
+        "casual hit": 19.99
+      },
+      "51": {
+        "discrimination": 2.24,
+        "difficulty": 519.95,
+        "casual hit": 14.79
+      },
+      "62": {
+        "discrimination": 2.34,
+        "difficulty": 522.14,
+        "casual hit": 4.96
+      },
+      "71": {
+        "discrimination": 1.22,
+        "difficulty": 524.53,
+        "casual hit": 17.47
+      },
+      "84": {
+        "discrimination": 1.14,
+        "difficulty": 524.89,
+        "casual hit": 0.66
+      },
+      "87": {
+        "discrimination": 2.07,
+        "difficulty": 532.55,
+        "casual hit": 20.03
+      },
+      "75": {
+        "discrimination": 2.06,
+        "difficulty": 534.45,
+        "casual hit": 21.85
+      },
+      "49": {
+        "discrimination": 1.32,
+        "difficulty": 544.06,
+        "casual hit": 18.26
+      },
+      "66": {
+        "discrimination": 2.8,
+        "difficulty": 544.49,
+        "casual hit": 21.35
+      },
+      "57": {
+        "discrimination": 2.23,
+        "difficulty": 546.65,
+        "casual hit": 15.94
+      },
+      "82": {
+        "discrimination": 2.78,
+        "difficulty": 548.12,
+        "casual hit": 18.25
+      },
+      "83": {
+        "discrimination": 3.56,
+        "difficulty": 551.63,
+        "casual hit": 13.66
+      },
+      "72": {
+        "discrimination": 2.9,
+        "difficulty": 560.87,
+        "casual hit": 22.91
+      },
+      "70": {
+        "discrimination": 1.14,
+        "difficulty": 561.71,
+        "casual hit": 0.16
+      },
+      "59": {
+        "discrimination": 3.33,
+        "difficulty": 565.95,
+        "casual hit": 32.56
+      },
+      "68": {
+        "discrimination": 2.54,
+        "difficulty": 568.74,
+        "casual hit": 16.09
+      },
+      "61": {
+        "discrimination": 3.17,
+        "difficulty": 577.15,
+        "casual hit": 9.19
+      },
+      "53": {
+        "discrimination": 2.9,
+        "difficulty": 593.43,
+        "casual hit": 16.21
+      },
+      "80": {
+        "discrimination": 1.2,
+        "difficulty": 597.5,
+        "casual hit": 14.6
+      },
+      "56": {
+        "discrimination": 0.62,
+        "difficulty": 600.17,
+        "casual hit": 4.15
+      },
+      "60": {
+        "discrimination": 2.2,
+        "difficulty": 601.84,
+        "casual hit": 13.0
+      },
+      "89": {
+        "discrimination": 3.49,
+        "difficulty": 602.57,
+        "casual hit": 18.73
+      },
+      "77": {
+        "discrimination": 2.64,
+        "difficulty": 607.05,
+        "casual hit": 22.58
+      },
+      "46": {
+        "discrimination": 2.22,
+        "difficulty": 610.81,
+        "casual hit": 13.72
+      },
+      "88": {
+        "discrimination": 2.21,
+        "difficulty": 612.91,
+        "casual hit": 18.62
+      },
+      "63": {
+        "discrimination": 3.73,
+        "difficulty": 613.74,
+        "casual hit": 16.3
+      },
+      "73": {
+        "discrimination": 1.4,
+        "difficulty": 615.69,
+        "casual hit": 9.67
+      },
+      "79": {
+        "discrimination": 0.73,
+        "difficulty": 620.73,
+        "casual hit": 1.01
+      },
+      "55": {
+        "discrimination": 1.4,
+        "difficulty": 631.82,
+        "casual hit": 11.44
+      },
+      "47": {
+        "discrimination": 2.07,
+        "difficulty": 634.72,
+        "casual hit": 7.74
+      },
+      "58": {
+        "discrimination": 1.79,
+        "difficulty": 634.89,
+        "casual hit": 18.08
+      },
+      "65": {
+        "discrimination": 1.46,
+        "difficulty": 636.18,
+        "casual hit": 21.59
+      },
+      "81": {
+        "discrimination": 3.04,
+        "difficulty": 636.61,
+        "casual hit": 23.18
+      },
+      "54": {
+        "discrimination": 2.31,
+        "difficulty": 645.83,
+        "casual hit": 17.48
+      },
+      "74": {
+        "discrimination": 2.07,
+        "difficulty": 648.05,
+        "casual hit": 17.34
+      },
+      "50": {
+        "discrimination": 3.45,
+        "difficulty": 665.02,
+        "casual hit": 9.48
+      },
+      "69": {
+        "discrimination": 1.36,
+        "difficulty": 669.19,
+        "casual hit": 10.23
+      },
+      "67": {
+        "discrimination": 1.47,
+        "difficulty": 673.9,
+        "casual hit": 23.77
+      },
+      "78": {
+        "discrimination": 2.45,
+        "difficulty": 681.37,
+        "casual hit": 12.03
+      },
+      "76": {
+        "discrimination": 2.35,
+        "difficulty": 687.88,
+        "casual hit": 11.62
+      },
+      "86": {
+        "discrimination": 1.7,
+        "difficulty": 703.03,
+        "casual hit": 19.84
+      },
+      "85": {
+        "discrimination": 1.43,
+        "difficulty": 725.73,
+        "casual hit": 6.71
+      }
+    }
+  },
+  "2020": {
+    "LC0": {
+      "43": {
+        "discrimination": 2.51,
+        "difficulty": 448.49,
+        "casual hit": 4.77
+      },
+      "22": {
+        "discrimination": 1.07,
+        "difficulty": 456.0,
+        "casual hit": 1.38
+      },
+      "15": {
+        "discrimination": 2.91,
+        "difficulty": 459.18,
+        "casual hit": 12.93
+      },
+      "26": {
+        "discrimination": 1.6,
+        "difficulty": 483.27,
+        "casual hit": 19.65
+      },
+      "27": {
+        "discrimination": 1.74,
+        "difficulty": 488.13,
+        "casual hit": 5.06
+      },
+      "35": {
+        "discrimination": 1.77,
+        "difficulty": 502.36,
+        "casual hit": 18.71
+      },
+      "32": {
+        "discrimination": 1.29,
+        "difficulty": 507.45,
+        "casual hit": 1.33
+      },
+      "2": {
+        "discrimination": 3.08,
+        "difficulty": 519.48,
+        "casual hit": 16.64
+      },
+      "44": {
+        "discrimination": 1.48,
+        "difficulty": 519.95,
+        "casual hit": 22.97
+      },
+      "39": {
+        "discrimination": 2.21,
+        "difficulty": 525.91,
+        "casual hit": 17.18
+      },
+      "13": {
+        "discrimination": 1.61,
+        "difficulty": 526.98,
+        "casual hit": 20.53
+      },
+      "17": {
+        "discrimination": 1.69,
+        "difficulty": 530.61,
+        "casual hit": 14.64
+      },
+      "36": {
+        "discrimination": 1.71,
+        "difficulty": 536.25,
+        "casual hit": 17.76
+      },
+      "1": {
+        "discrimination": 2.32,
+        "difficulty": 545.15,
+        "casual hit": 17.1
+      },
+      "29": {
+        "discrimination": 1.63,
+        "difficulty": 553.49,
+        "casual hit": 10.24
+      },
+      "42": {
+        "discrimination": 2.07,
+        "difficulty": 554.21,
+        "casual hit": 20.06
+      },
+      "20": {
+        "discrimination": 3.21,
+        "difficulty": 554.57,
+        "casual hit": 16.44
+      },
+      "5": {
+        "discrimination": 2.3,
+        "difficulty": 576.94,
+        "casual hit": 17.27
+      },
+      "31": {
+        "discrimination": 1.41,
+        "difficulty": 581.18,
+        "casual hit": 17.51
+      },
+      "33": {
+        "discrimination": 1.84,
+        "difficulty": 586.23,
+        "casual hit": 24.87
+      },
+      "28": {
+        "discrimination": 1.16,
+        "difficulty": 600.73,
+        "casual hit": 21.91
+      },
+      "11": {
+        "discrimination": 1.93,
+        "difficulty": 602.41,
+        "casual hit": 14.19
+      },
+      "37": {
+        "discrimination": 1.44,
+        "difficulty": 609.02,
+        "casual hit": 12.54
+      },
+      "16": {
+        "discrimination": 2.42,
+        "difficulty": 610.4,
+        "casual hit": 14.87
+      },
+      "7": {
+        "discrimination": 2.15,
+        "difficulty": 614.56,
+        "casual hit": 10.6
+      },
+      "4": {
+        "discrimination": 2.48,
+        "difficulty": 623.8,
+        "casual hit": 16.45
+      },
+      "6": {
+        "discrimination": 3.19,
+        "difficulty": 625.88,
+        "casual hit": 17.43
+      },
+      "18": {
+        "discrimination": 1.36,
+        "difficulty": 644.45,
+        "casual hit": 23.51
+      },
+      "19": {
+        "discrimination": 2.86,
+        "difficulty": 644.94,
+        "casual hit": 21.36
+      },
+      "24": {
+        "discrimination": 3.32,
+        "difficulty": 649.21,
+        "casual hit": 18.61
+      },
+      "12": {
+        "discrimination": 1.74,
+        "difficulty": 651.2,
+        "casual hit": 24.39
+      },
+      "10": {
+        "discrimination": 1.11,
+        "difficulty": 664.0,
+        "casual hit": 25.51
+      },
+      "40": {
+        "discrimination": 1.22,
+        "difficulty": 668.28,
+        "casual hit": 21.16
+      },
+      "41": {
+        "discrimination": 2.46,
+        "difficulty": 668.7,
+        "casual hit": 11.09
+      },
+      "23": {
+        "discrimination": 2.79,
+        "difficulty": 675.26,
+        "casual hit": 14.97
+      },
+      "30": {
+        "discrimination": 2.17,
+        "difficulty": 680.75,
+        "casual hit": 14.68
+      },
+      "25": {
+        "discrimination": 1.62,
+        "difficulty": 683.85,
+        "casual hit": 26.09
+      },
+      "8": {
+        "discrimination": 1.73,
+        "difficulty": 685.05,
+        "casual hit": 14.87
+      },
+      "38": {
+        "discrimination": 1.48,
+        "difficulty": 691.42,
+        "casual hit": 16.48
+      },
+      "9": {
+        "discrimination": 1.52,
+        "difficulty": 691.81,
+        "casual hit": 18.52
+      },
+      "3": {
+        "discrimination": 1.81,
+        "difficulty": 702.32,
+        "casual hit": 12.07
+      },
+      "45": {
+        "discrimination": 2.47,
+        "difficulty": 721.74,
+        "casual hit": 13.53
+      },
+      "34": {
+        "discrimination": 2.15,
+        "difficulty": 725.51,
+        "casual hit": 25.6
+      },
+      "14": {
+        "discrimination": 1.57,
+        "difficulty": 774.64,
+        "casual hit": 22.19
+      },
+      "21": {
+        "discrimination": 0.36,
+        "difficulty": 1045.14,
+        "casual hit": 16.3
+      }
+    },
+    "LC1": {
+      "43": {
+        "discrimination": 2.51,
+        "difficulty": 448.49,
+        "casual hit": 4.77
+      },
+      "22": {
+        "discrimination": 1.07,
+        "difficulty": 456.0,
+        "casual hit": 1.38
+      },
+      "15": {
+        "discrimination": 2.91,
+        "difficulty": 459.18,
+        "casual hit": 12.93
+      },
+      "26": {
+        "discrimination": 1.6,
+        "difficulty": 483.27,
+        "casual hit": 19.65
+      },
+      "27": {
+        "discrimination": 1.74,
+        "difficulty": 488.13,
+        "casual hit": 5.06
+      },
+      "35": {
+        "discrimination": 1.77,
+        "difficulty": 502.36,
+        "casual hit": 18.71
+      },
+      "32": {
+        "discrimination": 1.29,
+        "difficulty": 507.45,
+        "casual hit": 1.33
+      },
+      "44": {
+        "discrimination": 1.48,
+        "difficulty": 519.95,
+        "casual hit": 22.97
+      },
+      "39": {
+        "discrimination": 2.21,
+        "difficulty": 525.91,
+        "casual hit": 17.18
+      },
+      "13": {
+        "discrimination": 1.61,
+        "difficulty": 526.98,
+        "casual hit": 20.53
+      },
+      "17": {
+        "discrimination": 1.69,
+        "difficulty": 530.61,
+        "casual hit": 14.64
+      },
+      "36": {
+        "discrimination": 1.71,
+        "difficulty": 536.25,
+        "casual hit": 17.76
+      },
+      "29": {
+        "discrimination": 1.63,
+        "difficulty": 553.49,
+        "casual hit": 10.24
+      },
+      "42": {
+        "discrimination": 2.07,
+        "difficulty": 554.21,
+        "casual hit": 20.06
+      },
+      "20": {
+        "discrimination": 3.21,
+        "difficulty": 554.57,
+        "casual hit": 16.44
+      },
+      "4": {
+        "discrimination": 2.09,
+        "difficulty": 568.12,
+        "casual hit": 15.81
+      },
+      "5": {
+        "discrimination": 1.58,
+        "difficulty": 569.61,
+        "casual hit": 8.39
+      },
+      "31": {
+        "discrimination": 1.41,
+        "difficulty": 581.18,
+        "casual hit": 17.51
+      },
+      "33": {
+        "discrimination": 1.84,
+        "difficulty": 586.23,
+        "casual hit": 24.87
+      },
+      "1": {
+        "discrimination": 1.11,
+        "difficulty": 590.75,
+        "casual hit": 12.6
+      },
+      "28": {
+        "discrimination": 1.16,
+        "difficulty": 600.73,
+        "casual hit": 21.91
+      },
+      "11": {
+        "discrimination": 1.93,
+        "difficulty": 602.41,
+        "casual hit": 14.19
+      },
+      "37": {
+        "discrimination": 1.44,
+        "difficulty": 609.02,
+        "casual hit": 12.54
+      },
+      "16": {
+        "discrimination": 2.42,
+        "difficulty": 610.4,
+        "casual hit": 14.87
+      },
+      "7": {
+        "discrimination": 2.15,
+        "difficulty": 614.56,
+        "casual hit": 10.6
+      },
+      "3": {
+        "discrimination": 2.61,
+        "difficulty": 622.41,
+        "casual hit": 19.54
+      },
+      "6": {
+        "discrimination": 3.19,
+        "difficulty": 625.88,
+        "casual hit": 17.43
+      },
+      "18": {
+        "discrimination": 1.36,
+        "difficulty": 644.45,
+        "casual hit": 23.51
+      },
+      "19": {
+        "discrimination": 2.86,
+        "difficulty": 644.94,
+        "casual hit": 21.36
+      },
+      "24": {
+        "discrimination": 3.32,
+        "difficulty": 649.21,
+        "casual hit": 18.61
+      },
+      "12": {
+        "discrimination": 1.74,
+        "difficulty": 651.2,
+        "casual hit": 24.39
+      },
+      "10": {
+        "discrimination": 1.11,
+        "difficulty": 664.0,
+        "casual hit": 25.51
+      },
+      "2": {
+        "discrimination": 2.64,
+        "difficulty": 665.75,
+        "casual hit": 26.15
+      },
+      "40": {
+        "discrimination": 1.22,
+        "difficulty": 668.28,
+        "casual hit": 21.16
+      },
+      "41": {
+        "discrimination": 2.46,
+        "difficulty": 668.7,
+        "casual hit": 11.09
+      },
+      "23": {
+        "discrimination": 2.79,
+        "difficulty": 675.26,
+        "casual hit": 14.97
+      },
+      "30": {
+        "discrimination": 2.17,
+        "difficulty": 680.75,
+        "casual hit": 14.68
+      },
+      "25": {
+        "discrimination": 1.62,
+        "difficulty": 683.85,
+        "casual hit": 26.09
+      },
+      "8": {
+        "discrimination": 1.73,
+        "difficulty": 685.05,
+        "casual hit": 14.87
+      },
+      "38": {
+        "discrimination": 1.48,
+        "difficulty": 691.42,
+        "casual hit": 16.48
+      },
+      "9": {
+        "discrimination": 1.52,
+        "difficulty": 691.81,
+        "casual hit": 18.52
+      },
+      "45": {
+        "discrimination": 2.47,
+        "difficulty": 721.74,
+        "casual hit": 13.53
+      },
+      "34": {
+        "discrimination": 2.15,
+        "difficulty": 725.51,
+        "casual hit": 25.6
+      },
+      "14": {
+        "discrimination": 1.57,
+        "difficulty": 774.64,
+        "casual hit": 22.19
+      },
+      "21": {
+        "discrimination": 0.36,
+        "difficulty": 1045.14,
+        "casual hit": 16.3
+      }
+    },
+    "MT": {
+      "177": {
+        "discrimination": 1.26,
+        "difficulty": 459.64,
+        "casual hit": 20.41
+      },
+      "137": {
+        "discrimination": 1.59,
+        "difficulty": 491.45,
+        "casual hit": 20.09
+      },
+      "164": {
+        "discrimination": 2.31,
+        "difficulty": 544.07,
+        "casual hit": 18.92
+      },
+      "139": {
+        "discrimination": 2.76,
+        "difficulty": 562.45,
+        "casual hit": 9.2
+      },
+      "153": {
+        "discrimination": 1.08,
+        "difficulty": 584.34,
+        "casual hit": 1.49
+      },
+      "176": {
+        "discrimination": 1.2,
+        "difficulty": 584.97,
+        "casual hit": 16.36
+      },
+      "148": {
+        "discrimination": 2.96,
+        "difficulty": 589.58,
+        "casual hit": 18.53
+      },
+      "142": {
+        "discrimination": 2.09,
+        "difficulty": 599.37,
+        "casual hit": 13.29
+      },
+      "156": {
+        "discrimination": 2.05,
+        "difficulty": 608.17,
+        "casual hit": 17.94
+      },
+      "178": {
+        "discrimination": 0.93,
+        "difficulty": 610.92,
+        "casual hit": 7.39
+      },
+      "175": {
+        "discrimination": 2.76,
+        "difficulty": 615.2,
+        "casual hit": 15.16
+      },
+      "167": {
+        "discrimination": 2.01,
+        "difficulty": 615.44,
+        "casual hit": 14.06
+      },
+      "180": {
+        "discrimination": 3.02,
+        "difficulty": 633.42,
+        "casual hit": 11.46
+      },
+      "155": {
+        "discrimination": 2.6,
+        "difficulty": 634.03,
+        "casual hit": 15.45
+      },
+      "144": {
+        "discrimination": 3.25,
+        "difficulty": 657.72,
+        "casual hit": 13.55
+      },
+      "174": {
+        "discrimination": 1.54,
+        "difficulty": 660.31,
+        "casual hit": 19.66
+      },
+      "168": {
+        "discrimination": 3.2,
+        "difficulty": 660.83,
+        "casual hit": 17.18
+      },
+      "169": {
+        "discrimination": 1.89,
+        "difficulty": 665.19,
+        "casual hit": 27.99
+      },
+      "162": {
+        "discrimination": 2.15,
+        "difficulty": 673.59,
+        "casual hit": 22.61
+      },
+      "172": {
+        "discrimination": 2.73,
+        "difficulty": 676.98,
+        "casual hit": 14.12
+      },
+      "150": {
+        "discrimination": 2.14,
+        "difficulty": 678.18,
+        "casual hit": 15.6
+      },
+      "179": {
+        "discrimination": 2.99,
+        "difficulty": 684.65,
+        "casual hit": 6.39
+      },
+      "151": {
+        "discrimination": 2.99,
+        "difficulty": 689.02,
+        "casual hit": 15.88
+      },
+      "143": {
+        "discrimination": 1.52,
+        "difficulty": 692.26,
+        "casual hit": 23.04
+      },
+      "171": {
+        "discrimination": 1.34,
+        "difficulty": 693.47,
+        "casual hit": 18.7
+      },
+      "166": {
+        "discrimination": 2.59,
+        "difficulty": 703.37,
+        "casual hit": 18.39
+      },
+      "152": {
+        "discrimination": 2.95,
+        "difficulty": 706.57,
+        "casual hit": 12.11
+      },
+      "170": {
+        "discrimination": 1.22,
+        "difficulty": 710.95,
+        "casual hit": 9.01
+      },
+      "163": {
+        "discrimination": 1.57,
+        "difficulty": 717.74,
+        "casual hit": 11.43
+      },
+      "161": {
+        "discrimination": 4.06,
+        "difficulty": 718.03,
+        "casual hit": 21.61
+      },
+      "140": {
+        "discrimination": 1.18,
+        "difficulty": 723.25,
+        "casual hit": 20.71
+      },
+      "154": {
+        "discrimination": 2.18,
+        "difficulty": 731.08,
+        "casual hit": 14.89
+      },
+      "136": {
+        "discrimination": 1.5,
+        "difficulty": 733.11,
+        "casual hit": 12.16
+      },
+      "160": {
+        "discrimination": 1.76,
+        "difficulty": 740.75,
+        "casual hit": 16.63
+      },
+      "145": {
+        "discrimination": 2.73,
+        "difficulty": 749.85,
+        "casual hit": 13.47
+      },
+      "159": {
+        "discrimination": 0.97,
+        "difficulty": 750.65,
+        "casual hit": 20.49
+      },
+      "141": {
+        "discrimination": 1.74,
+        "difficulty": 768.03,
+        "casual hit": 13.99
+      },
+      "147": {
+        "discrimination": 2.27,
+        "difficulty": 777.69,
+        "casual hit": 23.48
+      },
+      "149": {
+        "discrimination": 2.89,
+        "difficulty": 782.28,
+        "casual hit": 13.96
+      },
+      "165": {
+        "discrimination": 2.6,
+        "difficulty": 782.96,
+        "casual hit": 9.69
+      },
+      "146": {
+        "discrimination": 3.3,
+        "difficulty": 786.17,
+        "casual hit": 25.53
+      },
+      "173": {
+        "discrimination": 2.42,
+        "difficulty": 801.97,
+        "casual hit": 15.36
+      },
+      "158": {
+        "discrimination": 1.78,
+        "difficulty": 829.88,
+        "casual hit": 18.91
+      },
+      "138": {
+        "discrimination": 3.35,
+        "difficulty": 834.17,
+        "casual hit": 16.61
+      }
+    },
+    "CN": {
+      "132": {
+        "discrimination": 1.47,
+        "difficulty": 476.47,
+        "casual hit": 19.95
+      },
+      "92": {
+        "discrimination": 1.71,
+        "difficulty": 492.45,
+        "casual hit": 17.41
+      },
+      "122": {
+        "discrimination": 2.91,
+        "difficulty": 512.76,
+        "casual hit": 21.0
+      },
+      "124": {
+        "discrimination": 2.54,
+        "difficulty": 532.44,
+        "casual hit": 18.4
+      },
+      "113": {
+        "discrimination": 3.26,
+        "difficulty": 547.51,
+        "casual hit": 24.93
+      },
+      "104": {
+        "discrimination": 3.04,
+        "difficulty": 562.39,
+        "casual hit": 20.84
+      },
+      "91": {
+        "discrimination": 1.85,
+        "difficulty": 563.07,
+        "casual hit": 17.8
+      },
+      "127": {
+        "discrimination": 0.74,
+        "difficulty": 563.22,
+        "casual hit": 1.07
+      },
+      "126": {
+        "discrimination": 2.22,
+        "difficulty": 567.09,
+        "casual hit": 17.27
+      },
+      "97": {
+        "discrimination": 1.99,
+        "difficulty": 567.44,
+        "casual hit": 18.66
+      },
+      "101": {
+        "discrimination": 2.4,
+        "difficulty": 572.03,
+        "casual hit": 21.29
+      },
+      "115": {
+        "discrimination": 1.79,
+        "difficulty": 579.21,
+        "casual hit": 20.74
+      },
+      "129": {
+        "discrimination": 2.62,
+        "difficulty": 581.62,
+        "casual hit": 5.77
+      },
+      "112": {
+        "discrimination": 1.65,
+        "difficulty": 584.95,
+        "casual hit": 17.54
+      },
+      "131": {
+        "discrimination": 3.99,
+        "difficulty": 594.64,
+        "casual hit": 16.66
+      },
+      "134": {
+        "discrimination": 2.47,
+        "difficulty": 595.06,
+        "casual hit": 13.11
+      },
+      "107": {
+        "discrimination": 0.51,
+        "difficulty": 595.76,
+        "casual hit": 4.21
+      },
+      "94": {
+        "discrimination": 4.35,
+        "difficulty": 609.2,
+        "casual hit": 14.7
+      },
+      "95": {
+        "discrimination": 2.91,
+        "difficulty": 612.36,
+        "casual hit": 11.24
+      },
+      "119": {
+        "discrimination": 1.7,
+        "difficulty": 615.07,
+        "casual hit": 14.75
+      },
+      "108": {
+        "discrimination": 1.29,
+        "difficulty": 617.94,
+        "casual hit": 15.94
+      },
+      "118": {
+        "discrimination": 1.0,
+        "difficulty": 619.44,
+        "casual hit": 21.32
+      },
+      "133": {
+        "discrimination": 2.95,
+        "difficulty": 628.42,
+        "casual hit": 16.45
+      },
+      "106": {
+        "discrimination": 3.17,
+        "difficulty": 635.72,
+        "casual hit": 21.78
+      },
+      "121": {
+        "discrimination": 1.88,
+        "difficulty": 648.75,
+        "casual hit": 27.04
+      },
+      "96": {
+        "discrimination": 3.01,
+        "difficulty": 650.25,
+        "casual hit": 18.75
+      },
+      "98": {
+        "discrimination": 2.3,
+        "difficulty": 650.26,
+        "casual hit": 13.08
+      },
+      "93": {
+        "discrimination": 2.74,
+        "difficulty": 655.43,
+        "casual hit": 18.59
+      },
+      "117": {
+        "discrimination": 2.12,
+        "difficulty": 657.16,
+        "casual hit": 14.44
+      },
+      "110": {
+        "discrimination": 2.12,
+        "difficulty": 659.38,
+        "casual hit": 9.21
+      },
+      "125": {
+        "discrimination": 1.57,
+        "difficulty": 665.34,
+        "casual hit": 22.04
+      },
+      "109": {
+        "discrimination": 1.45,
+        "difficulty": 667.69,
+        "casual hit": 14.05
+      },
+      "111": {
+        "discrimination": 2.98,
+        "difficulty": 669.47,
+        "casual hit": 29.49
+      },
+      "100": {
+        "discrimination": 2.4,
+        "difficulty": 669.95,
+        "casual hit": 19.02
+      },
+      "128": {
+        "discrimination": 2.94,
+        "difficulty": 673.04,
+        "casual hit": 23.2
+      },
+      "103": {
+        "discrimination": 2.28,
+        "difficulty": 685.81,
+        "casual hit": 26.25
+      },
+      "102": {
+        "discrimination": 3.31,
+        "difficulty": 688.36,
+        "casual hit": 13.86
+      },
+      "99": {
+        "discrimination": 3.21,
+        "difficulty": 690.81,
+        "casual hit": 17.21
+      },
+      "120": {
+        "discrimination": 2.82,
+        "difficulty": 700.97,
+        "casual hit": 12.38
+      },
+      "116": {
+        "discrimination": 1.83,
+        "difficulty": 708.85,
+        "casual hit": 18.37
+      },
+      "130": {
+        "discrimination": 1.01,
+        "difficulty": 726.89,
+        "casual hit": 12.08
+      },
+      "114": {
+        "discrimination": 2.28,
+        "difficulty": 762.94,
+        "casual hit": 24.44
+      },
+      "123": {
+        "discrimination": 1.93,
+        "difficulty": 772.33,
+        "casual hit": 17.68
+      },
+      "105": {
+        "discrimination": 0.3,
+        "difficulty": 880.03,
+        "casual hit": 2.69
+      }
+    },
+    "CH": {
+      "50": {
+        "discrimination": 1.34,
+        "difficulty": 475.33,
+        "casual hit": 20.17
+      },
+      "66": {
+        "discrimination": 1.28,
+        "difficulty": 496.17,
+        "casual hit": 18.72
+      },
+      "54": {
+        "discrimination": 3.86,
+        "difficulty": 508.93,
+        "casual hit": 13.13
+      },
+      "88": {
+        "discrimination": 1.03,
+        "difficulty": 510.88,
+        "casual hit": 19.58
+      },
+      "79": {
+        "discrimination": 1.68,
+        "difficulty": 513.43,
+        "casual hit": 17.62
+      },
+      "71": {
+        "discrimination": 1.72,
+        "difficulty": 522.54,
+        "casual hit": 22.1
+      },
+      "51": {
+        "discrimination": 1.05,
+        "difficulty": 555.13,
+        "casual hit": 21.95
+      },
+      "89": {
+        "discrimination": 2.78,
+        "difficulty": 555.81,
+        "casual hit": 19.81
+      },
+      "90": {
+        "discrimination": 1.03,
+        "difficulty": 571.58,
+        "casual hit": 17.36
+      },
+      "52": {
+        "discrimination": 2.11,
+        "difficulty": 573.91,
+        "casual hit": 14.78
+      },
+      "53": {
+        "discrimination": 1.94,
+        "difficulty": 576.77,
+        "casual hit": 16.89
+      },
+      "78": {
+        "discrimination": 3.98,
+        "difficulty": 578.92,
+        "casual hit": 19.0
+      },
+      "68": {
+        "discrimination": 2.05,
+        "difficulty": 595.99,
+        "casual hit": 14.34
+      },
+      "82": {
+        "discrimination": 2.74,
+        "difficulty": 599.39,
+        "casual hit": 26.43
+      },
+      "56": {
+        "discrimination": 1.73,
+        "difficulty": 600.15,
+        "casual hit": 27.0
+      },
+      "73": {
+        "discrimination": 5.87,
+        "difficulty": 602.88,
+        "casual hit": 11.53
+      },
+      "58": {
+        "discrimination": 1.34,
+        "difficulty": 603.57,
+        "casual hit": 19.68
+      },
+      "59": {
+        "discrimination": 1.3,
+        "difficulty": 605.12,
+        "casual hit": 23.2
+      },
+      "60": {
+        "discrimination": 1.95,
+        "difficulty": 607.27,
+        "casual hit": 32.94
+      },
+      "75": {
+        "discrimination": 2.84,
+        "difficulty": 608.37,
+        "casual hit": 17.69
+      },
+      "65": {
+        "discrimination": 3.0,
+        "difficulty": 618.13,
+        "casual hit": 18.75
+      },
+      "74": {
+        "discrimination": 2.63,
+        "difficulty": 621.1,
+        "casual hit": 28.11
+      },
+      "85": {
+        "discrimination": 2.18,
+        "difficulty": 621.93,
+        "casual hit": 26.5
+      },
+      "86": {
+        "discrimination": 3.55,
+        "difficulty": 623.41,
+        "casual hit": 18.4
+      },
+      "87": {
+        "discrimination": 3.72,
+        "difficulty": 625.88,
+        "casual hit": 16.92
+      },
+      "80": {
+        "discrimination": 1.64,
+        "difficulty": 631.75,
+        "casual hit": 18.86
+      },
+      "49": {
+        "discrimination": 3.11,
+        "difficulty": 633.81,
+        "casual hit": 15.77
+      },
+      "46": {
+        "discrimination": 3.53,
+        "difficulty": 634.09,
+        "casual hit": 13.68
+      },
+      "83": {
+        "discrimination": 2.31,
+        "difficulty": 649.24,
+        "casual hit": 22.04
+      },
+      "70": {
+        "discrimination": 1.92,
+        "difficulty": 650.18,
+        "casual hit": 12.07
+      },
+      "84": {
+        "discrimination": 2.2,
+        "difficulty": 656.36,
+        "casual hit": 14.0
+      },
+      "77": {
+        "discrimination": 2.11,
+        "difficulty": 658.2,
+        "casual hit": 23.07
+      },
+      "69": {
+        "discrimination": 2.32,
+        "difficulty": 658.95,
+        "casual hit": 11.89
+      },
+      "61": {
+        "discrimination": 1.41,
+        "difficulty": 660.78,
+        "casual hit": 21.12
+      },
+      "62": {
+        "discrimination": 2.2,
+        "difficulty": 667.41,
+        "casual hit": 24.12
+      },
+      "63": {
+        "discrimination": 4.44,
+        "difficulty": 668.0,
+        "casual hit": 27.05
+      },
+      "64": {
+        "discrimination": 3.04,
+        "difficulty": 673.77,
+        "casual hit": 29.72
+      },
+      "47": {
+        "discrimination": 2.48,
+        "difficulty": 682.86,
+        "casual hit": 30.93
+      },
+      "48": {
+        "discrimination": 2.16,
+        "difficulty": 683.01,
+        "casual hit": 13.41
+      },
+      "81": {
+        "discrimination": 2.11,
+        "difficulty": 684.34,
+        "casual hit": 12.87
+      },
+      "76": {
+        "discrimination": 1.66,
+        "difficulty": 687.44,
+        "casual hit": 19.62
+      },
+      "57": {
+        "discrimination": 2.05,
+        "difficulty": 707.96,
+        "casual hit": 11.92
+      },
+      "72": {
+        "discrimination": 2.15,
+        "difficulty": 728.55,
+        "casual hit": 17.14
+      },
+      "67": {
+        "discrimination": 1.64,
+        "difficulty": 822.87,
+        "casual hit": 14.22
+      },
+      "55": {
+        "discrimination": 1.63,
+        "difficulty": 851.78,
+        "casual hit": 12.28
+      }
+    }
+  },
+  "2021": {
+    "LC0": {
+      "11": {
+        "discrimination": 0.96,
+        "difficulty": 433.9,
+        "casual hit": 1.71
+      },
+      "39": {
+        "discrimination": 1.43,
+        "difficulty": 434.73,
+        "casual hit": 0.77
+      },
+      "12": {
+        "discrimination": 0.79,
+        "difficulty": 457.27,
+        "casual hit": 23.67
+      },
+      "10": {
+        "discrimination": 2.4,
+        "difficulty": 477.94,
+        "casual hit": 5.04
+      },
+      "31": {
+        "discrimination": 1.01,
+        "difficulty": 506.19,
+        "casual hit": 6.18
+      },
+      "37": {
+        "discrimination": 2.94,
+        "difficulty": 517.55,
+        "casual hit": 22.26
+      },
+      "22": {
+        "discrimination": 1.8,
+        "difficulty": 520.93,
+        "casual hit": 18.02
+      },
+      "6": {
+        "discrimination": 1.77,
+        "difficulty": 523.11,
+        "casual hit": 0.95
+      },
+      "9": {
+        "discrimination": 2.38,
+        "difficulty": 523.28,
+        "casual hit": 11.83
+      },
+      "29": {
+        "discrimination": 2.72,
+        "difficulty": 524.86,
+        "casual hit": 14.77
+      },
+      "2": {
+        "discrimination": 1.86,
+        "difficulty": 534.93,
+        "casual hit": 27.24
+      },
+      "34": {
+        "discrimination": 0.53,
+        "difficulty": 541.92,
+        "casual hit": 23.72
+      },
+      "23": {
+        "discrimination": 3.83,
+        "difficulty": 546.63,
+        "casual hit": 21.27
+      },
+      "7": {
+        "discrimination": 2.96,
+        "difficulty": 557.1,
+        "casual hit": 16.4
+      },
+      "3": {
+        "discrimination": 2.58,
+        "difficulty": 557.46,
+        "casual hit": 19.62
+      },
+      "21": {
+        "discrimination": 2.9,
+        "difficulty": 557.67,
+        "casual hit": 16.81
+      },
+      "18": {
+        "discrimination": 2.08,
+        "difficulty": 559.86,
+        "casual hit": 17.2
+      },
+      "19": {
+        "discrimination": 2.69,
+        "difficulty": 562.09,
+        "casual hit": 26.78
+      },
+      "1": {
+        "discrimination": 3.02,
+        "difficulty": 571.65,
+        "casual hit": 19.0
+      },
+      "35": {
+        "discrimination": 1.2,
+        "difficulty": 574.74,
+        "casual hit": 8.77
+      },
+      "44": {
+        "discrimination": 2.46,
+        "difficulty": 574.77,
+        "casual hit": 10.14
+      },
+      "8": {
+        "discrimination": 1.69,
+        "difficulty": 579.5,
+        "casual hit": 13.11
+      },
+      "40": {
+        "discrimination": 1.92,
+        "difficulty": 583.25,
+        "casual hit": 8.52
+      },
+      "4": {
+        "discrimination": 3.49,
+        "difficulty": 584.36,
+        "casual hit": 12.71
+      },
+      "16": {
+        "discrimination": 2.2,
+        "difficulty": 592.02,
+        "casual hit": 10.51
+      },
+      "15": {
+        "discrimination": 1.58,
+        "difficulty": 615.23,
+        "casual hit": 16.24
+      },
+      "28": {
+        "discrimination": 2.0,
+        "difficulty": 620.04,
+        "casual hit": 5.79
+      },
+      "20": {
+        "discrimination": 1.58,
+        "difficulty": 625.0,
+        "casual hit": 12.03
+      },
+      "30": {
+        "discrimination": 2.51,
+        "difficulty": 626.33,
+        "casual hit": 13.47
+      },
+      "14": {
+        "discrimination": 1.59,
+        "difficulty": 645.52,
+        "casual hit": 22.27
+      },
+      "5": {
+        "discrimination": 2.53,
+        "difficulty": 655.39,
+        "casual hit": 29.35
+      },
+      "41": {
+        "discrimination": 0.66,
+        "difficulty": 656.22,
+        "casual hit": 0.75
+      },
+      "45": {
+        "discrimination": 2.27,
+        "difficulty": 656.99,
+        "casual hit": 20.72
+      },
+      "33": {
+        "discrimination": 2.33,
+        "difficulty": 663.01,
+        "casual hit": 13.05
+      },
+      "32": {
+        "discrimination": 2.4,
+        "difficulty": 663.32,
+        "casual hit": 20.34
+      },
+      "17": {
+        "discrimination": 1.99,
+        "difficulty": 665.24,
+        "casual hit": 11.37
+      },
+      "27": {
+        "discrimination": 1.55,
+        "difficulty": 671.46,
+        "casual hit": 23.08
+      },
+      "38": {
+        "discrimination": 1.47,
+        "difficulty": 717.28,
+        "casual hit": 19.56
+      },
+      "36": {
+        "discrimination": 2.0,
+        "difficulty": 727.79,
+        "casual hit": 29.2
+      },
+      "26": {
+        "discrimination": 0.88,
+        "difficulty": 740.86,
+        "casual hit": 20.75
+      },
+      "42": {
+        "discrimination": 0.8,
+        "difficulty": 747.97,
+        "casual hit": 5.72
+      },
+      "25": {
+        "discrimination": 3.09,
+        "difficulty": 770.26,
+        "casual hit": 6.86
+      },
+      "13": {
+        "discrimination": 0.27,
+        "difficulty": 927.49,
+        "casual hit": 8.27
+      }
+    },
+    "LC1": {
+      "11": {
+        "discrimination": 0.96,
+        "difficulty": 433.9,
+        "casual hit": 1.71
+      },
+      "39": {
+        "discrimination": 1.43,
+        "difficulty": 434.73,
+        "casual hit": 0.77
+      },
+      "12": {
+        "discrimination": 0.79,
+        "difficulty": 457.27,
+        "casual hit": 23.67
+      },
+      "5": {
+        "discrimination": 2.82,
+        "difficulty": 462.29,
+        "casual hit": 19.55
+      },
+      "10": {
+        "discrimination": 2.4,
+        "difficulty": 477.94,
+        "casual hit": 5.04
+      },
+      "31": {
+        "discrimination": 1.01,
+        "difficulty": 506.19,
+        "casual hit": 6.18
+      },
+      "37": {
+        "discrimination": 2.94,
+        "difficulty": 517.55,
+        "casual hit": 22.26
+      },
+      "4": {
+        "discrimination": 3.01,
+        "difficulty": 518.65,
+        "casual hit": 26.63
+      },
+      "22": {
+        "discrimination": 1.8,
+        "difficulty": 520.93,
+        "casual hit": 18.02
+      },
+      "6": {
+        "discrimination": 1.77,
+        "difficulty": 523.11,
+        "casual hit": 0.95
+      },
+      "9": {
+        "discrimination": 2.38,
+        "difficulty": 523.28,
+        "casual hit": 11.83
+      },
+      "29": {
+        "discrimination": 2.72,
+        "difficulty": 524.86,
+        "casual hit": 14.77
+      },
+      "1": {
+        "discrimination": 2.0,
+        "difficulty": 526.86,
+        "casual hit": 7.89
+      },
+      "34": {
+        "discrimination": 0.53,
+        "difficulty": 541.92,
+        "casual hit": 23.72
+      },
+      "23": {
+        "discrimination": 3.83,
+        "difficulty": 546.63,
+        "casual hit": 21.27
+      },
+      "7": {
+        "discrimination": 2.96,
+        "difficulty": 557.1,
+        "casual hit": 16.4
+      },
+      "21": {
+        "discrimination": 2.9,
+        "difficulty": 557.67,
+        "casual hit": 16.81
+      },
+      "18": {
+        "discrimination": 2.08,
+        "difficulty": 559.86,
+        "casual hit": 17.2
+      },
+      "19": {
+        "discrimination": 2.69,
+        "difficulty": 562.09,
+        "casual hit": 26.78
+      },
+      "35": {
+        "discrimination": 1.2,
+        "difficulty": 574.74,
+        "casual hit": 8.77
+      },
+      "44": {
+        "discrimination": 2.46,
+        "difficulty": 574.77,
+        "casual hit": 10.14
+      },
+      "8": {
+        "discrimination": 1.69,
+        "difficulty": 579.5,
+        "casual hit": 13.11
+      },
+      "40": {
+        "discrimination": 1.92,
+        "difficulty": 583.25,
+        "casual hit": 8.52
+      },
+      "16": {
+        "discrimination": 2.2,
+        "difficulty": 592.02,
+        "casual hit": 10.51
+      },
+      "3": {
+        "discrimination": 2.03,
+        "difficulty": 605.53,
+        "casual hit": 5.39
+      },
+      "2": {
+        "discrimination": 1.49,
+        "difficulty": 612.76,
+        "casual hit": 17.63
+      },
+      "15": {
+        "discrimination": 1.58,
+        "difficulty": 615.23,
+        "casual hit": 16.24
+      },
+      "28": {
+        "discrimination": 2.0,
+        "difficulty": 620.04,
+        "casual hit": 5.79
+      },
+      "20": {
+        "discrimination": 1.58,
+        "difficulty": 625.0,
+        "casual hit": 12.03
+      },
+      "30": {
+        "discrimination": 2.51,
+        "difficulty": 626.33,
+        "casual hit": 13.47
+      },
+      "14": {
+        "discrimination": 1.59,
+        "difficulty": 645.52,
+        "casual hit": 22.27
+      },
+      "41": {
+        "discrimination": 0.66,
+        "difficulty": 656.22,
+        "casual hit": 0.75
+      },
+      "45": {
+        "discrimination": 2.27,
+        "difficulty": 656.99,
+        "casual hit": 20.72
+      },
+      "33": {
+        "discrimination": 2.33,
+        "difficulty": 663.01,
+        "casual hit": 13.05
+      },
+      "32": {
+        "discrimination": 2.4,
+        "difficulty": 663.32,
+        "casual hit": 20.34
+      },
+      "17": {
+        "discrimination": 1.99,
+        "difficulty": 665.24,
+        "casual hit": 11.37
+      },
+      "27": {
+        "discrimination": 1.55,
+        "difficulty": 671.46,
+        "casual hit": 23.08
+      },
+      "38": {
+        "discrimination": 1.47,
+        "difficulty": 717.28,
+        "casual hit": 19.56
+      },
+      "36": {
+        "discrimination": 2.0,
+        "difficulty": 727.79,
+        "casual hit": 29.2
+      },
+      "26": {
+        "discrimination": 0.88,
+        "difficulty": 740.86,
+        "casual hit": 20.75
+      },
+      "42": {
+        "discrimination": 0.8,
+        "difficulty": 747.97,
+        "casual hit": 5.72
+      },
+      "25": {
+        "discrimination": 3.09,
+        "difficulty": 770.26,
+        "casual hit": 6.86
+      },
+      "13": {
+        "discrimination": 0.27,
+        "difficulty": 927.49,
+        "casual hit": 8.27
+      }
+    },
+    "MT": {
+      "139": {
+        "discrimination": 1.5,
+        "difficulty": 556.97,
+        "casual hit": 19.56
+      },
+      "164": {
+        "discrimination": 1.02,
+        "difficulty": 577.6,
+        "casual hit": 14.73
+      },
+      "143": {
+        "discrimination": 1.68,
+        "difficulty": 594.54,
+        "casual hit": 7.5
+      },
+      "160": {
+        "discrimination": 2.83,
+        "difficulty": 604.22,
+        "casual hit": 22.91
+      },
+      "147": {
+        "discrimination": 1.86,
+        "difficulty": 606.45,
+        "casual hit": 10.04
+      },
+      "149": {
+        "discrimination": 1.91,
+        "difficulty": 609.12,
+        "casual hit": 14.15
+      },
+      "176": {
+        "discrimination": 1.68,
+        "difficulty": 621.25,
+        "casual hit": 14.57
+      },
+      "178": {
+        "discrimination": 3.3,
+        "difficulty": 621.45,
+        "casual hit": 20.48
+      },
+      "162": {
+        "discrimination": 2.26,
+        "difficulty": 627.9,
+        "casual hit": 13.43
+      },
+      "174": {
+        "discrimination": 1.35,
+        "difficulty": 630.33,
+        "casual hit": 25.76
+      },
+      "173": {
+        "discrimination": 1.44,
+        "difficulty": 637.87,
+        "casual hit": 14.88
+      },
+      "177": {
+        "discrimination": 2.48,
+        "difficulty": 640.25,
+        "casual hit": 20.24
+      },
+      "148": {
+        "discrimination": 1.62,
+        "difficulty": 646.8,
+        "casual hit": 17.13
+      },
+      "144": {
+        "discrimination": 3.33,
+        "difficulty": 647.45,
+        "casual hit": 6.76
+      },
+      "172": {
+        "discrimination": 1.72,
+        "difficulty": 649.88,
+        "casual hit": 15.9
+      },
+      "153": {
+        "discrimination": 2.14,
+        "difficulty": 653.24,
+        "casual hit": 18.15
+      },
+      "140": {
+        "discrimination": 2.43,
+        "difficulty": 657.2,
+        "casual hit": 13.35
+      },
+      "141": {
+        "discrimination": 2.1,
+        "difficulty": 659.28,
+        "casual hit": 9.67
+      },
+      "175": {
+        "discrimination": 1.48,
+        "difficulty": 659.92,
+        "casual hit": 16.15
+      },
+      "150": {
+        "discrimination": 2.32,
+        "difficulty": 668.96,
+        "casual hit": 10.65
+      },
+      "180": {
+        "discrimination": 1.78,
+        "difficulty": 671.64,
+        "casual hit": 13.02
+      },
+      "136": {
+        "discrimination": 1.38,
+        "difficulty": 673.94,
+        "casual hit": 14.08
+      },
+      "166": {
+        "discrimination": 2.38,
+        "difficulty": 682.23,
+        "casual hit": 17.49
+      },
+      "179": {
+        "discrimination": 2.75,
+        "difficulty": 687.46,
+        "casual hit": 13.84
+      },
+      "171": {
+        "discrimination": 2.26,
+        "difficulty": 688.58,
+        "casual hit": 8.17
+      },
+      "155": {
+        "discrimination": 2.24,
+        "difficulty": 691.31,
+        "casual hit": 17.07
+      },
+      "146": {
+        "discrimination": 3.24,
+        "difficulty": 693.24,
+        "casual hit": 16.88
+      },
+      "167": {
+        "discrimination": 2.16,
+        "difficulty": 694.02,
+        "casual hit": 20.44
+      },
+      "151": {
+        "discrimination": 1.54,
+        "difficulty": 695.84,
+        "casual hit": 19.27
+      },
+      "165": {
+        "discrimination": 2.72,
+        "difficulty": 709.99,
+        "casual hit": 8.09
+      },
+      "161": {
+        "discrimination": 2.68,
+        "difficulty": 710.5,
+        "casual hit": 14.92
+      },
+      "168": {
+        "discrimination": 1.5,
+        "difficulty": 716.19,
+        "casual hit": 8.89
+      },
+      "163": {
+        "discrimination": 2.46,
+        "difficulty": 721.31,
+        "casual hit": 18.78
+      },
+      "169": {
+        "discrimination": 1.51,
+        "difficulty": 723.06,
+        "casual hit": 13.96
+      },
+      "156": {
+        "discrimination": 1.72,
+        "difficulty": 733.15,
+        "casual hit": 16.04
+      },
+      "159": {
+        "discrimination": 2.34,
+        "difficulty": 734.89,
+        "casual hit": 13.17
+      },
+      "157": {
+        "discrimination": 2.06,
+        "difficulty": 738.32,
+        "casual hit": 14.79
+      },
+      "158": {
+        "discrimination": 2.17,
+        "difficulty": 738.52,
+        "casual hit": 14.31
+      },
+      "170": {
+        "discrimination": 1.46,
+        "difficulty": 740.85,
+        "casual hit": 19.55
+      },
+      "154": {
+        "discrimination": 1.93,
+        "difficulty": 743.34,
+        "casual hit": 24.02
+      },
+      "145": {
+        "discrimination": 1.41,
+        "difficulty": 747.48,
+        "casual hit": 26.94
+      },
+      "142": {
+        "discrimination": 3.77,
+        "difficulty": 788.47,
+        "casual hit": 17.34
+      },
+      "137": {
+        "discrimination": 0.38,
+        "difficulty": 978.32,
+        "casual hit": 3.71
+      },
+      "152": {
+        "discrimination": 0.38,
+        "difficulty": 996.79,
+        "casual hit": 8.06
+      }
+    },
+    "CN": {
+      "112": {
+        "discrimination": 0.93,
+        "difficulty": 427.29,
+        "casual hit": 2.1
+      },
+      "127": {
+        "discrimination": 1.74,
+        "difficulty": 476.63,
+        "casual hit": 13.31
+      },
+      "111": {
+        "discrimination": 1.42,
+        "difficulty": 530.94,
+        "casual hit": 7.88
+      },
+      "132": {
+        "discrimination": 2.46,
+        "difficulty": 544.93,
+        "casual hit": 19.74
+      },
+      "99": {
+        "discrimination": 2.77,
+        "difficulty": 551.39,
+        "casual hit": 30.71
+      },
+      "124": {
+        "discrimination": 2.28,
+        "difficulty": 559.1,
+        "casual hit": 22.22
+      },
+      "93": {
+        "discrimination": 1.89,
+        "difficulty": 564.63,
+        "casual hit": 16.33
+      },
+      "100": {
+        "discrimination": 2.69,
+        "difficulty": 565.14,
+        "casual hit": 15.91
+      },
+      "122": {
+        "discrimination": 2.63,
+        "difficulty": 567.27,
+        "casual hit": 32.91
+      },
+      "108": {
+        "discrimination": 2.77,
+        "difficulty": 571.69,
+        "casual hit": 24.27
+      },
+      "95": {
+        "discrimination": 4.14,
+        "difficulty": 576.31,
+        "casual hit": 13.49
+      },
+      "97": {
+        "discrimination": 1.83,
+        "difficulty": 597.62,
+        "casual hit": 19.55
+      },
+      "96": {
+        "discrimination": 2.79,
+        "difficulty": 612.83,
+        "casual hit": 24.61
+      },
+      "102": {
+        "discrimination": 3.0,
+        "difficulty": 617.43,
+        "casual hit": 16.92
+      },
+      "104": {
+        "discrimination": 3.25,
+        "difficulty": 621.84,
+        "casual hit": 9.43
+      },
+      "131": {
+        "discrimination": 2.16,
+        "difficulty": 623.17,
+        "casual hit": 29.57
+      },
+      "91": {
+        "discrimination": 2.58,
+        "difficulty": 634.84,
+        "casual hit": 19.92
+      },
+      "113": {
+        "discrimination": 3.25,
+        "difficulty": 638.46,
+        "casual hit": 17.11
+      },
+      "120": {
+        "discrimination": 2.36,
+        "difficulty": 639.0,
+        "casual hit": 14.9
+      },
+      "110": {
+        "discrimination": 2.59,
+        "difficulty": 640.59,
+        "casual hit": 14.0
+      },
+      "134": {
+        "discrimination": 1.74,
+        "difficulty": 640.7,
+        "casual hit": 13.67
+      },
+      "135": {
+        "discrimination": 2.77,
+        "difficulty": 653.28,
+        "casual hit": 11.28
+      },
+      "101": {
+        "discrimination": 1.99,
+        "difficulty": 661.39,
+        "casual hit": 29.1
+      },
+      "128": {
+        "discrimination": 3.28,
+        "difficulty": 665.57,
+        "casual hit": 21.07
+      },
+      "92": {
+        "discrimination": 3.02,
+        "difficulty": 665.69,
+        "casual hit": 15.29
+      },
+      "114": {
+        "discrimination": 2.4,
+        "difficulty": 665.73,
+        "casual hit": 14.97
+      },
+      "103": {
+        "discrimination": 2.12,
+        "difficulty": 666.35,
+        "casual hit": 22.98
+      },
+      "109": {
+        "discrimination": 2.59,
+        "difficulty": 666.72,
+        "casual hit": 26.73
+      },
+      "123": {
+        "discrimination": 0.49,
+        "difficulty": 672.45,
+        "casual hit": 2.27
+      },
+      "121": {
+        "discrimination": 1.27,
+        "difficulty": 676.47,
+        "casual hit": 13.41
+      },
+      "107": {
+        "discrimination": 1.9,
+        "difficulty": 677.37,
+        "casual hit": 22.71
+      },
+      "117": {
+        "discrimination": 1.36,
+        "difficulty": 679.78,
+        "casual hit": 14.0
+      },
+      "130": {
+        "discrimination": 3.88,
+        "difficulty": 686.92,
+        "casual hit": 19.87
+      },
+      "129": {
+        "discrimination": 3.29,
+        "difficulty": 687.86,
+        "casual hit": 17.78
+      },
+      "125": {
+        "discrimination": 1.7,
+        "difficulty": 693.67,
+        "casual hit": 18.18
+      },
+      "133": {
+        "discrimination": 2.97,
+        "difficulty": 696.75,
+        "casual hit": 12.08
+      },
+      "115": {
+        "discrimination": 2.73,
+        "difficulty": 699.11,
+        "casual hit": 20.28
+      },
+      "105": {
+        "discrimination": 2.37,
+        "difficulty": 702.54,
+        "casual hit": 14.13
+      },
+      "126": {
+        "discrimination": 1.2,
+        "difficulty": 712.16,
+        "casual hit": 23.45
+      },
+      "106": {
+        "discrimination": 0.82,
+        "difficulty": 729.11,
+        "casual hit": 15.39
+      },
+      "119": {
+        "discrimination": 2.53,
+        "difficulty": 740.95,
+        "casual hit": 9.54
+      },
+      "116": {
+        "discrimination": 2.16,
+        "difficulty": 743.32,
+        "casual hit": 33.88
+      },
+      "94": {
+        "discrimination": 0.77,
+        "difficulty": 824.39,
+        "casual hit": 19.07
+      },
+      "98": {
+        "discrimination": 0.73,
+        "difficulty": 881.49,
+        "casual hit": 10.88
+      }
+    },
+    "CH": {
+      "65": {
+        "discrimination": 1.61,
+        "difficulty": 467.7,
+        "casual hit": 9.05
+      },
+      "86": {
+        "discrimination": 1.22,
+        "difficulty": 504.23,
+        "casual hit": 19.34
+      },
+      "61": {
+        "discrimination": 1.94,
+        "difficulty": 523.71,
+        "casual hit": 14.76
+      },
+      "70": {
+        "discrimination": 3.35,
+        "difficulty": 529.98,
+        "casual hit": 23.03
+      },
+      "59": {
+        "discrimination": 3.46,
+        "difficulty": 536.93,
+        "casual hit": 17.75
+      },
+      "49": {
+        "discrimination": 2.37,
+        "difficulty": 538.66,
+        "casual hit": 25.85
+      },
+      "66": {
+        "discrimination": 2.65,
+        "difficulty": 547.06,
+        "casual hit": 14.95
+      },
+      "68": {
+        "discrimination": 2.89,
+        "difficulty": 555.12,
+        "casual hit": 13.87
+      },
+      "81": {
+        "discrimination": 1.5,
+        "difficulty": 557.73,
+        "casual hit": 18.68
+      },
+      "46": {
+        "discrimination": 1.54,
+        "difficulty": 559.03,
+        "casual hit": 19.09
+      },
+      "58": {
+        "discrimination": 1.77,
+        "difficulty": 561.19,
+        "casual hit": 9.36
+      },
+      "53": {
+        "discrimination": 1.27,
+        "difficulty": 566.07,
+        "casual hit": 11.2
+      },
+      "90": {
+        "discrimination": 2.14,
+        "difficulty": 566.4,
+        "casual hit": 25.43
+      },
+      "72": {
+        "discrimination": 2.28,
+        "difficulty": 577.52,
+        "casual hit": 16.87
+      },
+      "51": {
+        "discrimination": 0.77,
+        "difficulty": 578.4,
+        "casual hit": 1.83
+      },
+      "83": {
+        "discrimination": 3.05,
+        "difficulty": 583.94,
+        "casual hit": 23.47
+      },
+      "82": {
+        "discrimination": 1.9,
+        "difficulty": 584.84,
+        "casual hit": 26.09
+      },
+      "71": {
+        "discrimination": 1.57,
+        "difficulty": 586.62,
+        "casual hit": 20.21
+      },
+      "60": {
+        "discrimination": 3.52,
+        "difficulty": 589.98,
+        "casual hit": 18.46
+      },
+      "77": {
+        "discrimination": 2.56,
+        "difficulty": 592.49,
+        "casual hit": 16.28
+      },
+      "69": {
+        "discrimination": 1.86,
+        "difficulty": 594.31,
+        "casual hit": 19.16
+      },
+      "78": {
+        "discrimination": 3.23,
+        "difficulty": 596.25,
+        "casual hit": 14.04
+      },
+      "54": {
+        "discrimination": 2.15,
+        "difficulty": 607.75,
+        "casual hit": 23.67
+      },
+      "75": {
+        "discrimination": 2.53,
+        "difficulty": 612.46,
+        "casual hit": 15.05
+      },
+      "55": {
+        "discrimination": 3.21,
+        "difficulty": 613.17,
+        "casual hit": 10.83
+      },
+      "84": {
+        "discrimination": 3.22,
+        "difficulty": 615.59,
+        "casual hit": 18.83
+      },
+      "67": {
+        "discrimination": 2.36,
+        "difficulty": 617.25,
+        "casual hit": 9.95
+      },
+      "74": {
+        "discrimination": 2.47,
+        "difficulty": 618.88,
+        "casual hit": 16.76
+      },
+      "88": {
+        "discrimination": 2.57,
+        "difficulty": 619.29,
+        "casual hit": 16.16
+      },
+      "63": {
+        "discrimination": 1.99,
+        "difficulty": 620.98,
+        "casual hit": 16.55
+      },
+      "73": {
+        "discrimination": 1.63,
+        "difficulty": 632.75,
+        "casual hit": 10.7
+      },
+      "47": {
+        "discrimination": 1.74,
+        "difficulty": 633.8,
+        "casual hit": 29.64
+      },
+      "52": {
+        "discrimination": 1.8,
+        "difficulty": 637.84,
+        "casual hit": 16.63
+      },
+      "57": {
+        "discrimination": 1.08,
+        "difficulty": 643.98,
+        "casual hit": 12.87
+      },
+      "56": {
+        "discrimination": 1.9,
+        "difficulty": 656.95,
+        "casual hit": 14.46
+      },
+      "87": {
+        "discrimination": 2.49,
+        "difficulty": 657.82,
+        "casual hit": 16.14
+      },
+      "48": {
+        "discrimination": 2.22,
+        "difficulty": 661.96,
+        "casual hit": 16.57
+      },
+      "50": {
+        "discrimination": 3.52,
+        "difficulty": 667.76,
+        "casual hit": 13.43
+      },
+      "62": {
+        "discrimination": 2.5,
+        "difficulty": 672.55,
+        "casual hit": 13.09
+      },
+      "85": {
+        "discrimination": 1.29,
+        "difficulty": 681.12,
+        "casual hit": 20.19
+      },
+      "64": {
+        "discrimination": 2.17,
+        "difficulty": 684.94,
+        "casual hit": 13.18
+      },
+      "79": {
+        "discrimination": 1.52,
+        "difficulty": 704.58,
+        "casual hit": 21.37
+      },
+      "80": {
+        "discrimination": 1.78,
+        "difficulty": 710.82,
+        "casual hit": 17.7
+      },
+      "89": {
+        "discrimination": 2.21,
+        "difficulty": 756.42,
+        "casual hit": 13.89
+      },
+      "76": {
+        "discrimination": 0.86,
+        "difficulty": 826.89,
+        "casual hit": 11.2
+      }
+    }
+  },
+  "2022": {
+    "LC0": {
+      "9": {
+        "discrimination": 2.66,
+        "difficulty": 425.69,
+        "casual hit": 13.3
+      },
+      "34": {
+        "discrimination": 2.11,
+        "difficulty": 444.13,
+        "casual hit": 18.57
+      },
+      "26": {
+        "discrimination": 1.15,
+        "difficulty": 448.4,
+        "casual hit": 0.91
+      },
+      "37": {
+        "discrimination": 1.55,
+        "difficulty": 469.52,
+        "casual hit": 0.84
+      },
+      "14": {
+        "discrimination": 1.31,
+        "difficulty": 470.12,
+        "casual hit": 0.8
+      },
+      "25": {
+        "discrimination": 1.71,
+        "difficulty": 484.86,
+        "casual hit": 18.76
+      },
+      "41": {
+        "discrimination": 1.36,
+        "difficulty": 489.51,
+        "casual hit": 0.7
+      },
+      "19": {
+        "discrimination": 2.93,
+        "difficulty": 503.34,
+        "casual hit": 17.64
+      },
+      "40": {
+        "discrimination": 0.57,
+        "difficulty": 509.79,
+        "casual hit": 1.56
+      },
+      "24": {
+        "discrimination": 2.72,
+        "difficulty": 513.27,
+        "casual hit": 20.08
+      },
+      "11": {
+        "discrimination": 0.93,
+        "difficulty": 515.1,
+        "casual hit": 1.17
+      },
+      "27": {
+        "discrimination": 2.62,
+        "difficulty": 520.07,
+        "casual hit": 10.69
+      },
+      "1": {
+        "discrimination": 3.71,
+        "difficulty": 534.92,
+        "casual hit": 20.29
+      },
+      "3": {
+        "discrimination": 4.34,
+        "difficulty": 536.87,
+        "casual hit": 44.87
+      },
+      "31": {
+        "discrimination": 1.06,
+        "difficulty": 545.77,
+        "casual hit": 3.35
+      },
+      "43": {
+        "discrimination": 0.76,
+        "difficulty": 546.07,
+        "casual hit": 0.86
+      },
+      "45": {
+        "discrimination": 2.31,
+        "difficulty": 548.33,
+        "casual hit": 18.14
+      },
+      "4": {
+        "discrimination": 2.88,
+        "difficulty": 549.59,
+        "casual hit": 18.22
+      },
+      "12": {
+        "discrimination": 2.27,
+        "difficulty": 551.89,
+        "casual hit": 23.37
+      },
+      "5": {
+        "discrimination": 2.56,
+        "difficulty": 557.35,
+        "casual hit": 15.42
+      },
+      "13": {
+        "discrimination": 2.56,
+        "difficulty": 565.1,
+        "casual hit": 12.18
+      },
+      "32": {
+        "discrimination": 1.05,
+        "difficulty": 565.81,
+        "casual hit": 23.79
+      },
+      "21": {
+        "discrimination": 2.05,
+        "difficulty": 567.99,
+        "casual hit": 17.38
+      },
+      "6": {
+        "discrimination": 1.77,
+        "difficulty": 568.05,
+        "casual hit": 8.7
+      },
+      "42": {
+        "discrimination": 1.32,
+        "difficulty": 569.55,
+        "casual hit": 7.83
+      },
+      "36": {
+        "discrimination": 1.68,
+        "difficulty": 570.64,
+        "casual hit": 29.62
+      },
+      "44": {
+        "discrimination": 0.91,
+        "difficulty": 576.59,
+        "casual hit": 1.17
+      },
+      "2": {
+        "discrimination": 2.65,
+        "difficulty": 579.05,
+        "casual hit": 18.96
+      },
+      "28": {
+        "discrimination": 0.82,
+        "difficulty": 589.71,
+        "casual hit": 3.56
+      },
+      "15": {
+        "discrimination": 2.48,
+        "difficulty": 589.72,
+        "casual hit": 27.11
+      },
+      "33": {
+        "discrimination": 2.09,
+        "difficulty": 596.39,
+        "casual hit": 23.74
+      },
+      "20": {
+        "discrimination": 2.64,
+        "difficulty": 604.53,
+        "casual hit": 13.27
+      },
+      "10": {
+        "discrimination": 2.44,
+        "difficulty": 615.87,
+        "casual hit": 12.51
+      },
+      "22": {
+        "discrimination": 2.07,
+        "difficulty": 619.1,
+        "casual hit": 13.57
+      },
+      "29": {
+        "discrimination": 0.79,
+        "difficulty": 619.88,
+        "casual hit": 6.46
+      },
+      "17": {
+        "discrimination": 0.95,
+        "difficulty": 625.17,
+        "casual hit": 21.41
+      },
+      "30": {
+        "discrimination": 4.15,
+        "difficulty": 634.8,
+        "casual hit": 9.28
+      },
+      "23": {
+        "discrimination": 0.9,
+        "difficulty": 648.14,
+        "casual hit": 5.68
+      },
+      "7": {
+        "discrimination": 2.15,
+        "difficulty": 651.64,
+        "casual hit": 20.05
+      },
+      "18": {
+        "discrimination": 2.64,
+        "difficulty": 676.93,
+        "casual hit": 18.79
+      },
+      "39": {
+        "discrimination": 2.91,
+        "difficulty": 705.31,
+        "casual hit": 10.36
+      },
+      "8": {
+        "discrimination": 1.53,
+        "difficulty": 716.7,
+        "casual hit": 23.71
+      },
+      "38": {
+        "discrimination": 3.46,
+        "difficulty": 720.56,
+        "casual hit": 6.75
+      },
+      "16": {
+        "discrimination": 2.41,
+        "difficulty": 728.14,
+        "casual hit": 11.37
+      },
+      "35": {
+        "discrimination": 1.69,
+        "difficulty": 732.56,
+        "casual hit": 16.36
+      }
+    },
+    "LC1": {
+      "9": {
+        "discrimination": 2.66,
+        "difficulty": 425.69,
+        "casual hit": 13.3
+      },
+      "34": {
+        "discrimination": 2.11,
+        "difficulty": 444.13,
+        "casual hit": 18.57
+      },
+      "26": {
+        "discrimination": 1.15,
+        "difficulty": 448.4,
+        "casual hit": 0.91
+      },
+      "1": {
+        "discrimination": 1.79,
+        "difficulty": 464.71,
+        "casual hit": 9.11
+      },
+      "37": {
+        "discrimination": 1.55,
+        "difficulty": 469.52,
+        "casual hit": 0.84
+      },
+      "14": {
+        "discrimination": 1.31,
+        "difficulty": 470.12,
+        "casual hit": 0.8
+      },
+      "25": {
+        "discrimination": 1.71,
+        "difficulty": 484.86,
+        "casual hit": 18.76
+      },
+      "5": {
+        "discrimination": 1.95,
+        "difficulty": 488.38,
+        "casual hit": 18.87
+      },
+      "4": {
+        "discrimination": 1.13,
+        "difficulty": 488.49,
+        "casual hit": 20.58
+      },
+      "41": {
+        "discrimination": 1.36,
+        "difficulty": 489.51,
+        "casual hit": 0.7
+      },
+      "19": {
+        "discrimination": 2.93,
+        "difficulty": 503.34,
+        "casual hit": 17.64
+      },
+      "40": {
+        "discrimination": 0.57,
+        "difficulty": 509.79,
+        "casual hit": 1.56
+      },
+      "24": {
+        "discrimination": 2.72,
+        "difficulty": 513.27,
+        "casual hit": 20.08
+      },
+      "11": {
+        "discrimination": 0.93,
+        "difficulty": 515.1,
+        "casual hit": 1.17
+      },
+      "27": {
+        "discrimination": 2.62,
+        "difficulty": 520.07,
+        "casual hit": 10.69
+      },
+      "31": {
+        "discrimination": 1.06,
+        "difficulty": 545.77,
+        "casual hit": 3.35
+      },
+      "43": {
+        "discrimination": 0.76,
+        "difficulty": 546.07,
+        "casual hit": 0.86
+      },
+      "45": {
+        "discrimination": 2.31,
+        "difficulty": 548.33,
+        "casual hit": 18.14
+      },
+      "12": {
+        "discrimination": 2.27,
+        "difficulty": 551.89,
+        "casual hit": 23.37
+      },
+      "13": {
+        "discrimination": 2.56,
+        "difficulty": 565.1,
+        "casual hit": 12.18
+      },
+      "32": {
+        "discrimination": 1.05,
+        "difficulty": 565.81,
+        "casual hit": 23.79
+      },
+      "21": {
+        "discrimination": 2.05,
+        "difficulty": 567.99,
+        "casual hit": 17.38
+      },
+      "6": {
+        "discrimination": 1.77,
+        "difficulty": 568.05,
+        "casual hit": 8.7
+      },
+      "42": {
+        "discrimination": 1.32,
+        "difficulty": 569.55,
+        "casual hit": 7.83
+      },
+      "36": {
+        "discrimination": 1.68,
+        "difficulty": 570.64,
+        "casual hit": 29.62
+      },
+      "44": {
+        "discrimination": 0.91,
+        "difficulty": 576.59,
+        "casual hit": 1.17
+      },
+      "28": {
+        "discrimination": 0.82,
+        "difficulty": 589.71,
+        "casual hit": 3.56
+      },
+      "15": {
+        "discrimination": 2.48,
+        "difficulty": 589.72,
+        "casual hit": 27.11
+      },
+      "2": {
+        "discrimination": 1.94,
+        "difficulty": 592.0,
+        "casual hit": 14.29
+      },
+      "33": {
+        "discrimination": 2.09,
+        "difficulty": 596.39,
+        "casual hit": 23.74
+      },
+      "20": {
+        "discrimination": 2.64,
+        "difficulty": 604.53,
+        "casual hit": 13.27
+      },
+      "10": {
+        "discrimination": 2.44,
+        "difficulty": 615.87,
+        "casual hit": 12.51
+      },
+      "22": {
+        "discrimination": 2.07,
+        "difficulty": 619.1,
+        "casual hit": 13.57
+      },
+      "29": {
+        "discrimination": 0.79,
+        "difficulty": 619.88,
+        "casual hit": 6.46
+      },
+      "17": {
+        "discrimination": 0.95,
+        "difficulty": 625.17,
+        "casual hit": 21.41
+      },
+      "30": {
+        "discrimination": 4.15,
+        "difficulty": 634.8,
+        "casual hit": 9.28
+      },
+      "23": {
+        "discrimination": 0.9,
+        "difficulty": 648.14,
+        "casual hit": 5.68
+      },
+      "7": {
+        "discrimination": 2.15,
+        "difficulty": 651.64,
+        "casual hit": 20.05
+      },
+      "18": {
+        "discrimination": 2.64,
+        "difficulty": 676.93,
+        "casual hit": 18.79
+      },
+      "3": {
+        "discrimination": 0.57,
+        "difficulty": 697.79,
+        "casual hit": 12.77
+      },
+      "39": {
+        "discrimination": 2.91,
+        "difficulty": 705.31,
+        "casual hit": 10.36
+      },
+      "8": {
+        "discrimination": 1.53,
+        "difficulty": 716.7,
+        "casual hit": 23.71
+      },
+      "38": {
+        "discrimination": 3.46,
+        "difficulty": 720.56,
+        "casual hit": 6.75
+      },
+      "16": {
+        "discrimination": 2.41,
+        "difficulty": 728.14,
+        "casual hit": 11.37
+      },
+      "35": {
+        "discrimination": 1.69,
+        "difficulty": 732.56,
+        "casual hit": 16.36
+      }
+    },
+    "MT": {
+      "175": {
+        "discrimination": 1.43,
+        "difficulty": 497.6,
+        "casual hit": 11.01
+      },
+      "179": {
+        "discrimination": 2.3,
+        "difficulty": 546.7,
+        "casual hit": 25.8
+      },
+      "173": {
+        "discrimination": 2.81,
+        "difficulty": 563.98,
+        "casual hit": 16.34
+      },
+      "177": {
+        "discrimination": 1.32,
+        "difficulty": 564.8,
+        "casual hit": 18.73
+      },
+      "171": {
+        "discrimination": 1.69,
+        "difficulty": 587.45,
+        "casual hit": 20.61
+      },
+      "168": {
+        "discrimination": 1.54,
+        "difficulty": 594.72,
+        "casual hit": 19.17
+      },
+      "170": {
+        "discrimination": 2.19,
+        "difficulty": 632.98,
+        "casual hit": 4.6
+      },
+      "162": {
+        "discrimination": 1.82,
+        "difficulty": 638.1,
+        "casual hit": 13.88
+      },
+      "154": {
+        "discrimination": 2.19,
+        "difficulty": 656.69,
+        "casual hit": 13.02
+      },
+      "167": {
+        "discrimination": 2.57,
+        "difficulty": 658.6,
+        "casual hit": 10.18
+      },
+      "164": {
+        "discrimination": 2.66,
+        "difficulty": 664.46,
+        "casual hit": 20.09
+      },
+      "166": {
+        "discrimination": 1.51,
+        "difficulty": 677.7,
+        "casual hit": 15.24
+      },
+      "169": {
+        "discrimination": 3.78,
+        "difficulty": 688.96,
+        "casual hit": 14.44
+      },
+      "144": {
+        "discrimination": 1.18,
+        "difficulty": 692.19,
+        "casual hit": 16.86
+      },
+      "151": {
+        "discrimination": 1.73,
+        "difficulty": 702.11,
+        "casual hit": 14.97
+      },
+      "180": {
+        "discrimination": 1.67,
+        "difficulty": 703.63,
+        "casual hit": 24.59
+      },
+      "155": {
+        "discrimination": 0.92,
+        "difficulty": 716.92,
+        "casual hit": 15.72
+      },
+      "149": {
+        "discrimination": 2.65,
+        "difficulty": 721.35,
+        "casual hit": 24.89
+      },
+      "148": {
+        "discrimination": 2.62,
+        "difficulty": 725.15,
+        "casual hit": 18.51
+      },
+      "138": {
+        "discrimination": 0.8,
+        "difficulty": 727.56,
+        "casual hit": 12.86
+      },
+      "165": {
+        "discrimination": 1.91,
+        "difficulty": 730.1,
+        "casual hit": 10.66
+      },
+      "161": {
+        "discrimination": 3.13,
+        "difficulty": 733.34,
+        "casual hit": 21.9
+      },
+      "158": {
+        "discrimination": 2.68,
+        "difficulty": 737.31,
+        "casual hit": 20.52
+      },
+      "163": {
+        "discrimination": 3.12,
+        "difficulty": 740.38,
+        "casual hit": 16.66
+      },
+      "156": {
+        "discrimination": 0.79,
+        "difficulty": 740.68,
+        "casual hit": 11.29
+      },
+      "136": {
+        "discrimination": 2.33,
+        "difficulty": 740.9,
+        "casual hit": 14.22
+      },
+      "146": {
+        "discrimination": 2.28,
+        "difficulty": 741.53,
+        "casual hit": 11.33
+      },
+      "160": {
+        "discrimination": 0.89,
+        "difficulty": 743.21,
+        "casual hit": 25.09
+      },
+      "153": {
+        "discrimination": 2.96,
+        "difficulty": 744.8,
+        "casual hit": 21.5
+      },
+      "143": {
+        "discrimination": 0.9,
+        "difficulty": 745.13,
+        "casual hit": 16.17
+      },
+      "159": {
+        "discrimination": 2.17,
+        "difficulty": 754.23,
+        "casual hit": 18.41
+      },
+      "178": {
+        "discrimination": 4.16,
+        "difficulty": 756.7,
+        "casual hit": 6.54
+      },
+      "174": {
+        "discrimination": 2.94,
+        "difficulty": 757.77,
+        "casual hit": 12.03
+      },
+      "145": {
+        "discrimination": 0.51,
+        "difficulty": 758.4,
+        "casual hit": 0.88
+      },
+      "172": {
+        "discrimination": 0.66,
+        "difficulty": 758.86,
+        "casual hit": 16.51
+      },
+      "139": {
+        "discrimination": 1.87,
+        "difficulty": 786.03,
+        "casual hit": 18.35
+      },
+      "150": {
+        "discrimination": 2.13,
+        "difficulty": 822.2,
+        "casual hit": 12.75
+      },
+      "140": {
+        "discrimination": 1.58,
+        "difficulty": 830.11,
+        "casual hit": 16.86
+      },
+      "142": {
+        "discrimination": 2.94,
+        "difficulty": 833.57,
+        "casual hit": 21.21
+      },
+      "152": {
+        "discrimination": 2.13,
+        "difficulty": 873.78,
+        "casual hit": 24.05
+      },
+      "147": {
+        "discrimination": 0.49,
+        "difficulty": 948.65,
+        "casual hit": 14.74
+      },
+      "137": {
+        "discrimination": 0.24,
+        "difficulty": 965.33,
+        "casual hit": 3.23
+      },
+      "176": {
+        "discrimination": 0.44,
+        "difficulty": 1127.51,
+        "casual hit": 12.51
+      }
+    },
+    "CN": {
+      "131": {
+        "discrimination": 2.86,
+        "difficulty": 549.48,
+        "casual hit": 16.06
+      },
+      "118": {
+        "discrimination": 2.03,
+        "difficulty": 556.74,
+        "casual hit": 24.52
+      },
+      "130": {
+        "discrimination": 2.42,
+        "difficulty": 578.82,
+        "casual hit": 19.32
+      },
+      "132": {
+        "discrimination": 3.83,
+        "difficulty": 585.52,
+        "casual hit": 11.51
+      },
+      "110": {
+        "discrimination": 1.88,
+        "difficulty": 591.05,
+        "casual hit": 15.11
+      },
+      "111": {
+        "discrimination": 1.49,
+        "difficulty": 596.74,
+        "casual hit": 24.21
+      },
+      "99": {
+        "discrimination": 1.2,
+        "difficulty": 597.6,
+        "casual hit": 22.54
+      },
+      "104": {
+        "discrimination": 2.35,
+        "difficulty": 600.99,
+        "casual hit": 30.64
+      },
+      "117": {
+        "discrimination": 0.89,
+        "difficulty": 601.7,
+        "casual hit": 29.79
+      },
+      "135": {
+        "discrimination": 0.98,
+        "difficulty": 603.39,
+        "casual hit": 0.43
+      },
+      "122": {
+        "discrimination": 1.69,
+        "difficulty": 610.71,
+        "casual hit": 12.01
+      },
+      "128": {
+        "discrimination": 3.25,
+        "difficulty": 620.51,
+        "casual hit": 8.4
+      },
+      "109": {
+        "discrimination": 2.54,
+        "difficulty": 620.77,
+        "casual hit": 21.01
+      },
+      "96": {
+        "discrimination": 2.01,
+        "difficulty": 635.45,
+        "casual hit": 16.88
+      },
+      "103": {
+        "discrimination": 4.45,
+        "difficulty": 640.48,
+        "casual hit": 15.59
+      },
+      "105": {
+        "discrimination": 1.51,
+        "difficulty": 641.87,
+        "casual hit": 14.91
+      },
+      "133": {
+        "discrimination": 1.71,
+        "difficulty": 642.36,
+        "casual hit": 16.15
+      },
+      "115": {
+        "discrimination": 2.33,
+        "difficulty": 644.8,
+        "casual hit": 20.93
+      },
+      "91": {
+        "discrimination": 0.7,
+        "difficulty": 645.36,
+        "casual hit": 3.44
+      },
+      "124": {
+        "discrimination": 1.91,
+        "difficulty": 646.44,
+        "casual hit": 34.04
+      },
+      "92": {
+        "discrimination": 1.95,
+        "difficulty": 646.5,
+        "casual hit": 11.25
+      },
+      "125": {
+        "discrimination": 2.47,
+        "difficulty": 646.75,
+        "casual hit": 6.51
+      },
+      "114": {
+        "discrimination": 3.55,
+        "difficulty": 649.4,
+        "casual hit": 20.26
+      },
+      "101": {
+        "discrimination": 1.75,
+        "difficulty": 652.51,
+        "casual hit": 16.16
+      },
+      "120": {
+        "discrimination": 5.67,
+        "difficulty": 652.79,
+        "casual hit": 14.27
+      },
+      "97": {
+        "discrimination": 2.14,
+        "difficulty": 660.96,
+        "casual hit": 14.87
+      },
+      "95": {
+        "discrimination": 3.29,
+        "difficulty": 665.71,
+        "casual hit": 14.01
+      },
+      "127": {
+        "discrimination": 3.48,
+        "difficulty": 670.43,
+        "casual hit": 15.45
+      },
+      "123": {
+        "discrimination": 2.14,
+        "difficulty": 677.91,
+        "casual hit": 8.87
+      },
+      "129": {
+        "discrimination": 1.99,
+        "difficulty": 678.68,
+        "casual hit": 12.76
+      },
+      "93": {
+        "discrimination": 1.99,
+        "difficulty": 687.76,
+        "casual hit": 19.41
+      },
+      "108": {
+        "discrimination": 3.07,
+        "difficulty": 689.13,
+        "casual hit": 25.27
+      },
+      "98": {
+        "discrimination": 1.82,
+        "difficulty": 693.17,
+        "casual hit": 6.67
+      },
+      "107": {
+        "discrimination": 5.32,
+        "difficulty": 704.29,
+        "casual hit": 17.09
+      },
+      "100": {
+        "discrimination": 1.73,
+        "difficulty": 708.84,
+        "casual hit": 27.62
+      },
+      "94": {
+        "discrimination": 2.08,
+        "difficulty": 723.41,
+        "casual hit": 17.19
+      },
+      "116": {
+        "discrimination": 0.6,
+        "difficulty": 740.14,
+        "casual hit": 12.02
+      },
+      "121": {
+        "discrimination": 1.78,
+        "difficulty": 750.06,
+        "casual hit": 27.07
+      },
+      "126": {
+        "discrimination": 0.41,
+        "difficulty": 751.68,
+        "casual hit": 0.92
+      },
+      "106": {
+        "discrimination": 2.4,
+        "difficulty": 776.59,
+        "casual hit": 18.97
+      },
+      "102": {
+        "discrimination": 1.53,
+        "difficulty": 819.2,
+        "casual hit": 11.28
+      }
+    },
+    "CH": {
+      "65": {
+        "discrimination": 1.64,
+        "difficulty": 427.36,
+        "casual hit": 0.91
+      },
+      "70": {
+        "discrimination": 1.46,
+        "difficulty": 455.99,
+        "casual hit": 20.48
+      },
+      "48": {
+        "discrimination": 2.9,
+        "difficulty": 457.59,
+        "casual hit": 19.36
+      },
+      "56": {
+        "discrimination": 1.83,
+        "difficulty": 482.46,
+        "casual hit": 4.29
+      },
+      "89": {
+        "discrimination": 1.94,
+        "difficulty": 527.39,
+        "casual hit": 14.79
+      },
+      "85": {
+        "discrimination": 1.69,
+        "difficulty": 529.13,
+        "casual hit": 11.66
+      },
+      "61": {
+        "discrimination": 3.16,
+        "difficulty": 530.78,
+        "casual hit": 14.2
+      },
+      "77": {
+        "discrimination": 3.53,
+        "difficulty": 541.13,
+        "casual hit": 19.02
+      },
+      "58": {
+        "discrimination": 1.5,
+        "difficulty": 547.56,
+        "casual hit": 1.59
+      },
+      "52": {
+        "discrimination": 3.62,
+        "difficulty": 551.64,
+        "casual hit": 27.5
+      },
+      "68": {
+        "discrimination": 2.81,
+        "difficulty": 554.45,
+        "casual hit": 20.52
+      },
+      "79": {
+        "discrimination": 2.16,
+        "difficulty": 557.48,
+        "casual hit": 15.92
+      },
+      "49": {
+        "discrimination": 2.71,
+        "difficulty": 559.05,
+        "casual hit": 19.78
+      },
+      "83": {
+        "discrimination": 2.78,
+        "difficulty": 564.42,
+        "casual hit": 18.56
+      },
+      "47": {
+        "discrimination": 1.98,
+        "difficulty": 565.73,
+        "casual hit": 8.7
+      },
+      "59": {
+        "discrimination": 1.93,
+        "difficulty": 569.05,
+        "casual hit": 17.2
+      },
+      "87": {
+        "discrimination": 2.47,
+        "difficulty": 573.77,
+        "casual hit": 17.05
+      },
+      "60": {
+        "discrimination": 2.17,
+        "difficulty": 575.17,
+        "casual hit": 18.09
+      },
+      "67": {
+        "discrimination": 3.49,
+        "difficulty": 579.82,
+        "casual hit": 18.64
+      },
+      "80": {
+        "discrimination": 1.3,
+        "difficulty": 582.45,
+        "casual hit": 9.37
+      },
+      "71": {
+        "discrimination": 2.74,
+        "difficulty": 586.16,
+        "casual hit": 21.62
+      },
+      "53": {
+        "discrimination": 1.49,
+        "difficulty": 587.45,
+        "casual hit": 17.25
+      },
+      "75": {
+        "discrimination": 0.82,
+        "difficulty": 592.56,
+        "casual hit": 2.54
+      },
+      "81": {
+        "discrimination": 4.25,
+        "difficulty": 596.27,
+        "casual hit": 16.05
+      },
+      "73": {
+        "discrimination": 2.34,
+        "difficulty": 597.02,
+        "casual hit": 12.42
+      },
+      "72": {
+        "discrimination": 3.39,
+        "difficulty": 605.61,
+        "casual hit": 15.96
+      },
+      "51": {
+        "discrimination": 4.79,
+        "difficulty": 619.62,
+        "casual hit": 13.0
+      },
+      "76": {
+        "discrimination": 1.76,
+        "difficulty": 631.97,
+        "casual hit": 21.91
+      },
+      "78": {
+        "discrimination": 4.04,
+        "difficulty": 633.06,
+        "casual hit": 5.94
+      },
+      "69": {
+        "discrimination": 1.73,
+        "difficulty": 634.24,
+        "casual hit": 16.87
+      },
+      "46": {
+        "discrimination": 0.98,
+        "difficulty": 634.9,
+        "casual hit": 6.22
+      },
+      "90": {
+        "discrimination": 1.91,
+        "difficulty": 636.09,
+        "casual hit": 22.52
+      },
+      "82": {
+        "discrimination": 2.21,
+        "difficulty": 642.36,
+        "casual hit": 21.78
+      },
+      "84": {
+        "discrimination": 0.57,
+        "difficulty": 658.01,
+        "casual hit": 3.47
+      },
+      "50": {
+        "discrimination": 1.89,
+        "difficulty": 659.33,
+        "casual hit": 13.2
+      },
+      "62": {
+        "discrimination": 2.18,
+        "difficulty": 660.48,
+        "casual hit": 16.09
+      },
+      "86": {
+        "discrimination": 2.9,
+        "difficulty": 666.08,
+        "casual hit": 10.31
+      },
+      "74": {
+        "discrimination": 2.22,
+        "difficulty": 679.85,
+        "casual hit": 25.24
+      },
+      "57": {
+        "discrimination": 2.81,
+        "difficulty": 685.76,
+        "casual hit": 17.6
+      },
+      "54": {
+        "discrimination": 0.56,
+        "difficulty": 708.51,
+        "casual hit": 0.96
+      },
+      "66": {
+        "discrimination": 0.85,
+        "difficulty": 713.24,
+        "casual hit": 12.37
+      },
+      "88": {
+        "discrimination": 1.97,
+        "difficulty": 720.59,
+        "casual hit": 8.86
+      },
+      "63": {
+        "discrimination": 0.47,
+        "difficulty": 725.06,
+        "casual hit": 0.9
+      },
+      "55": {
+        "discrimination": 1.58,
+        "difficulty": 733.97,
+        "casual hit": 25.07
+      }
+    }
+  },
+  "2023": {
+    "LC0": {
+      "44": {
+        "discrimination": 2.72,
+        "difficulty": 396.7,
+        "casual hit": 1.56
+      },
+      "24": {
+        "discrimination": 1.26,
+        "difficulty": 440.79,
+        "casual hit": 1.14
+      },
+      "11": {
+        "discrimination": 0.95,
+        "difficulty": 452.24,
+        "casual hit": 0.56
+      },
+      "35": {
+        "discrimination": 2.01,
+        "difficulty": 472.35,
+        "casual hit": 9.75
+      },
+      "28": {
+        "discrimination": 0.99,
+        "difficulty": 486.78,
+        "casual hit": 2.23
+      },
+      "41": {
+        "discrimination": 1.81,
+        "difficulty": 491.07,
+        "casual hit": 19.9
+      },
+      "15": {
+        "discrimination": 1.67,
+        "difficulty": 493.99,
+        "casual hit": 8.73
+      },
+      "42": {
+        "discrimination": 2.6,
+        "difficulty": 496.91,
+        "casual hit": 21.02
+      },
+      "19": {
+        "discrimination": 1.64,
+        "difficulty": 500.89,
+        "casual hit": 20.48
+      },
+      "38": {
+        "discrimination": 2.36,
+        "difficulty": 500.91,
+        "casual hit": 19.66
+      },
+      "5": {
+        "discrimination": 2.92,
+        "difficulty": 512.36,
+        "casual hit": 19.99
+      },
+      "27": {
+        "discrimination": 1.22,
+        "difficulty": 519.62,
+        "casual hit": 20.61
+      },
+      "1": {
+        "discrimination": 2.79,
+        "difficulty": 521.67,
+        "casual hit": 49.99
+      },
+      "22": {
+        "discrimination": 3.15,
+        "difficulty": 525.14,
+        "casual hit": 17.38
+      },
+      "21": {
+        "discrimination": 2.54,
+        "difficulty": 528.06,
+        "casual hit": 18.43
+      },
+      "10": {
+        "discrimination": 3.04,
+        "difficulty": 533.95,
+        "casual hit": 18.33
+      },
+      "4": {
+        "discrimination": 2.48,
+        "difficulty": 539.22,
+        "casual hit": 33.72
+      },
+      "30": {
+        "discrimination": 3.32,
+        "difficulty": 541.63,
+        "casual hit": 18.78
+      },
+      "6": {
+        "discrimination": 1.74,
+        "difficulty": 550.45,
+        "casual hit": 15.42
+      },
+      "8": {
+        "discrimination": 2.2,
+        "difficulty": 552.12,
+        "casual hit": 13.93
+      },
+      "40": {
+        "discrimination": 1.89,
+        "difficulty": 553.68,
+        "casual hit": 20.42
+      },
+      "16": {
+        "discrimination": 2.97,
+        "difficulty": 557.51,
+        "casual hit": 16.64
+      },
+      "17": {
+        "discrimination": 3.24,
+        "difficulty": 559.68,
+        "casual hit": 20.04
+      },
+      "45": {
+        "discrimination": 1.42,
+        "difficulty": 567.93,
+        "casual hit": 21.27
+      },
+      "36": {
+        "discrimination": 1.75,
+        "difficulty": 577.04,
+        "casual hit": 16.21
+      },
+      "13": {
+        "discrimination": 1.43,
+        "difficulty": 580.54,
+        "casual hit": 12.27
+      },
+      "12": {
+        "discrimination": 1.22,
+        "difficulty": 582.18,
+        "casual hit": 6.9
+      },
+      "25": {
+        "discrimination": 2.11,
+        "difficulty": 583.41,
+        "casual hit": 21.82
+      },
+      "43": {
+        "discrimination": 1.36,
+        "difficulty": 590.65,
+        "casual hit": 15.98
+      },
+      "39": {
+        "discrimination": 1.96,
+        "difficulty": 591.29,
+        "casual hit": 16.23
+      },
+      "3": {
+        "discrimination": 2.41,
+        "difficulty": 591.47,
+        "casual hit": 10.16
+      },
+      "32": {
+        "discrimination": 2.69,
+        "difficulty": 608.3,
+        "casual hit": 17.39
+      },
+      "7": {
+        "discrimination": 1.36,
+        "difficulty": 614.95,
+        "casual hit": 23.38
+      },
+      "31": {
+        "discrimination": 2.59,
+        "difficulty": 619.8,
+        "casual hit": 23.01
+      },
+      "14": {
+        "discrimination": 1.22,
+        "difficulty": 621.43,
+        "casual hit": 22.04
+      },
+      "37": {
+        "discrimination": 1.33,
+        "difficulty": 623.17,
+        "casual hit": 22.15
+      },
+      "2": {
+        "discrimination": 2.12,
+        "difficulty": 627.88,
+        "casual hit": 12.47
+      },
+      "34": {
+        "discrimination": 1.83,
+        "difficulty": 645.07,
+        "casual hit": 12.25
+      },
+      "9": {
+        "discrimination": 1.73,
+        "difficulty": 660.1,
+        "casual hit": 19.2
+      },
+      "23": {
+        "discrimination": 1.84,
+        "difficulty": 665.13,
+        "casual hit": 12.3
+      },
+      "33": {
+        "discrimination": 1.73,
+        "difficulty": 666.93,
+        "casual hit": 27.06
+      },
+      "20": {
+        "discrimination": 1.15,
+        "difficulty": 688.93,
+        "casual hit": 22.05
+      },
+      "29": {
+        "discrimination": 1.75,
+        "difficulty": 691.98,
+        "casual hit": 19.93
+      },
+      "18": {
+        "discrimination": 2.29,
+        "difficulty": 741.31,
+        "casual hit": 22.1
+      },
+      "26": {
+        "discrimination": 3.54,
+        "difficulty": 745.24,
+        "casual hit": 11.6
+      }
+    },
+    "LC1": {
+      "44": {
+        "discrimination": 2.72,
+        "difficulty": 396.7,
+        "casual hit": 1.56
+      },
+      "24": {
+        "discrimination": 1.26,
+        "difficulty": 440.79,
+        "casual hit": 1.14
+      },
+      "11": {
+        "discrimination": 0.95,
+        "difficulty": 452.24,
+        "casual hit": 0.56
+      },
+      "35": {
+        "discrimination": 2.01,
+        "difficulty": 472.35,
+        "casual hit": 9.75
+      },
+      "28": {
+        "discrimination": 0.99,
+        "difficulty": 486.78,
+        "casual hit": 2.23
+      },
+      "41": {
+        "discrimination": 1.81,
+        "difficulty": 491.07,
+        "casual hit": 19.9
+      },
+      "15": {
+        "discrimination": 1.67,
+        "difficulty": 493.99,
+        "casual hit": 8.73
+      },
+      "42": {
+        "discrimination": 2.6,
+        "difficulty": 496.91,
+        "casual hit": 21.02
+      },
+      "5": {
+        "discrimination": 1.78,
+        "difficulty": 498.54,
+        "casual hit": 17.76
+      },
+      "19": {
+        "discrimination": 1.64,
+        "difficulty": 500.89,
+        "casual hit": 20.48
+      },
+      "38": {
+        "discrimination": 2.36,
+        "difficulty": 500.91,
+        "casual hit": 19.66
+      },
+      "27": {
+        "discrimination": 1.22,
+        "difficulty": 519.62,
+        "casual hit": 20.61
+      },
+      "22": {
+        "discrimination": 3.15,
+        "difficulty": 525.14,
+        "casual hit": 17.38
+      },
+      "21": {
+        "discrimination": 2.54,
+        "difficulty": 528.06,
+        "casual hit": 18.43
+      },
+      "10": {
+        "discrimination": 3.04,
+        "difficulty": 533.95,
+        "casual hit": 18.33
+      },
+      "30": {
+        "discrimination": 3.32,
+        "difficulty": 541.63,
+        "casual hit": 18.78
+      },
+      "1": {
+        "discrimination": 3.18,
+        "difficulty": 544.86,
+        "casual hit": 18.73
+      },
+      "6": {
+        "discrimination": 1.74,
+        "difficulty": 550.45,
+        "casual hit": 15.42
+      },
+      "3": {
+        "discrimination": 2.66,
+        "difficulty": 551.61,
+        "casual hit": 18.62
+      },
+      "8": {
+        "discrimination": 2.2,
+        "difficulty": 552.12,
+        "casual hit": 13.93
+      },
+      "40": {
+        "discrimination": 1.89,
+        "difficulty": 553.68,
+        "casual hit": 20.42
+      },
+      "16": {
+        "discrimination": 2.97,
+        "difficulty": 557.51,
+        "casual hit": 16.64
+      },
+      "17": {
+        "discrimination": 3.24,
+        "difficulty": 559.68,
+        "casual hit": 20.04
+      },
+      "45": {
+        "discrimination": 1.42,
+        "difficulty": 567.93,
+        "casual hit": 21.27
+      },
+      "36": {
+        "discrimination": 1.75,
+        "difficulty": 577.04,
+        "casual hit": 16.21
+      },
+      "13": {
+        "discrimination": 1.43,
+        "difficulty": 580.54,
+        "casual hit": 12.27
+      },
+      "12": {
+        "discrimination": 1.22,
+        "difficulty": 582.18,
+        "casual hit": 6.9
+      },
+      "25": {
+        "discrimination": 2.11,
+        "difficulty": 583.41,
+        "casual hit": 21.82
+      },
+      "4": {
+        "discrimination": 2.24,
+        "difficulty": 586.09,
+        "casual hit": 18.55
+      },
+      "43": {
+        "discrimination": 1.36,
+        "difficulty": 590.65,
+        "casual hit": 15.98
+      },
+      "39": {
+        "discrimination": 1.96,
+        "difficulty": 591.29,
+        "casual hit": 16.23
+      },
+      "32": {
+        "discrimination": 2.69,
+        "difficulty": 608.3,
+        "casual hit": 17.39
+      },
+      "7": {
+        "discrimination": 1.36,
+        "difficulty": 614.95,
+        "casual hit": 23.38
+      },
+      "31": {
+        "discrimination": 2.59,
+        "difficulty": 619.8,
+        "casual hit": 23.01
+      },
+      "14": {
+        "discrimination": 1.22,
+        "difficulty": 621.43,
+        "casual hit": 22.04
+      },
+      "37": {
+        "discrimination": 1.33,
+        "difficulty": 623.17,
+        "casual hit": 22.15
+      },
+      "34": {
+        "discrimination": 1.83,
+        "difficulty": 645.07,
+        "casual hit": 12.25
+      },
+      "9": {
+        "discrimination": 1.73,
+        "difficulty": 660.1,
+        "casual hit": 19.2
+      },
+      "23": {
+        "discrimination": 1.84,
+        "difficulty": 665.13,
+        "casual hit": 12.3
+      },
+      "33": {
+        "discrimination": 1.73,
+        "difficulty": 666.93,
+        "casual hit": 27.06
+      },
+      "20": {
+        "discrimination": 1.15,
+        "difficulty": 688.93,
+        "casual hit": 22.05
+      },
+      "29": {
+        "discrimination": 1.75,
+        "difficulty": 691.98,
+        "casual hit": 19.93
+      },
+      "2": {
+        "discrimination": 1.25,
+        "difficulty": 698.52,
+        "casual hit": 17.3
+      },
+      "18": {
+        "discrimination": 2.29,
+        "difficulty": 741.31,
+        "casual hit": 22.1
+      },
+      "26": {
+        "discrimination": 3.54,
+        "difficulty": 745.24,
+        "casual hit": 11.6
+      }
+    },
+    "MT": {
+      "174": {
+        "discrimination": 1.55,
+        "difficulty": 471.08,
+        "casual hit": 18.19
+      },
+      "153": {
+        "discrimination": 1.13,
+        "difficulty": 513.88,
+        "casual hit": 19.16
+      },
+      "156": {
+        "discrimination": 1.73,
+        "difficulty": 537.83,
+        "casual hit": 17.23
+      },
+      "179": {
+        "discrimination": 1.53,
+        "difficulty": 563.29,
+        "casual hit": 18.5
+      },
+      "180": {
+        "discrimination": 1.78,
+        "difficulty": 574.31,
+        "casual hit": 18.88
+      },
+      "169": {
+        "discrimination": 1.72,
+        "difficulty": 577.83,
+        "casual hit": 18.89
+      },
+      "162": {
+        "discrimination": 3.0,
+        "difficulty": 586.03,
+        "casual hit": 22.08
+      },
+      "151": {
+        "discrimination": 1.79,
+        "difficulty": 586.17,
+        "casual hit": 17.31
+      },
+      "137": {
+        "discrimination": 3.34,
+        "difficulty": 608.02,
+        "casual hit": 20.91
+      },
+      "166": {
+        "discrimination": 1.53,
+        "difficulty": 616.54,
+        "casual hit": 5.54
+      },
+      "157": {
+        "discrimination": 2.26,
+        "difficulty": 623.8,
+        "casual hit": 16.27
+      },
+      "159": {
+        "discrimination": 2.04,
+        "difficulty": 627.71,
+        "casual hit": 27.07
+      },
+      "176": {
+        "discrimination": 1.63,
+        "difficulty": 634.48,
+        "casual hit": 13.96
+      },
+      "141": {
+        "discrimination": 2.7,
+        "difficulty": 636.82,
+        "casual hit": 16.1
+      },
+      "150": {
+        "discrimination": 2.26,
+        "difficulty": 645.12,
+        "casual hit": 23.84
+      },
+      "155": {
+        "discrimination": 3.59,
+        "difficulty": 648.69,
+        "casual hit": 21.9
+      },
+      "177": {
+        "discrimination": 0.96,
+        "difficulty": 652.43,
+        "casual hit": 14.82
+      },
+      "143": {
+        "discrimination": 2.1,
+        "difficulty": 652.61,
+        "casual hit": 10.67
+      },
+      "171": {
+        "discrimination": 2.4,
+        "difficulty": 653.87,
+        "casual hit": 11.87
+      },
+      "149": {
+        "discrimination": 3.44,
+        "difficulty": 655.67,
+        "casual hit": 9.15
+      },
+      "139": {
+        "discrimination": 1.19,
+        "difficulty": 675.7,
+        "casual hit": 15.18
+      },
+      "175": {
+        "discrimination": 2.21,
+        "difficulty": 682.99,
+        "casual hit": 15.41
+      },
+      "146": {
+        "discrimination": 2.38,
+        "difficulty": 688.67,
+        "casual hit": 10.32
+      },
+      "154": {
+        "discrimination": 2.33,
+        "difficulty": 691.64,
+        "casual hit": 8.39
+      },
+      "167": {
+        "discrimination": 1.95,
+        "difficulty": 693.92,
+        "casual hit": 17.14
+      },
+      "165": {
+        "discrimination": 2.39,
+        "difficulty": 698.39,
+        "casual hit": 11.51
+      },
+      "147": {
+        "discrimination": 1.06,
+        "difficulty": 698.51,
+        "casual hit": 8.39
+      },
+      "173": {
+        "discrimination": 2.6,
+        "difficulty": 711.19,
+        "casual hit": 26.39
+      },
+      "145": {
+        "discrimination": 1.59,
+        "difficulty": 719.08,
+        "casual hit": 24.23
+      },
+      "140": {
+        "discrimination": 1.72,
+        "difficulty": 719.57,
+        "casual hit": 8.74
+      },
+      "144": {
+        "discrimination": 2.29,
+        "difficulty": 723.36,
+        "casual hit": 23.39
+      },
+      "148": {
+        "discrimination": 2.25,
+        "difficulty": 726.98,
+        "casual hit": 24.37
+      },
+      "172": {
+        "discrimination": 2.21,
+        "difficulty": 737.23,
+        "casual hit": 31.77
+      },
+      "160": {
+        "discrimination": 2.11,
+        "difficulty": 738.01,
+        "casual hit": 17.3
+      },
+      "142": {
+        "discrimination": 3.3,
+        "difficulty": 742.21,
+        "casual hit": 14.07
+      },
+      "136": {
+        "discrimination": 2.09,
+        "difficulty": 744.82,
+        "casual hit": 25.84
+      },
+      "168": {
+        "discrimination": 2.69,
+        "difficulty": 750.46,
+        "casual hit": 12.71
+      },
+      "158": {
+        "discrimination": 1.37,
+        "difficulty": 755.62,
+        "casual hit": 17.15
+      },
+      "163": {
+        "discrimination": 2.41,
+        "difficulty": 757.72,
+        "casual hit": 4.51
+      },
+      "170": {
+        "discrimination": 3.01,
+        "difficulty": 767.18,
+        "casual hit": 8.46
+      },
+      "178": {
+        "discrimination": 2.96,
+        "difficulty": 784.31,
+        "casual hit": 24.51
+      },
+      "138": {
+        "discrimination": 1.47,
+        "difficulty": 791.94,
+        "casual hit": 24.28
+      },
+      "152": {
+        "discrimination": 3.59,
+        "difficulty": 800.09,
+        "casual hit": 19.24
+      }
+    },
+    "CN": {
+      "92": {
+        "discrimination": 1.93,
+        "difficulty": 385.05,
+        "casual hit": 20.13
+      },
+      "128": {
+        "discrimination": 1.87,
+        "difficulty": 454.38,
+        "casual hit": 19.79
+      },
+      "91": {
+        "discrimination": 1.25,
+        "difficulty": 514.73,
+        "casual hit": 0.56
+      },
+      "130": {
+        "discrimination": 3.09,
+        "difficulty": 532.87,
+        "casual hit": 15.77
+      },
+      "93": {
+        "discrimination": 2.73,
+        "difficulty": 532.92,
+        "casual hit": 13.66
+      },
+      "131": {
+        "discrimination": 1.51,
+        "difficulty": 549.48,
+        "casual hit": 17.37
+      },
+      "106": {
+        "discrimination": 2.69,
+        "difficulty": 569.49,
+        "casual hit": 15.32
+      },
+      "132": {
+        "discrimination": 1.52,
+        "difficulty": 595.97,
+        "casual hit": 15.22
+      },
+      "124": {
+        "discrimination": 2.34,
+        "difficulty": 600.18,
+        "casual hit": 23.89
+      },
+      "105": {
+        "discrimination": 2.18,
+        "difficulty": 601.18,
+        "casual hit": 20.27
+      },
+      "100": {
+        "discrimination": 3.84,
+        "difficulty": 604.69,
+        "casual hit": 14.48
+      },
+      "98": {
+        "discrimination": 3.97,
+        "difficulty": 619.29,
+        "casual hit": 12.26
+      },
+      "126": {
+        "discrimination": 2.32,
+        "difficulty": 621.0,
+        "casual hit": 10.45
+      },
+      "121": {
+        "discrimination": 2.53,
+        "difficulty": 621.48,
+        "casual hit": 15.34
+      },
+      "97": {
+        "discrimination": 3.68,
+        "difficulty": 627.13,
+        "casual hit": 10.0
+      },
+      "96": {
+        "discrimination": 3.98,
+        "difficulty": 634.61,
+        "casual hit": 24.21
+      },
+      "125": {
+        "discrimination": 1.81,
+        "difficulty": 641.99,
+        "casual hit": 25.19
+      },
+      "133": {
+        "discrimination": 3.64,
+        "difficulty": 643.99,
+        "casual hit": 18.36
+      },
+      "118": {
+        "discrimination": 3.52,
+        "difficulty": 646.88,
+        "casual hit": 26.94
+      },
+      "104": {
+        "discrimination": 1.85,
+        "difficulty": 652.24,
+        "casual hit": 17.45
+      },
+      "102": {
+        "discrimination": 3.38,
+        "difficulty": 655.58,
+        "casual hit": 25.04
+      },
+      "114": {
+        "discrimination": 0.99,
+        "difficulty": 655.82,
+        "casual hit": 20.32
+      },
+      "119": {
+        "discrimination": 2.6,
+        "difficulty": 659.38,
+        "casual hit": 26.32
+      },
+      "129": {
+        "discrimination": 3.4,
+        "difficulty": 660.65,
+        "casual hit": 8.85
+      },
+      "123": {
+        "discrimination": 3.78,
+        "difficulty": 661.25,
+        "casual hit": 10.24
+      },
+      "109": {
+        "discrimination": 2.41,
+        "difficulty": 662.18,
+        "casual hit": 13.07
+      },
+      "135": {
+        "discrimination": 3.99,
+        "difficulty": 663.48,
+        "casual hit": 19.03
+      },
+      "134": {
+        "discrimination": 1.57,
+        "difficulty": 675.34,
+        "casual hit": 18.63
+      },
+      "115": {
+        "discrimination": 2.34,
+        "difficulty": 677.34,
+        "casual hit": 10.81
+      },
+      "108": {
+        "discrimination": 3.78,
+        "difficulty": 677.93,
+        "casual hit": 5.73
+      },
+      "116": {
+        "discrimination": 3.05,
+        "difficulty": 681.69,
+        "casual hit": 33.74
+      },
+      "107": {
+        "discrimination": 1.83,
+        "difficulty": 682.07,
+        "casual hit": 19.86
+      },
+      "103": {
+        "discrimination": 1.77,
+        "difficulty": 697.13,
+        "casual hit": 14.34
+      },
+      "117": {
+        "discrimination": 2.71,
+        "difficulty": 698.22,
+        "casual hit": 5.93
+      },
+      "122": {
+        "discrimination": 1.78,
+        "difficulty": 698.86,
+        "casual hit": 10.82
+      },
+      "110": {
+        "discrimination": 3.2,
+        "difficulty": 699.26,
+        "casual hit": 20.28
+      },
+      "112": {
+        "discrimination": 3.38,
+        "difficulty": 702.0,
+        "casual hit": 18.17
+      },
+      "111": {
+        "discrimination": 0.83,
+        "difficulty": 706.7,
+        "casual hit": 6.03
+      },
+      "95": {
+        "discrimination": 1.04,
+        "difficulty": 713.28,
+        "casual hit": 24.91
+      },
+      "101": {
+        "discrimination": 2.19,
+        "difficulty": 720.86,
+        "casual hit": 13.52
+      },
+      "127": {
+        "discrimination": 3.05,
+        "difficulty": 724.44,
+        "casual hit": 15.94
+      },
+      "120": {
+        "discrimination": 5.94,
+        "difficulty": 733.4,
+        "casual hit": 11.44
+      },
+      "113": {
+        "discrimination": 2.67,
+        "difficulty": 735.84,
+        "casual hit": 5.5
+      },
+      "99": {
+        "discrimination": 2.22,
+        "difficulty": 735.84,
+        "casual hit": 11.59
+      },
+      "94": {
+        "discrimination": 1.09,
+        "difficulty": 767.41,
+        "casual hit": 10.12
+      }
+    },
+    "CH": {
+      "66": {
+        "discrimination": 2.42,
+        "difficulty": 437.98,
+        "casual hit": 9.59
+      },
+      "75": {
+        "discrimination": 1.74,
+        "difficulty": 444.22,
+        "casual hit": 1.88
+      },
+      "61": {
+        "discrimination": 2.59,
+        "difficulty": 479.67,
+        "casual hit": 17.59
+      },
+      "89": {
+        "discrimination": 3.21,
+        "difficulty": 494.36,
+        "casual hit": 29.49
+      },
+      "68": {
+        "discrimination": 2.59,
+        "difficulty": 508.09,
+        "casual hit": 14.64
+      },
+      "60": {
+        "discrimination": 1.4,
+        "difficulty": 508.59,
+        "casual hit": 21.03
+      },
+      "59": {
+        "discrimination": 1.7,
+        "difficulty": 511.48,
+        "casual hit": 11.19
+      },
+      "67": {
+        "discrimination": 1.54,
+        "difficulty": 512.89,
+        "casual hit": 18.97
+      },
+      "46": {
+        "discrimination": 1.82,
+        "difficulty": 519.31,
+        "casual hit": 25.11
+      },
+      "83": {
+        "discrimination": 1.15,
+        "difficulty": 524.13,
+        "casual hit": 1.09
+      },
+      "58": {
+        "discrimination": 2.86,
+        "difficulty": 524.52,
+        "casual hit": 19.05
+      },
+      "69": {
+        "discrimination": 1.19,
+        "difficulty": 526.61,
+        "casual hit": 22.14
+      },
+      "64": {
+        "discrimination": 1.2,
+        "difficulty": 531.78,
+        "casual hit": 22.69
+      },
+      "72": {
+        "discrimination": 1.1,
+        "difficulty": 536.11,
+        "casual hit": 35.16
+      },
+      "62": {
+        "discrimination": 2.59,
+        "difficulty": 539.35,
+        "casual hit": 17.77
+      },
+      "76": {
+        "discrimination": 2.8,
+        "difficulty": 544.01,
+        "casual hit": 15.52
+      },
+      "82": {
+        "discrimination": 3.56,
+        "difficulty": 550.48,
+        "casual hit": 22.2
+      },
+      "65": {
+        "discrimination": 3.5,
+        "difficulty": 556.07,
+        "casual hit": 15.91
+      },
+      "56": {
+        "discrimination": 1.83,
+        "difficulty": 556.13,
+        "casual hit": 10.74
+      },
+      "74": {
+        "discrimination": 1.23,
+        "difficulty": 557.31,
+        "casual hit": 22.44
+      },
+      "47": {
+        "discrimination": 2.4,
+        "difficulty": 560.6,
+        "casual hit": 21.27
+      },
+      "57": {
+        "discrimination": 2.53,
+        "difficulty": 566.43,
+        "casual hit": 17.01
+      },
+      "49": {
+        "discrimination": 2.89,
+        "difficulty": 567.11,
+        "casual hit": 18.91
+      },
+      "55": {
+        "discrimination": 2.43,
+        "difficulty": 567.28,
+        "casual hit": 27.8
+      },
+      "63": {
+        "discrimination": 3.82,
+        "difficulty": 570.94,
+        "casual hit": 15.46
+      },
+      "73": {
+        "discrimination": 1.47,
+        "difficulty": 571.04,
+        "casual hit": 19.3
+      },
+      "87": {
+        "discrimination": 3.81,
+        "difficulty": 574.42,
+        "casual hit": 24.13
+      },
+      "70": {
+        "discrimination": 2.88,
+        "difficulty": 576.85,
+        "casual hit": 17.22
+      },
+      "86": {
+        "discrimination": 3.83,
+        "difficulty": 579.15,
+        "casual hit": 11.06
+      },
+      "53": {
+        "discrimination": 2.79,
+        "difficulty": 582.08,
+        "casual hit": 25.73
+      },
+      "48": {
+        "discrimination": 3.07,
+        "difficulty": 594.87,
+        "casual hit": 17.72
+      },
+      "85": {
+        "discrimination": 2.98,
+        "difficulty": 604.36,
+        "casual hit": 22.82
+      },
+      "52": {
+        "discrimination": 1.58,
+        "difficulty": 618.54,
+        "casual hit": 13.86
+      },
+      "50": {
+        "discrimination": 3.3,
+        "difficulty": 619.13,
+        "casual hit": 15.6
+      },
+      "78": {
+        "discrimination": 3.08,
+        "difficulty": 619.36,
+        "casual hit": 14.88
+      },
+      "51": {
+        "discrimination": 0.72,
+        "difficulty": 629.86,
+        "casual hit": 3.59
+      },
+      "80": {
+        "discrimination": 1.05,
+        "difficulty": 640.62,
+        "casual hit": 22.59
+      },
+      "90": {
+        "discrimination": 2.02,
+        "difficulty": 647.03,
+        "casual hit": 23.59
+      },
+      "77": {
+        "discrimination": 0.82,
+        "difficulty": 656.05,
+        "casual hit": 23.38
+      },
+      "88": {
+        "discrimination": 1.9,
+        "difficulty": 659.99,
+        "casual hit": 16.85
+      },
+      "84": {
+        "discrimination": 0.77,
+        "difficulty": 669.32,
+        "casual hit": 9.28
+      },
+      "71": {
+        "discrimination": 0.93,
+        "difficulty": 690.01,
+        "casual hit": 9.39
+      },
+      "79": {
+        "discrimination": 1.81,
+        "difficulty": 697.57,
+        "casual hit": 17.81
+      },
+      "81": {
+        "discrimination": 1.98,
+        "difficulty": 737.9,
+        "casual hit": 24.52
+      },
+      "54": {
+        "discrimination": 1.22,
+        "difficulty": 763.78,
+        "casual hit": 30.45
+      }
+    }
+  }
+}
