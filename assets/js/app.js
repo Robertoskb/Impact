@@ -83,6 +83,9 @@ function createQuestionElement(
   if (isDone) baseClasses += " done";
   questionDiv.className = baseClasses;
 
+  const capitalize = (str) =>
+    str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
   questionDiv.innerHTML = `
         <div class="item-content" style="display: flex; align-items: center; gap: 0.5rem;">
             <span class="checkmark-icon">
@@ -102,7 +105,10 @@ function createQuestionElement(
             
             <div><strong>Posições:</strong></div>
             ${Object.entries(positions)
-              .map(([caderno, pos]) => `<div>Caderno ${caderno}: ${pos}</div>`)
+              .map(
+                ([caderno, pos]) =>
+                  `<div>Cor ${capitalize(caderno)}: ${pos}</div>`
+              )
               .join("")}
             <div><strong>Parâmetros:</strong></div>
             <div>Discriminação: ${meta.discrimination || "N/A"}</div>
