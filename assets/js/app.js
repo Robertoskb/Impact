@@ -86,6 +86,15 @@ function createQuestionElement(
   const capitalize = (str) =>
     str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 
+  const level_discrimination = (dis) => {
+    if (dis == null) return '<span class="text-not-available">N/A</span>';
+    if (dis < 1.0) return '<span class="text-very-low">Muito baixa</span>';
+    if (dis < 2.0) return '<span class="text-low">Baixa</span>';
+    if (dis < 3.0) return '<span class="text-medium">Média</span>';
+    if (dis < 4.0) return '<span class="text-high">Alta</span>';
+    return '<span class="text-very-high">Muito alta</span>';
+  };
+
   const level_difficulty = (dif) => {
     if (dif == null) return '<span class="text-not-available">N/A</span>';
     if (dif < 550.0) return '<span class="text-very-easy">Muito fácil</span>';
@@ -120,7 +129,9 @@ function createQuestionElement(
               )
               .join("")}
             <div><strong>Parâmetros:</strong></div>
-            <div>Discriminação: ${meta.discrimination || "N/A"}</div>
+            <div>Discriminação: ${
+              meta.discrimination || "N/A"
+            } (${level_discrimination(meta.discrimination)})</div>
             <div>Dificuldade: ${meta.difficulty || "N/A"} (${level_difficulty(
     meta.difficulty
   )})</div>

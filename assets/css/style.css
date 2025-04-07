@@ -208,33 +208,29 @@ body {
   font-size: 0.9rem;
   color: #555;
 }
-/*
-const level_difficulty = (dif) => {
-    if (dif == null) return '<span class="text-not-available">N/A</span>';
-    if (dif < 550.0) return '<span class="text-very-easy">Muito fácil</span>';
-    if (dif < 600.0) return '<span class="text-easy">Fácil</span>';
-    if (dif < 650.0) return '<span class="text-medium">Média</span>';
-    if (dif < 700.0) return '<span class="text-hard">Difícil</span>';
-    return '<span class="text-very-hard">Muito difícil</span>';
-  };
-*/
+/* Estilos para os ícones de dificuldade */
+
 .text-not-available {
   color: #777;
 }
-.text-very-easy {
+.text-very-easy,
+.text-very-low {
   color: #28a745; /* verde claro */
 }
 
-.text-easy {
+.text-easy,
+.text-low {
   color: #17a2b8; /* azul claro */
 }
 .text-medium {
   color: #ffc107; /* amarelo */
 }
-.text-hard {
+.text-hard,
+.text-high {
   color: #fd7e14; /* laranja */
 }
-.text-very-hard {
+.text-very-hard,
+.text-very-high {
   color: #dc3545; /* vermelho */
 }
 
