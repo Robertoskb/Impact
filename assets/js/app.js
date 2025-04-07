@@ -86,6 +86,15 @@ function createQuestionElement(
   const capitalize = (str) =>
     str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 
+  const level_difficulty = (dif) => {
+    if (dif == null) return '<span class="text-not-available">N/A</span>';
+    if (dif < 550.0) return '<span class="text-very-easy">Muito fácil</span>';
+    if (dif < 650.0) return '<span class="text-easy">Fácil</span>';
+    if (dif < 750.0) return '<span class="text-medium">Média</span>';
+    if (dif < 850.0) return '<span class="text-hard">Difícil</span>';
+    return '<span class="text-very-hard">Muito difícil</span>';
+  };
+
   questionDiv.innerHTML = `
         <div class="item-content" style="display: flex; align-items: center; gap: 0.5rem;">
             <span class="checkmark-icon">
@@ -112,7 +121,9 @@ function createQuestionElement(
               .join("")}
             <div><strong>Parâmetros:</strong></div>
             <div>Discriminação: ${meta.discrimination || "N/A"}</div>
-            <div>Dificuldade: ${meta.difficulty || "N/A"}</div>
+            <div>Dificuldade: ${meta.difficulty || "N/A"} (${level_difficulty(
+    meta.difficulty
+  )})</div>
             <div>Acerto Casual: ${
               meta["casual hit"] ? meta["casual hit"] + "%" : "N/A"
             }</div>
