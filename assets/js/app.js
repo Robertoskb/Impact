@@ -104,6 +104,17 @@ function createQuestionElement(
     return '<span class="text-very-hard">Muito difícil</span>';
   };
 
+  const level_causal_hit = (casual_hit) => {
+    if (casual_hit == null)
+      return '<span class="text-not-available">N/A</span>';
+    if (casual_hit < 10.0)
+      return '<span class="text-very-low">Muito eficaz</span>';
+    if (casual_hit < 15.0) return '<span class="text-low">Bom</span>';
+    if (casual_hit < 25.0) return '<span class="text-medium">Esperado</span>';
+    if (casual_hit < 30.0) return '<span class="text-high">Ruim</span>';
+    return '<span class="text-very-high">Muito ruim</span>';
+  };
+
   questionDiv.innerHTML = `
         <div class="item-content" style="display: flex; align-items: center; gap: 0.5rem;">
             <span class="checkmark-icon">
@@ -137,7 +148,7 @@ function createQuestionElement(
   )})</div>
             <div>Acerto Casual: ${
               meta["casual hit"] ? meta["casual hit"] + "%" : "N/A"
-            }</div>
+            } (${level_causal_hit(meta["casual hit"])})</div>
         </div>
     `;
 
