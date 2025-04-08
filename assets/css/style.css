@@ -157,7 +157,7 @@ body {
   color: var(--text);
 }
 .question-item:hover {
-  background-color: #f0f0f0;
+  background-color: #72c355;
 }
 .question-item.done {
   background-color: #198754; /* verde mais forte e escuro */
