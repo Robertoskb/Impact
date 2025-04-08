@@ -89,7 +89,10 @@ function createQuestionElement(
   };
 
   let url = urls[area] || `/question.html?year=${ano}&pos=${numero}`;
-  url = `${window.location.origin}${url}`;
+
+  const currentUrl = window.location.href;
+  const baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf("/"));
+  url = `${baseUrl}${url}`;
 
   const capitalize = (str) =>
     str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
