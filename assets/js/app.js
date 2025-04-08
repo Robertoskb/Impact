@@ -88,7 +88,8 @@ function createQuestionElement(
     LC1: `/question.html?year=${ano}&pos=${numero}&lang=espanhol`,
   };
 
-  const url = urls[area] || `/question.html?year=${ano}&pos=${numero}`;
+  let url = urls[area] || `/question.html?year=${ano}&pos=${numero}`;
+  url = `${window.location.origin}${url}`;
 
   const capitalize = (str) =>
     str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
