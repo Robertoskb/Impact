@@ -83,6 +83,13 @@ function createQuestionElement(
   if (isDone) baseClasses += " done";
   questionDiv.className = baseClasses;
 
+  const urls = {
+    LC0: `/question.html?year=${ano}&pos=${numero}&lang=ingles`,
+    LC1: `/question.html?year=${ano}&pos=${numero}&lang=espanhol`,
+  };
+
+  const url = urls[area] || `/question.html?year=${ano}&pos=${numero}`;
+
   const capitalize = (str) =>
     str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 
@@ -120,7 +127,7 @@ function createQuestionElement(
             <span class="checkmark-icon">
                 <i class="fa ${isDone ? "fa-check-circle" : "fa-circle"}"></i>
             </span>
-            <span class="question-text">Questão ${numero}</span>
+            <a href="${url}" target="_blank" ><span class="question-text">Questão ${numero}</span></a>
             <span class="dropdown-toggle" style="cursor: pointer;">
                 <i class="fa fa-caret-down"></i>
             </span>
