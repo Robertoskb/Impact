@@ -1,119 +1,23 @@
 {
   "2017": {
     "LC0": {
-      "34": {
-        "AZUL": 34,
-        "AMARELA": 43,
-        "ROSA": 31,
-        "BRANCA": 22
-      },
-      "21": {
-        "AZUL": 21,
-        "AMARELA": 24,
-        "ROSA": 21,
-        "BRANCA": 9
-      },
-      "27": {
-        "AZUL": 27,
-        "AMARELA": 22,
-        "ROSA": 30,
-        "BRANCA": 18
-      },
-      "6": {
-        "AZUL": 6,
-        "AMARELA": 9,
-        "ROSA": 37,
-        "BRANCA": 41
-      },
-      "23": {
-        "AZUL": 23,
-        "AMARELA": 26,
-        "ROSA": 18,
-        "BRANCA": 11
-      },
-      "28": {
-        "AZUL": 28,
-        "AMARELA": 35,
-        "ROSA": 25,
-        "BRANCA": 19
-      },
-      "11": {
-        "AZUL": 11,
-        "AMARELA": 17,
-        "ROSA": 39,
-        "BRANCA": 29
-      },
-      "43": {
-        "AZUL": 43,
-        "AMARELA": 30,
-        "ROSA": 14,
-        "BRANCA": 40
-      },
-      "37": {
-        "AZUL": 37,
-        "AMARELA": 31,
-        "ROSA": 8,
-        "BRANCA": 25
-      },
-      "31": {
-        "AZUL": 31,
-        "AMARELA": 40,
-        "ROSA": 22,
-        "BRANCA": 13
-      },
-      "19": {
-        "AZUL": 19,
-        "AMARELA": 12,
-        "ROSA": 36,
-        "BRANCA": 45
-      },
-      "15": {
-        "AZUL": 15,
-        "AMARELA": 8,
-        "ROSA": 6,
-        "BRANCA": 7
-      },
-      "9": {
-        "AZUL": 9,
-        "AMARELA": 15,
-        "ROSA": 44,
-        "BRANCA": 36
-      },
-      "26": {
-        "AZUL": 26,
-        "AMARELA": 21,
-        "ROSA": 29,
+      "29": {
+        "AZUL": 29,
+        "AMARELA": 38,
+        "ROSA": 26,
         "BRANCA": 17
       },
-      "42": {
-        "AZUL": 42,
-        "AMARELA": 29,
-        "ROSA": 13,
-        "BRANCA": 39
-      },
-      "17": {
-        "AZUL": 17,
-        "AMARELA": 10,
-        "ROSA": 34,
-        "BRANCA": 43
-      },
-      "4": {
-        "AZUL": 4,
-        "AMARELA": 3,
-        "ROSA": 3,
+      "16": {
+        "AZUL": 16,
+        "AMARELA": 19,
+        "ROSA": 16,
         "BRANCA": 4
       },
-      "40": {
-        "AZUL": 40,
-        "AMARELA": 34,
-        "ROSA": 11,
-        "BRANCA": 28
-      },
-      "32": {
-        "AZUL": 32,
-        "AMARELA": 41,
-        "ROSA": 23,
-        "BRANCA": 14
+      "22": {
+        "AZUL": 22,
+        "AMARELA": 17,
+        "ROSA": 25,
+        "BRANCA": 13
       },
       "1": {
         "AZUL": 1,
@@ -121,125 +25,95 @@
         "ROSA": 1,
         "BRANCA": 2
       },
-      "14": {
-        "AZUL": 14,
-        "AMARELA": 7,
-        "ROSA": 7,
+      "18": {
+        "AZUL": 18,
+        "AMARELA": 21,
+        "ROSA": 13,
         "BRANCA": 6
       },
-      "44": {
-        "AZUL": 44,
-        "AMARELA": 38,
-        "ROSA": 15,
-        "BRANCA": 32
+      "23": {
+        "AZUL": 23,
+        "AMARELA": 30,
+        "ROSA": 20,
+        "BRANCA": 14
       },
-      "7": {
-        "AZUL": 7,
-        "AMARELA": 13,
-        "ROSA": 42,
-        "BRANCA": 34
-      },
-      "22": {
-        "AZUL": 22,
-        "AMARELA": 25,
-        "ROSA": 17,
-        "BRANCA": 10
-      },
-      "2": {
-        "AZUL": 2,
-        "AMARELA": 5,
-        "ROSA": 5,
-        "BRANCA": 1
-      },
-      "24": {
-        "AZUL": 24,
-        "AMARELA": 27,
-        "ROSA": 19,
-        "BRANCA": 12
-      },
-      "5": {
-        "AZUL": 5,
-        "AMARELA": 1,
-        "ROSA": 2,
-        "BRANCA": 5
+      "6": {
+        "AZUL": 6,
+        "AMARELA": 12,
+        "ROSA": 34,
+        "BRANCA": 24
       },
       "38": {
         "AZUL": 38,
-        "AMARELA": 32,
+        "AMARELA": 25,
         "ROSA": 9,
-        "BRANCA": 26
+        "BRANCA": 35
       },
-      "3": {
-        "AZUL": 3,
-        "AMARELA": 4,
-        "ROSA": 4,
-        "BRANCA": 3
+      "32": {
+        "AZUL": 32,
+        "AMARELA": 26,
+        "ROSA": 3,
+        "BRANCA": 20
       },
-      "45": {
-        "AZUL": 45,
-        "AMARELA": 39,
-        "ROSA": 16,
-        "BRANCA": 33
+      "26": {
+        "AZUL": 26,
+        "AMARELA": 35,
+        "ROSA": 17,
+        "BRANCA": 8
+      },
+      "14": {
+        "AZUL": 14,
+        "AMARELA": 7,
+        "ROSA": 31,
+        "BRANCA": 40
       },
       "10": {
         "AZUL": 10,
+        "AMARELA": 3,
+        "ROSA": 1,
+        "BRANCA": 2
+      },
+      "4": {
+        "AZUL": 4,
+        "AMARELA": 3,
+        "ROSA": 3,
+        "BRANCA": 4
+      },
+      "21": {
+        "AZUL": 21,
         "AMARELA": 16,
-        "ROSA": 45,
-        "BRANCA": 37
+        "ROSA": 24,
+        "BRANCA": 12
       },
-      "30": {
-        "AZUL": 30,
-        "AMARELA": 37,
-        "ROSA": 27,
-        "BRANCA": 21
-      },
-      "8": {
-        "AZUL": 8,
-        "AMARELA": 14,
-        "ROSA": 43,
-        "BRANCA": 35
-      },
-      "18": {
-        "AZUL": 18,
-        "AMARELA": 11,
-        "ROSA": 35,
-        "BRANCA": 44
-      },
-      "16": {
-        "AZUL": 16,
-        "AMARELA": 6,
-        "ROSA": 38,
-        "BRANCA": 42
+      "37": {
+        "AZUL": 37,
+        "AMARELA": 24,
+        "ROSA": 8,
+        "BRANCA": 34
       },
       "12": {
         "AZUL": 12,
-        "AMARELA": 18,
-        "ROSA": 40,
-        "BRANCA": 30
-      },
-      "20": {
-        "AZUL": 20,
-        "AMARELA": 23,
-        "ROSA": 20,
-        "BRANCA": 8
+        "AMARELA": 5,
+        "ROSA": 29,
+        "BRANCA": 38
       },
       "35": {
         "AZUL": 35,
-        "AMARELA": 44,
-        "ROSA": 32,
+        "AMARELA": 29,
+        "ROSA": 6,
         "BRANCA": 23
       },
-      "29": {
-        "AZUL": 29,
+      "27": {
+        "AZUL": 27,
         "AMARELA": 36,
-        "ROSA": 26,
-        "BRANCA": 20
+        "ROSA": 18,
+        "BRANCA": 9
       },
-      "25": {
-        "AZUL": 25,
-        "AMARELA": 20,
-        "ROSA": 28,
-        "BRANCA": 16
+      "9": {
+        "AZUL": 9,
+        "AMARELA": 2,
+        "ROSA": 2,
+        "BRANCA": 1
       },
       "39": {
         "AZUL": 39,
@@ -247,193 +121,145 @@
         "ROSA": 10,
         "BRANCA": 27
       },
-      "13": {
-        "AZUL": 13,
-        "AMARELA": 19,
-        "ROSA": 41,
-        "BRANCA": 31
+      "2": {
+        "AZUL": 2,
+        "AMARELA": 5,
+        "ROSA": 5,
+        "BRANCA": 1
+      },
+      "17": {
+        "AZUL": 17,
+        "AMARELA": 20,
+        "ROSA": 12,
+        "BRANCA": 5
+      },
+      "19": {
+        "AZUL": 19,
+        "AMARELA": 22,
+        "ROSA": 14,
+        "BRANCA": 7
+      },
+      "5": {
+        "AZUL": 5,
+        "AMARELA": 11,
+        "ROSA": 40,
+        "BRANCA": 32
       },
       "33": {
         "AZUL": 33,
-        "AMARELA": 42,
-        "ROSA": 24,
+        "AMARELA": 27,
+        "ROSA": 4,
+        "BRANCA": 21
+      },
+      "3": {
+        "AZUL": 3,
+        "AMARELA": 9,
+        "ROSA": 38,
+        "BRANCA": 30
+      },
+      "40": {
+        "AZUL": 40,
+        "AMARELA": 34,
+        "ROSA": 11,
+        "BRANCA": 28
+      },
+      "25": {
+        "AZUL": 25,
+        "AMARELA": 32,
+        "ROSA": 22,
+        "BRANCA": 16
+      },
+      "13": {
+        "AZUL": 13,
+        "AMARELA": 6,
+        "ROSA": 30,
+        "BRANCA": 39
+      },
+      "11": {
+        "AZUL": 11,
+        "AMARELA": 1,
+        "ROSA": 33,
+        "BRANCA": 37
+      },
+      "7": {
+        "AZUL": 7,
+        "AMARELA": 13,
+        "ROSA": 35,
+        "BRANCA": 25
+      },
+      "15": {
+        "AZUL": 15,
+        "AMARELA": 18,
+        "ROSA": 15,
+        "BRANCA": 3
+      },
+      "30": {
+        "AZUL": 30,
+        "AMARELA": 39,
+        "ROSA": 27,
+        "BRANCA": 18
+      },
+      "24": {
+        "AZUL": 24,
+        "AMARELA": 31,
+        "ROSA": 21,
         "BRANCA": 15
       },
-      "41": {
-        "AZUL": 41,
+      "20": {
+        "AZUL": 20,
+        "AMARELA": 15,
+        "ROSA": 23,
+        "BRANCA": 11
+      },
+      "34": {
+        "AZUL": 34,
         "AMARELA": 28,
-        "ROSA": 12,
-        "BRANCA": 38
+        "ROSA": 5,
+        "BRANCA": 22
+      },
+      "8": {
+        "AZUL": 8,
+        "AMARELA": 14,
+        "ROSA": 36,
+        "BRANCA": 26
+      },
+      "28": {
+        "AZUL": 28,
+        "AMARELA": 37,
+        "ROSA": 19,
+        "BRANCA": 10
       },
       "36": {
         "AZUL": 36,
-        "AMARELA": 45,
-        "ROSA": 33,
-        "BRANCA": 24
+        "AMARELA": 23,
+        "ROSA": 7,
+        "BRANCA": 33
+      },
+      "31": {
+        "AZUL": 31,
+        "AMARELA": 40,
+        "ROSA": 28,
+        "BRANCA": 19
       }
     },
     "LC1": {
-      "34": {
-        "AZUL": 34,
-        "AMARELA": 43,
-        "ROSA": 31,
-        "BRANCA": 22
-      },
-      "21": {
-        "AZUL": 21,
-        "AMARELA": 24,
-        "ROSA": 21,
-        "BRANCA": 9
-      },
-      "27": {
-        "AZUL": 27,
-        "AMARELA": 22,
-        "ROSA": 30,
-        "BRANCA": 18
-      },
-      "6": {
-        "AZUL": 6,
-        "AMARELA": 9,
-        "ROSA": 37,
-        "BRANCA": 41
-      },
-      "23": {
-        "AZUL": 23,
-        "AMARELA": 26,
-        "ROSA": 18,
-        "BRANCA": 11
-      },
-      "28": {
-        "AZUL": 28,
-        "AMARELA": 35,
-        "ROSA": 25,
-        "BRANCA": 19
-      },
-      "11": {
-        "AZUL": 11,
-        "AMARELA": 17,
-        "ROSA": 39,
-        "BRANCA": 29
-      },
-      "43": {
-        "AZUL": 43,
-        "AMARELA": 30,
-        "ROSA": 14,
-        "BRANCA": 40
-      },
-      "37": {
-        "AZUL": 37,
-        "AMARELA": 31,
-        "ROSA": 8,
-        "BRANCA": 25
-      },
-      "31": {
-        "AZUL": 31,
-        "AMARELA": 40,
-        "ROSA": 22,
-        "BRANCA": 13
-      },
-      "19": {
-        "AZUL": 19,
-        "AMARELA": 12,
-        "ROSA": 36,
-        "BRANCA": 45
-      },
-      "15": {
-        "AZUL": 15,
-        "AMARELA": 8,
-        "ROSA": 6,
-        "BRANCA": 7
-      },
-      "9": {
-        "AZUL": 9,
-        "AMARELA": 15,
-        "ROSA": 44,
-        "BRANCA": 36
-      },
-      "26": {
-        "AZUL": 26,
-        "AMARELA": 21,
-        "ROSA": 29,
+      "29": {
+        "AZUL": 29,
+        "AMARELA": 38,
+        "ROSA": 26,
         "BRANCA": 17
       },
-      "3": {
-        "AZUL": 3,
-        "AMARELA": 1,
-        "ROSA": 1,
-        "BRANCA": 3
-      },
-      "42": {
-        "AZUL": 42,
-        "AMARELA": 29,
-        "ROSA": 13,
-        "BRANCA": 39
-      },
-      "17": {
-        "AZUL": 17,
-        "AMARELA": 10,
-        "ROSA": 34,
-        "BRANCA": 43
-      },
-      "40": {
-        "AZUL": 40,
-        "AMARELA": 34,
-        "ROSA": 11,
-        "BRANCA": 28
-      },
-      "32": {
-        "AZUL": 32,
-        "AMARELA": 41,
-        "ROSA": 23,
-        "BRANCA": 14
-      },
-      "2": {
-        "AZUL": 2,
-        "AMARELA": 4,
-        "ROSA": 4,
-        "BRANCA": 2
-      },
-      "14": {
-        "AZUL": 14,
-        "AMARELA": 7,
-        "ROSA": 7,
-        "BRANCA": 6
-      },
-      "44": {
-        "AZUL": 44,
-        "AMARELA": 38,
-        "ROSA": 15,
-        "BRANCA": 32
-      },
-      "7": {
-        "AZUL": 7,
-        "AMARELA": 13,
-        "ROSA": 42,
-        "BRANCA": 34
+      "16": {
+        "AZUL": 16,
+        "AMARELA": 19,
+        "ROSA": 16,
+        "BRANCA": 4
       },
       "22": {
         "AZUL": 22,
-        "AMARELA": 25,
-        "ROSA": 17,
-        "BRANCA": 10
-      },
-      "24": {
-        "AZUL": 24,
-        "AMARELA": 27,
-        "ROSA": 19,
-        "BRANCA": 12
-      },
-      "38": {
-        "AZUL": 38,
-        "AMARELA": 32,
-        "ROSA": 9,
-        "BRANCA": 26
-      },
-      "5": {
-        "AZUL": 5,
-        "AMARELA": 5,
-        "ROSA": 5,
-        "BRANCA": 5
+        "AMARELA": 17,
+        "ROSA": 25,
+        "BRANCA": 13
       },
       "1": {
         "AZUL": 1,
@@ -441,83 +267,53 @@
         "ROSA": 2,
         "BRANCA": 4
       },
-      "45": {
-        "AZUL": 45,
-        "AMARELA": 39,
-        "ROSA": 16,
-        "BRANCA": 33
+      "18": {
+        "AZUL": 18,
+        "AMARELA": 21,
+        "ROSA": 13,
+        "BRANCA": 6
+      },
+      "23": {
+        "AZUL": 23,
+        "AMARELA": 30,
+        "ROSA": 20,
+        "BRANCA": 14
+      },
+      "6": {
+        "AZUL": 6,
+        "AMARELA": 12,
+        "ROSA": 34,
+        "BRANCA": 24
+      },
+      "38": {
+        "AZUL": 38,
+        "AMARELA": 25,
+        "ROSA": 9,
+        "BRANCA": 35
+      },
+      "32": {
+        "AZUL": 32,
+        "AMARELA": 26,
+        "ROSA": 3,
+        "BRANCA": 20
+      },
+      "26": {
+        "AZUL": 26,
+        "AMARELA": 35,
+        "ROSA": 17,
+        "BRANCA": 8
+      },
+      "14": {
+        "AZUL": 14,
+        "AMARELA": 7,
+        "ROSA": 31,
+        "BRANCA": 40
       },
       "10": {
         "AZUL": 10,
-        "AMARELA": 16,
-        "ROSA": 45,
-        "BRANCA": 37
-      },
-      "30": {
-        "AZUL": 30,
-        "AMARELA": 37,
-        "ROSA": 27,
-        "BRANCA": 21
-      },
-      "8": {
-        "AZUL": 8,
-        "AMARELA": 14,
-        "ROSA": 43,
-        "BRANCA": 35
-      },
-      "18": {
-        "AZUL": 18,
-        "AMARELA": 11,
-        "ROSA": 35,
-        "BRANCA": 44
-      },
-      "16": {
-        "AZUL": 16,
-        "AMARELA": 6,
-        "ROSA": 38,
-        "BRANCA": 42
-      },
-      "12": {
-        "AZUL": 12,
-        "AMARELA": 18,
-        "ROSA": 40,
-        "BRANCA": 30
-      },
-      "20": {
-        "AZUL": 20,
-        "AMARELA": 23,
-        "ROSA": 20,
-        "BRANCA": 8
-      },
-      "35": {
-        "AZUL": 35,
-        "AMARELA": 44,
-        "ROSA": 32,
-        "BRANCA": 23
-      },
-      "29": {
-        "AZUL": 29,
-        "AMARELA": 36,
-        "ROSA": 26,
-        "BRANCA": 20
-      },
-      "25": {
-        "AZUL": 25,
-        "AMARELA": 20,
-        "ROSA": 28,
-        "BRANCA": 16
-      },
-      "39": {
-        "AZUL": 39,
-        "AMARELA": 33,
-        "ROSA": 10,
-        "BRANCA": 27
-      },
-      "13": {
-        "AZUL": 13,
-        "AMARELA": 19,
-        "ROSA": 41,
-        "BRANCA": 31
+        "AMARELA": 3,
+        "ROSA": 1,
+        "BRANCA": 2
       },
       "4": {
         "AZUL": 4,
@@ -525,839 +321,983 @@
         "ROSA": 3,
         "BRANCA": 1
       },
+      "21": {
+        "AZUL": 21,
+        "AMARELA": 16,
+        "ROSA": 24,
+        "BRANCA": 12
+      },
+      "3": {
+        "AZUL": 3,
+        "AMARELA": 9,
+        "ROSA": 38,
+        "BRANCA": 30
+      },
+      "37": {
+        "AZUL": 37,
+        "AMARELA": 24,
+        "ROSA": 8,
+        "BRANCA": 34
+      },
+      "12": {
+        "AZUL": 12,
+        "AMARELA": 5,
+        "ROSA": 29,
+        "BRANCA": 38
+      },
+      "35": {
+        "AZUL": 35,
+        "AMARELA": 29,
+        "ROSA": 6,
+        "BRANCA": 23
+      },
+      "27": {
+        "AZUL": 27,
+        "AMARELA": 36,
+        "ROSA": 18,
+        "BRANCA": 9
+      },
+      "2": {
+        "AZUL": 2,
+        "AMARELA": 8,
+        "ROSA": 37,
+        "BRANCA": 29
+      },
+      "9": {
+        "AZUL": 9,
+        "AMARELA": 2,
+        "ROSA": 2,
+        "BRANCA": 1
+      },
+      "39": {
+        "AZUL": 39,
+        "AMARELA": 33,
+        "ROSA": 10,
+        "BRANCA": 27
+      },
+      "17": {
+        "AZUL": 17,
+        "AMARELA": 20,
+        "ROSA": 12,
+        "BRANCA": 5
+      },
+      "19": {
+        "AZUL": 19,
+        "AMARELA": 22,
+        "ROSA": 14,
+        "BRANCA": 7
+      },
       "33": {
         "AZUL": 33,
-        "AMARELA": 42,
-        "ROSA": 24,
+        "AMARELA": 27,
+        "ROSA": 4,
+        "BRANCA": 21
+      },
+      "5": {
+        "AZUL": 5,
+        "AMARELA": 11,
+        "ROSA": 40,
+        "BRANCA": 32
+      },
+      "40": {
+        "AZUL": 40,
+        "AMARELA": 34,
+        "ROSA": 11,
+        "BRANCA": 28
+      },
+      "25": {
+        "AZUL": 25,
+        "AMARELA": 32,
+        "ROSA": 22,
+        "BRANCA": 16
+      },
+      "13": {
+        "AZUL": 13,
+        "AMARELA": 6,
+        "ROSA": 30,
+        "BRANCA": 39
+      },
+      "11": {
+        "AZUL": 11,
+        "AMARELA": 1,
+        "ROSA": 33,
+        "BRANCA": 37
+      },
+      "7": {
+        "AZUL": 7,
+        "AMARELA": 13,
+        "ROSA": 35,
+        "BRANCA": 25
+      },
+      "15": {
+        "AZUL": 15,
+        "AMARELA": 18,
+        "ROSA": 15,
+        "BRANCA": 3
+      },
+      "30": {
+        "AZUL": 30,
+        "AMARELA": 39,
+        "ROSA": 27,
+        "BRANCA": 18
+      },
+      "24": {
+        "AZUL": 24,
+        "AMARELA": 31,
+        "ROSA": 21,
         "BRANCA": 15
       },
-      "41": {
-        "AZUL": 41,
+      "20": {
+        "AZUL": 20,
+        "AMARELA": 15,
+        "ROSA": 23,
+        "BRANCA": 11
+      },
+      "34": {
+        "AZUL": 34,
         "AMARELA": 28,
-        "ROSA": 12,
-        "BRANCA": 38
+        "ROSA": 5,
+        "BRANCA": 22
+      },
+      "8": {
+        "AZUL": 8,
+        "AMARELA": 14,
+        "ROSA": 36,
+        "BRANCA": 26
+      },
+      "28": {
+        "AZUL": 28,
+        "AMARELA": 37,
+        "ROSA": 19,
+        "BRANCA": 10
       },
       "36": {
         "AZUL": 36,
-        "AMARELA": 45,
-        "ROSA": 33,
-        "BRANCA": 24
+        "AMARELA": 23,
+        "ROSA": 7,
+        "BRANCA": 33
+      },
+      "31": {
+        "AZUL": 31,
+        "AMARELA": 40,
+        "ROSA": 28,
+        "BRANCA": 19
       }
     },
     "MT": {
-      "154": {
-        "AZUL": 154,
-        "AMARELA": 158,
-        "ROSA": 175,
-        "CINZA": 161
+      "289": {
+        "AZUL": 289,
+        "AMARELA": 293,
+        "ROSA": 310,
+        "CINZA": 296
       },
-      "153": {
-        "AZUL": 153,
-        "AMARELA": 157,
-        "ROSA": 174,
-        "CINZA": 160
+      "288": {
+        "AZUL": 288,
+        "AMARELA": 292,
+        "ROSA": 309,
+        "CINZA": 295
       },
-      "178": {
-        "AZUL": 178,
-        "AMARELA": 141,
-        "ROSA": 144,
-        "CINZA": 137
+      "313": {
+        "AZUL": 313,
+        "AMARELA": 276,
+        "ROSA": 279,
+        "CINZA": 272
       },
-      "163": {
-        "AZUL": 163,
-        "AMARELA": 161,
-        "ROSA": 179,
-        "CINZA": 157
+      "298": {
+        "AZUL": 298,
+        "AMARELA": 296,
+        "ROSA": 314,
+        "CINZA": 292
       },
-      "150": {
-        "AZUL": 150,
-        "AMARELA": 147,
-        "ROSA": 154,
-        "CINZA": 144
+      "285": {
+        "AZUL": 285,
+        "AMARELA": 282,
+        "ROSA": 289,
+        "CINZA": 279
       },
-      "156": {
-        "AZUL": 156,
-        "AMARELA": 163,
-        "ROSA": 159,
-        "CINZA": 169
+      "291": {
+        "AZUL": 291,
+        "AMARELA": 298,
+        "ROSA": 294,
+        "CINZA": 304
       },
-      "167": {
-        "AZUL": 167,
-        "AMARELA": 180,
-        "ROSA": 171,
-        "CINZA": 176
+      "302": {
+        "AZUL": 302,
+        "AMARELA": 315,
+        "ROSA": 306,
+        "CINZA": 311
       },
-      "148": {
-        "AZUL": 148,
-        "AMARELA": 154,
-        "ROSA": 152,
-        "CINZA": 151
+      "283": {
+        "AZUL": 283,
+        "AMARELA": 289,
+        "ROSA": 287,
+        "CINZA": 286
       },
-      "139": {
-        "AZUL": 139,
-        "AMARELA": 136,
-        "ROSA": 147,
-        "CINZA": 140
+      "274": {
+        "AZUL": 274,
+        "AMARELA": 271,
+        "ROSA": 282,
+        "CINZA": 275
       },
-      "172": {
-        "AZUL": 172,
-        "AMARELA": 173,
-        "ROSA": 166,
-        "CINZA": 168
+      "307": {
+        "AZUL": 307,
+        "AMARELA": 308,
+        "ROSA": 301,
+        "CINZA": 303
       },
-      "138": {
-        "AZUL": 138,
-        "AMARELA": 146,
-        "ROSA": 142,
-        "CINZA": 155
+      "273": {
+        "AZUL": 273,
+        "AMARELA": 281,
+        "ROSA": 277,
+        "CINZA": 290
       },
-      "143": {
-        "AZUL": 143,
-        "AMARELA": 149,
-        "ROSA": 136,
-        "CINZA": 146
+      "278": {
+        "AZUL": 278,
+        "AMARELA": 284,
+        "ROSA": 271,
+        "CINZA": 281
       },
-      "177": {
-        "AZUL": 177,
-        "AMARELA": 140,
-        "ROSA": 143,
-        "CINZA": 136
+      "312": {
+        "AZUL": 312,
+        "AMARELA": 275,
+        "ROSA": 278,
+        "CINZA": 271
       },
-      "158": {
-        "AZUL": 158,
-        "AMARELA": 165,
-        "ROSA": 161,
-        "CINZA": 171
+      "293": {
+        "AZUL": 293,
+        "AMARELA": 300,
+        "ROSA": 296,
+        "CINZA": 306
       },
-      "147": {
-        "AZUL": 147,
-        "AMARELA": 153,
-        "ROSA": 151,
-        "CINZA": 150
+      "282": {
+        "AZUL": 282,
+        "AMARELA": 288,
+        "ROSA": 286,
+        "CINZA": 285
       },
-      "160": {
-        "AZUL": 160,
-        "AMARELA": 167,
-        "ROSA": 157,
-        "CINZA": 164
+      "295": {
+        "AZUL": 295,
+        "AMARELA": 302,
+        "ROSA": 292,
+        "CINZA": 299
       },
-      "169": {
-        "AZUL": 169,
-        "AMARELA": 177,
-        "ROSA": 168,
-        "CINZA": 173
+      "304": {
+        "AZUL": 304,
+        "AMARELA": 312,
+        "ROSA": 303,
+        "CINZA": 308
       },
-      "173": {
-        "AZUL": 173,
-        "AMARELA": 169,
-        "ROSA": 162,
-        "CINZA": 177
+      "308": {
+        "AZUL": 308,
+        "AMARELA": 304,
+        "ROSA": 297,
+        "CINZA": 312
       },
-      "170": {
-        "AZUL": 170,
-        "AMARELA": 174,
-        "ROSA": 172,
-        "CINZA": 166
+      "305": {
+        "AZUL": 305,
+        "AMARELA": 309,
+        "ROSA": 307,
+        "CINZA": 301
       },
-      "145": {
-        "AZUL": 145,
-        "AMARELA": 151,
-        "ROSA": 138,
-        "CINZA": 148
+      "280": {
+        "AZUL": 280,
+        "AMARELA": 286,
+        "ROSA": 273,
+        "CINZA": 283
       },
-      "146": {
-        "AZUL": 146,
-        "AMARELA": 152,
-        "ROSA": 139,
-        "CINZA": 149
+      "281": {
+        "AZUL": 281,
+        "AMARELA": 287,
+        "ROSA": 274,
+        "CINZA": 284
       },
-      "151": {
-        "AZUL": 151,
-        "AMARELA": 148,
-        "ROSA": 155,
-        "CINZA": 145
+      "286": {
+        "AZUL": 286,
+        "AMARELA": 283,
+        "ROSA": 290,
+        "CINZA": 280
       },
-      "141": {
-        "AZUL": 141,
-        "AMARELA": 138,
-        "ROSA": 149,
-        "CINZA": 142
+      "276": {
+        "AZUL": 276,
+        "AMARELA": 273,
+        "ROSA": 284,
+        "CINZA": 277
       },
-      "152": {
-        "AZUL": 152,
-        "AMARELA": 156,
-        "ROSA": 177,
-        "CINZA": 159
+      "287": {
+        "AZUL": 287,
+        "AMARELA": 291,
+        "ROSA": 312,
+        "CINZA": 294
       },
-      "168": {
-        "AZUL": 168,
-        "AMARELA": 176,
-        "ROSA": 167,
-        "CINZA": 172
+      "303": {
+        "AZUL": 303,
+        "AMARELA": 311,
+        "ROSA": 302,
+        "CINZA": 307
       },
-      "149": {
-        "AZUL": 149,
-        "AMARELA": 155,
-        "ROSA": 153,
-        "CINZA": 152
+      "284": {
+        "AZUL": 284,
+        "AMARELA": 290,
+        "ROSA": 288,
+        "CINZA": 287
       },
-      "171": {
-        "AZUL": 171,
-        "AMARELA": 175,
-        "ROSA": 173,
-        "CINZA": 167
+      "306": {
+        "AZUL": 306,
+        "AMARELA": 310,
+        "ROSA": 308,
+        "CINZA": 302
       },
-      "144": {
-        "AZUL": 144,
-        "AMARELA": 150,
-        "ROSA": 137,
-        "CINZA": 147
+      "279": {
+        "AZUL": 279,
+        "AMARELA": 285,
+        "ROSA": 272,
+        "CINZA": 282
       },
-      "180": {
-        "AZUL": 180,
-        "AMARELA": 143,
-        "ROSA": 146,
-        "CINZA": 139
+      "315": {
+        "AZUL": 315,
+        "AMARELA": 278,
+        "ROSA": 281,
+        "CINZA": 274
       },
-      "162": {
-        "AZUL": 162,
-        "AMARELA": 160,
-        "ROSA": 178,
-        "CINZA": 156
+      "297": {
+        "AZUL": 297,
+        "AMARELA": 295,
+        "ROSA": 313,
+        "CINZA": 291
       },
-      "161": {
-        "AZUL": 161,
-        "AMARELA": 168,
-        "ROSA": 158,
-        "CINZA": 165
+      "296": {
+        "AZUL": 296,
+        "AMARELA": 303,
+        "ROSA": 293,
+        "CINZA": 300
       },
-      "157": {
-        "AZUL": 157,
-        "AMARELA": 164,
-        "ROSA": 160,
-        "CINZA": 170
+      "292": {
+        "AZUL": 292,
+        "AMARELA": 299,
+        "ROSA": 295,
+        "CINZA": 305
       },
-      "179": {
-        "AZUL": 179,
-        "AMARELA": 142,
-        "ROSA": 145,
-        "CINZA": 138
+      "314": {
+        "AZUL": 314,
+        "AMARELA": 277,
+        "ROSA": 280,
+        "CINZA": 273
       },
-      "164": {
-        "AZUL": 164,
-        "AMARELA": 162,
-        "ROSA": 180,
-        "CINZA": 158
+      "299": {
+        "AZUL": 299,
+        "AMARELA": 297,
+        "ROSA": 315,
+        "CINZA": 293
       },
-      "166": {
-        "AZUL": 166,
-        "AMARELA": 179,
-        "ROSA": 170,
-        "CINZA": 175
+      "301": {
+        "AZUL": 301,
+        "AMARELA": 314,
+        "ROSA": 305,
+        "CINZA": 310
       },
-      "159": {
-        "AZUL": 159,
-        "AMARELA": 166,
-        "ROSA": 156,
-        "CINZA": 163
+      "294": {
+        "AZUL": 294,
+        "AMARELA": 301,
+        "ROSA": 291,
+        "CINZA": 298
       },
-      "176": {
-        "AZUL": 176,
-        "AMARELA": 172,
-        "ROSA": 165,
-        "CINZA": 180
+      "311": {
+        "AZUL": 311,
+        "AMARELA": 307,
+        "ROSA": 300,
+        "CINZA": 315
       },
-      "175": {
-        "AZUL": 175,
-        "AMARELA": 171,
-        "ROSA": 164,
-        "CINZA": 179
+      "310": {
+        "AZUL": 310,
+        "AMARELA": 306,
+        "ROSA": 299,
+        "CINZA": 314
       },
-      "142": {
-        "AZUL": 142,
-        "AMARELA": 139,
-        "ROSA": 150,
-        "CINZA": 143
+      "277": {
+        "AZUL": 277,
+        "AMARELA": 274,
+        "ROSA": 285,
+        "CINZA": 278
       },
-      "165": {
-        "AZUL": 165,
-        "AMARELA": 178,
-        "ROSA": 169,
-        "CINZA": 174
+      "300": {
+        "AZUL": 300,
+        "AMARELA": 313,
+        "ROSA": 304,
+        "CINZA": 309
       },
-      "140": {
-        "AZUL": 140,
-        "AMARELA": 137,
-        "ROSA": 148,
-        "CINZA": 141
+      "275": {
+        "AZUL": 275,
+        "AMARELA": 272,
+        "ROSA": 283,
+        "CINZA": 276
       },
-      "155": {
-        "AZUL": 155,
-        "AMARELA": 159,
-        "ROSA": 176,
-        "CINZA": 162
+      "290": {
+        "AZUL": 290,
+        "AMARELA": 294,
+        "ROSA": 311,
+        "CINZA": 297
       },
-      "136": {
-        "AZUL": 136,
-        "AMARELA": 144,
-        "ROSA": 140,
-        "CINZA": 153
+      "271": {
+        "AZUL": 271,
+        "AMARELA": 279,
+        "ROSA": 275,
+        "CINZA": 288
       },
-      "137": {
-        "AZUL": 137,
-        "AMARELA": 145,
-        "ROSA": 141,
-        "CINZA": 154
+      "272": {
+        "AZUL": 272,
+        "AMARELA": 280,
+        "ROSA": 276,
+        "CINZA": 289
       },
-      "174": {
-        "AZUL": 174,
-        "AMARELA": 170,
-        "ROSA": 163,
-        "CINZA": 178
+      "309": {
+        "AZUL": 309,
+        "AMARELA": 305,
+        "ROSA": 298,
+        "CINZA": 313
       }
     },
     "CN": {
-      "101": {
-        "AZUL": 101,
-        "AMARELA": 99,
-        "CINZA": 125,
-        "ROSA": 123
+      "191": {
+        "AZUL": 191,
+        "AMARELA": 189,
+        "CINZA": 215,
+        "ROSA": 213
       },
-      "115": {
-        "AZUL": 115,
-        "AMARELA": 97,
-        "CINZA": 134,
-        "ROSA": 130
+      "205": {
+        "AZUL": 205,
+        "AMARELA": 187,
+        "CINZA": 224,
+        "ROSA": 220
       },
-      "131": {
-        "AZUL": 131,
-        "AMARELA": 125,
-        "CINZA": 97,
-        "ROSA": 91
+      "221": {
+        "AZUL": 221,
+        "AMARELA": 215,
+        "CINZA": 187,
+        "ROSA": 181
       },
-      "100": {
-        "AZUL": 100,
-        "AMARELA": 94,
-        "CINZA": 131,
-        "ROSA": 135
+      "190": {
+        "AZUL": 190,
+        "AMARELA": 184,
+        "CINZA": 221,
+        "ROSA": 225
       },
-      "117": {
-        "AZUL": 117,
-        "AMARELA": 118,
-        "CINZA": 105,
-        "ROSA": 112
+      "207": {
+        "AZUL": 207,
+        "AMARELA": 208,
+        "CINZA": 195,
+        "ROSA": 202
       },
-      "94": {
-        "AZUL": 94,
-        "AMARELA": 109,
-        "CINZA": 120,
-        "ROSA": 119
+      "184": {
+        "AZUL": 184,
+        "AMARELA": 199,
+        "CINZA": 210,
+        "ROSA": 209
       },
-      "109": {
-        "AZUL": 109,
-        "AMARELA": 110,
-        "CINZA": 113,
-        "ROSA": 104
+      "199": {
+        "AZUL": 199,
+        "AMARELA": 200,
+        "CINZA": 203,
+        "ROSA": 194
       },
-      "99": {
-        "AZUL": 99,
-        "AMARELA": 93,
-        "CINZA": 130,
-        "ROSA": 134
+      "189": {
+        "AZUL": 189,
+        "AMARELA": 183,
+        "CINZA": 220,
+        "ROSA": 224
       },
-      "125": {
-        "AZUL": 125,
-        "AMARELA": 132,
-        "CINZA": 91,
-        "ROSA": 98
+      "215": {
+        "AZUL": 215,
+        "AMARELA": 222,
+        "CINZA": 181,
+        "ROSA": 188
       },
-      "105": {
-        "AZUL": 105,
-        "AMARELA": 103,
-        "CINZA": 124,
-        "ROSA": 127
+      "195": {
+        "AZUL": 195,
+        "AMARELA": 193,
+        "CINZA": 214,
+        "ROSA": 217
       },
-      "106": {
-        "AZUL": 106,
-        "AMARELA": 122,
-        "CINZA": 102,
-        "ROSA": 120
+      "196": {
+        "AZUL": 196,
+        "AMARELA": 212,
+        "CINZA": 192,
+        "ROSA": 210
       },
-      "92": {
-        "AZUL": 92,
-        "AMARELA": 107,
-        "CINZA": 118,
-        "ROSA": 117
+      "182": {
+        "AZUL": 182,
+        "AMARELA": 197,
+        "CINZA": 208,
+        "ROSA": 207
       },
-      "110": {
-        "AZUL": 110,
-        "AMARELA": 111,
-        "CINZA": 114,
-        "ROSA": 105
+      "200": {
+        "AZUL": 200,
+        "AMARELA": 201,
+        "CINZA": 204,
+        "ROSA": 195
       },
-      "127": {
-        "AZUL": 127,
-        "AMARELA": 134,
-        "CINZA": 93,
-        "ROSA": 100
+      "217": {
+        "AZUL": 217,
+        "AMARELA": 224,
+        "CINZA": 183,
+        "ROSA": 190
       },
+      "219": {
+        "AZUL": 219,
+        "AMARELA": 220,
+        "CINZA": 185,
+        "ROSA": 186
+      },
+      "220": {
+        "AZUL": 220,
+        "AMARELA": 221,
+        "CINZA": 186,
+        "ROSA": 187
+      },
+      "209": {
+        "AZUL": 209,
+        "AMARELA": 210,
+        "CINZA": 197,
+        "ROSA": 204
+      },
+      "187": {
+        "AZUL": 187,
+        "AMARELA": 181,
+        "CINZA": 218,
+        "ROSA": 222
+      },
+      "224": {
+        "AZUL": 224,
+        "AMARELA": 218,
+        "CINZA": 190,
+        "ROSA": 184
+      },
+      "223": {
+        "AZUL": 223,
+        "AMARELA": 217,
+        "CINZA": 189,
+        "ROSA": 183
+      },
+      "181": {
+        "AZUL": 181,
+        "AMARELA": 196,
+        "CINZA": 207,
+        "ROSA": 206
+      },
+      "186": {
+        "AZUL": 186,
+        "AMARELA": 195,
+        "CINZA": 212,
+        "ROSA": 193
+      },
+      "202": {
+        "AZUL": 202,
+        "AMARELA": 203,
+        "CINZA": 206,
+        "ROSA": 197
+      },
+      "225": {
+        "AZUL": 225,
+        "AMARELA": 219,
+        "CINZA": 191,
+        "ROSA": 185
+      },
+      "183": {
+        "AZUL": 183,
+        "AMARELA": 198,
+        "CINZA": 209,
+        "ROSA": 208
+      },
+      "204": {
+        "AZUL": 204,
+        "AMARELA": 186,
+        "CINZA": 223,
+        "ROSA": 219
+      },
+      "185": {
+        "AZUL": 185,
+        "AMARELA": 194,
+        "CINZA": 211,
+        "ROSA": 192
+      },
+      "218": {
+        "AZUL": 218,
+        "AMARELA": 225,
+        "CINZA": 184,
+        "ROSA": 191
+      },
+      "211": {
+        "AZUL": 211,
+        "AMARELA": 207,
+        "CINZA": 199,
+        "ROSA": 201
+      },
+      "194": {
+        "AZUL": 194,
+        "AMARELA": 192,
+        "CINZA": 213,
+        "ROSA": 216
+      },
+      "206": {
+        "AZUL": 206,
+        "AMARELA": 188,
+        "CINZA": 225,
+        "ROSA": 221
+      },
+      "188": {
+        "AZUL": 188,
+        "AMARELA": 182,
+        "CINZA": 219,
+        "ROSA": 223
+      },
+      "222": {
+        "AZUL": 222,
+        "AMARELA": 216,
+        "CINZA": 188,
+        "ROSA": 182
+      },
+      "208": {
+        "AZUL": 208,
+        "AMARELA": 209,
+        "CINZA": 196,
+        "ROSA": 203
+      },
+      "214": {
+        "AZUL": 214,
+        "AMARELA": 206,
+        "CINZA": 202,
+        "ROSA": 200
+      },
+      "192": {
+        "AZUL": 192,
+        "AMARELA": 190,
+        "CINZA": 216,
+        "ROSA": 214
+      },
+      "213": {
+        "AZUL": 213,
+        "AMARELA": 205,
+        "CINZA": 201,
+        "ROSA": 199
+      },
+      "216": {
+        "AZUL": 216,
+        "AMARELA": 223,
+        "CINZA": 182,
+        "ROSA": 189
+      },
+      "197": {
+        "AZUL": 197,
+        "AMARELA": 213,
+        "CINZA": 193,
+        "ROSA": 211
+      },
+      "198": {
+        "AZUL": 198,
+        "AMARELA": 214,
+        "CINZA": 194,
+        "ROSA": 212
+      },
+      "193": {
+        "AZUL": 193,
+        "AMARELA": 191,
+        "CINZA": 217,
+        "ROSA": 215
+      },
+      "203": {
+        "AZUL": 203,
+        "AMARELA": 185,
+        "CINZA": 222,
+        "ROSA": 218
+      },
+      "212": {
+        "AZUL": 212,
+        "AMARELA": 204,
+        "CINZA": 200,
+        "ROSA": 198
+      },
+      "201": {
+        "AZUL": 201,
+        "AMARELA": 202,
+        "CINZA": 205,
+        "ROSA": 196
+      },
+      "210": {
+        "AZUL": 210,
+        "AMARELA": 211,
+        "CINZA": 198,
+        "ROSA": 205
+      }
+    },
+    "CH": {
       "129": {
         "AZUL": 129,
-        "AMARELA": 130,
-        "CINZA": 95,
-        "ROSA": 96
-      },
-      "130": {
-        "AZUL": 130,
-        "AMARELA": 131,
-        "CINZA": 96,
-        "ROSA": 97
-      },
-      "119": {
-        "AZUL": 119,
-        "AMARELA": 120,
-        "CINZA": 107,
-        "ROSA": 114
-      },
-      "97": {
-        "AZUL": 97,
-        "AMARELA": 91,
-        "CINZA": 128,
-        "ROSA": 132
-      },
-      "134": {
-        "AZUL": 134,
-        "AMARELA": 128,
-        "CINZA": 100,
+        "AMARELA": 112,
+        "BRANCA": 115,
         "ROSA": 94
-      },
-      "133": {
-        "AZUL": 133,
-        "AMARELA": 127,
-        "CINZA": 99,
-        "ROSA": 93
-      },
-      "91": {
-        "AZUL": 91,
-        "AMARELA": 106,
-        "CINZA": 117,
-        "ROSA": 116
-      },
-      "96": {
-        "AZUL": 96,
-        "AMARELA": 105,
-        "CINZA": 122,
-        "ROSA": 103
-      },
-      "112": {
-        "AZUL": 112,
-        "AMARELA": 113,
-        "CINZA": 116,
-        "ROSA": 107
       },
       "135": {
         "AZUL": 135,
-        "AMARELA": 129,
-        "CINZA": 101,
-        "ROSA": 95
-      },
-      "93": {
-        "AZUL": 93,
-        "AMARELA": 108,
-        "CINZA": 119,
+        "AMARELA": 93,
+        "BRANCA": 121,
         "ROSA": 118
       },
-      "114": {
-        "AZUL": 114,
-        "AMARELA": 96,
-        "CINZA": 133,
-        "ROSA": 129
-      },
-      "95": {
-        "AZUL": 95,
-        "AMARELA": 104,
-        "CINZA": 121,
+      "106": {
+        "AZUL": 106,
+        "AMARELA": 127,
+        "BRANCA": 131,
         "ROSA": 102
       },
-      "128": {
-        "AZUL": 128,
-        "AMARELA": 135,
-        "CINZA": 94,
-        "ROSA": 101
+      "115": {
+        "AZUL": 115,
+        "AMARELA": 119,
+        "BRANCA": 127,
+        "ROSA": 135
       },
-      "121": {
-        "AZUL": 121,
-        "AMARELA": 117,
-        "CINZA": 109,
-        "ROSA": 111
+      "92": {
+        "AZUL": 92,
+        "AMARELA": 132,
+        "BRANCA": 97,
+        "ROSA": 104
       },
-      "104": {
-        "AZUL": 104,
-        "AMARELA": 102,
-        "CINZA": 123,
-        "ROSA": 126
+      "127": {
+        "AZUL": 127,
+        "AMARELA": 110,
+        "BRANCA": 113,
+        "ROSA": 92
+      },
+      "100": {
+        "AZUL": 100,
+        "AMARELA": 121,
+        "BRANCA": 105,
+        "ROSA": 96
+      },
+      "103": {
+        "AZUL": 103,
+        "AMARELA": 124,
+        "BRANCA": 128,
+        "ROSA": 99
+      },
+      "94": {
+        "AZUL": 94,
+        "AMARELA": 134,
+        "BRANCA": 99,
+        "ROSA": 106
+      },
+      "122": {
+        "AZUL": 122,
+        "AMARELA": 105,
+        "BRANCA": 132,
+        "ROSA": 128
       },
       "116": {
         "AZUL": 116,
-        "AMARELA": 98,
-        "CINZA": 135,
-        "ROSA": 131
+        "AMARELA": 94,
+        "BRANCA": 122,
+        "ROSA": 114
       },
-      "98": {
-        "AZUL": 98,
+      "96": {
+        "AZUL": 96,
+        "AMARELA": 128,
+        "BRANCA": 101,
+        "ROSA": 108
+      },
+      "134": {
+        "AZUL": 134,
         "AMARELA": 92,
-        "CINZA": 129,
+        "BRANCA": 120,
+        "ROSA": 117
+      },
+      "112": {
+        "AZUL": 112,
+        "AMARELA": 116,
+        "BRANCA": 124,
+        "ROSA": 132
+      },
+      "95": {
+        "AZUL": 95,
+        "AMARELA": 135,
+        "BRANCA": 100,
+        "ROSA": 107
+      },
+      "101": {
+        "AZUL": 101,
+        "AMARELA": 122,
+        "BRANCA": 106,
+        "ROSA": 97
+      },
+      "110": {
+        "AZUL": 110,
+        "AMARELA": 99,
+        "BRANCA": 94,
+        "ROSA": 122
+      },
+      "131": {
+        "AZUL": 131,
+        "AMARELA": 114,
+        "BRANCA": 117,
+        "ROSA": 112
+      },
+      "105": {
+        "AZUL": 105,
+        "AMARELA": 126,
+        "BRANCA": 130,
+        "ROSA": 101
+      },
+      "99": {
+        "AZUL": 99,
+        "AMARELA": 120,
+        "BRANCA": 104,
+        "ROSA": 95
+      },
+      "120": {
+        "AZUL": 120,
+        "AMARELA": 103,
+        "BRANCA": 110,
+        "ROSA": 126
+      },
+      "124": {
+        "AZUL": 124,
+        "AMARELA": 107,
+        "BRANCA": 134,
+        "ROSA": 130
+      },
+      "97": {
+        "AZUL": 97,
+        "AMARELA": 129,
+        "BRANCA": 102,
+        "ROSA": 109
+      },
+      "91": {
+        "AZUL": 91,
+        "AMARELA": 131,
+        "BRANCA": 96,
+        "ROSA": 103
+      },
+      "107": {
+        "AZUL": 107,
+        "AMARELA": 96,
+        "BRANCA": 91,
+        "ROSA": 119
+      },
+      "118": {
+        "AZUL": 118,
+        "AMARELA": 101,
+        "BRANCA": 108,
+        "ROSA": 124
+      },
+      "130": {
+        "AZUL": 130,
+        "AMARELA": 113,
+        "BRANCA": 116,
+        "ROSA": 111
+      },
+      "108": {
+        "AZUL": 108,
+        "AMARELA": 97,
+        "BRANCA": 92,
+        "ROSA": 120
+      },
+      "121": {
+        "AZUL": 121,
+        "AMARELA": 104,
+        "BRANCA": 111,
+        "ROSA": 127
+      },
+      "117": {
+        "AZUL": 117,
+        "AMARELA": 95,
+        "BRANCA": 123,
+        "ROSA": 115
+      },
+      "104": {
+        "AZUL": 104,
+        "AMARELA": 125,
+        "BRANCA": 129,
+        "ROSA": 100
+      },
+      "109": {
+        "AZUL": 109,
+        "AMARELA": 98,
+        "BRANCA": 93,
+        "ROSA": 121
+      },
+      "102": {
+        "AZUL": 102,
+        "AMARELA": 123,
+        "BRANCA": 107,
+        "ROSA": 98
+      },
+      "128": {
+        "AZUL": 128,
+        "AMARELA": 111,
+        "BRANCA": 114,
+        "ROSA": 93
+      },
+      "126": {
+        "AZUL": 126,
+        "AMARELA": 109,
+        "BRANCA": 112,
+        "ROSA": 91
+      },
+      "113": {
+        "AZUL": 113,
+        "AMARELA": 117,
+        "BRANCA": 125,
         "ROSA": 133
       },
       "132": {
         "AZUL": 132,
-        "AMARELA": 126,
-        "CINZA": 98,
-        "ROSA": 92
-      },
-      "118": {
-        "AZUL": 118,
-        "AMARELA": 119,
-        "CINZA": 106,
-        "ROSA": 113
-      },
-      "124": {
-        "AZUL": 124,
-        "AMARELA": 116,
-        "CINZA": 112,
-        "ROSA": 110
-      },
-      "102": {
-        "AZUL": 102,
-        "AMARELA": 100,
-        "CINZA": 126,
-        "ROSA": 124
-      },
-      "123": {
-        "AZUL": 123,
         "AMARELA": 115,
-        "CINZA": 111,
-        "ROSA": 109
-      },
-      "126": {
-        "AZUL": 126,
-        "AMARELA": 133,
-        "CINZA": 92,
-        "ROSA": 99
-      },
-      "107": {
-        "AZUL": 107,
-        "AMARELA": 123,
-        "CINZA": 103,
-        "ROSA": 121
-      },
-      "108": {
-        "AZUL": 108,
-        "AMARELA": 124,
-        "CINZA": 104,
-        "ROSA": 122
-      },
-      "103": {
-        "AZUL": 103,
-        "AMARELA": 101,
-        "CINZA": 127,
-        "ROSA": 125
-      },
-      "113": {
-        "AZUL": 113,
-        "AMARELA": 95,
-        "CINZA": 132,
-        "ROSA": 128
-      },
-      "122": {
-        "AZUL": 122,
-        "AMARELA": 114,
-        "CINZA": 110,
-        "ROSA": 108
+        "BRANCA": 118,
+        "ROSA": 113
       },
       "111": {
         "AZUL": 111,
-        "AMARELA": 112,
-        "CINZA": 115,
-        "ROSA": 106
+        "AMARELA": 100,
+        "BRANCA": 95,
+        "ROSA": 123
       },
-      "120": {
-        "AZUL": 120,
-        "AMARELA": 121,
-        "CINZA": 108,
-        "ROSA": 115
-      }
-    },
-    "CH": {
-      "84": {
-        "AZUL": 84,
-        "AMARELA": 67,
-        "BRANCA": 70,
-        "ROSA": 49
+      "123": {
+        "AZUL": 123,
+        "AMARELA": 106,
+        "BRANCA": 133,
+        "ROSA": 129
       },
-      "90": {
-        "AZUL": 90,
-        "AMARELA": 48,
-        "BRANCA": 76,
-        "ROSA": 73
+      "125": {
+        "AZUL": 125,
+        "AMARELA": 108,
+        "BRANCA": 135,
+        "ROSA": 131
       },
-      "61": {
-        "AZUL": 61,
-        "AMARELA": 82,
-        "BRANCA": 86,
-        "ROSA": 57
+      "119": {
+        "AZUL": 119,
+        "AMARELA": 102,
+        "BRANCA": 109,
+        "ROSA": 125
       },
-      "70": {
-        "AZUL": 70,
-        "AMARELA": 74,
-        "BRANCA": 82,
-        "ROSA": 90
+      "114": {
+        "AZUL": 114,
+        "AMARELA": 118,
+        "BRANCA": 126,
+        "ROSA": 134
       },
-      "47": {
-        "AZUL": 47,
-        "AMARELA": 87,
-        "BRANCA": 52,
-        "ROSA": 59
+      "98": {
+        "AZUL": 98,
+        "AMARELA": 130,
+        "BRANCA": 103,
+        "ROSA": 110
       },
-      "82": {
-        "AZUL": 82,
-        "AMARELA": 65,
-        "BRANCA": 68,
-        "ROSA": 47
+      "133": {
+        "AZUL": 133,
+        "AMARELA": 91,
+        "BRANCA": 119,
+        "ROSA": 116
       },
-      "55": {
-        "AZUL": 55,
-        "AMARELA": 76,
-        "BRANCA": 60,
-        "ROSA": 51
-      },
-      "58": {
-        "AZUL": 58,
-        "AMARELA": 79,
-        "BRANCA": 83,
-        "ROSA": 54
-      },
-      "49": {
-        "AZUL": 49,
-        "AMARELA": 89,
-        "BRANCA": 54,
-        "ROSA": 61
-      },
-      "77": {
-        "AZUL": 77,
-        "AMARELA": 60,
-        "BRANCA": 87,
-        "ROSA": 83
-      },
-      "71": {
-        "AZUL": 71,
-        "AMARELA": 49,
-        "BRANCA": 77,
-        "ROSA": 69
-      },
-      "51": {
-        "AZUL": 51,
-        "AMARELA": 83,
-        "BRANCA": 56,
-        "ROSA": 63
-      },
-      "89": {
-        "AZUL": 89,
-        "AMARELA": 47,
-        "BRANCA": 75,
-        "ROSA": 72
-      },
-      "67": {
-        "AZUL": 67,
-        "AMARELA": 71,
-        "BRANCA": 79,
-        "ROSA": 87
-      },
-      "50": {
-        "AZUL": 50,
-        "AMARELA": 90,
-        "BRANCA": 55,
-        "ROSA": 62
-      },
-      "56": {
-        "AZUL": 56,
-        "AMARELA": 77,
-        "BRANCA": 61,
-        "ROSA": 52
-      },
-      "65": {
-        "AZUL": 65,
-        "AMARELA": 54,
-        "BRANCA": 49,
-        "ROSA": 77
-      },
-      "86": {
-        "AZUL": 86,
-        "AMARELA": 69,
-        "BRANCA": 72,
-        "ROSA": 67
-      },
-      "60": {
-        "AZUL": 60,
-        "AMARELA": 81,
-        "BRANCA": 85,
-        "ROSA": 56
-      },
-      "54": {
-        "AZUL": 54,
-        "AMARELA": 75,
-        "BRANCA": 59,
-        "ROSA": 50
-      },
-      "75": {
-        "AZUL": 75,
-        "AMARELA": 58,
-        "BRANCA": 65,
-        "ROSA": 81
-      },
-      "79": {
-        "AZUL": 79,
-        "AMARELA": 62,
-        "BRANCA": 89,
-        "ROSA": 85
-      },
-      "52": {
-        "AZUL": 52,
-        "AMARELA": 84,
-        "BRANCA": 57,
-        "ROSA": 64
-      },
-      "46": {
-        "AZUL": 46,
-        "AMARELA": 86,
-        "BRANCA": 51,
-        "ROSA": 58
-      },
-      "62": {
-        "AZUL": 62,
-        "AMARELA": 51,
-        "BRANCA": 46,
-        "ROSA": 74
-      },
-      "73": {
-        "AZUL": 73,
-        "AMARELA": 56,
-        "BRANCA": 63,
-        "ROSA": 79
-      },
-      "85": {
-        "AZUL": 85,
-        "AMARELA": 68,
-        "BRANCA": 71,
-        "ROSA": 66
-      },
-      "63": {
-        "AZUL": 63,
-        "AMARELA": 52,
-        "BRANCA": 47,
-        "ROSA": 75
-      },
-      "76": {
-        "AZUL": 76,
-        "AMARELA": 59,
-        "BRANCA": 66,
-        "ROSA": 82
-      },
-      "72": {
-        "AZUL": 72,
-        "AMARELA": 50,
-        "BRANCA": 78,
-        "ROSA": 70
-      },
-      "59": {
-        "AZUL": 59,
-        "AMARELA": 80,
-        "BRANCA": 84,
-        "ROSA": 55
-      },
-      "64": {
-        "AZUL": 64,
-        "AMARELA": 53,
-        "BRANCA": 48,
-        "ROSA": 76
-      },
-      "57": {
-        "AZUL": 57,
-        "AMARELA": 78,
-        "BRANCA": 62,
-        "ROSA": 53
-      },
-      "83": {
-        "AZUL": 83,
-        "AMARELA": 66,
-        "BRANCA": 69,
-        "ROSA": 48
-      },
-      "81": {
-        "AZUL": 81,
-        "AMARELA": 64,
-        "BRANCA": 67,
-        "ROSA": 46
-      },
-      "68": {
-        "AZUL": 68,
-        "AMARELA": 72,
-        "BRANCA": 80,
-        "ROSA": 88
-      },
-      "87": {
-        "AZUL": 87,
-        "AMARELA": 70,
-        "BRANCA": 73,
-        "ROSA": 68
-      },
-      "66": {
-        "AZUL": 66,
-        "AMARELA": 55,
-        "BRANCA": 50,
-        "ROSA": 78
-      },
-      "78": {
-        "AZUL": 78,
-        "AMARELA": 61,
-        "BRANCA": 88,
-        "ROSA": 84
-      },
-      "80": {
-        "AZUL": 80,
-        "AMARELA": 63,
-        "BRANCA": 90,
-        "ROSA": 86
-      },
-      "74": {
-        "AZUL": 74,
-        "AMARELA": 57,
-        "BRANCA": 64,
-        "ROSA": 80
-      },
-      "69": {
-        "AZUL": 69,
-        "AMARELA": 73,
-        "BRANCA": 81,
-        "ROSA": 89
-      },
-      "53": {
-        "AZUL": 53,
-        "AMARELA": 85,
-        "BRANCA": 58,
-        "ROSA": 65
-      },
-      "88": {
-        "AZUL": 88,
-        "AMARELA": 46,
-        "BRANCA": 74,
-        "ROSA": 71
-      },
-      "48": {
-        "AZUL": 48,
-        "AMARELA": 88,
-        "BRANCA": 53,
-        "ROSA": 60
+      "93": {
+        "AZUL": 93,
+        "AMARELA": 133,
+        "BRANCA": 98,
+        "ROSA": 105
       }
     }
   },
@@ -9386,6 +9326,1362 @@
         "AMARELA": 75,
         "BRANCA": 84,
         "ROSA": 65
+      }
+    }
+  },
+  "2024": {
+    "LC0": {
+      "33": {
+        "AZUL": 33,
+        "AMARELA": 13,
+        "VERDE": 18,
+        "BRANCA": 36
+      },
+      "9": {
+        "AZUL": 9,
+        "AMARELA": 40,
+        "VERDE": 43,
+        "BRANCA": 12
+      },
+      "35": {
+        "AZUL": 35,
+        "AMARELA": 18,
+        "VERDE": 15,
+        "BRANCA": 38
+      },
+      "26": {
+        "AZUL": 26,
+        "AMARELA": 34,
+        "VERDE": 20,
+        "BRANCA": 32
+      },
+      "7": {
+        "AZUL": 7,
+        "AMARELA": 10,
+        "VERDE": 41,
+        "BRANCA": 44
+      },
+      "42": {
+        "AZUL": 42,
+        "AMARELA": 8,
+        "VERDE": 11,
+        "BRANCA": 22
+      },
+      "13": {
+        "AZUL": 13,
+        "AMARELA": 26,
+        "VERDE": 38,
+        "BRANCA": 41
+      },
+      "17": {
+        "AZUL": 17,
+        "AMARELA": 33,
+        "VERDE": 36,
+        "BRANCA": 11
+      },
+      "45": {
+        "AZUL": 45,
+        "AMARELA": 17,
+        "VERDE": 14,
+        "BRANCA": 25
+      },
+      "8": {
+        "AZUL": 8,
+        "AMARELA": 11,
+        "VERDE": 42,
+        "BRANCA": 45
+      },
+      "41": {
+        "AZUL": 41,
+        "AMARELA": 7,
+        "VERDE": 10,
+        "BRANCA": 21
+      },
+      "44": {
+        "AZUL": 44,
+        "AMARELA": 16,
+        "VERDE": 13,
+        "BRANCA": 24
+      },
+      "3": {
+        "AZUL": 3,
+        "AMARELA": 1,
+        "VERDE": 2,
+        "BRANCA": 3
+      },
+      "6": {
+        "AZUL": 6,
+        "AMARELA": 9,
+        "VERDE": 40,
+        "BRANCA": 43
+      },
+      "10": {
+        "AZUL": 10,
+        "AMARELA": 41,
+        "VERDE": 44,
+        "BRANCA": 13
+      },
+      "12": {
+        "AZUL": 12,
+        "AMARELA": 25,
+        "VERDE": 37,
+        "BRANCA": 40
+      },
+      "39": {
+        "AZUL": 39,
+        "AMARELA": 24,
+        "VERDE": 8,
+        "BRANCA": 28
+      },
+      "20": {
+        "AZUL": 20,
+        "AMARELA": 45,
+        "VERDE": 33,
+        "BRANCA": 8
+      },
+      "38": {
+        "AZUL": 38,
+        "AMARELA": 23,
+        "VERDE": 7,
+        "BRANCA": 27
+      },
+      "15": {
+        "AZUL": 15,
+        "AMARELA": 31,
+        "VERDE": 34,
+        "BRANCA": 9
+      },
+      "1": {
+        "AZUL": 1,
+        "AMARELA": 3,
+        "VERDE": 3,
+        "BRANCA": 5
+      },
+      "43": {
+        "AZUL": 43,
+        "AMARELA": 15,
+        "VERDE": 12,
+        "BRANCA": 23
+      },
+      "4": {
+        "AZUL": 4,
+        "AMARELA": 5,
+        "VERDE": 5,
+        "BRANCA": 2
+      },
+      "16": {
+        "AZUL": 16,
+        "AMARELA": 32,
+        "VERDE": 35,
+        "BRANCA": 10
+      },
+      "37": {
+        "AZUL": 37,
+        "AMARELA": 22,
+        "VERDE": 6,
+        "BRANCA": 26
+      },
+      "19": {
+        "AZUL": 19,
+        "AMARELA": 44,
+        "VERDE": 32,
+        "BRANCA": 7
+      },
+      "27": {
+        "AZUL": 27,
+        "AMARELA": 35,
+        "VERDE": 21,
+        "BRANCA": 33
+      },
+      "2": {
+        "AZUL": 2,
+        "AMARELA": 2,
+        "VERDE": 1,
+        "BRANCA": 4
+      },
+      "40": {
+        "AZUL": 40,
+        "AMARELA": 6,
+        "VERDE": 9,
+        "BRANCA": 20
+      },
+      "23": {
+        "AZUL": 23,
+        "AMARELA": 37,
+        "VERDE": 25,
+        "BRANCA": 17
+      },
+      "5": {
+        "AZUL": 5,
+        "AMARELA": 4,
+        "VERDE": 4,
+        "BRANCA": 1
+      },
+      "32": {
+        "AZUL": 32,
+        "AMARELA": 12,
+        "VERDE": 17,
+        "BRANCA": 35
+      },
+      "30": {
+        "AZUL": 30,
+        "AMARELA": 29,
+        "VERDE": 30,
+        "BRANCA": 31
+      },
+      "14": {
+        "AZUL": 14,
+        "AMARELA": 27,
+        "VERDE": 39,
+        "BRANCA": 42
+      },
+      "18": {
+        "AZUL": 18,
+        "AMARELA": 43,
+        "VERDE": 31,
+        "BRANCA": 6
+      },
+      "25": {
+        "AZUL": 25,
+        "AMARELA": 39,
+        "VERDE": 27,
+        "BRANCA": 19
+      },
+      "34": {
+        "AZUL": 34,
+        "AMARELA": 14,
+        "VERDE": 19,
+        "BRANCA": 37
+      },
+      "24": {
+        "AZUL": 24,
+        "AMARELA": 38,
+        "VERDE": 26,
+        "BRANCA": 18
+      },
+      "21": {
+        "AZUL": 21,
+        "AMARELA": 20,
+        "VERDE": 23,
+        "BRANCA": 15
+      },
+      "29": {
+        "AZUL": 29,
+        "AMARELA": 28,
+        "VERDE": 29,
+        "BRANCA": 30
+      },
+      "28": {
+        "AZUL": 28,
+        "AMARELA": 36,
+        "VERDE": 22,
+        "BRANCA": 34
+      },
+      "11": {
+        "AZUL": 11,
+        "AMARELA": 42,
+        "VERDE": 45,
+        "BRANCA": 14
+      },
+      "22": {
+        "AZUL": 22,
+        "AMARELA": 21,
+        "VERDE": 24,
+        "BRANCA": 16
+      },
+      "36": {
+        "AZUL": 36,
+        "AMARELA": 19,
+        "VERDE": 16,
+        "BRANCA": 39
+      },
+      "31": {
+        "AZUL": 31,
+        "AMARELA": 30,
+        "VERDE": 28,
+        "BRANCA": 29
+      }
+    },
+    "LC1": {
+      "33": {
+        "AZUL": 33,
+        "AMARELA": 13,
+        "VERDE": 18,
+        "BRANCA": 36
+      },
+      "9": {
+        "AZUL": 9,
+        "AMARELA": 40,
+        "VERDE": 43,
+        "BRANCA": 12
+      },
+      "35": {
+        "AZUL": 35,
+        "AMARELA": 18,
+        "VERDE": 15,
+        "BRANCA": 38
+      },
+      "26": {
+        "AZUL": 26,
+        "AMARELA": 34,
+        "VERDE": 20,
+        "BRANCA": 32
+      },
+      "7": {
+        "AZUL": 7,
+        "AMARELA": 10,
+        "VERDE": 41,
+        "BRANCA": 44
+      },
+      "42": {
+        "AZUL": 42,
+        "AMARELA": 8,
+        "VERDE": 11,
+        "BRANCA": 22
+      },
+      "13": {
+        "AZUL": 13,
+        "AMARELA": 26,
+        "VERDE": 38,
+        "BRANCA": 41
+      },
+      "17": {
+        "AZUL": 17,
+        "AMARELA": 33,
+        "VERDE": 36,
+        "BRANCA": 11
+      },
+      "45": {
+        "AZUL": 45,
+        "AMARELA": 17,
+        "VERDE": 14,
+        "BRANCA": 25
+      },
+      "8": {
+        "AZUL": 8,
+        "AMARELA": 11,
+        "VERDE": 42,
+        "BRANCA": 45
+      },
+      "41": {
+        "AZUL": 41,
+        "AMARELA": 7,
+        "VERDE": 10,
+        "BRANCA": 21
+      },
+      "44": {
+        "AZUL": 44,
+        "AMARELA": 16,
+        "VERDE": 13,
+        "BRANCA": 24
+      },
+      "6": {
+        "AZUL": 6,
+        "AMARELA": 9,
+        "VERDE": 40,
+        "BRANCA": 43
+      },
+      "10": {
+        "AZUL": 10,
+        "AMARELA": 41,
+        "VERDE": 44,
+        "BRANCA": 13
+      },
+      "12": {
+        "AZUL": 12,
+        "AMARELA": 25,
+        "VERDE": 37,
+        "BRANCA": 40
+      },
+      "39": {
+        "AZUL": 39,
+        "AMARELA": 24,
+        "VERDE": 8,
+        "BRANCA": 28
+      },
+      "4": {
+        "AZUL": 4,
+        "AMARELA": 3,
+        "VERDE": 1,
+        "BRANCA": 4
+      },
+      "20": {
+        "AZUL": 20,
+        "AMARELA": 45,
+        "VERDE": 33,
+        "BRANCA": 8
+      },
+      "38": {
+        "AZUL": 38,
+        "AMARELA": 23,
+        "VERDE": 7,
+        "BRANCA": 27
+      },
+      "15": {
+        "AZUL": 15,
+        "AMARELA": 31,
+        "VERDE": 34,
+        "BRANCA": 9
+      },
+      "43": {
+        "AZUL": 43,
+        "AMARELA": 15,
+        "VERDE": 12,
+        "BRANCA": 23
+      },
+      "16": {
+        "AZUL": 16,
+        "AMARELA": 32,
+        "VERDE": 35,
+        "BRANCA": 10
+      },
+      "37": {
+        "AZUL": 37,
+        "AMARELA": 22,
+        "VERDE": 6,
+        "BRANCA": 26
+      },
+      "3": {
+        "AZUL": 3,
+        "AMARELA": 1,
+        "VERDE": 5,
+        "BRANCA": 2
+      },
+      "19": {
+        "AZUL": 19,
+        "AMARELA": 44,
+        "VERDE": 32,
+        "BRANCA": 7
+      },
+      "27": {
+        "AZUL": 27,
+        "AMARELA": 35,
+        "VERDE": 21,
+        "BRANCA": 33
+      },
+      "40": {
+        "AZUL": 40,
+        "AMARELA": 6,
+        "VERDE": 9,
+        "BRANCA": 20
+      },
+      "23": {
+        "AZUL": 23,
+        "AMARELA": 37,
+        "VERDE": 25,
+        "BRANCA": 17
+      },
+      "32": {
+        "AZUL": 32,
+        "AMARELA": 12,
+        "VERDE": 17,
+        "BRANCA": 35
+      },
+      "5": {
+        "AZUL": 5,
+        "AMARELA": 4,
+        "VERDE": 2,
+        "BRANCA": 5
+      },
+      "30": {
+        "AZUL": 30,
+        "AMARELA": 29,
+        "VERDE": 30,
+        "BRANCA": 31
+      },
+      "14": {
+        "AZUL": 14,
+        "AMARELA": 27,
+        "VERDE": 39,
+        "BRANCA": 42
+      },
+      "18": {
+        "AZUL": 18,
+        "AMARELA": 43,
+        "VERDE": 31,
+        "BRANCA": 6
+      },
+      "2": {
+        "AZUL": 2,
+        "AMARELA": 2,
+        "VERDE": 4,
+        "BRANCA": 1
+      },
+      "25": {
+        "AZUL": 25,
+        "AMARELA": 39,
+        "VERDE": 27,
+        "BRANCA": 19
+      },
+      "1": {
+        "AZUL": 1,
+        "AMARELA": 5,
+        "VERDE": 3,
+        "BRANCA": 3
+      },
+      "34": {
+        "AZUL": 34,
+        "AMARELA": 14,
+        "VERDE": 19,
+        "BRANCA": 37
+      },
+      "24": {
+        "AZUL": 24,
+        "AMARELA": 38,
+        "VERDE": 26,
+        "BRANCA": 18
+      },
+      "21": {
+        "AZUL": 21,
+        "AMARELA": 20,
+        "VERDE": 23,
+        "BRANCA": 15
+      },
+      "29": {
+        "AZUL": 29,
+        "AMARELA": 28,
+        "VERDE": 29,
+        "BRANCA": 30
+      },
+      "28": {
+        "AZUL": 28,
+        "AMARELA": 36,
+        "VERDE": 22,
+        "BRANCA": 34
+      },
+      "11": {
+        "AZUL": 11,
+        "AMARELA": 42,
+        "VERDE": 45,
+        "BRANCA": 14
+      },
+      "22": {
+        "AZUL": 22,
+        "AMARELA": 21,
+        "VERDE": 24,
+        "BRANCA": 16
+      },
+      "36": {
+        "AZUL": 36,
+        "AMARELA": 19,
+        "VERDE": 16,
+        "BRANCA": 39
+      },
+      "31": {
+        "AZUL": 31,
+        "AMARELA": 30,
+        "VERDE": 28,
+        "BRANCA": 29
+      }
+    },
+    "MT": {
+      "139": {
+        "AZUL": 139,
+        "AMARELA": 166,
+        "VERDE": 151,
+        "CINZA": 174
+      },
+      "154": {
+        "AZUL": 154,
+        "AMARELA": 154,
+        "VERDE": 136,
+        "CINZA": 167
+      },
+      "178": {
+        "AZUL": 178,
+        "AMARELA": 137,
+        "VERDE": 162,
+        "CINZA": 139
+      },
+      "156": {
+        "AZUL": 156,
+        "AMARELA": 156,
+        "VERDE": 138,
+        "CINZA": 169
+      },
+      "147": {
+        "AZUL": 147,
+        "AMARELA": 178,
+        "VERDE": 144,
+        "CINZA": 164
+      },
+      "152": {
+        "AZUL": 152,
+        "AMARELA": 175,
+        "VERDE": 141,
+        "CINZA": 172
+      },
+      "157": {
+        "AZUL": 157,
+        "AMARELA": 160,
+        "VERDE": 158,
+        "CINZA": 159
+      },
+      "145": {
+        "AZUL": 145,
+        "AMARELA": 172,
+        "VERDE": 150,
+        "CINZA": 180
+      },
+      "153": {
+        "AZUL": 153,
+        "AMARELA": 176,
+        "VERDE": 142,
+        "CINZA": 173
+      },
+      "168": {
+        "AZUL": 168,
+        "AMARELA": 146,
+        "VERDE": 173,
+        "CINZA": 161
+      },
+      "144": {
+        "AZUL": 144,
+        "AMARELA": 171,
+        "VERDE": 149,
+        "CINZA": 179
+      },
+      "158": {
+        "AZUL": 158,
+        "AMARELA": 159,
+        "VERDE": 157,
+        "CINZA": 157
+      },
+      "176": {
+        "AZUL": 176,
+        "AMARELA": 152,
+        "VERDE": 166,
+        "CINZA": 137
+      },
+      "173": {
+        "AZUL": 173,
+        "AMARELA": 161,
+        "VERDE": 167,
+        "CINZA": 142
+      },
+      "140": {
+        "AZUL": 140,
+        "AMARELA": 167,
+        "VERDE": 152,
+        "CINZA": 175
+      },
+      "142": {
+        "AZUL": 142,
+        "AMARELA": 169,
+        "VERDE": 147,
+        "CINZA": 177
+      },
+      "137": {
+        "AZUL": 137,
+        "AMARELA": 164,
+        "VERDE": 155,
+        "CINZA": 147
+      },
+      "174": {
+        "AZUL": 174,
+        "AMARELA": 162,
+        "VERDE": 168,
+        "CINZA": 143
+      },
+      "172": {
+        "AZUL": 172,
+        "AMARELA": 148,
+        "VERDE": 170,
+        "CINZA": 145
+      },
+      "166": {
+        "AZUL": 166,
+        "AMARELA": 141,
+        "VERDE": 175,
+        "CINZA": 152
+      },
+      "177": {
+        "AZUL": 177,
+        "AMARELA": 136,
+        "VERDE": 161,
+        "CINZA": 138
+      },
+      "159": {
+        "AZUL": 159,
+        "AMARELA": 158,
+        "VERDE": 160,
+        "CINZA": 160
+      },
+      "160": {
+        "AZUL": 160,
+        "AMARELA": 157,
+        "VERDE": 159,
+        "CINZA": 158
+      },
+      "175": {
+        "AZUL": 175,
+        "AMARELA": 151,
+        "VERDE": 165,
+        "CINZA": 136
+      },
+      "167": {
+        "AZUL": 167,
+        "AMARELA": 142,
+        "VERDE": 176,
+        "CINZA": 153
+      },
+      "141": {
+        "AZUL": 141,
+        "AMARELA": 168,
+        "VERDE": 153,
+        "CINZA": 176
+      },
+      "149": {
+        "AZUL": 149,
+        "AMARELA": 180,
+        "VERDE": 146,
+        "CINZA": 166
+      },
+      "138": {
+        "AZUL": 138,
+        "AMARELA": 165,
+        "VERDE": 156,
+        "CINZA": 148
+      },
+      "179": {
+        "AZUL": 179,
+        "AMARELA": 138,
+        "VERDE": 163,
+        "CINZA": 140
+      },
+      "164": {
+        "AZUL": 164,
+        "AMARELA": 145,
+        "VERDE": 179,
+        "CINZA": 156
+      },
+      "155": {
+        "AZUL": 155,
+        "AMARELA": 155,
+        "VERDE": 137,
+        "CINZA": 168
+      },
+      "170": {
+        "AZUL": 170,
+        "AMARELA": 150,
+        "VERDE": 172,
+        "CINZA": 150
+      },
+      "163": {
+        "AZUL": 163,
+        "AMARELA": 144,
+        "VERDE": 178,
+        "CINZA": 155
+      },
+      "161": {
+        "AZUL": 161,
+        "AMARELA": 153,
+        "VERDE": 180,
+        "CINZA": 162
+      },
+      "180": {
+        "AZUL": 180,
+        "AMARELA": 139,
+        "VERDE": 164,
+        "CINZA": 141
+      },
+      "151": {
+        "AZUL": 151,
+        "AMARELA": 174,
+        "VERDE": 140,
+        "CINZA": 171
+      },
+      "136": {
+        "AZUL": 136,
+        "AMARELA": 163,
+        "VERDE": 154,
+        "CINZA": 146
+      },
+      "162": {
+        "AZUL": 162,
+        "AMARELA": 143,
+        "VERDE": 177,
+        "CINZA": 154
+      },
+      "169": {
+        "AZUL": 169,
+        "AMARELA": 149,
+        "VERDE": 171,
+        "CINZA": 149
+      },
+      "148": {
+        "AZUL": 148,
+        "AMARELA": 179,
+        "VERDE": 145,
+        "CINZA": 165
+      },
+      "165": {
+        "AZUL": 165,
+        "AMARELA": 140,
+        "VERDE": 174,
+        "CINZA": 151
+      },
+      "171": {
+        "AZUL": 171,
+        "AMARELA": 147,
+        "VERDE": 169,
+        "CINZA": 144
+      },
+      "143": {
+        "AZUL": 143,
+        "AMARELA": 170,
+        "VERDE": 148,
+        "CINZA": 178
+      },
+      "146": {
+        "AZUL": 146,
+        "AMARELA": 177,
+        "VERDE": 143,
+        "CINZA": 163
+      },
+      "150": {
+        "AZUL": 150,
+        "AMARELA": 173,
+        "VERDE": 139,
+        "CINZA": 170
+      }
+    },
+    "CN": {
+      "110": {
+        "AZUL": 110,
+        "AMARELA": 133,
+        "VERDE": 91,
+        "CINZA": 105
+      },
+      "117": {
+        "AZUL": 117,
+        "AMARELA": 93,
+        "VERDE": 134,
+        "CINZA": 110
+      },
+      "128": {
+        "AZUL": 128,
+        "AMARELA": 101,
+        "VERDE": 123,
+        "CINZA": 99
+      },
+      "91": {
+        "AZUL": 91,
+        "AMARELA": 119,
+        "VERDE": 105,
+        "CINZA": 126
+      },
+      "96": {
+        "AZUL": 96,
+        "AMARELA": 114,
+        "VERDE": 113,
+        "CINZA": 134
+      },
+      "114": {
+        "AZUL": 114,
+        "AMARELA": 123,
+        "VERDE": 104,
+        "CINZA": 125
+      },
+      "124": {
+        "AZUL": 124,
+        "AMARELA": 97,
+        "VERDE": 131,
+        "CINZA": 114
+      },
+      "112": {
+        "AZUL": 112,
+        "AMARELA": 135,
+        "VERDE": 93,
+        "CINZA": 107
+      },
+      "127": {
+        "AZUL": 127,
+        "AMARELA": 100,
+        "VERDE": 128,
+        "CINZA": 104
+      },
+      "93": {
+        "AZUL": 93,
+        "AMARELA": 121,
+        "VERDE": 107,
+        "CINZA": 128
+      },
+      "101": {
+        "AZUL": 101,
+        "AMARELA": 124,
+        "VERDE": 99,
+        "CINZA": 115
+      },
+      "122": {
+        "AZUL": 122,
+        "AMARELA": 95,
+        "VERDE": 129,
+        "CINZA": 112
+      },
+      "107": {
+        "AZUL": 107,
+        "AMARELA": 130,
+        "VERDE": 96,
+        "CINZA": 121
+      },
+      "109": {
+        "AZUL": 109,
+        "AMARELA": 132,
+        "VERDE": 98,
+        "CINZA": 123
+      },
+      "111": {
+        "AZUL": 111,
+        "AMARELA": 134,
+        "VERDE": 92,
+        "CINZA": 106
+      },
+      "125": {
+        "AZUL": 125,
+        "AMARELA": 98,
+        "VERDE": 126,
+        "CINZA": 102
+      },
+      "105": {
+        "AZUL": 105,
+        "AMARELA": 128,
+        "VERDE": 94,
+        "CINZA": 119
+      },
+      "123": {
+        "AZUL": 123,
+        "AMARELA": 96,
+        "VERDE": 130,
+        "CINZA": 113
+      },
+      "135": {
+        "AZUL": 135,
+        "AMARELA": 108,
+        "VERDE": 119,
+        "CINZA": 95
+      },
+      "120": {
+        "AZUL": 120,
+        "AMARELA": 105,
+        "VERDE": 121,
+        "CINZA": 97
+      },
+      "118": {
+        "AZUL": 118,
+        "AMARELA": 94,
+        "VERDE": 135,
+        "CINZA": 111
+      },
+      "99": {
+        "AZUL": 99,
+        "AMARELA": 117,
+        "VERDE": 109,
+        "CINZA": 130
+      },
+      "130": {
+        "AZUL": 130,
+        "AMARELA": 103,
+        "VERDE": 125,
+        "CINZA": 101
+      },
+      "102": {
+        "AZUL": 102,
+        "AMARELA": 125,
+        "VERDE": 100,
+        "CINZA": 116
+      },
+      "113": {
+        "AZUL": 113,
+        "AMARELA": 122,
+        "VERDE": 103,
+        "CINZA": 124
+      },
+      "108": {
+        "AZUL": 108,
+        "AMARELA": 131,
+        "VERDE": 97,
+        "CINZA": 122
+      },
+      "106": {
+        "AZUL": 106,
+        "AMARELA": 129,
+        "VERDE": 95,
+        "CINZA": 120
+      },
+      "116": {
+        "AZUL": 116,
+        "AMARELA": 92,
+        "VERDE": 133,
+        "CINZA": 109
+      },
+      "126": {
+        "AZUL": 126,
+        "AMARELA": 99,
+        "VERDE": 127,
+        "CINZA": 103
+      },
+      "92": {
+        "AZUL": 92,
+        "AMARELA": 120,
+        "VERDE": 106,
+        "CINZA": 127
+      },
+      "121": {
+        "AZUL": 121,
+        "AMARELA": 106,
+        "VERDE": 122,
+        "CINZA": 98
+      },
+      "100": {
+        "AZUL": 100,
+        "AMARELA": 118,
+        "VERDE": 110,
+        "CINZA": 131
+      },
+      "98": {
+        "AZUL": 98,
+        "AMARELA": 116,
+        "VERDE": 108,
+        "CINZA": 129
+      },
+      "103": {
+        "AZUL": 103,
+        "AMARELA": 126,
+        "VERDE": 101,
+        "CINZA": 117
+      },
+      "119": {
+        "AZUL": 119,
+        "AMARELA": 104,
+        "VERDE": 120,
+        "CINZA": 96
+      },
+      "97": {
+        "AZUL": 97,
+        "AMARELA": 115,
+        "VERDE": 114,
+        "CINZA": 135
+      },
+      "95": {
+        "AZUL": 95,
+        "AMARELA": 113,
+        "VERDE": 112,
+        "CINZA": 133
+      },
+      "115": {
+        "AZUL": 115,
+        "AMARELA": 91,
+        "VERDE": 132,
+        "CINZA": 108
+      },
+      "133": {
+        "AZUL": 133,
+        "AMARELA": 111,
+        "VERDE": 117,
+        "CINZA": 93
+      },
+      "131": {
+        "AZUL": 131,
+        "AMARELA": 109,
+        "VERDE": 115,
+        "CINZA": 91
+      },
+      "132": {
+        "AZUL": 132,
+        "AMARELA": 110,
+        "VERDE": 116,
+        "CINZA": 92
+      },
+      "134": {
+        "AZUL": 134,
+        "AMARELA": 107,
+        "VERDE": 118,
+        "CINZA": 94
+      },
+      "104": {
+        "AZUL": 104,
+        "AMARELA": 127,
+        "VERDE": 102,
+        "CINZA": 118
+      },
+      "94": {
+        "AZUL": 94,
+        "AMARELA": 112,
+        "VERDE": 111,
+        "CINZA": 132
+      }
+    },
+    "CH": {
+      "77": {
+        "AZUL": 77,
+        "AMARELA": 79,
+        "BRANCA": 79,
+        "VERDE": 78
+      },
+      "72": {
+        "AZUL": 72,
+        "AMARELA": 90,
+        "BRANCA": 60,
+        "VERDE": 61
+      },
+      "69": {
+        "AZUL": 69,
+        "AMARELA": 87,
+        "BRANCA": 57,
+        "VERDE": 58
+      },
+      "80": {
+        "AZUL": 80,
+        "AMARELA": 73,
+        "BRANCA": 69,
+        "VERDE": 50
+      },
+      "86": {
+        "AZUL": 86,
+        "AMARELA": 48,
+        "BRANCA": 90,
+        "VERDE": 72
+      },
+      "57": {
+        "AZUL": 57,
+        "AMARELA": 68,
+        "BRANCA": 52,
+        "VERDE": 65
+      },
+      "75": {
+        "AZUL": 75,
+        "AMARELA": 82,
+        "BRANCA": 63,
+        "VERDE": 56
+      },
+      "81": {
+        "AZUL": 81,
+        "AMARELA": 74,
+        "BRANCA": 70,
+        "VERDE": 51
+      },
+      "59": {
+        "AZUL": 59,
+        "AMARELA": 58,
+        "BRANCA": 74,
+        "VERDE": 84
+      },
+      "87": {
+        "AZUL": 87,
+        "AMARELA": 69,
+        "BRANCA": 65,
+        "VERDE": 46
+      },
+      "47": {
+        "AZUL": 47,
+        "AMARELA": 54,
+        "BRANCA": 81,
+        "VERDE": 88
+      },
+      "48": {
+        "AZUL": 48,
+        "AMARELA": 55,
+        "BRANCA": 82,
+        "VERDE": 89
+      },
+      "67": {
+        "AZUL": 67,
+        "AMARELA": 85,
+        "BRANCA": 47,
+        "VERDE": 81
+      },
+      "64": {
+        "AZUL": 64,
+        "AMARELA": 51,
+        "BRANCA": 86,
+        "VERDE": 75
+      },
+      "70": {
+        "AZUL": 70,
+        "AMARELA": 88,
+        "BRANCA": 58,
+        "VERDE": 59
+      },
+      "50": {
+        "AZUL": 50,
+        "AMARELA": 61,
+        "BRANCA": 53,
+        "VERDE": 66
+      },
+      "65": {
+        "AZUL": 65,
+        "AMARELA": 52,
+        "BRANCA": 87,
+        "VERDE": 76
+      },
+      "76": {
+        "AZUL": 76,
+        "AMARELA": 83,
+        "BRANCA": 64,
+        "VERDE": 57
+      },
+      "55": {
+        "AZUL": 55,
+        "AMARELA": 66,
+        "BRANCA": 50,
+        "VERDE": 63
+      },
+      "51": {
+        "AZUL": 51,
+        "AMARELA": 62,
+        "BRANCA": 54,
+        "VERDE": 67
+      },
+      "83": {
+        "AZUL": 83,
+        "AMARELA": 76,
+        "BRANCA": 72,
+        "VERDE": 53
+      },
+      "63": {
+        "AZUL": 63,
+        "AMARELA": 50,
+        "BRANCA": 85,
+        "VERDE": 74
+      },
+      "66": {
+        "AZUL": 66,
+        "AMARELA": 84,
+        "BRANCA": 46,
+        "VERDE": 80
+      },
+      "68": {
+        "AZUL": 68,
+        "AMARELA": 86,
+        "BRANCA": 48,
+        "VERDE": 82
+      },
+      "52": {
+        "AZUL": 52,
+        "AMARELA": 63,
+        "BRANCA": 55,
+        "VERDE": 68
+      },
+      "79": {
+        "AZUL": 79,
+        "AMARELA": 78,
+        "BRANCA": 77,
+        "VERDE": 77
+      },
+      "54": {
+        "AZUL": 54,
+        "AMARELA": 65,
+        "BRANCA": 49,
+        "VERDE": 62
+      },
+      "58": {
+        "AZUL": 58,
+        "AMARELA": 57,
+        "BRANCA": 73,
+        "VERDE": 83
+      },
+      "61": {
+        "AZUL": 61,
+        "AMARELA": 60,
+        "BRANCA": 76,
+        "VERDE": 86
+      },
+      "84": {
+        "AZUL": 84,
+        "AMARELA": 46,
+        "BRANCA": 88,
+        "VERDE": 70
+      },
+      "71": {
+        "AZUL": 71,
+        "AMARELA": 89,
+        "BRANCA": 59,
+        "VERDE": 60
+      },
+      "60": {
+        "AZUL": 60,
+        "AMARELA": 59,
+        "BRANCA": 75,
+        "VERDE": 85
+      },
+      "90": {
+        "AZUL": 90,
+        "AMARELA": 72,
+        "BRANCA": 68,
+        "VERDE": 49
+      },
+      "85": {
+        "AZUL": 85,
+        "AMARELA": 47,
+        "BRANCA": 89,
+        "VERDE": 71
+      },
+      "56": {
+        "AZUL": 56,
+        "AMARELA": 67,
+        "BRANCA": 51,
+        "VERDE": 64
+      },
+      "46": {
+        "AZUL": 46,
+        "AMARELA": 53,
+        "BRANCA": 80,
+        "VERDE": 87
+      },
+      "49": {
+        "AZUL": 49,
+        "AMARELA": 56,
+        "BRANCA": 83,
+        "VERDE": 90
+      },
+      "74": {
+        "AZUL": 74,
+        "AMARELA": 81,
+        "BRANCA": 62,
+        "VERDE": 55
+      },
+      "88": {
+        "AZUL": 88,
+        "AMARELA": 70,
+        "BRANCA": 66,
+        "VERDE": 47
+      },
+      "53": {
+        "AZUL": 53,
+        "AMARELA": 64,
+        "BRANCA": 56,
+        "VERDE": 69
+      },
+      "89": {
+        "AZUL": 89,
+        "AMARELA": 71,
+        "BRANCA": 67,
+        "VERDE": 48
+      },
+      "78": {
+        "AZUL": 78,
+        "AMARELA": 77,
+        "BRANCA": 78,
+        "VERDE": 79
+      },
+      "82": {
+        "AZUL": 82,
+        "AMARELA": 75,
+        "BRANCA": 71,
+        "VERDE": 52
+      },
+      "73": {
+        "AZUL": 73,
+        "AMARELA": 80,
+        "BRANCA": 61,
+        "VERDE": 54
+      },
+      "62": {
+        "AZUL": 62,
+        "AMARELA": 49,
+        "BRANCA": 84,
+        "VERDE": 73
       }
     }
   }
