@@ -75,7 +75,19 @@ a:hover {
   color: inherit;
   display: block;
   padding: 0.5rem 0;
+  transition: all 0.3s ease;
 }
+
+.menu-link:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.menu-link.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
 .menu-link i {
   margin-right: 0.5rem;
 }

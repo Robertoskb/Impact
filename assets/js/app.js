@@ -107,6 +107,7 @@ function createQuestionElement(
   };
 
   const level_difficulty = (dif) => {
+    dif = dif * 100 + 500; // Ajusta a dificuldade para o intervalo correto
     if (dif == null) return '<span class="text-not-available">N/A</span>';
     if (dif < 550.0) return '<span class="text-very-easy">Muito fácil</span>';
     if (dif < 650.0) return '<span class="text-easy">Fácil</span>';
@@ -154,9 +155,9 @@ function createQuestionElement(
             <div>Discriminação: ${
               meta.discrimination || "N/A"
             } (${level_discrimination(meta.discrimination)})</div>
-            <div>Dificuldade: ${meta.difficulty || "N/A"} (${level_difficulty(
-    meta.difficulty
-  )})</div>
+            <div>Dificuldade: ${
+              (meta.difficulty * 100 + 500).toFixed(1) || "N/A"
+            } (${level_difficulty(meta.difficulty)})</div>
             <div>Acerto Casual: ${
               meta["casual hit"] ? meta["casual hit"] + "%" : "N/A"
             } (${level_causal_hit(meta["casual hit"])})</div>

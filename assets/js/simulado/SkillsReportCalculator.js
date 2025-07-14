@@ -1,0 +1,290 @@
+// Calculador de relatórios por habilidades
+export class SkillsReportCalculator {
+  constructor(app) {
+    this.app = app;
+    this.skillsDescriptions = {};
+    this.loadSkillsDescriptions();
+  }
+
+  async loadSkillsDescriptions() {
+    try {
+      const response = await fetch("./skills-descriptions.json");
+      if (response.ok) {
+        this.skillsDescriptions = await response.json();
+      } else {
+        this.skillsDescriptions = this.getDefaultSkillsDescriptions();
+      }
+    } catch (error) {
+      console.warn(
+        "Erro ao carregar descrições de habilidades, usando padrão:",
+        error
+      );
+      this.skillsDescriptions = this.getDefaultSkillsDescriptions();
+    }
+  }
+
+  calculateSkillsReport() {
+    const questions = this.app.getQuestions();
+    const answers = this.app.getAnswers();
+    const meta = this.app.getMeta();
+    const config = this.app.getCurrentConfig();
+
+    if (!questions.length || !meta[config.year]) {
+      return this.getEmptyReport();
+    }
+
+    const skillsData = {};
+
+    // Processar cada questão
+    questions.forEach((question) => {
+      const area = question.area;
+      const originalPosition = question.originalPosition || question.position;
+
+      // Verificar se existe metadados para esta questão
+      if (
+        !meta[config.year][area] ||
+        !meta[config.year][area][originalPosition]
+      ) {
+        return;
+      }
+
+      const questionMeta = meta[config.year][area][originalPosition];
+      const hability = questionMeta.hability;
+
+      if (!hability) return;
+
+      // Inicializar área se não existir
+      if (!skillsData[area]) {
+        skillsData[area] = {};
+      }
+
+      // Inicializar habilidade se não existir
+      if (!skillsData[area][hability]) {
+        skillsData[area][hability] = {
+          total: 0,
+          correct: 0,
+          wrong: 0,
+          cancelled: 0,
+          questions: [],
+        };
+      }
+
+      const skillData = skillsData[area][hability];
+      skillData.total++;
+      skillData.questions.push(question);
+
+      // Verificar resultado da questão
+      if (question.cancelled) {
+        skillData.cancelled++;
+        // Questões anuladas contam como acerto se o usuário marcou algo
+        if (answers[question.position]) {
+          skillData.correct++;
+        }
+      } else {
+        const correctAnswer =
+          this.app.questionGenerator.getCorrectAnswer(question);
+        const userAnswer = answers[question.position];
+
+        if (userAnswer === correctAnswer) {
+          skillData.correct++;
+        } else {
+          skillData.wrong++;
+        }
+      }
+    });
+
+    return this.processSkillsData(skillsData);
+  }
+
+  processSkillsData(skillsData) {
+    const processedData = {};
+
+    Object.keys(skillsData).forEach((area) => {
+      processedData[area] = {
+        name: this.getAreaName(area),
+        icon: this.getAreaIcon(area),
+        skills: {},
+      };
+
+      Object.keys(skillsData[area]).forEach((hability) => {
+        const skillData = skillsData[area][hability];
+        const percentage =
+          skillData.total > 0
+            ? Math.round((skillData.correct / skillData.total) * 100)
+            : 0;
+
+        processedData[area].skills[hability] = {
+          code: `H${hability}`,
+          total: skillData.total,
+          correct: skillData.correct,
+          wrong: skillData.wrong,
+          cancelled: skillData.cancelled,
+          percentage: percentage,
+          performance: this.getPerformanceLevel(percentage),
+          description: this.getSkillDescription(area, hability),
+          questions: skillData.questions,
+        };
+      });
+    });
+
+    return processedData;
+  }
+
+  getPerformanceLevel(percentage) {
+    if (percentage >= 80) return "excellent";
+    if (percentage >= 65) return "good";
+    if (percentage >= 50) return "average";
+    return "poor";
+  }
+
+  getAreaName(area) {
+    const names = {
+      LC0: "Linguagens - Inglês",
+      LC1: "Linguagens - Espanhol",
+      CH: "Ciências Humanas",
+      CN: "Ciências da Natureza",
+      MT: "Matemática",
+    };
+    return names[area] || area;
+  }
+
+  getAreaIcon(area) {
+    const icons = {
+      LC0: "fa-language",
+      LC1: "fa-language",
+      CH: "fa-users",
+      CN: "fa-flask",
+      MT: "fa-calculator",
+    };
+    return icons[area] || "fa-book";
+  }
+
+  getSkillDescription(area, hability) {
+    const key = `${area}_H${hability}`;
+    return (
+      this.skillsDescriptions[key] ||
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+    );
+  }
+
+  getDefaultSkillsDescriptions() {
+    // Fallback case - descrições básicas
+    return {
+      MT_H1:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Construir significados para os números.",
+      MT_H2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilizar o conhecimento geométrico.",
+      CH_H1:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Compreender os elementos culturais.",
+      CH_H2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Compreender as transformações dos espaços geográficos.",
+      LC0_H1:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aplicar as tecnologias da comunicação.",
+      LC0_H2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Conhecer e usar língua(s) estrangeira(s) moderna(s).",
+      LC1_H1:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aplicar as tecnologias da comunicação.",
+      LC1_H2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Conhecer e usar língua(s) estrangeira(s) moderna(s).",
+      CN_H1:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Reconhecer características ou propriedades.",
+      CN_H2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Identificar a presença e aplicar as tecnologias.",
+    };
+  }
+
+  getEmptyReport() {
+    return {};
+  }
+
+  renderSkillsReport(skillsData) {
+    const container = document.getElementById("skills-container");
+
+    if (!container) return;
+
+    if (Object.keys(skillsData).length === 0) {
+      container.innerHTML = `
+        <div class="no-skills-message">
+          <i class="fa fa-info-circle"></i>
+          <p>Nenhum dado de habilidade disponível para este simulado.</p>
+        </div>
+      `;
+      return;
+    }
+
+    let html = "";
+
+    Object.keys(skillsData).forEach((area) => {
+      const areaData = skillsData[area];
+      const skills = Object.keys(areaData.skills);
+
+      if (skills.length === 0) return;
+
+      html += `
+        <div class="area-skills">
+          <h4>
+            <i class="fa ${areaData.icon} area-icon"></i>
+            ${areaData.name}
+          </h4>
+          <div class="skills-grid">
+      `;
+
+      skills
+        .sort((a, b) => parseInt(a) - parseInt(b))
+        .forEach((hability) => {
+          const skill = areaData.skills[hability];
+
+          html += `
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-code">${skill.code}</span>
+              <span class="skill-performance ${skill.performance}">${
+            skill.percentage
+          }%</span>
+            </div>
+            
+            <div class="skill-progress">
+              <div class="progress-bar">
+                <div class="progress-fill ${skill.performance}" style="width: ${
+            skill.percentage
+          }%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-stats">
+              <span>Acertos: ${skill.correct}/${skill.total}</span>
+              <span>Erros: ${skill.wrong}</span>
+              ${
+                skill.cancelled > 0
+                  ? `<span>Anuladas: ${skill.cancelled}</span>`
+                  : ""
+              }
+            </div>
+            
+            <div class="skill-description">
+              ${skill.description}
+            </div>
+          </div>
+        `;
+        });
+
+      html += `
+          </div>
+        </div>
+      `;
+    });
+
+    container.innerHTML = html;
+
+    // Animar as barras de progresso
+    setTimeout(() => {
+      container.querySelectorAll(".progress-fill").forEach((bar) => {
+        const width = bar.style.width;
+        bar.style.width = "0%";
+        setTimeout(() => {
+          bar.style.width = width;
+        }, 100);
+      });
+    }, 200);
+  }
+}
