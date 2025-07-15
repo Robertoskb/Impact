@@ -14,6 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- DEBUG: Botão para testar resultados - Controlado por variável -->
+    <div id="debug-button" style="position: fixed; top: 10px; right: 10px; z-index: 9999; background: red; color: white; padding: 10px; border: none; cursor: pointer; display: none;" onclick="debugShowResults()">
+        DEBUG: Mostrar Resultados
+    </div>
+    
     <!-- Botão de menu para mobile -->
     <button id="menuToggleBtn" class="menu-toggle">
         <i class="fa fa-bars"></i>
@@ -402,6 +407,105 @@
         </div>
     </div>
 
+    
+    <script>
+        // =====================================
+        // CONFIGURAÇÃO DE DEBUG
+        // =====================================
+        const DEBUG_MODE = false; // Altere para true para ativar o modo debug
+        
+        // Mostrar/esconder botão de debug baseado na variável
+        document.addEventListener('DOMContentLoaded', function() {
+            const debugButton = document.getElementById('debug-button');
+            if (debugButton) {
+                debugButton.style.display = DEBUG_MODE ? 'block' : 'none';
+            }
+        });
+        
+        // DEBUG: Função para testar a exibição de resultados
+        function debugShowResults() {
+            if (!DEBUG_MODE) {
+                console.warn('DEBUG: Modo debug está desativado. Altere DEBUG_MODE para true.');
+                return;
+            }
+            
+            console.log('DEBUG: Forçando exibição da tela de resultados...');
+            
+            // Esconder outras telas
+            const screens = ['config-screen', 'simulado-screen', 'saved-simulados-screen'];
+            screens.forEach(screenId => {
+                const screen = document.getElementById(screenId);
+                if (screen) {
+                    screen.style.display = 'none';
+                }
+            });
+            
+            // Mostrar tela de resultados
+            const resultsScreen = document.getElementById('results-screen');
+            if (resultsScreen) {
+                resultsScreen.style.display = 'block';
+                
+                // Adicionar dados de teste nas estatísticas básicas
+                const elements = {
+                    'total-questions': '45',
+                    'correct-answers': '30',
+                    'wrong-answers': '15',
+                    'cancelled-questions': '0',
+                    'performance': '67%'
+                };
+                
+                Object.entries(elements).forEach(([id, value]) => {
+                    const element = document.getElementById(id);
+                    if (element) {
+                        element.textContent = value;
+                    }
+                });
+                
+                // Simular dados para os renderizadores
+                if (window.simuladoApp) {
+                    // Criar dados fictícios
+                    const mockStats = {
+                        totalQuestions: 45,
+                        correctAnswers: 30,
+                        wrongAnswers: 15,
+                        cancelledQuestions: 0,
+                        performance: 67,
+                        areaStats: {
+                            'LC': { correct: 8, total: 9 },
+                            'CH': { correct: 7, total: 9 },
+                            'CN': { correct: 8, total: 9 },
+                            'MT': { correct: 7, total: 9 }
+                        }
+                    };
+                    
+                    // Atualizar o controller com dados fictícios
+                    if (window.simuladoApp.resultsTabsController) {
+                        window.simuladoApp.resultsTabsController.updateResults(mockStats);
+                    }
+                }
+                
+            } else {
+                console.log('DEBUG: results-screen não encontrado!');
+            }
+        }
+        
+        // =====================================
+        // INSTRUÇÕES DE USO DO DEBUG
+        // =====================================
+        /*
+        Para ativar o modo debug:
+        1. Altere a variável DEBUG_MODE para true (linha ~16)
+        2. Recarregue a página
+        3. Um botão vermelho "DEBUG: Mostrar Resultados" aparecerá no canto superior direito
+        4. Clique no botão para testar a tela de resultados com dados fictícios
+        
+        Para desativar o modo debug:
+        1. Altere a variável DEBUG_MODE para false
+        2. Recarregue a página
+        3. O botão de debug ficará oculto
+        */
+    </script>
+    
     <script type="module" src="assets/js/simulado-main.js"></script>
 </body>
 </html>

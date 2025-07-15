@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Simulado</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .log { margin: 5px 0; padding: 5px; background: #f0f0f0; border-left: 3px solid #007acc; }
+        .error { border-left-color: #d32f2f; background: #ffebee; }
+        .success { border-left-color: #388e3c; background: #e8f5e8; }
+    </style>
+</head>
+<body>
+    <h1>Debug do Simulado</h1>
+    <div id="logs"></div>
+    
+    <script type="module">
+        const logs = document.getElementById('logs');
+        
+        function addLog(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = `log ${type}`;
+            div.textContent = `${new Date().toLocaleTimeString()}: ${message}`;
+            logs.appendChild(div);
+        }
+        
+        // Override console.log para capturar logs
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+        
+        console.log = (...args) => {
+            originalLog(...args);
+            addLog(args.join(' '), 'info');
+        };
+        
+        console.error = (...args) => {
+            originalError(...args);
+            addLog(args.join(' '), 'error');
+        };
+        
+        console.warn = (...args) => {
+            originalWarn(...args);
+            addLog(args.join(' '), 'error');
+        };
+        
+        addLog('Iniciando debug do simulado...');
+        
+        try {
+            // Tentar importar o SimuladoApp
+            import('./assets/js/simulado/SimuladoApp.js').then(module => {
+                addLog('SimuladoApp importado com sucesso', 'success');
+                
+                // Tentar instanciar
+                const app = new module.SimuladoApp();
+                addLog('SimuladoApp instanciado com sucesso', 'success');
+                
+                // Verificar se os renderizadores foram criados
+                if (app.resultsTabsController && app.resultsTabsController.renderers) {
+                    addLog(`Renderizadores criados: ${Object.keys(app.resultsTabsController.renderers).join(', ')}`, 'success');
+                } else {
+                    addLog('Problema na criação dos renderizadores', 'error');
+                }
+                
+            }).catch(error => {
+                addLog(`Erro ao importar SimuladoApp: ${error.message}`, 'error');
+            });
+        } catch (error) {
+            addLog(`Erro geral: ${error.message}`, 'error');
+        }
+    </script>
+</body>
+</html>

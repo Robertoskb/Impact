@@ -96,9 +96,13 @@ export class SimuladoApp {
     const skillsData = this.skillsReportCalculator.calculateSkillsReport();
     this.skillsReportCalculator.renderSkillsReport(skillsData);
 
-    // Os dados das abas já foram atualizados pelo ResultsCalculator.updateUI()
-
+    // Mostrar a tela de resultados primeiro
     this.uiController.showResultsScreen();
+
+    // Forçar a renderização das abas após a tela estar visível
+    if (this.resultsTabsController && this.resultsTabsController.resultsData) {
+      this.resultsTabsController.renderTabContent("geral");
+    }
 
     // Mostrar modal de salvamento apenas se não estiver carregando um simulado salvo
     if (!this.isLoadingFromSaved) {
