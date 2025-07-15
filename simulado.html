@@ -119,6 +119,48 @@
                             <button id="start-simulado" class="start-btn" disabled>
                                 <i class="fa fa-play"></i> Iniciar Simulado
                             </button>
+                            <button id="view-saved-simulados" class="saved-btn">
+                                <i class="fa fa-history"></i> Ver Simulados Salvos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tela de simulados salvos -->
+            <div id="saved-simulados-screen" class="saved-simulados-screen" style="display: none;">
+                <div class="container">
+                    <div class="saved-simulados-card">
+                        <div class="saved-header">
+                            <h2><i class="fa fa-history"></i> Simulados Salvos</h2>
+                            <button id="back-to-config" class="back-btn">
+                                <i class="fa fa-arrow-left"></i> Voltar
+                            </button>
+                        </div>
+                        
+                        <div class="saved-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="total-saved">0</span>
+                                <span class="stat-label">Total Salvos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="average-performance">0%</span>
+                                <span class="stat-label">Média Geral</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="best-performance">0%</span>
+                                <span class="stat-label">Melhor Resultado</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="recent-count">0</span>
+                                <span class="stat-label">Últimos 7 dias</span>
+                            </div>
+                        </div>
+
+                        <div class="saved-simulados-list">
+                            <div id="saved-simulados-container">
+                                <!-- Lista de simulados será carregada aqui -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -162,34 +204,103 @@
                     <div class="results-card">
                         <h2><i class="fa fa-chart-bar"></i> Resultado do Simulado</h2>
                         
-                        <div class="results-summary">
-                            <div class="result-item">
-                                <span class="result-label">Total de Questões:</span>
-                                <span id="total-questions" class="result-value">0</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Acertos:</span>
-                                <span id="correct-answers" class="result-value">0</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Erros:</span>
-                                <span id="wrong-answers" class="result-value">0</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Questões Anuladas:</span>
-                                <span id="cancelled-questions" class="result-value">0</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Aproveitamento:</span>
-                                <span id="performance" class="result-value">0%</span>
-                            </div>
+                        <!-- Navegação por Abas -->
+                        <div class="results-tabs">
+                            <button class="tab-button active" data-tab="geral">
+                                <i class="fa fa-chart-line"></i> Visão Geral
+                            </button>
+                            <button class="tab-button" data-tab="habilidades">
+                                <i class="fa fa-chart-pie"></i> Habilidades
+                            </button>
+                            <button class="tab-button" data-tab="areas">
+                                <i class="fa fa-layer-group"></i> Por Área
+                            </button>
+                            <button class="tab-button" data-tab="dificuldade">
+                                <i class="fa fa-signal"></i> Dificuldade
+                            </button>
+                            <button class="tab-button" data-tab="padroes">
+                                <i class="fa fa-pattern"></i> Padrões
+                            </button>
+                            <button class="tab-button" data-tab="gabarito">
+                                <i class="fa fa-clipboard-list"></i> Gabarito
+                            </button>
                         </div>
 
-                        <!-- Relatório por Habilidades -->
-                        <div class="skills-report">
-                            <h3><i class="fa fa-chart-pie"></i> Desempenho por Habilidade</h3>
-                            <div id="skills-container" class="skills-container">
-                                <!-- Conteúdo será gerado dinamicamente -->
+                        <!-- Conteúdo das Abas -->
+                        <div class="tab-content">
+                            <!-- Aba Geral -->
+                            <div id="tab-geral" class="tab-panel active">
+                                <div class="results-summary">
+                                    <div class="result-item">
+                                        <span class="result-label">Total de Questões:</span>
+                                        <span id="total-questions" class="result-value">0</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Acertos:</span>
+                                        <span id="correct-answers" class="result-value">0</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Erros:</span>
+                                        <span id="wrong-answers" class="result-value">0</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Questões Anuladas:</span>
+                                        <span id="cancelled-questions" class="result-value">0</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="result-label">Aproveitamento:</span>
+                                        <span id="performance" class="result-value">0%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="general-stats">
+                                    <h3><i class="fa fa-chart-bar"></i> Estatísticas Gerais</h3>
+                                    <div id="general-stats-content">
+                                        <!-- Conteúdo será gerado dinamicamente -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Aba Habilidades -->
+                            <div id="tab-habilidades" class="tab-panel">
+                                <div class="skills-report">
+                                    <h3><i class="fa fa-chart-pie"></i> Desempenho por Habilidade</h3>
+                                    <div id="skills-container" class="skills-container">
+                                        <!-- Conteúdo será gerado dinamicamente -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Aba Por Área -->
+                            <div id="tab-areas" class="tab-panel">
+                                <h3><i class="fa fa-layer-group"></i> Desempenho por Área</h3>
+                                <div id="areas-container" class="areas-container">
+                                    <!-- Conteúdo será gerado dinamicamente -->
+                                </div>
+                            </div>
+
+                            <!-- Aba Dificuldade -->
+                            <div id="tab-dificuldade" class="tab-panel">
+                                <h3><i class="fa fa-signal"></i> Análise por Dificuldade</h3>
+                                <div id="difficulty-container" class="difficulty-container">
+                                    <!-- Conteúdo será gerado dinamicamente -->
+                                </div>
+                            </div>
+
+                            <!-- Aba Padrões -->
+                            <div id="tab-padroes" class="tab-panel">
+                                <h3><i class="fa fa-pattern"></i> Padrões de Acerto</h3>
+                                <div id="patterns-container" class="patterns-container">
+                                    <!-- Conteúdo será gerado dinamicamente -->
+                                </div>
+                            </div>
+
+                            <!-- Aba Gabarito -->
+                            <div id="tab-gabarito" class="tab-panel">
+                                <h3><i class="fa fa-clipboard-list"></i> Gabarito Detalhado</h3>
+                                <div id="answer-sheet-container" class="answer-sheet-container">
+                                    <!-- Conteúdo será gerado dinamicamente -->
+                                </div>
                             </div>
                         </div>
 
@@ -244,6 +355,48 @@
                 </button>
                 <button id="back-confirm" class="modal-btn confirm-btn">
                     <i class="fa fa-arrow-left"></i> Voltar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação para salvar simulado -->
+    <div id="save-simulado-modal" class="modal" role="dialog" aria-labelledby="save-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="save-modal-title"><i class="fa fa-save"></i> Salvar Simulado</h3>
+            </div>
+            <div class="modal-body">
+                <p>Deseja salvar este simulado para poder revisar os resultados mais tarde?</p>
+                <p class="modal-info">Você poderá acessar todos os dados e análises novamente através de "Ver Simulados Salvos".</p>
+            </div>
+            <div class="modal-actions">
+                <button id="save-cancel" class="modal-btn cancel-btn">
+                    <i class="fa fa-times"></i> Não Salvar
+                </button>
+                <button id="save-confirm" class="modal-btn confirm-btn">
+                    <i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação para excluir simulado -->
+    <div id="delete-simulado-modal" class="modal" role="dialog" aria-labelledby="delete-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="delete-modal-title"><i class="fa fa-trash"></i> Excluir Simulado</h3>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir este simulado?</p>
+                <p class="modal-warning">Esta ação não pode ser desfeita.</p>
+            </div>
+            <div class="modal-actions">
+                <button id="delete-cancel" class="modal-btn cancel-btn">
+                    <i class="fa fa-times"></i> Cancelar
+                </button>
+                <button id="delete-confirm" class="modal-btn confirm-btn">
+                    <i class="fa fa-trash"></i> Excluir
                 </button>
             </div>
         </div>

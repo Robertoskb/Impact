@@ -235,12 +235,13 @@ export class SkillsReportCalculator {
           const skill = areaData.skills[hability];
 
           html += `
-          <div class="skill-item">
+          <div class="skill-item" data-skill="${hability}">
             <div class="skill-header">
               <span class="skill-code">${skill.code}</span>
               <span class="skill-performance ${skill.performance}">${
             skill.percentage
           }%</span>
+              <i class="fa fa-chevron-down skill-toggle" aria-hidden="true"></i>
             </div>
             
             <div class="skill-progress">
@@ -261,8 +262,11 @@ export class SkillsReportCalculator {
               }
             </div>
             
-            <div class="skill-description">
-              ${skill.description}
+            <div class="skill-description" style="display: none;">
+              <div class="description-content">
+                <h5><i class="fa fa-info-circle"></i> Descrição da Habilidade</h5>
+                <p>${skill.description}</p>
+              </div>
             </div>
           </div>
         `;
@@ -275,6 +279,31 @@ export class SkillsReportCalculator {
     });
 
     container.innerHTML = html;
+
+    // Adicionar event listeners para toggle das descrições
+    container.addEventListener("click", (e) => {
+      const skillItem = e.target.closest(".skill-item");
+      if (skillItem) {
+        const description = skillItem.querySelector(".skill-description");
+        const toggle = skillItem.querySelector(".skill-toggle");
+
+        if (description && toggle) {
+          const isVisible = description.style.display !== "none";
+
+          if (isVisible) {
+            description.style.display = "none";
+            toggle.classList.remove("fa-chevron-up");
+            toggle.classList.add("fa-chevron-down");
+            skillItem.classList.remove("expanded");
+          } else {
+            description.style.display = "block";
+            toggle.classList.remove("fa-chevron-down");
+            toggle.classList.add("fa-chevron-up");
+            skillItem.classList.add("expanded");
+          }
+        }
+      }
+    });
 
     // Animar as barras de progresso
     setTimeout(() => {

@@ -62,6 +62,59 @@ export class UIController {
       startBtn.addEventListener("click", () => this.app.startSimulado());
     }
 
+    const viewSavedBtn = document.getElementById("view-saved-simulados");
+    if (viewSavedBtn) {
+      viewSavedBtn.addEventListener("click", () =>
+        this.app.showSavedSimuladosList()
+      );
+    }
+
+    const backToConfigBtn = document.getElementById("back-to-config");
+    if (backToConfigBtn) {
+      backToConfigBtn.addEventListener("click", () => this.showConfigScreen());
+    }
+
+    // Modal de exclusão de simulado
+    const deleteModal = document.getElementById("delete-simulado-modal");
+    const deleteCancelBtn = document.getElementById("delete-cancel");
+    const deleteConfirmBtn = document.getElementById("delete-confirm");
+
+    if (deleteCancelBtn) {
+      deleteCancelBtn.addEventListener("click", () => {
+        deleteModal.style.display = "none";
+      });
+    }
+
+    if (deleteConfirmBtn) {
+      deleteConfirmBtn.addEventListener("click", () => {
+        const simuladoId = deleteConfirmBtn.dataset.simuladoId;
+        if (simuladoId) {
+          this.app.deleteSavedSimulado(simuladoId);
+          this.loadSavedSimuladosList();
+          deleteModal.style.display = "none";
+        }
+      });
+    }
+
+    // Modal de salvamento de simulado
+    const saveModal = document.getElementById("save-simulado-modal");
+    const saveCancelBtn = document.getElementById("save-cancel");
+    const saveConfirmBtn = document.getElementById("save-confirm");
+
+    if (saveCancelBtn) {
+      saveCancelBtn.addEventListener("click", () => {
+        saveModal.style.display = "none";
+      });
+    }
+
+    if (saveConfirmBtn) {
+      saveConfirmBtn.addEventListener("click", () => {
+        this.app.saveCurrentSimulado();
+        saveModal.style.display = "none";
+        this.showSaveSuccessMessage();
+      });
+    }
+
     const finishBtn = document.getElementById("finish-simulado");
     if (finishBtn) {
       // Criar e armazenar o handler original
@@ -363,6 +416,7 @@ export class UIController {
     document.getElementById("config-screen").style.display = "none";
     document.getElementById("simulado-screen").style.display = "block";
     document.getElementById("results-screen").style.display = "none";
+    document.getElementById("saved-simulados-screen").style.display = "none";
 
     const config = this.app.getCurrentConfig();
     document.getElementById(
@@ -380,12 +434,22 @@ export class UIController {
     document.getElementById("config-screen").style.display = "block";
     document.getElementById("simulado-screen").style.display = "none";
     document.getElementById("results-screen").style.display = "none";
+    document.getElementById("saved-simulados-screen").style.display = "none";
+  }
+
+  showSavedSimuladosScreen() {
+    document.getElementById("config-screen").style.display = "none";
+    document.getElementById("simulado-screen").style.display = "none";
+    document.getElementById("results-screen").style.display = "none";
+    document.getElementById("saved-simulados-screen").style.display = "block";
+    this.loadSavedSimuladosList();
   }
 
   showResultsScreen() {
     document.getElementById("config-screen").style.display = "none";
     document.getElementById("simulado-screen").style.display = "none";
     document.getElementById("results-screen").style.display = "block";
+    document.getElementById("saved-simulados-screen").style.display = "none";
   }
 
   showDataLoadSuccess() {
@@ -834,5 +898,121 @@ export class UIController {
         sections.color.classList.add("active");
       }
     }
+  }
+
+  // Métodos para simulados salvos
+  loadSavedSimuladosList() {
+    const savedSimulados = this.app.getSavedSimulados();
+    const stats = this.app.savedSimuladosManager.getStats();
+
+    // Atualizar estatísticas
+    document.getElementById("total-saved").textContent = stats.total;
+    document.getElementById(
+      "average-performance"
+    ).textContent = `${stats.averagePerformance}%`;
+    document.getElementById(
+      "best-performance"
+    ).textContent = `${stats.bestPerformance}%`;
+    document.getElementById("recent-count").textContent = stats.recentCount;
+
+    // Renderizar lista de simulados
+    this.renderSavedSimuladosList(savedSimulados);
+  }
+
+  renderSavedSimuladosList(savedSimulados) {
+    const container = document.getElementById("saved-simulados-container");
+    if (!container) return;
+
+    if (savedSimulados.length === 0) {
+      container.innerHTML = `
+        <div class="empty-saved-simulados">
+          <i class="fa fa-clipboard-list"></i>
+          <h3>Nenhum simulado salvo</h3>
+          <p>Faça um simulado e veja seus resultados aqui!</p>
+        </div>
+      `;
+      return;
+    }
+
+    // Ordenar por data (mais recente primeiro)
+    const sortedSimulados = [...savedSimulados].sort(
+      (a, b) => b.timestamp - a.timestamp
+    );
+
+    let html = "";
+
+    sortedSimulados.forEach((simulado) => {
+      html += `
+        <div class="saved-simulado-item">
+          <div class="simulado-item-header">
+            <div>
+              <h4 class="simulado-title">${simulado.title}</h4>
+              <span class="simulado-date">${simulado.date}</span>
+            </div>
+            <div class="simulado-actions">
+              <button class="view-btn" onclick="window.simuladoApp.loadSavedSimulado('${simulado.id}')">
+                <i class="fa fa-eye"></i> Ver Resultados
+              </button>
+              <button class="delete-btn" onclick="window.simuladoApp.uiController.showDeleteConfirmation('${simulado.id}')">
+                <i class="fa fa-trash"></i> Excluir
+              </button>
+            </div>
+          </div>
+          
+          <div class="simulado-info">
+            <div class="info-item">
+              <span class="info-label">Questões</span>
+              <span class="info-value">${simulado.questionsCount}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Acertos</span>
+              <span class="info-value">${simulado.correctAnswers}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Aproveitamento</span>
+              <span class="info-value performance-indicator">${simulado.performance}%</span>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    container.innerHTML = html;
+  }
+
+  showDeleteConfirmation(simuladoId) {
+    const deleteModal = document.getElementById("delete-simulado-modal");
+    const deleteConfirmBtn = document.getElementById("delete-confirm");
+
+    if (deleteModal && deleteConfirmBtn) {
+      deleteConfirmBtn.dataset.simuladoId = simuladoId;
+      deleteModal.style.display = "flex";
+    }
+  }
+
+  showSaveConfirmation() {
+    const saveModal = document.getElementById("save-simulado-modal");
+    if (saveModal) {
+      saveModal.style.display = "flex";
+    }
+  }
+
+  showSaveSuccessMessage() {
+    // Criar uma notificação temporária de sucesso
+    const notification = document.createElement("div");
+    notification.className = "save-success-notification";
+    notification.innerHTML = `
+      <i class="fa fa-check-circle"></i>
+      <span>Simulado salvo com sucesso!</span>
+    `;
+
+    document.body.appendChild(notification);
+
+    // Remover após 3 segundos
+    setTimeout(() => {
+      if (notification.parentNode) {
+        notification.parentNode.removeChild(notification);
+      }
+    }, 3000);
   }
 }

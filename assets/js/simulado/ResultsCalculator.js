@@ -41,6 +41,7 @@ export class ResultsCalculator {
 
       if (isCancelled) {
         cancelledQuestions++;
+        // Para questões anuladas, só conta como acerto se o usuário respondeu
         if (answers[question.position]) {
           correctAnswers++;
         }
@@ -50,7 +51,8 @@ export class ResultsCalculator {
         }
       }
 
-      examOrderPattern += isCorrect ? "1" : "0";
+      // Para o padrão visual, questões anuladas aparecem como acerto (1)
+      examOrderPattern += isCancelled || isCorrect ? "1" : "0";
 
       const resultData = this.createResultData(
         question,
@@ -234,19 +236,24 @@ export class ResultsCalculator {
   }
 
   calculateStatistics(totalQuestions, correctAnswers, cancelledQuestions) {
+    // Questões respondidas = total - anuladas
     const answeredQuestions = totalQuestions - cancelledQuestions;
-    const wrongAnswers =
-      answeredQuestions - (correctAnswers - cancelledQuestions);
+
+    // Acertos reais = acertos totais - anuladas (que sempre contam como acerto)
+    const realCorrectAnswers = correctAnswers - cancelledQuestions;
+
+    // Erros = questões respondidas - acertos reais
+    const wrongAnswers = answeredQuestions - realCorrectAnswers;
+
+    // Performance = acertos reais / questões respondidas
     const performance =
       answeredQuestions > 0
-        ? Math.round(
-            ((correctAnswers - cancelledQuestions) / answeredQuestions) * 100
-          )
+        ? Math.round((realCorrectAnswers / answeredQuestions) * 100)
         : 0;
 
     return {
       totalQuestions,
-      correctAnswers,
+      correctAnswers, // Total de acertos (incluindo anuladas)
       wrongAnswers,
       cancelledQuestions,
       performance,
@@ -264,6 +271,11 @@ export class ResultsCalculator {
     document.getElementById(
       "performance"
     ).textContent = `${stats.performance}%`;
+
+    // Atualizar dados nas abas
+    if (this.app.resultsTabsController) {
+      this.app.resultsTabsController.updateResults(stats);
+    }
   }
 
   logResults(stats) {

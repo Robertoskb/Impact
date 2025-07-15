@@ -5,6 +5,8 @@ import { QuestionGenerator } from "./QuestionGenerator.js";
 import { ResultsCalculator } from "./ResultsCalculator.js";
 import { ModalController } from "./ModalController.js";
 import { SkillsReportCalculator } from "./SkillsReportCalculator.js";
+import { ResultsTabsController } from "./ResultsTabsController.js";
+import { SavedSimuladosManager } from "./SavedSimuladosManager.js";
 
 export class SimuladoApp {
   constructor() {
@@ -18,6 +20,7 @@ export class SimuladoApp {
     this.answers = {};
     this.positions = {};
     this.meta = {};
+    this.isLoadingFromSaved = false; // Flag para controlar se está carregando um simulado salvo
 
     // Instanciar módulos
     this.dataLoader = new DataLoader();
@@ -26,6 +29,8 @@ export class SimuladoApp {
     this.resultsCalculator = new ResultsCalculator(this);
     this.modalController = new ModalController(this);
     this.skillsReportCalculator = new SkillsReportCalculator(this);
+    this.resultsTabsController = new ResultsTabsController(this);
+    this.savedSimuladosManager = new SavedSimuladosManager(this);
 
     this.init();
   }
@@ -91,7 +96,17 @@ export class SimuladoApp {
     const skillsData = this.skillsReportCalculator.calculateSkillsReport();
     this.skillsReportCalculator.renderSkillsReport(skillsData);
 
+    // Os dados das abas já foram atualizados pelo ResultsCalculator.updateUI()
+
     this.uiController.showResultsScreen();
+
+    // Mostrar modal de salvamento apenas se não estiver carregando um simulado salvo
+    if (!this.isLoadingFromSaved) {
+      this.uiController.showSaveConfirmation();
+    }
+
+    // Reset da flag
+    this.isLoadingFromSaved = false;
   }
 
   backToConfig() {
@@ -118,6 +133,36 @@ export class SimuladoApp {
 
   reviewAnswers() {
     this.uiController.showReviewMode();
+  }
+
+  // Métodos para simulados salvos
+  loadSavedSimulado(simuladoId) {
+    const simuladoData = this.savedSimuladosManager.loadSimulado(simuladoId);
+    if (simuladoData) {
+      this.isLoadingFromSaved = true; // Marcar que está carregando um simulado salvo
+      this.savedSimuladosManager.applySimuladoToApp(simuladoData);
+      this.calculateAndShowResults();
+      return true;
+    }
+    return false;
+  }
+
+  showSavedSimuladosList() {
+    this.uiController.showSavedSimuladosScreen();
+  }
+
+  getSavedSimulados() {
+    return this.savedSimuladosManager.getSavedSimulados();
+  }
+
+  deleteSavedSimulado(simuladoId) {
+    this.savedSimuladosManager.deleteSimulado(simuladoId);
+  }
+
+  saveCurrentSimulado() {
+    const simuladoId = this.savedSimuladosManager.saveCurrentSimulado();
+    console.log("Simulado salvo com ID:", simuladoId);
+    return simuladoId;
   }
 
   // Getters para os módulos acessarem os dados
