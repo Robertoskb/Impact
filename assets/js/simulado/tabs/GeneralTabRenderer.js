@@ -3,6 +3,7 @@ import { BaseTabRenderer } from "./BaseTabRenderer.js";
 // Renderizador para a aba geral
 export class GeneralTabRenderer extends BaseTabRenderer {
   render(resultsData) {
+    console.log("📊 GeneralTabRenderer: Renderizando aba geral...");
     const container = document.getElementById("general-stats-content");
     if (!container) {
       console.error(
@@ -48,6 +49,28 @@ export class GeneralTabRenderer extends BaseTabRenderer {
       </div>
     `;
 
+    // Preservar seção TRI existente antes de atualizar
+    const existingTriSection = container.querySelector(".tri-scores-section");
+
     container.innerHTML = html;
+
+    // Recolocar seção TRI se existia
+    if (existingTriSection) {
+      console.log("🔄 GeneralTabRenderer: Preservando seção TRI existente");
+      container.appendChild(existingTriSection);
+    } else {
+      console.log(
+        "ℹ️ GeneralTabRenderer: Nenhuma seção TRI encontrada para preservar"
+      );
+    }
+
+    console.log("✅ GeneralTabRenderer: Renderização concluída");
+
+    // Garantir que as notas TRI sejam exibidas após a renderização
+    setTimeout(() => {
+      if (this.app.ensureTRIScoresDisplay) {
+        this.app.ensureTRIScoresDisplay();
+      }
+    }, 100);
   }
 }

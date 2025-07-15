@@ -145,17 +145,17 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
       let difficultyLevel = "Desconhecida";
 
       // Tentar obter dificuldade dos metadados
+      // Usar originalPosition (posição na prova azul) para buscar no meta.json
+      const metaPosition = question.originalPosition;
       if (
+        metaPosition &&
         meta[config.year] &&
         meta[config.year][question.area] &&
-        meta[config.year][question.area][
-          question.originalPosition || question.position
-        ]
+        meta[config.year][question.area][metaPosition]
       ) {
-        const metaData =
-          meta[config.year][question.area][
-            question.originalPosition || question.position
-          ]; // Calcular dificuldade usando parâmetros da TRI: 100*B + 500
+        const metaData = meta[config.year][question.area][metaPosition];
+
+        // Calcular dificuldade usando parâmetros da TRI: 100*B + 500
         if (metaData.difficulty !== null && metaData.difficulty !== undefined) {
           difficulty = 100 * metaData.difficulty + 500;
           hasDifficultyData = true;
@@ -174,20 +174,17 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
         const totalQuestions = questions.length;
         const position = examIndex + 1;
 
-        if (position <= totalQuestions * 0.3)
-          difficultyLevel = "Início da Prova";
-        else if (position <= totalQuestions * 0.7)
-          difficultyLevel = "Meio da Prova";
-        else difficultyLevel = "Fim da Prova";
+        difficultyLevel = "N/A";
       }
 
       questionsWithDifficulty.push({
         questionNumber: examIndex + 1,
-        originalPosition: question.originalPosition || question.position,
+        originalPosition: question.originalPosition,
         area: question.area,
         difficulty: difficulty,
         difficultyLevel: difficultyLevel,
         isCorrect: isCorrect,
+        cancelled: question.cancelled,
         userAnswer: userAnswer || "-",
         correctAnswer: correctAnswer,
       });
@@ -271,7 +268,10 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
     }
 
     const pattern = sortedQuestions
-      .map((q) => (q.isCorrect ? "1" : "0"))
+      .map((q) => {
+        if (q.cancelled) return "C"; // C para cancelled (anulada)
+        return q.isCorrect ? "1" : "0";
+      })
       .join("");
 
     return `
@@ -289,8 +289,8 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
         </div>
         <small>${
           hasDifficultyData
-            ? "Questões ordenadas da mais fácil para a mais difícil com base nos metadados"
-            : "Padrão na ordem que as questões apareceram na prova"
+            ? "Questões ordenadas da mais fácil para a mais difícil com base nos metadados (C=anulada, 1=acerto, 0=erro)"
+            : "Padrão na ordem que as questões apareceram na prova (C=anulada, 1=acerto, 0=erro)"
         }</small>
       </div>
     `;

@@ -137,7 +137,7 @@ export class ResultsCalculator {
     }
 
     return {
-      originalPosition: question.originalPosition || question.position,
+      originalPosition: question.originalPosition,
       isCorrect: isCorrect,
       area: question.area,
       cancelled: isCancelled,

@@ -21,15 +21,24 @@ export class PatternsTabRenderer extends BaseTabRenderer {
         
         <div class="pattern-overview">
           <div class="pattern-display">
-            <h5>String de Respostas</h5>
+            <h5>Padrão de Respostas</h5>
             <div class="answer-pattern">
               ${answerString
                 .split("")
                 .map((bit, index) => {
                   const questionNum = index + 1;
-                  return `<span class="bit bit-${bit}" title="Questão ${questionNum}: ${
-                    bit === "1" ? "Correta" : "Incorreta"
-                  }">${bit}</span>`;
+                  let title, status;
+                  if (bit === "C") {
+                    title = `Questão ${questionNum}: Anulada`;
+                    status = "Anulada";
+                  } else if (bit === "1") {
+                    title = `Questão ${questionNum}: Correta`;
+                    status = "Correta";
+                  } else {
+                    title = `Questão ${questionNum}: Incorreta`;
+                    status = "Incorreta";
+                  }
+                  return `<span class="bit bit-${bit}" title="${title}"></span>`;
                 })
                 .join("")}
             </div>
@@ -50,19 +59,16 @@ export class PatternsTabRenderer extends BaseTabRenderer {
   getAnswerString(questions, answers) {
     return questions
       .map((question) => {
+        if (question.cancelled) {
+          return "C"; // C para cancelled (anulada)
+        }
+        
         const userAnswer = answers[question.position];
         const correctAnswer =
           this.app.questionGenerator.getCorrectAnswer(question);
 
-        let isCorrect = false;
-        if (question.cancelled) {
-          // Para questões anuladas, considera correto se o usuário respondeu
-          isCorrect = userAnswer !== undefined && userAnswer !== null;
-        } else {
-          // Para questões não anuladas, compara com o gabarito
-          isCorrect = userAnswer === correctAnswer;
-        }
-
+        // Para questões não anuladas, compara com o gabarito
+        const isCorrect = userAnswer === correctAnswer;
         return isCorrect ? "1" : "0";
       })
       .join("");

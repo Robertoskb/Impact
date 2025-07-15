@@ -94,11 +94,20 @@ export class QuestionGenerator {
       }
     }
 
-    // Verificar se a questão é anulada
-    let isCancelled = !hasValidPosition;
+    // Se não encontrou posição válida no mapeamento, a questão é anulada
+    if (!hasValidPosition) {
+      return {
+        position: pos,
+        originalPosition: pos,
+        area: questionArea,
+        cancelled: true,
+        color: config.color,
+      };
+    }
 
+    // Verificar se a questão existe no meta.json (posição da prova azul)
+    let isCancelled = false;
     if (
-      hasValidPosition &&
       this.app.getMeta()[config.year] &&
       this.app.getMeta()[config.year][questionArea]
     ) {
@@ -110,10 +119,12 @@ export class QuestionGenerator {
           `Questão ${realPosition} da área ${questionArea} anulada (não encontrada no meta.json)`
         );
       }
-    }
-
-    if (!realPosition && hasValidPosition) {
-      realPosition = pos;
+    } else {
+      // Se não há dados no meta.json para esse ano/área, considera anulada
+      isCancelled = true;
+      console.log(
+        `Questão ${realPosition} da área ${questionArea} anulada (sem dados no meta.json)`
+      );
     }
 
     return {

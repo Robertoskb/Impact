@@ -1,0 +1,548 @@
+/* Estilos para sub-navegação das abas */
+
+/* Sub-navegação de áreas */
+.areas-sub-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.area-filter-btn {
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.area-filter-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.area-filter-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.areas-content {
+  min-height: 300px;
+}
+
+.area-view {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Visualização detalhada de área */
+.area-detailed-view {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.area-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.area-header h4 {
+  color: var(--primary-color);
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.area-summary {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.summary-item {
+  background: var(--bg-secondary);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.summary-item strong {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+/* Seção do padrão */
+.area-pattern-section {
+  margin-bottom: 2rem;
+}
+
+.area-pattern-section h5 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.pattern-display {
+  font-family: "Courier New", monospace;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+
+.pattern-display .bit {
+  display: inline-block;
+  padding: 0.25rem 0.4rem;
+  margin: 0.1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pattern-display .bit:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bit {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 0.6rem;
+}
+
+.bit-1 {
+  background: var(--success-color, #28a745);
+  color: white;
+}
+
+.bit-0 {
+  background: var(--error-color, #dc3545);
+  color: white;
+}
+
+.bit-C {
+  background: var(--info-color, #007bff);
+  color: white;
+}
+
+.area-pattern-section small {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Tabela de questões da área */
+.area-questions-table {
+  margin-top: 2rem;
+}
+
+.area-questions-table h5 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.area-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.area-table th {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.area-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.area-table tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+.area-table .answer-correct {
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.area-table .answer-wrong {
+  background: rgba(244, 67, 54, 0.1);
+}
+
+/* Sub-navegação de dificuldade */
+.difficulty-sub-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.difficulty-filter-btn {
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.difficulty-filter-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.difficulty-filter-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.difficulty-content {
+  min-height: 300px;
+}
+
+.difficulty-view {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Estilos para cards de estatísticas de dificuldade */
+.difficulty-stats-grid {
+  margin-bottom: 2rem;
+}
+
+.stats-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.difficulty-stat-card {
+  background: var(--card-background, #f8f9fa);
+  border: 1px solid var(--border-color, #dee2e6);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  min-width: 120px;
+  flex: 1;
+  max-width: 180px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.difficulty-stat-card h6 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #6c757d);
+  font-weight: 600;
+}
+
+.difficulty-stat-card .stat-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color, #007bff);
+  margin-bottom: 0.25rem;
+}
+
+.difficulty-stat-card .stat-percentage {
+  font-size: 1rem;
+  color: var(--text-primary, #333);
+  font-weight: 500;
+}
+
+/* Sub-navegação de answer sheet */
+.answer-sheet-sub-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.answer-sheet-filter-btn {
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.answer-sheet-filter-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.answer-sheet-filter-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.answer-sheet-content {
+  min-height: 300px;
+}
+
+.answer-sheet-view {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.answer-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.answer-sheet-header h4 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.question-count {
+  background: var(--bg-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Sub-navegação de padrões */
+.patterns-sub-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.pattern-filter-btn {
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pattern-filter-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.pattern-filter-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.patterns-content {
+  min-height: 300px;
+}
+
+.pattern-view {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Visualização detalhada de padrão */
+.pattern-detailed-view {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.pattern-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pattern-header h4 {
+  color: var(--primary-color);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pattern-subtitle {
+  color: var(--text-secondary);
+  margin: 0;
+  font-style: italic;
+}
+
+.pattern-display-large {
+  margin-bottom: 2rem;
+}
+
+.pattern-display-large h5 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.pattern-string-large {
+  font-family: "Courier New", monospace;
+  font-size: 1.3rem;
+  line-height: 2;
+  margin-bottom: 1rem;
+  word-break: break-all;
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.pattern-string-large .bit {
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  margin: 0.1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pattern-string-large .bit:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pattern-stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Responsividade para sub-navegação */
+@media (max-width: 768px) {
+  .areas-sub-nav,
+  .difficulty-sub-nav,
+  .answer-sheet-sub-nav,
+  .patterns-sub-nav {
+    flex-direction: column;
+  }
+
+  .area-filter-btn,
+  .difficulty-filter-btn,
+  .answer-sheet-filter-btn,
+  .pattern-filter-btn {
+    justify-content: center;
+  }
+
+  .area-summary,
+  .level-summary {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pattern-display {
+    font-size: 1rem;
+  }
+
+  .area-table {
+    font-size: 0.8rem;
+  }
+
+  .area-table th,
+  .area-table td {
+    padding: 0.5rem;
+  }
+
+  .answer-sheet-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .difficulty-stat-card {
+    max-width: 100%;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .area-detailed-view,
+  .level-detailed-view {
+    padding: 1rem;
+  }
+
+  .area-header h4,
+  .level-header h4,
+  .answer-sheet-header h4 {
+    font-size: 1.1rem;
+  }
+}

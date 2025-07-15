@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulados - ENEM</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/simulado.css">
+    <!-- Modular CSS files for simulado -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/config.css">
+    <link rel="stylesheet" href="assets/css/simulado-screen.css">
+    <link rel="stylesheet" href="assets/css/results.css">
+    <link rel="stylesheet" href="assets/css/tabs.css">
+    <link rel="stylesheet" href="assets/css/modals.css">
+    <link rel="stylesheet" href="assets/css/skills.css">
+    <link rel="stylesheet" href="assets/css/saved-simulados.css">
+    <link rel="stylesheet" href="assets/css/tri-scores.css">
+    <link rel="stylesheet" href="assets/css/sub-navigation.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Fonts -->
@@ -15,8 +25,8 @@
 </head>
 <body>
     <!-- DEBUG: Botão para testar resultados - Controlado por variável -->
-    <div id="debug-button" style="position: fixed; top: 10px; right: 10px; z-index: 9999; background: red; color: white; padding: 10px; border: none; cursor: pointer; display: none;" onclick="debugShowResults()">
-        DEBUG: Mostrar Resultados
+    <div id="debug-button" style="position: fixed; top: 10px; right: 10px; z-index: 9999; background: #28a745; color: white; padding: 15px; border: none; cursor: pointer; display: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);" onclick="debugShowResults()">
+        🎯 TESTAR NOTAS TRI
     </div>
     
     <!-- Botão de menu para mobile -->
@@ -412,7 +422,7 @@
         // =====================================
         // CONFIGURAÇÃO DE DEBUG
         // =====================================
-        const DEBUG_MODE = false; // Altere para true para ativar o modo debug
+        const DEBUG_MODE = true; // Altere para true para ativar o modo debug
         
         // Mostrar/esconder botão de debug baseado na variável
         document.addEventListener('DOMContentLoaded', function() {
@@ -478,9 +488,63 @@
                         }
                     };
                     
+                    // Simular configuração para teste
+                    window.simuladoApp.currentConfig = {
+                        year: 2023,
+                        type: 'LC0',
+                        color: 'azul',
+                        language: 'LC0'
+                    };
+                    
+                    // Simular questões para teste
+                    window.simuladoApp.questions = Array.from({length: 45}, (_, i) => ({
+                        position: i + 1,
+                        originalPosition: i + 1,
+                        area: 'LC0',
+                        cancelled: i >= 43 // últimas 2 questões anuladas
+                    }));
+                    
+                    // Simular respostas para teste (padrão aleatório mas consistente)
+                    window.simuladoApp.answers = {};
+                    for (let i = 1; i <= 45; i++) {
+                        // 67% de acertos aproximadamente
+                        window.simuladoApp.answers[i] = Math.random() > 0.33 ? 'A' : 'B';
+                    }
+                    
+                    // Simular meta data básico
+                    window.simuladoApp.meta = {
+                        2023: {
+                            LC0: {}
+                        }
+                    };
+                    
+                    // Preencher meta data para as questões
+                    for (let i = 1; i <= 43; i++) { // questões válidas
+                        window.simuladoApp.meta[2023].LC0[i] = {
+                            answer: 'A',
+                            difficulty: Math.random() * 2 - 1, // -1 a 1
+                            discrimination: Math.random() * 2 + 0.5 // 0.5 a 2.5
+                        };
+                    }
+                    
                     // Atualizar o controller com dados fictícios
                     if (window.simuladoApp.resultsTabsController) {
                         window.simuladoApp.resultsTabsController.updateResults(mockStats);
+                    }
+                    
+                    // Testar cálculo de notas TRI se disponível
+                    if (window.simuladoApp.scoreCalculator) {
+                        console.log('DEBUG: Testando cálculo de notas TRI...');
+                        window.simuladoApp.scoreCalculator.calculateAllScores()
+                            .then(triResults => {
+                                console.log('DEBUG: Resultados TRI:', triResults);
+                                if (triResults.totalCalculated > 0) {
+                                    window.simuladoApp.updateTRIScoresDisplay(triResults);
+                                }
+                            })
+                            .catch(error => {
+                                console.log('DEBUG: Erro no cálculo TRI (esperado se modelos não existirem):', error.message);
+                            });
                     }
                 }
                 

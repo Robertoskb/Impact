@@ -1,0 +1,288 @@
+"CN": {
+      "131": {
+        "discrimination": 2.86,
+        "difficulty": 0.4948,
+        "casual hit": 16.06,
+        "hability": 3,
+        "answer": "C"
+      },
+      "118": {
+        "discrimination": 2.03,
+        "difficulty": 0.56741,
+        "casual hit": 24.52,
+        "hability": 14,
+        "answer": "C"
+      },
+      "130": {
+        "discrimination": 2.42,
+        "difficulty": 0.78824,
+        "casual hit": 19.32,
+        "hability": 22,
+        "answer": "C"
+      },
+      "132": {
+        "discrimination": 3.83,
+        "difficulty": 0.85524,
+        "casual hit": 11.51,
+        "hability": 4,
+        "answer": "D"
+      },
+      "110": {
+        "discrimination": 1.88,
+        "difficulty": 0.91052,
+        "casual hit": 15.11,
+        "hability": 16,
+        "answer": "D"
+      },
+      "111": {
+        "discrimination": 1.49,
+        "difficulty": 0.96735,
+        "casual hit": 24.21,
+        "hability": 17,
+        "answer": "A"
+      },
+      "99": {
+        "discrimination": 1.2,
+        "difficulty": 0.97602,
+        "casual hit": 22.54,
+        "hability": 28,
+        "answer": "A"
+      },
+      "104": {
+        "discrimination": 2.35,
+        "difficulty": 1.00991,
+        "casual hit": 30.64,
+        "hability": 18,
+        "answer": "E"
+      },
+      "117": {
+        "discrimination": 0.89,
+        "difficulty": 1.01697,
+        "casual hit": 29.79,
+        "hability": 17,
+        "answer": "C"
+      },
+      "135": {
+        "discrimination": 0.98,
+        "difficulty": 1.03388,
+        "casual hit": 0.43,
+        "hability": 1,
+        "answer": "E"
+      },
+      "122": {
+        "discrimination": 1.69,
+        "difficulty": 1.10708,
+        "casual hit": 12.01,
+        "hability": 11,
+        "answer": "A"
+      },
+      "128": {
+        "discrimination": 3.25,
+        "difficulty": 1.20513,
+        "casual hit": 8.4,
+        "hability": 2,
+        "answer": "A"
+      },
+      "109": {
+        "discrimination": 2.54,
+        "difficulty": 1.20769,
+        "casual hit": 21.01,
+        "hability": 22,
+        "answer": "D"
+      },
+      "96": {
+        "discrimination": 2.01,
+        "difficulty": 1.35453,
+        "casual hit": 16.88,
+        "hability": 21,
+        "answer": "A"
+      },
+      "103": {
+        "discrimination": 4.45,
+        "difficulty": 1.4048,
+        "casual hit": 15.59,
+        "hability": 20,
+        "answer": "E"
+      },
+      "105": {
+        "discrimination": 1.51,
+        "difficulty": 1.41874,
+        "casual hit": 14.91,
+        "hability": 18,
+        "answer": "A"
+      },
+      "133": {
+        "discrimination": 1.71,
+        "difficulty": 1.42364,
+        "casual hit": 16.15,
+        "hability": 2,
+        "answer": "D"
+      },
+      "115": {
+        "discrimination": 2.33,
+        "difficulty": 1.44802,
+        "casual hit": 20.93,
+        "hability": 12,
+        "answer": "B"
+      },
+      "91": {
+        "discrimination": 0.7,
+        "difficulty": 1.45358,
+        "casual hit": 3.44,
+        "hability": 27,
+        "answer": "A"
+      },
+      "124": {
+        "discrimination": 1.91,
+        "difficulty": 1.4644,
+        "casual hit": 34.04,
+        "hability": 10,
+        "answer": "B"
+      },
+      "92": {
+        "discrimination": 1.95,
+        "difficulty": 1.46498,
+        "casual hit": 11.25,
+        "hability": 30,
+        "answer": "D"
+      },
+      "125": {
+        "discrimination": 2.47,
+        "difficulty": 1.46748,
+        "casual hit": 6.51,
+        "hability": 13,
+        "answer": "E"
+      },
+      "114": {
+        "discrimination": 3.55,
+        "difficulty": 1.49398,
+        "casual hit": 20.26,
+        "hability": 15,
+        "answer": "C"
+      },
+      "101": {
+        "discrimination": 1.75,
+        "difficulty": 1.52509,
+        "casual hit": 16.16,
+        "hability": 26,
+        "answer": "C"
+      },
+      "120": {
+        "discrimination": 5.67,
+        "difficulty": 1.52791,
+        "casual hit": 14.27,
+        "hability": 15,
+        "answer": "E"
+      },
+      "97": {
+        "discrimination": 2.14,
+        "difficulty": 1.60964,
+        "casual hit": 14.87,
+        "hability": 26,
+        "answer": "B"
+      },
+      "95": {
+        "discrimination": 3.29,
+        "difficulty": 1.65709,
+        "casual hit": 14.01,
+        "hability": 21,
+        "answer": "D"
+      },
+      "127": {
+        "discrimination": 3.48,
+        "difficulty": 1.70426,
+        "casual hit": 15.45,
+        "hability": 9,
+        "answer": "E"
+      },
+      "123": {
+        "discrimination": 2.14,
+        "difficulty": 1.77912,
+        "casual hit": 8.87,
+        "hability": 3,
+        "answer": "E"
+      },
+      "129": {
+        "discrimination": 1.99,
+        "difficulty": 1.78678,
+        "casual hit": 12.76,
+        "hability": 9,
+        "answer": "C"
+      },
+      "93": {
+        "discrimination": 1.99,
+        "difficulty": 1.87763,
+        "casual hit": 19.41,
+        "hability": 23,
+        "answer": "B"
+      },
+      "108": {
+        "discrimination": 3.07,
+        "difficulty": 1.89127,
+        "casual hit": 25.27,
+        "hability": 25,
+        "answer": "B"
+      },
+      "98": {
+        "discrimination": 1.82,
+        "difficulty": 1.93167,
+        "casual hit": 6.67,
+        "hability": 29,
+        "answer": "E"
+      },
+      "107": {
+        "discrimination": 5.32,
+        "difficulty": 2.04288,
+        "casual hit": 17.09,
+        "hability": 24,
+        "answer": "C"
+      },
+      "100": {
+        "discrimination": 1.73,
+        "difficulty": 2.08841,
+        "casual hit": 27.62,
+        "hability": 20,
+        "answer": "B"
+      },
+      "94": {
+        "discrimination": 2.08,
+        "difficulty": 2.23408,
+        "casual hit": 17.19,
+        "hability": 27,
+        "answer": "A"
+      },
+      "116": {
+        "discrimination": 0.6,
+        "difficulty": 2.40137,
+        "casual hit": 12.02,
+        "hability": 6,
+        "answer": "B"
+      },
+      "121": {
+        "discrimination": 1.78,
+        "difficulty": 2.50062,
+        "casual hit": 27.07,
+        "hability": 14,
+        "answer": "B"
+      },
+      "126": {
+        "discrimination": 0.41,
+        "difficulty": 2.51676,
+        "casual hit": 0.92,
+        "hability": 8,
+        "answer": "B"
+      },
+      "106": {
+        "discrimination": 2.4,
+        "difficulty": 2.76588,
+        "casual hit": 18.97,
+        "hability": 24,
+        "answer": "C"
+      },
+      "102": {
+        "discrimination": 1.53,
+        "difficulty": 3.19204,
+        "casual hit": 11.28,
+        "hability": 29,
+        "answer": "E"
+      }

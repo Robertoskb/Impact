@@ -38,10 +38,11 @@ export class SkillsReportCalculator {
     // Processar cada questão
     questions.forEach((question) => {
       const area = question.area;
-      const originalPosition = question.originalPosition || question.position;
+      const originalPosition = question.originalPosition;
 
-      // Verificar se existe metadados para esta questão
+      // Verificar se existe metadados para esta questão (usar posição da prova azul)
       if (
+        !originalPosition ||
         !meta[config.year][area] ||
         !meta[config.year][area][originalPosition]
       ) {

@@ -100,9 +100,10 @@ export class LegendTabRenderer extends BaseTabRenderer {
                 <span class="legend-pattern">
                   <span class="bit bit-1">1</span>
                   <span class="bit bit-0">0</span>
+                  <span class="bit bit-C">C</span>
                 </span>
                 <span class="legend-text">
-                  <strong>String de Respostas:</strong> 1 = Correto, 0 = Incorreto
+                  <strong>String de Respostas:</strong> 1 = Correto, 0 = Incorreto, C = Anulada
                 </span>
               </div>
               <div class="legend-item">

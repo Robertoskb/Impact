@@ -83,7 +83,7 @@ export class AnswerSheetTabRenderer extends BaseTabRenderer {
             ${userAnswer || "-"}
           </td>
           <td class="answer-cell">
-            ${question.cancelled ? "ANULADA" : correctAnswer}
+            ${question.cancelled ? "X" : correctAnswer}
           </td>
           <td>
             <span class="status-badge ${statusClass}">

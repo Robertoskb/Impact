@@ -54,13 +54,20 @@ export class AreasTabRenderer extends BaseTabRenderer {
         areaData[area].correct++;
       }
 
-      areaData[area].pattern.push(isCorrect ? "1" : "0");
+      // Adicionar ao padrão: C para anulada, 1 para acerto, 0 para erro
+      if (question.cancelled) {
+        areaData[area].pattern.push("C");
+      } else {
+        areaData[area].pattern.push(isCorrect ? "1" : "0");
+      }
+      
       areaData[area].questions.push({
         questionNumber: examIndex + 1,
-        originalPosition: question.originalPosition || question.position,
+        originalPosition: question.originalPosition,
         isCorrect: isCorrect,
         userAnswer: userAnswer || "-",
         correctAnswer: correctAnswer,
+        cancelled: question.cancelled,
       });
     });
 
@@ -167,17 +174,30 @@ export class AreasTabRenderer extends BaseTabRenderer {
           ${patternString
             .split("")
             .map(
-              (bit, index) => `
-                <span class="bit bit-${bit}" title="Questão ${
-                questions[index].questionNumber
-              }: ${bit === "1" ? "Correto" : "Incorreto"}">
-                  ${bit}
-                </span>
-              `
+              (bit, index) => {
+                const question = questions[index];
+                let title, status;
+                if (bit === "C") {
+                  title = `Questão ${question.questionNumber}: Anulada`;
+                  status = "Anulada";
+                } else if (bit === "1") {
+                  title = `Questão ${question.questionNumber}: Correto`;
+                  status = "Correto";
+                } else {
+                  title = `Questão ${question.questionNumber}: Incorreto`;
+                  status = "Incorreto";
+                }
+                
+                return `
+                  <span class="bit bit-${bit}" title="${title}">
+                    ${bit}
+                  </span>
+                `;
+              }
             )
             .join("")}
         </div>
-        <small>Sequência na ordem da prova (1=acerto, 0=erro)</small>
+        <small>Sequência na ordem da prova (C=anulada, 1=acerto, 0=erro)</small>
       </div>
     `;
   }
