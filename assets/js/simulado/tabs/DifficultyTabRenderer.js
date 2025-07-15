@@ -160,7 +160,10 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
           const metaData = meta[config.year][question.area][metaPosition];
 
           // Calcular dificuldade usando parâmetros da TRI: 100*B + 500
-          if (metaData.difficulty !== null && metaData.difficulty !== undefined) {
+          if (
+            metaData.difficulty !== null &&
+            metaData.difficulty !== undefined
+          ) {
             difficulty = 100 * metaData.difficulty + 500;
             hasDifficultyData = true;
 
@@ -289,8 +292,8 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
     const { questions, hasDifficultyData } = difficultyData;
 
     // Separar questões anuladas das questões válidas
-    const validQuestions = questions.filter(q => !q.cancelled);
-    const cancelledQuestions = questions.filter(q => q.cancelled);
+    const validQuestions = questions.filter((q) => !q.cancelled);
+    const cancelledQuestions = questions.filter((q) => q.cancelled);
 
     // Ordenar questões válidas por dificuldade
     let sortedValidQuestions;
@@ -309,10 +312,15 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
     }
 
     // Questões anuladas ficam por último, ordenadas por posição
-    const sortedCancelledQuestions = [...cancelledQuestions].sort((a, b) => a.originalPosition - b.originalPosition);
+    const sortedCancelledQuestions = [...cancelledQuestions].sort(
+      (a, b) => a.originalPosition - b.originalPosition
+    );
 
     // Combinar questões válidas + anuladas
-    const sortedQuestions = [...sortedValidQuestions, ...sortedCancelledQuestions];
+    const sortedQuestions = [
+      ...sortedValidQuestions,
+      ...sortedCancelledQuestions,
+    ];
 
     const pattern = sortedQuestions
       .map((q) => {
@@ -363,8 +371,8 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
     const { questions, hasDifficultyData } = difficultyData;
 
     // Separar questões anuladas das questões válidas
-    const validQuestions = questions.filter(q => !q.cancelled);
-    const cancelledQuestions = questions.filter(q => q.cancelled);
+    const validQuestions = questions.filter((q) => !q.cancelled);
+    const cancelledQuestions = questions.filter((q) => q.cancelled);
 
     // Ordenar questões válidas por dificuldade para exibir na tabela
     let sortedValidQuestions;
@@ -383,10 +391,15 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
     }
 
     // Questões anuladas ficam por último, ordenadas por posição
-    const sortedCancelledQuestions = [...cancelledQuestions].sort((a, b) => a.originalPosition - b.originalPosition);
+    const sortedCancelledQuestions = [...cancelledQuestions].sort(
+      (a, b) => a.originalPosition - b.originalPosition
+    );
 
     // Combinar questões válidas + anuladas
-    const sortedQuestions = [...sortedValidQuestions, ...sortedCancelledQuestions];
+    const sortedQuestions = [
+      ...sortedValidQuestions,
+      ...sortedCancelledQuestions,
+    ];
 
     let html = `
       <div class="difficulty-table">

@@ -5,6 +5,74 @@ export class PatternsTabRenderer extends BaseTabRenderer {
     super(app);
   }
 
+  /**
+   * Obtém o casual hit de uma questão dos metadados
+   * @param {Object} meta - Metadados do simulado
+   * @param {Object} config - Configuração atual
+   * @param {Object} question - Objeto da questão
+   * @returns {number|null} - Valor do casual hit em decimal (0-1) ou null se não encontrado
+   */
+  getCasualHit(meta, config, question) {
+    try {
+      if (
+        !meta[config.year] ||
+        !meta[config.year][question.area] ||
+        !meta[config.year][question.area][question.originalPosition]
+      ) {
+        return null;
+      }
+
+      const questionMeta =
+        meta[config.year][question.area][question.originalPosition];
+      const casualHitPercent = questionMeta["casual hit"];
+
+      if (casualHitPercent === null || casualHitPercent === undefined) {
+        return null;
+      }
+
+      // Converter de percentual para decimal
+      return casualHitPercent / 100;
+    } catch (error) {
+      console.warn("Erro ao obter casual hit:", error);
+      return null;
+    }
+  }
+
+  /**
+   * Função de teste para verificar se o casual hit está sendo obtido corretamente
+   * Use no console: renderer.testCasualHit()
+   */
+  testCasualHit() {
+    const config = this.app.getCurrentConfig();
+    const meta = this.app.getMeta();
+    const questions = this.app.getQuestions();
+
+    console.log("=== TESTE DE CASUAL HIT ===");
+    console.log("Config:", config);
+
+    // Testar com as primeiras 5 questões
+    questions.slice(0, 5).forEach((question, index) => {
+      if (question.cancelled) {
+        console.log(
+          `Questão ${index + 1} (${question.originalPosition}): ANULADA`
+        );
+        return;
+      }
+
+      const casualHit = this.getCasualHit(meta, config, question);
+      const questionMeta =
+        meta[config.year]?.[question.area]?.[question.originalPosition];
+
+      console.log(`Questão ${index + 1} (${question.originalPosition}):`, {
+        area: question.area,
+        casualHitPercent: questionMeta?.["casual hit"],
+        casualHitDecimal: casualHit,
+        difficulty: questionMeta?.difficulty,
+        discrimination: questionMeta?.discrimination,
+      });
+    });
+  }
+
   render() {
     const container = document.getElementById("patterns-container");
     if (!container) return;
@@ -888,16 +956,19 @@ export class PatternsTabRenderer extends BaseTabRenderer {
       const difficulty = questionMeta.difficulty;
       const discrimination = questionMeta.discrimination;
 
+      // Usar a função helper para obter casual hit
+      const casualHitDecimal = this.getCasualHit(meta, config, question);
+
       if (difficulty === null || discrimination === null) return;
 
       // Calcular probabilidade de acerto usando modelo 3PL da TRI
-      // P(θ) = c + (1-c) * [e^(Da(θ-b)) / (1 + e^(Da(θ-b)))]
-      // Assumindo c = 0.2 (chute) e D = 1.7 (constante de escala)
-      const c = 0.2; // Probabilidade de acerto ao acaso
-      const D = 1.7; // Constante de escala
-      const exponent = D * discrimination * (userTheta - difficulty);
-      const probability =
-        c + (1 - c) * (Math.exp(exponent) / (1 + Math.exp(exponent)));
+      // P(θ) = c + (1 - c) / (1 + exp(-a * (θ - b)))
+      // onde: c = casual_hit, a = discrimination, θ = ability (userTheta), b = difficulty
+      const c = casualHitDecimal !== null ? casualHitDecimal : 0.2;
+      const a = discrimination;
+      const theta = userTheta;
+      const b = difficulty;
+      const probability = c + (1 - c) / (1 + Math.exp(-a * (theta - b)));
 
       const userAnswer = answers[question.position];
       const correctAnswer =
@@ -924,6 +995,7 @@ export class PatternsTabRenderer extends BaseTabRenderer {
           severity: Math.abs(probability - (isCorrect ? 1 : 0)),
           difficulty: difficulty,
           discrimination: discrimination,
+          casualHit: c, // Adicionar casual_hit para debug/análise
         });
       }
     });

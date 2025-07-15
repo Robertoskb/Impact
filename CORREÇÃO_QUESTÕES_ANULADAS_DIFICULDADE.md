@@ -3,6 +3,7 @@
 ## 🐛 PROBLEMA IDENTIFICADO
 
 As questões anuladas estavam recebendo valores de dificuldade incorretos porque o sistema estava:
+
 1. Tentando buscar dados de dificuldade no meta.json mesmo para questões anuladas
 2. Recebendo valores de dificuldade da questão que ficaria na mesma posição no ranking
 3. Sendo misturadas com questões válidas na ordenação por dificuldade
@@ -10,6 +11,7 @@ As questões anuladas estavam recebendo valores de dificuldade incorretos porque
 ## ✅ CORREÇÕES APLICADAS
 
 ### 1. **Detecção Prévia de Questões Anuladas**
+
 ```javascript
 // ANTES: Buscava dificuldade para todas as questões
 const metaPosition = question.originalPosition;
@@ -26,6 +28,7 @@ if (question.cancelled) {
 ```
 
 ### 2. **Separação na Ordenação por Dificuldade**
+
 ```javascript
 // ANTES: Misturava questões anuladas com válidas na ordenação
 sortedQuestions = [...questions].sort((a, b) => {
@@ -47,26 +50,44 @@ const sortedQuestions = [...sortedValidQuestions, ...sortedCancelledQuestions];
 ```
 
 ### 3. **Inclusão de "Anulada" nos Níveis de Dificuldade**
+
 ```javascript
 // ANTES: Não incluía "Anulada" na lista de níveis
-const difficultyOrder = ["Muito fácil", "Fácil", "Média", "Difícil", "Muito difícil"];
+const difficultyOrder = [
+  "Muito fácil",
+  "Fácil",
+  "Média",
+  "Difícil",
+  "Muito difícil",
+];
 
 // DEPOIS: Inclui "Anulada" como nível separado
-const difficultyOrder = ["Muito fácil", "Fácil", "Média", "Difícil", "Muito difícil", "Anulada"];
+const difficultyOrder = [
+  "Muito fácil",
+  "Fácil",
+  "Média",
+  "Difícil",
+  "Muito difícil",
+  "Anulada",
+];
 ```
 
 ### 4. **Exibição Correta na Tabela**
+
 ```javascript
 // ANTES: Tentava mostrar dificuldade mesmo para anuladas
-question.difficulty !== null ? Math.round(question.difficulty) : "N/A"
+question.difficulty !== null ? Math.round(question.difficulty) : "N/A";
 
 // DEPOIS: Verifica se é anulada primeiro
-question.cancelled 
-  ? "N/A" 
-  : (question.difficulty !== null ? Math.round(question.difficulty) : "N/A")
+question.cancelled
+  ? "N/A"
+  : question.difficulty !== null
+  ? Math.round(question.difficulty)
+  : "N/A";
 ```
 
 ### 5. **Ícone Específico para Questões Anuladas**
+
 ```javascript
 // Adicionado suporte a ícone para questões anuladas
 else if (level === "Anulada") {
@@ -78,12 +99,14 @@ else if (level === "Anulada") {
 ## 🎯 RESULTADO DAS CORREÇÕES
 
 ### Antes:
+
 - ❌ Questões anuladas recebiam dados de dificuldade incorretos
 - ❌ Eram misturadas com questões válidas no ranking
 - ❌ Apareciam com níveis de dificuldade indevidos (ex: "Fácil", "Média")
 - ❌ Confundiam o usuário sobre qual questão realmente tinha aquela dificuldade
 
 ### Depois:
+
 - ✅ Questões anuladas têm `difficulty = null` e `difficultyLevel = "Anulada"`
 - ✅ Aparecem separadamente no final do ranking de dificuldade
 - ✅ Têm seu próprio card de estatísticas como "Anulada"
