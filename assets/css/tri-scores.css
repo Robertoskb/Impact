@@ -240,3 +240,77 @@
     padding: 0.75rem;
   }
 }
+
+/* Estilos para área única */
+.tri-score-display {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.score-card.single-area {
+  min-width: 250px;
+  max-width: 300px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: white;
+  border: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.score-card.single-area:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.score-card.single-area .score-area {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.score-card.single-area .score-value {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0.5rem 0;
+}
+
+.score-card.single-area .score-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+/* Estilos para erros */
+.tri-error-display {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.error-card {
+  min-width: 250px;
+  max-width: 400px;
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(220, 53, 69, 0.15);
+}
+
+.error-card .error-area {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.error-card .error-message {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}

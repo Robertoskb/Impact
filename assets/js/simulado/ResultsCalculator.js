@@ -51,8 +51,13 @@ export class ResultsCalculator {
         }
       }
 
-      // Para o padrão visual, questões anuladas aparecem como acerto (1)
-      examOrderPattern += isCancelled || isCorrect ? "1" : "0";
+      // Para o padrão visual:
+      // 1 = acerto, 0 = erro, A = anulada
+      if (isCancelled) {
+        examOrderPattern += "A";
+      } else {
+        examOrderPattern += isCorrect ? "1" : "0";
+      }
 
       const resultData = this.createResultData(
         question,

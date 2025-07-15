@@ -497,6 +497,11 @@ export class UIController {
       const questionDiv = this.createQuestionElement(question);
       container.appendChild(questionDiv);
     });
+
+    // Atualizar informações do debug se estiver ativo
+    if (this.debugMode) {
+      this.updateDebugInfo();
+    }
   }
 
   createQuestionElement(question) {
@@ -662,6 +667,9 @@ export class UIController {
     this.initializeSequentialState();
     this.updateProgressIndicators();
     this.updateStartButton();
+
+    // Atualizar debug panel se estiver ativo
+    this.updateDebugPanel();
   }
 
   // Métodos para gerenciar fluxo sequencial
@@ -1014,5 +1022,435 @@ export class UIController {
         notification.parentNode.removeChild(notification);
       }
     }, 3000);
+  }
+
+  /**
+   * Inicializa o sistema de debug para desenvolvimento
+   */
+  initializeDebugMode() {
+    // Verificar se o debug está ativado (pode ser via URL parameter ou localStorage)
+    const urlParams = new URLSearchParams(window.location.search);
+    const debugParam = urlParams.get("debug");
+    const debugLocal = localStorage.getItem("debugMode");
+
+    this.debugMode =
+      debugParam === "true" || debugLocal === "true" || debugParam === "1";
+
+    if (this.debugMode) {
+      console.log("🔧 Modo DEBUG ativado");
+      this.createDebugPanel();
+    }
+  }
+
+  /**
+   * Cria o painel de debug flutuante
+   */
+  createDebugPanel() {
+    // Criar painel de debug se não existir
+    if (document.getElementById("debug-panel")) return;
+
+    const debugPanel = document.createElement("div");
+    debugPanel.id = "debug-panel";
+    debugPanel.className = "debug-panel";
+    debugPanel.innerHTML = `
+      <div class="debug-header">
+        <h4>🔧 Debug Panel</h4>
+        <button id="debug-toggle" class="debug-toggle">−</button>
+      </div>
+      <div class="debug-content">
+        <button id="debug-random-answers" class="debug-btn primary">
+          🎲 Gerar Respostas Aleatórias
+        </button>
+        <button id="debug-clear-answers" class="debug-btn secondary">
+          🗑️ Limpar Respostas
+        </button>
+        <button id="debug-fill-correct" class="debug-btn success">
+          ✅ Preencher Corretas (Teste)
+        </button>
+        <div class="debug-info">
+          <small>Total de questões: <span id="debug-question-count">0</span></small>
+          <small>Respondidas: <span id="debug-answered-count">0</span></small>
+        </div>
+      </div>
+    `;
+
+    // Adicionar estilos CSS inline para o debug panel
+    const debugStyles = document.createElement("style");
+    debugStyles.textContent = `
+      .debug-panel {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 280px;
+        background: #2c3e50;
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        border: 2px solid #3498db;
+      }
+      
+      .debug-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #34495e;
+        padding: 12px 16px;
+        border-radius: 6px 6px 0 0;
+        border-bottom: 1px solid #3498db;
+        cursor: move;
+        user-select: none;
+      }
+      
+      .debug-header h4 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      
+      .debug-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: background 0.2s;
+      }
+      
+      .debug-toggle:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      
+      .debug-content {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .debug-content.hidden {
+        display: none;
+      }
+      
+      .debug-btn {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+      }
+      
+      .debug-btn.primary {
+        background: #3498db;
+        color: white;
+      }
+      
+      .debug-btn.primary:hover {
+        background: #2980b9;
+        transform: translateY(-1px);
+      }
+      
+      .debug-btn.secondary {
+        background: #95a5a6;
+        color: white;
+      }
+      
+      .debug-btn.secondary:hover {
+        background: #7f8c8d;
+        transform: translateY(-1px);
+      }
+      
+      .debug-btn.success {
+        background: #27ae60;
+        color: white;
+      }
+      
+      .debug-btn.success:hover {
+        background: #229954;
+        transform: translateY(-1px);
+      }
+      
+      .debug-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-top: 8px;
+        padding-top: 12px;
+        border-top: 1px solid #3498db;
+        opacity: 0.8;
+      }
+      
+      .debug-info small {
+        font-size: 12px;
+      }
+    `;
+
+    document.head.appendChild(debugStyles);
+    document.body.appendChild(debugPanel);
+
+    // Configurar event listeners do debug panel
+    this.setupDebugEventListeners();
+  }
+
+  /**
+   * Configura os event listeners do painel de debug
+   */
+  setupDebugEventListeners() {
+    // Toggle do painel
+    document.getElementById("debug-toggle").addEventListener("click", () => {
+      const content = document.querySelector(".debug-content");
+      const toggle = document.getElementById("debug-toggle");
+
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        toggle.textContent = "−";
+      } else {
+        content.classList.add("hidden");
+        toggle.textContent = "+";
+      }
+    });
+
+    // Tornar o painel draggable
+    this.makePanelDraggable();
+
+    // Gerar respostas aleatórias
+    document
+      .getElementById("debug-random-answers")
+      .addEventListener("click", () => {
+        this.generateRandomAnswers();
+      });
+
+    // Limpar respostas
+    document
+      .getElementById("debug-clear-answers")
+      .addEventListener("click", () => {
+        this.clearAllAnswers();
+      });
+
+    // Preencher respostas corretas (para teste)
+    document
+      .getElementById("debug-fill-correct")
+      .addEventListener("click", () => {
+        this.fillCorrectAnswers();
+      });
+  }
+
+  /**
+   * Gera respostas aleatórias para todas as questões
+   */
+  generateRandomAnswers() {
+    const questions = this.app.getQuestions();
+    const alternatives = ["A", "B", "C", "D", "E"];
+
+    console.log("🎲 Gerando respostas aleatórias...");
+
+    questions.forEach((question) => {
+      const randomAnswer =
+        alternatives[Math.floor(Math.random() * alternatives.length)];
+
+      // Encontrar o radio button da questão
+      const radio = document.querySelector(
+        `input[name="question_${question.position}"][value="${randomAnswer}"]`
+      );
+
+      if (radio) {
+        // Simular click no radio
+        radio.checked = true;
+        radio.dispatchEvent(new Event("change", { bubbles: true }));
+
+        // Atualizar visualmente
+        const questionDiv = radio.closest(".question-card");
+        if (questionDiv) {
+          questionDiv.querySelectorAll(".alternative").forEach((alt) => {
+            alt.classList.remove("selected");
+          });
+          radio.closest(".alternative").classList.add("selected");
+        }
+
+        // Salvar resposta
+        this.app.setAnswer(question.position, randomAnswer);
+      }
+    });
+
+    this.updateDebugInfo();
+    console.log(`✅ ${questions.length} respostas aleatórias geradas!`);
+  }
+
+  /**
+   * Limpa todas as respostas
+   */
+  clearAllAnswers() {
+    console.log("🗑️ Limpando todas as respostas...");
+
+    // Limpar todos os radio buttons
+    document
+      .querySelectorAll('input[type="radio"]:checked')
+      .forEach((radio) => {
+        radio.checked = false;
+      });
+
+    // Remover classes visuais
+    document.querySelectorAll(".alternative.selected").forEach((alt) => {
+      alt.classList.remove("selected");
+    });
+
+    // Limpar respostas no app
+    const questions = this.app.getQuestions();
+    questions.forEach((question) => {
+      this.app.clearAnswer(question.position);
+    });
+
+    this.updateDebugInfo();
+    console.log("✅ Todas as respostas foram limpas!");
+  }
+
+  /**
+   * Preenche com respostas corretas (para teste) - se disponível no meta
+   */
+  fillCorrectAnswers() {
+    const questions = this.app.getQuestions();
+    const meta = this.app.getMeta();
+    const config = this.app.getCurrentConfig();
+
+    console.log("✅ Preenchendo respostas corretas...");
+
+    let correctCount = 0;
+
+    questions.forEach((question) => {
+      // Tentar obter resposta correta do meta
+      const questionMeta =
+        meta[config.year]?.[question.area]?.[question.originalPosition];
+      const correctAnswer = questionMeta?.answer;
+
+      if (correctAnswer) {
+        // Encontrar o radio button da resposta correta
+        const radio = document.querySelector(
+          `input[name="question_${question.position}"][value="${correctAnswer}"]`
+        );
+
+        if (radio) {
+          radio.checked = true;
+          radio.dispatchEvent(new Event("change", { bubbles: true }));
+
+          // Atualizar visualmente
+          const questionDiv = radio.closest(".question-card");
+          if (questionDiv) {
+            questionDiv.querySelectorAll(".alternative").forEach((alt) => {
+              alt.classList.remove("selected");
+            });
+            radio.closest(".alternative").classList.add("selected");
+          }
+
+          // Salvar resposta
+          this.app.setAnswer(question.position, correctAnswer);
+          correctCount++;
+        }
+      }
+    });
+
+    this.updateDebugInfo();
+    console.log(
+      `✅ ${correctCount}/${questions.length} respostas corretas preenchidas!`
+    );
+  }
+
+  /**
+   * Atualiza as informações no painel de debug
+   */
+  updateDebugInfo() {
+    const totalCount = document.getElementById("debug-question-count");
+    const answeredCount = document.getElementById("debug-answered-count");
+
+    if (totalCount && answeredCount) {
+      const questions = this.app.getQuestions();
+      const answers = this.app.getAnswers();
+
+      totalCount.textContent = questions.length;
+      answeredCount.textContent = Object.keys(answers).length;
+    }
+  }
+
+  /**
+   * Torna o painel de debug movível/draggable
+   */
+  makePanelDraggable() {
+    const panel = document.getElementById("debug-panel");
+    const header = panel.querySelector(".debug-header");
+
+    let isDragging = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+
+    function dragStart(e) {
+      if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - xOffset;
+        initialY = e.touches[0].clientY - yOffset;
+      } else {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+      }
+
+      if (e.target === header || header.contains(e.target)) {
+        isDragging = true;
+        panel.style.cursor = "grabbing";
+      }
+    }
+
+    function dragEnd(e) {
+      initialX = currentX;
+      initialY = currentY;
+      isDragging = false;
+      panel.style.cursor = "auto";
+    }
+
+    function drag(e) {
+      if (isDragging) {
+        e.preventDefault();
+
+        if (e.type === "touchmove") {
+          currentX = e.touches[0].clientX - initialX;
+          currentY = e.touches[0].clientY - initialY;
+        } else {
+          currentX = e.clientX - initialX;
+          currentY = e.clientY - initialY;
+        }
+
+        xOffset = currentX;
+        yOffset = currentY;
+
+        // Limitar movimento dentro da viewport
+        const rect = panel.getBoundingClientRect();
+        const maxX = window.innerWidth - rect.width;
+        const maxY = window.innerHeight - rect.height;
+
+        currentX = Math.max(0, Math.min(currentX, maxX));
+        currentY = Math.max(0, Math.min(currentY, maxY));
+
+        panel.style.transform = `translate(${currentX}px, ${currentY}px)`;
+      }
+    }
+
+    header.addEventListener("mousedown", dragStart, false);
+    document.addEventListener("mouseup", dragEnd, false);
+    document.addEventListener("mousemove", drag, false);
+
+    // Touch events para dispositivos móveis
+    header.addEventListener("touchstart", dragStart, false);
+    document.addEventListener("touchend", dragEnd, false);
+    document.addEventListener("touchmove", drag, false);
   }
 }

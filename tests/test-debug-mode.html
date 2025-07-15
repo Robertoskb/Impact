@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Debug Mode</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; text-align: center; }
+        .link-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .link-box a {
+            display: inline-block;
+            background: #2196f3;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        .link-box a:hover {
+            background: #1976d2;
+        }
+        .instructions {
+            background: #f9f9f9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .feature h4 {
+            margin-top: 0;
+            color: #495057;
+        }
+        .console-code {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Teste do Modo Debug - Simulado ENEM</h1>
+        
+        <div class="instructions">
+            <h3>📋 Instruções de Uso</h3>
+            <p>O modo debug permite gerar respostas aleatórias automaticamente, facilitando o teste rápido do simulado.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>🚀 Links para Teste</h3>
+            <a href="simulado.html?debug=true" target="_blank">
+                🎯 Abrir Simulado com Debug
+            </a>
+            <a href="simulado.html" target="_blank">
+                📝 Abrir Simulado Normal
+            </a>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Atenção:</strong> O modo debug é apenas para desenvolvimento e testes. 
+            As respostas geradas são aleatórias e não refletem conhecimento real.
+        </div>
+
+        <h3>🔧 Funcionalidades do Debug Panel</h3>
+        
+        <div class="feature">
+            <h4>🔧 Painel Movível</h4>
+            <p>O painel pode ser arrastado clicando e segurando a barra do título "🔧 Debug Panel". 
+            Pode ser posicionado em qualquer lugar da tela conforme necessário. 
+            Use o botão "−" / "+" para minimizar/expandir o painel.</p>
+        </div>
+        
+        <div class="feature">
+            <h4>🎲 Gerar Respostas Aleatórias</h4>
+            <p>Preenche automaticamente todas as questões com respostas aleatórias (A, B, C, D ou E). 
+            Útil para testar rapidamente o cálculo de notas TRI.</p>
+        </div>
+
+        <div class="feature">
+            <h4>🗑️ Limpar Respostas</h4>
+            <p>Remove todas as respostas marcadas, limpando tanto visualmente quanto nos dados internos.</p>
+        </div>
+
+        <div class="feature">
+            <h4>✅ Preencher Corretas (Teste)</h4>
+            <p>Tenta preencher com as respostas corretas baseadas no meta.json. 
+            Só funciona se o gabarito estiver disponível para o ano/área selecionados.</p>
+        </div>
+
+        <h3>💻 Ativação Manual via Console</h3>
+        <p>Alternativamente, você pode ativar o debug via console do navegador (F12):</p>
+        
+        <div class="console-code">
+localStorage.setItem('debugMode', 'true');
+location.reload();
+        </div>
+
+        <h3>📊 Como Testar</h3>
+        <ol>
+            <li>Clique no link "Abrir Simulado com Debug" acima</li>
+            <li>Configure um simulado (selecione ano, tipo, cor)</li>
+            <li>Inicie o simulado</li>
+            <li>Você verá o painel de debug no canto superior direito</li>
+            <li>Use "Gerar Respostas Aleatórias" para preencher tudo automaticamente</li>
+            <li>Finalize o simulado para ver as notas TRI calculadas</li>
+        </ol>
+
+        <div class="instructions">
+            <h4>🎯 Cenários de Teste Sugeridos</h4>
+            <ul>
+                <li><strong>Teste Rápido:</strong> Use respostas aleatórias para verificar se o cálculo TRI funciona</li>
+                <li><strong>Teste de Performance:</strong> Use respostas corretas para verificar notas máximas</li>
+                <li><strong>Teste de Limpeza:</strong> Teste a funcionalidade de limpar respostas</li>
+                <li><strong>Teste de Áreas:</strong> Teste diferentes áreas (LC0, LC1, CH, CN, MT)</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <strong>💡 Dica:</strong> O painel de debug pode ser minimizado clicando no botão "−" 
+            e reaparecerá automaticamente quando você abrir um novo simulado.
+        </div>
+    </div>
+</body>
+</html>

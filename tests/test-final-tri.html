@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Final - Cálculo TRI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .result { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        .loading { background-color: #d1ecf1; border-color: #bee5eb; }
+    </style>
+</head>
+<body>
+    <h1>Teste Final - Cálculo TRI</h1>
+    <button onclick="startTest()">Iniciar Teste</button>
+    <div id="results"></div>
+    
+    <script type="module">
+        import { ScoreCalculator } from './assets/js/simulado/ScoreCalculator.js';
+        
+        class TestApp {
+            constructor() {
+                this.config = { year: 2024, type: 'dia2', language: null };
+                this.questions = this.generateQuestions();
+                this.answers = this.generateAnswers();
+                this.meta = this.generateMeta();
+                
+                this.scoreCalculator = new ScoreCalculator(this);
+                window.testApp = this; // Disponibilizar globalmente
+            }
+            
+            getCurrentConfig() { return this.config; }
+            getQuestions() { return this.questions; }
+            getAnswers() { return this.answers; }
+            getMeta() { return this.meta; }
+            
+            generateQuestions() {
+                const questions = [];
+                
+                // CN: questões 1-45
+                for (let i = 1; i <= 45; i++) {
+                    questions.push({
+                        position: i,
+                        originalPosition: i,
+                        area: 'CN',
+                        cancelled: false
+                    });
+                }
+                
+                // MT: questões 46-90  
+                for (let i = 46; i <= 90; i++) {
+                    questions.push({
+                        position: i,
+                        originalPosition: i - 45,
+                        area: 'MT',
+                        cancelled: false
+                    });
+                }
+                
+                return questions;
+            }
+            
+            generateAnswers() {
+                const answers = {};
+                const options = ['A', 'B', 'C', 'D', 'E'];
+                
+                for (let i = 1; i <= 90; i++) {
+                    answers[i] = options[Math.floor(Math.random() * options.length)];
+                }
+                
+                return answers;
+            }
+            
+            generateMeta() {
+                const meta = { 2024: { CN: {}, MT: {} } };
+                const options = ['A', 'B', 'C', 'D', 'E'];
+                
+                // Meta CN
+                for (let i = 1; i <= 45; i++) {
+                    meta[2024].CN[i] = {
+                        discrimination: 1.0 + Math.random() * 2,
+                        difficulty: -2 + Math.random() * 4,
+                        answer: options[Math.floor(Math.random() * options.length)]
+                    };
+                }
+                
+                // Meta MT
+                for (let i = 1; i <= 45; i++) {
+                    meta[2024].MT[i] = {
+                        discrimination: 1.0 + Math.random() * 2,
+                        difficulty: -2 + Math.random() * 4,
+                        answer: options[Math.floor(Math.random() * options.length)]
+                    };
+                }
+                
+                return meta;
+            }
+            
+            async runTest() {
+                const resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = '<div class="loading">🔄 Iniciando teste...</div>';
+                
+                try {
+                    console.log('🚀 Iniciando teste do cálculo TRI...');
+                    
+                    // Teste 1: Área individual CN
+                    resultsDiv.innerHTML += '<div class="loading">🔄 Testando Ciências da Natureza...</div>';
+                    const cnResult = await this.scoreCalculator.calculateAreaScore('CN', null);
+                    
+                    if (cnResult.success) {
+                        resultsDiv.innerHTML += `<div class="success">✅ CN: ${cnResult.score} pontos</div>`;
+                    } else {
+                        resultsDiv.innerHTML += `<div class="error">❌ CN: ${cnResult.error}</div>`;
+                    }
+                    
+                    // Teste 2: Área individual MT
+                    resultsDiv.innerHTML += '<div class="loading">🔄 Testando Matemática...</div>';
+                    const mtResult = await this.scoreCalculator.calculateAreaScore('MT', null);
+                    
+                    if (mtResult.success) {
+                        resultsDiv.innerHTML += `<div class="success">✅ MT: ${mtResult.score} pontos</div>`;
+                    } else {
+                        resultsDiv.innerHTML += `<div class="error">❌ MT: ${mtResult.error}</div>`;
+                    }
+                    
+                    // Teste 3: Cálculo completo
+                    resultsDiv.innerHTML += '<div class="loading">🔄 Testando cálculo completo...</div>';
+                    const allResults = await this.scoreCalculator.calculateAllScores();
+                    
+                    resultsDiv.innerHTML += `<div class="result">📊 Total calculado: ${allResults.totalCalculated}/2</div>`;
+                    resultsDiv.innerHTML += `<div class="result">🚨 Erros: ${allResults.errors.length}</div>`;
+                    
+                    if (allResults.errors.length > 0) {
+                        allResults.errors.forEach(error => {
+                            resultsDiv.innerHTML += `<div class="error">⚠️ ${error}</div>`;
+                        });
+                    }
+                    
+                    // Resumo final
+                    const success = cnResult.success && mtResult.success && allResults.errors.length === 0;
+                    if (success) {
+                        resultsDiv.innerHTML += '<div class="success"><h3>🎉 TESTE PASSOU! Todos os modelos carregaram corretamente.</h3></div>';
+                    } else {
+                        resultsDiv.innerHTML += '<div class="error"><h3>❌ TESTE FALHOU. Alguns problemas encontrados.</h3></div>';
+                    }
+                    
+                } catch (error) {
+                    resultsDiv.innerHTML += `<div class="error">💥 Erro crítico: ${error.message}</div>`;
+                    console.error('Erro no teste:', error);
+                }
+            }
+        }
+        
+        // Inicializar app de teste
+        const testApp = new TestApp();
+        window.startTest = () => testApp.runTest();
+        
+        console.log('🎯 App de teste inicializado. Clique no botão para começar.');
+    </script>
+</body>
+</html>

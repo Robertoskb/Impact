@@ -178,7 +178,7 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
       }
 
       questionsWithDifficulty.push({
-        questionNumber: examIndex + 1,
+        questionNumber: question.position, // Usar posição real da prova
         originalPosition: question.originalPosition,
         area: question.area,
         difficulty: difficulty,

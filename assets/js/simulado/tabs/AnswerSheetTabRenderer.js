@@ -77,7 +77,7 @@ export class AnswerSheetTabRenderer extends BaseTabRenderer {
 
       html += `
         <tr class="${statusClass}">
-          <td>${index + 1}</td>
+          <td>${question.position}</td>
           <td>${areaNames[question.area] || question.area}</td>
           <td class="answer-cell">
             ${userAnswer || "-"}

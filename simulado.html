@@ -24,11 +24,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- DEBUG: Botão para testar resultados - Controlado por variável -->
-    <div id="debug-button" style="position: fixed; top: 10px; right: 10px; z-index: 9999; background: #28a745; color: white; padding: 15px; border: none; cursor: pointer; display: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);" onclick="debugShowResults()">
-        🎯 TESTAR NOTAS TRI
-    </div>
-    
     <!-- Botão de menu para mobile -->
     <button id="menuToggleBtn" class="menu-toggle">
         <i class="fa fa-bars"></i>
@@ -66,18 +61,8 @@
                         </div>
 
                         <div class="config-section">
-                            <h3><i class="fa fa-layer-group"></i> Tipo de Prova</h3>
+                            <h3><i class="fa fa-layer-group"></i> Área de Conhecimento</h3>
                             <div class="exam-type-buttons">
-                                <button class="exam-type-btn" data-type="dia1">
-                                    <i class="fa fa-book"></i>
-                                    <span>1º Dia</span>
-                                    <small>Linguagens e Códigos + Ciências Humanas</small>
-                                </button>
-                                <button class="exam-type-btn" data-type="dia2">
-                                    <i class="fa fa-calculator"></i>
-                                    <span>2º Dia</span>
-                                    <small>Ciências da Natureza + Matemática</small>
-                                </button>
                                 <button class="exam-type-btn" data-type="LC0">
                                     <i class="fa fa-language"></i>
                                     <span>LC - Inglês</span>
@@ -417,159 +402,6 @@
         </div>
     </div>
 
-    
-    <script>
-        // =====================================
-        // CONFIGURAÇÃO DE DEBUG
-        // =====================================
-        const DEBUG_MODE = true; // Altere para true para ativar o modo debug
-        
-        // Mostrar/esconder botão de debug baseado na variável
-        document.addEventListener('DOMContentLoaded', function() {
-            const debugButton = document.getElementById('debug-button');
-            if (debugButton) {
-                debugButton.style.display = DEBUG_MODE ? 'block' : 'none';
-            }
-        });
-        
-        // DEBUG: Função para testar a exibição de resultados
-        function debugShowResults() {
-            if (!DEBUG_MODE) {
-                console.warn('DEBUG: Modo debug está desativado. Altere DEBUG_MODE para true.');
-                return;
-            }
-            
-            console.log('DEBUG: Forçando exibição da tela de resultados...');
-            
-            // Esconder outras telas
-            const screens = ['config-screen', 'simulado-screen', 'saved-simulados-screen'];
-            screens.forEach(screenId => {
-                const screen = document.getElementById(screenId);
-                if (screen) {
-                    screen.style.display = 'none';
-                }
-            });
-            
-            // Mostrar tela de resultados
-            const resultsScreen = document.getElementById('results-screen');
-            if (resultsScreen) {
-                resultsScreen.style.display = 'block';
-                
-                // Adicionar dados de teste nas estatísticas básicas
-                const elements = {
-                    'total-questions': '45',
-                    'correct-answers': '30',
-                    'wrong-answers': '15',
-                    'cancelled-questions': '0',
-                    'performance': '67%'
-                };
-                
-                Object.entries(elements).forEach(([id, value]) => {
-                    const element = document.getElementById(id);
-                    if (element) {
-                        element.textContent = value;
-                    }
-                });
-                
-                // Simular dados para os renderizadores
-                if (window.simuladoApp) {
-                    // Criar dados fictícios
-                    const mockStats = {
-                        totalQuestions: 45,
-                        correctAnswers: 30,
-                        wrongAnswers: 15,
-                        cancelledQuestions: 0,
-                        performance: 67,
-                        areaStats: {
-                            'LC': { correct: 8, total: 9 },
-                            'CH': { correct: 7, total: 9 },
-                            'CN': { correct: 8, total: 9 },
-                            'MT': { correct: 7, total: 9 }
-                        }
-                    };
-                    
-                    // Simular configuração para teste
-                    window.simuladoApp.currentConfig = {
-                        year: 2023,
-                        type: 'LC0',
-                        color: 'azul',
-                        language: 'LC0'
-                    };
-                    
-                    // Simular questões para teste
-                    window.simuladoApp.questions = Array.from({length: 45}, (_, i) => ({
-                        position: i + 1,
-                        originalPosition: i + 1,
-                        area: 'LC0',
-                        cancelled: i >= 43 // últimas 2 questões anuladas
-                    }));
-                    
-                    // Simular respostas para teste (padrão aleatório mas consistente)
-                    window.simuladoApp.answers = {};
-                    for (let i = 1; i <= 45; i++) {
-                        // 67% de acertos aproximadamente
-                        window.simuladoApp.answers[i] = Math.random() > 0.33 ? 'A' : 'B';
-                    }
-                    
-                    // Simular meta data básico
-                    window.simuladoApp.meta = {
-                        2023: {
-                            LC0: {}
-                        }
-                    };
-                    
-                    // Preencher meta data para as questões
-                    for (let i = 1; i <= 43; i++) { // questões válidas
-                        window.simuladoApp.meta[2023].LC0[i] = {
-                            answer: 'A',
-                            difficulty: Math.random() * 2 - 1, // -1 a 1
-                            discrimination: Math.random() * 2 + 0.5 // 0.5 a 2.5
-                        };
-                    }
-                    
-                    // Atualizar o controller com dados fictícios
-                    if (window.simuladoApp.resultsTabsController) {
-                        window.simuladoApp.resultsTabsController.updateResults(mockStats);
-                    }
-                    
-                    // Testar cálculo de notas TRI se disponível
-                    if (window.simuladoApp.scoreCalculator) {
-                        console.log('DEBUG: Testando cálculo de notas TRI...');
-                        window.simuladoApp.scoreCalculator.calculateAllScores()
-                            .then(triResults => {
-                                console.log('DEBUG: Resultados TRI:', triResults);
-                                if (triResults.totalCalculated > 0) {
-                                    window.simuladoApp.updateTRIScoresDisplay(triResults);
-                                }
-                            })
-                            .catch(error => {
-                                console.log('DEBUG: Erro no cálculo TRI (esperado se modelos não existirem):', error.message);
-                            });
-                    }
-                }
-                
-            } else {
-                console.log('DEBUG: results-screen não encontrado!');
-            }
-        }
-        
-        // =====================================
-        // INSTRUÇÕES DE USO DO DEBUG
-        // =====================================
-        /*
-        Para ativar o modo debug:
-        1. Altere a variável DEBUG_MODE para true (linha ~16)
-        2. Recarregue a página
-        3. Um botão vermelho "DEBUG: Mostrar Resultados" aparecerá no canto superior direito
-        4. Clique no botão para testar a tela de resultados com dados fictícios
-        
-        Para desativar o modo debug:
-        1. Altere a variável DEBUG_MODE para false
-        2. Recarregue a página
-        3. O botão de debug ficará oculto
-        */
-    </script>
-    
     <script type="module" src="assets/js/simulado-main.js"></script>
 </body>
 </html>

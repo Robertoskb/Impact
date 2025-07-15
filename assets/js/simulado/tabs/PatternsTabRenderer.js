@@ -46,9 +46,10 @@ export class PatternsTabRenderer extends BaseTabRenderer {
         </div>
 
         <div class="patterns-grid">
+          ${this.renderTRIConsistencyAnalysis(questions, answers)}
+          ${this.renderTemporalPatterns(answerString)}
           ${this.renderSequencePatterns(answerString)}
           ${this.renderOptionFrequency(questions, answers)}
-          ${this.renderTemporalPatterns(answerString)}
         </div>
       </div>
     `;
@@ -62,7 +63,7 @@ export class PatternsTabRenderer extends BaseTabRenderer {
         if (question.cancelled) {
           return "C"; // C para cancelled (anulada)
         }
-        
+
         const userAnswer = answers[question.position];
         const correctAnswer =
           this.app.questionGenerator.getCorrectAnswer(question);
@@ -123,7 +124,29 @@ export class PatternsTabRenderer extends BaseTabRenderer {
     for (let i = 0; i < answerString.length; i++) {
       const bit = answerString[i];
 
-      if (lastBit !== null && lastBit !== bit) {
+      // Pular questões anuladas (C) para análise de sequências
+      if (bit === "C") {
+        // Se estava em uma sequência, finalizá-la
+        if (currentCorrectStreak > 0) {
+          correctStreaks.push({
+            length: currentCorrectStreak,
+            start: i - currentCorrectStreak,
+            end: i - 1,
+          });
+          currentCorrectStreak = 0;
+        }
+        if (currentIncorrectStreak > 0) {
+          incorrectStreaks.push({
+            length: currentIncorrectStreak,
+            start: i - currentIncorrectStreak,
+            end: i - 1,
+          });
+          currentIncorrectStreak = 0;
+        }
+        continue; // Pular questão anulada
+      }
+
+      if (lastBit !== null && lastBit !== bit && lastBit !== "C") {
         alternations++;
       }
 
@@ -138,7 +161,7 @@ export class PatternsTabRenderer extends BaseTabRenderer {
         }
         currentCorrectStreak++;
         maxCorrectStreak = Math.max(maxCorrectStreak, currentCorrectStreak);
-      } else {
+      } else if (bit === "0") {
         if (currentCorrectStreak > 0) {
           correctStreaks.push({
             length: currentCorrectStreak,
@@ -154,7 +177,10 @@ export class PatternsTabRenderer extends BaseTabRenderer {
         );
       }
 
-      lastBit = bit;
+      // Só atualizar lastBit se não for questão anulada
+      if (bit !== "C") {
+        lastBit = bit;
+      }
     }
 
     // Finalizar última sequência
@@ -251,6 +277,15 @@ export class PatternsTabRenderer extends BaseTabRenderer {
       <div class="pattern-card">
         <h5><i class="fa fa-chart-pie"></i> Frequência das Alternativas</h5>
         
+        <div class="frequency-summary">
+          <div class="summary-item">
+            <strong>Total respondidas:</strong> ${totalAnswered} questões
+          </div>
+          <div class="summary-item">
+            <strong>Distribuição esperada:</strong> ${expectedPercentage}% por alternativa
+          </div>
+        </div>
+        
         <div class="option-frequency">
           ${Object.entries(optionFreq)
             .map(([option, count]) => {
@@ -265,13 +300,13 @@ export class PatternsTabRenderer extends BaseTabRenderer {
                     <div class="option-fill" style="width: ${percentage}%"></div>
                   </div>
                   <div class="option-stats">
-                    <span class="option-count">${count}</span>
-                    <span class="option-percentage">${percentage.toFixed(
+                    <div class="option-count">${count} vezes</div>
+                    <div class="option-percentage">${percentage.toFixed(
                       1
-                    )}%</span>
+                    )}%</div>
                     ${
                       deviation > 5
-                        ? `<span class="deviation-warning">⚠</span>`
+                        ? `<span class="deviation-warning" title="Desvio significativo da distribuição esperada">⚠</span>`
                         : ""
                     }
                   </div>
@@ -334,53 +369,91 @@ export class PatternsTabRenderer extends BaseTabRenderer {
   renderTemporalPatterns(answerString) {
     // Analisar padrões temporais (início, meio, fim da prova)
     const thirds = this.analyzeByThirds(answerString);
+    const totalQuestions = answerString.length;
+    const validQuestions = answerString.replace(/C/g, "").length;
 
     return `
       <div class="pattern-card">
         <h5><i class="fa fa-clock"></i> Desempenho Temporal</h5>
         
+        <div class="temporal-summary">
+          <div class="summary-item">
+            <strong>Total de questões:</strong> ${totalQuestions} (${validQuestions} válidas)
+          </div>
+          <div class="summary-item">
+            <strong>Análise:</strong> Divisão em terços para identificar fadiga ou melhora
+          </div>
+        </div>
+        
         <div class="temporal-analysis">
-          <div class="third-item">
-            <h6>Início da Prova</h6>
-            <div class="third-stats">
-              <span class="third-score">${thirds.first.correct}/${
+          <div class="temporal-item">
+            <div class="temporal-label">
+              <i class="fa fa-play"></i>
+              <span>Início da Prova</span>
+              <small>1º terço</small>
+            </div>
+            <div class="temporal-bar">
+              <div class="temporal-fill" style="width: ${
+                thirds.first.percentage
+              }%"></div>
+            </div>
+            <div class="temporal-stats">
+              <div class="temporal-score">${thirds.first.correct}/${
       thirds.first.total
-    }</span>
-              <span class="third-percentage">${thirds.first.percentage.toFixed(
+    }</div>
+              <div class="temporal-percentage">${thirds.first.percentage.toFixed(
                 1
-              )}%</span>
+              )}%</div>
             </div>
           </div>
           
-          <div class="third-item">
-            <h6>Meio da Prova</h6>
-            <div class="third-stats">
-              <span class="third-score">${thirds.second.correct}/${
+          <div class="temporal-item">
+            <div class="temporal-label">
+              <i class="fa fa-pause"></i>
+              <span>Meio da Prova</span>
+              <small>2º terço</small>
+            </div>
+            <div class="temporal-bar">
+              <div class="temporal-fill" style="width: ${
+                thirds.second.percentage
+              }%"></div>
+            </div>
+            <div class="temporal-stats">
+              <div class="temporal-score">${thirds.second.correct}/${
       thirds.second.total
-    }</span>
-              <span class="third-percentage">${thirds.second.percentage.toFixed(
+    }</div>
+              <div class="temporal-percentage">${thirds.second.percentage.toFixed(
                 1
-              )}%</span>
+              )}%</div>
             </div>
           </div>
           
-          <div class="third-item">
-            <h6>Final da Prova</h6>
-            <div class="third-stats">
-              <span class="third-score">${thirds.third.correct}/${
+          <div class="temporal-item">
+            <div class="temporal-label">
+              <i class="fa fa-stop"></i>
+              <span>Final da Prova</span>
+              <small>3º terço</small>
+            </div>
+            <div class="temporal-bar">
+              <div class="temporal-fill" style="width: ${
+                thirds.third.percentage
+              }%"></div>
+            </div>
+            <div class="temporal-stats">
+              <div class="temporal-score">${thirds.third.correct}/${
       thirds.third.total
-    }</span>
-              <span class="third-percentage">${thirds.third.percentage.toFixed(
+    }</div>
+              <div class="temporal-percentage">${thirds.third.percentage.toFixed(
                 1
-              )}%</span>
+              )}%</div>
             </div>
           </div>
         </div>
         
-        <div class="temporal-trend">
+        <div class="temporal-analysis-text">
           <small>
-            <strong>Tendência:</strong> 
-            ${this.analyzeTrend(thirds)}
+            <strong>Interpretação:</strong> 
+            ${this.analyzeTemporalPerformance(thirds)}
           </small>
         </div>
       </div>
@@ -395,48 +468,305 @@ export class PatternsTabRenderer extends BaseTabRenderer {
     const second = answerString.slice(thirdSize, thirdSize * 2);
     const third = answerString.slice(thirdSize * 2);
 
+    const analyzeSection = (section) => {
+      // Contar apenas questões não anuladas
+      const validAnswers = section.replace(/C/g, "");
+      const correct = (validAnswers.match(/1/g) || []).length;
+      const total = validAnswers.length;
+      const percentage = total > 0 ? (correct / total) * 100 : 0;
+
+      return { correct, total, percentage };
+    };
+
     return {
-      first: {
-        correct: (first.match(/1/g) || []).length,
-        total: first.length,
-        percentage: ((first.match(/1/g) || []).length / first.length) * 100,
-      },
-      second: {
-        correct: (second.match(/1/g) || []).length,
-        total: second.length,
-        percentage: ((second.match(/1/g) || []).length / second.length) * 100,
-      },
-      third: {
-        correct: (third.match(/1/g) || []).length,
-        total: third.length,
-        percentage: ((third.match(/1/g) || []).length / third.length) * 100,
-      },
+      first: analyzeSection(first),
+      second: analyzeSection(second),
+      third: analyzeSection(third),
     };
   }
 
-  analyzeTrend(thirds) {
-    const percentages = [
+  renderTRIConsistencyAnalysis(questions, answers) {
+    const config = this.app.getCurrentConfig();
+    const meta = this.app.getMeta();
+
+    // Obter notas TRI calculadas do app
+    const triScoresData = this.app.triScores;
+
+    if (!triScoresData || !triScoresData.scores) {
+      return `
+        <div class="pattern-card">
+          <h5><i class="fa fa-chart-area"></i> Análise de Consistência TRI</h5>
+          <div class="consistency-area">
+            <p>Notas TRI não disponíveis. Calcule as notas primeiro para ver a análise de consistência.</p>
+          </div>
+        </div>
+      `;
+    }
+
+    // Analisar inconsistências para cada área
+    const areas = [...new Set(questions.map((q) => q.area))];
+    let html = `
+      <div class="pattern-card">
+        <h5><i class="fa fa-chart-area"></i> Análise de Consistência TRI</h5>
+    `;
+
+    areas.forEach((area) => {
+      const areaQuestions = questions.filter((q) => q.area === area);
+      const areaScore = triScoresData.scores[area];
+
+      if (!areaScore) {
+        html += `
+          <div class="consistency-area">
+            <h6><i class="fa fa-chart-bar"></i> ${this.getAreaName(area)}</h6>
+            <p>Nota TRI não disponível para esta área.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const userScore = areaScore.score || 500; // Fallback para 500 se não houver nota
+      const userTheta = (userScore - 500) / 100; // Converter nota para parâmetro θ (theta)
+
+      const inconsistencies = this.analyzeAreaInconsistencies(
+        areaQuestions,
+        answers,
+        userTheta,
+        meta,
+        config
+      );
+
+      html += this.renderAreaConsistency(area, inconsistencies, userScore);
+    });
+
+    html += `</div>`;
+    return html;
+  }
+
+  analyzeAreaInconsistencies(questions, answers, userTheta, meta, config) {
+    const inconsistentItems = [];
+    let totalAnalyzed = 0;
+    let totalInconsistent = 0;
+
+    questions.forEach((question, index) => {
+      // Pular questões anuladas
+      if (question.cancelled) return;
+
+      // Verificar se há metadados disponíveis
+      if (
+        !meta[config.year] ||
+        !meta[config.year][question.area] ||
+        !meta[config.year][question.area][question.originalPosition]
+      ) {
+        return;
+      }
+
+      const questionMeta =
+        meta[config.year][question.area][question.originalPosition];
+      const difficulty = questionMeta.difficulty;
+      const discrimination = questionMeta.discrimination;
+
+      if (difficulty === null || discrimination === null) return;
+
+      // Calcular probabilidade de acerto usando modelo 3PL da TRI
+      // P(θ) = c + (1-c) * [e^(Da(θ-b)) / (1 + e^(Da(θ-b)))]
+      // Assumindo c = 0.2 (chute) e D = 1.7 (constante de escala)
+      const c = 0.2; // Probabilidade de acerto ao acaso
+      const D = 1.7; // Constante de escala
+      const exponent = D * discrimination * (userTheta - difficulty);
+      const probability =
+        c + (1 - c) * (Math.exp(exponent) / (1 + Math.exp(exponent)));
+
+      const userAnswer = answers[question.position];
+      const correctAnswer =
+        this.app.questionGenerator.getCorrectAnswer(question);
+      const isCorrect = userAnswer === correctAnswer;
+
+      totalAnalyzed++;
+
+      // Considerar inconsistente se:
+      // 1. Probabilidade alta (>70%) mas errou
+      // 2. Probabilidade baixa (<30%) mas acertou
+      if (
+        (probability > 0.7 && !isCorrect) ||
+        (probability < 0.3 && isCorrect)
+      ) {
+        totalInconsistent++;
+        inconsistentItems.push({
+          questionNumber: question.position, // Usar posição real na prova
+          originalPosition: question.originalPosition,
+          probability: probability * 100,
+          isCorrect: isCorrect,
+          expectedResult: probability > 0.5 ? "acerto" : "erro",
+          actualResult: isCorrect ? "acerto" : "erro",
+          severity: Math.abs(probability - (isCorrect ? 1 : 0)),
+          difficulty: difficulty,
+          discrimination: discrimination,
+        });
+      }
+    });
+
+    // Ordenar por severidade (maior inconsistência primeiro)
+    inconsistentItems.sort((a, b) => b.severity - a.severity);
+
+    return {
+      items: inconsistentItems.slice(0, 10), // Top 10 inconsistências
+      totalAnalyzed: totalAnalyzed,
+      totalInconsistent: totalInconsistent,
+      consistencyRate:
+        totalAnalyzed > 0
+          ? ((totalAnalyzed - totalInconsistent) / totalAnalyzed) * 100
+          : 0,
+    };
+  }
+
+  renderAreaConsistency(area, analysis, userScore) {
+    const areaNames = {
+      LC0: "Linguagens (Inglês)",
+      LC1: "Linguagens (Espanhol)",
+      CH: "Ciências Humanas",
+      CN: "Ciências da Natureza",
+      MT: "Matemática",
+    };
+
+    const consistencyLevel =
+      analysis.consistencyRate >= 80
+        ? "alta"
+        : analysis.consistencyRate >= 60
+        ? "média"
+        : "baixa";
+
+    let html = `
+      <div class="consistency-area">
+        <h6><i class="fa fa-chart-bar"></i> ${areaNames[area] || area}</h6>
+        <div class="consistency-stats">
+          <div class="stat-item">
+            <strong>Nota TRI:</strong> ${Math.round(userScore)} pontos
+          </div>
+          <div class="stat-item">
+            <strong>Consistência:</strong> 
+            <span class="consistency-${consistencyLevel}">${analysis.consistencyRate.toFixed(
+      1
+    )}%</span>
+          </div>
+          <div class="stat-item">
+            <strong>Questões analisadas:</strong> ${analysis.totalAnalyzed}
+          </div>
+        </div>
+    `;
+
+    if (analysis.items.length > 0) {
+      html += `
+        <div class="inconsistent-items">
+          <h6>Principais Inconsistências:</h6>
+          <div class="inconsistency-list">
+            ${analysis.items
+              .slice(0, 5)
+              .map(
+                (item) => `
+              <div class="inconsistency-item">
+                <div class="item-info">
+                  <strong>Q${item.questionNumber}</strong>
+                  <span class="probability">${item.probability.toFixed(
+                    1
+                  )}% prob.</span>
+                  <span class="result ${
+                    item.isCorrect ? "correct" : "incorrect"
+                  }">
+                    ${item.actualResult}
+                  </span>
+                </div>
+                <div class="item-description">
+                  ${
+                    item.probability > 70 && !item.isCorrect
+                      ? "Erro em questão com alta probabilidade de acerto"
+                      : "Acerto em questão com baixa probabilidade"
+                  }
+                </div>
+              </div>
+            `
+              )
+              .join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    html += `
+        <div class="consistency-analysis">
+          <small>
+            <strong>Análise:</strong> 
+            ${this.getConsistencyDescription(
+              analysis.consistencyRate,
+              analysis.totalInconsistent
+            )}
+          </small>
+        </div>
+      </div>
+    `;
+
+    return html;
+  }
+
+  getAreaName(area) {
+    const areaNames = {
+      LC0: "Linguagens (Inglês)",
+      LC1: "Linguagens (Espanhol)",
+      CH: "Ciências Humanas",
+      CN: "Ciências da Natureza",
+      MT: "Matemática",
+    };
+    return areaNames[area] || area;
+  }
+
+  getConsistencyDescription(consistencyRate, totalInconsistent) {
+    if (consistencyRate >= 85) {
+      return "Desempenho muito consistente com a habilidade estimada.";
+    } else if (consistencyRate >= 70) {
+      return "Desempenho razoavelmente consistente, com algumas inconsistências pontuais.";
+    } else if (consistencyRate >= 50) {
+      return "Desempenho moderadamente inconsistente. Revise estratégias de resolução.";
+    } else {
+      return "Desempenho inconsistente. Pode indicar problemas de concentração, chutes ou gaps de conhecimento.";
+    }
+  }
+
+  analyzeTemporalPerformance(thirds) {
+    const performances = [
       thirds.first.percentage,
       thirds.second.percentage,
       thirds.third.percentage,
     ];
+    const maxPerf = Math.max(...performances);
+    const minPerf = Math.min(...performances);
+    const difference = maxPerf - minPerf;
 
-    if (percentages[0] > percentages[1] && percentages[1] > percentages[2]) {
-      return "Desempenho decrescente ao longo da prova (possível fadiga)";
-    } else if (
-      percentages[0] < percentages[1] &&
-      percentages[1] < percentages[2]
+    if (difference < 10) {
+      return "Desempenho consistente ao longo da prova, sem sinais significativos de fadiga ou melhora.";
+    }
+
+    // Identificar padrão
+    if (
+      thirds.first.percentage > thirds.second.percentage &&
+      thirds.second.percentage > thirds.third.percentage
     ) {
-      return "Desempenho crescente ao longo da prova (aquecimento)";
+      return "Declínio progressivo: possível fadiga mental ou redução da concentração ao longo da prova.";
     } else if (
-      percentages[1] > percentages[0] &&
-      percentages[1] > percentages[2]
+      thirds.first.percentage < thirds.second.percentage &&
+      thirds.second.percentage < thirds.third.percentage
     ) {
-      return "Melhor desempenho no meio da prova";
-    } else if (Math.max(...percentages) - Math.min(...percentages) < 5) {
-      return "Desempenho consistente ao longo da prova";
+      return "Melhora progressiva: aquecimento gradual ou estratégia de acelerar no final da prova.";
+    } else if (
+      thirds.second.percentage < thirds.first.percentage &&
+      thirds.second.percentage < thirds.third.percentage
+    ) {
+      return "Queda no meio: possível perda de foco na parte central, com recuperação no final.";
+    } else if (
+      thirds.second.percentage > thirds.first.percentage &&
+      thirds.second.percentage > thirds.third.percentage
+    ) {
+      return "Pico no meio: melhor desempenho na parte central, com início e final mais fracos.";
     } else {
-      return "Desempenho irregular";
+      return "Padrão irregular: desempenho varia significativamente entre as seções da prova.";
     }
   }
 }

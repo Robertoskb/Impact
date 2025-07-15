@@ -43,6 +43,9 @@ export class SimuladoApp {
     this.uiController.loadYearButtons();
     this.uiController.updateColorSelection(null); // Inicializar com mensagem
     this.uiController.initTheme();
+
+    // Inicializar modo debug se ativado
+    this.uiController.initializeDebugMode();
   }
 
   async loadData() {
@@ -82,6 +85,9 @@ export class SimuladoApp {
     this.questions = this.questionGenerator.generateQuestions();
     this.uiController.showSimuladoScreen();
     this.uiController.renderQuestions();
+
+    // Atualizar debug panel se estiver ativo
+    this.uiController.updateDebugPanel();
   }
 
   finishSimulado() {
@@ -109,23 +115,23 @@ export class SimuladoApp {
       this.resultsTabsController.renderTabContent("geral");
     }
 
-    // DEPOIS calcular notas TRI para evitar sobrescrita
-    console.log("Iniciando cálculo de notas TRI...");
+    // DEPOIS calcular nota TRI para a área selecionada
+    console.log("Iniciando cálculo de nota TRI...");
     try {
-      const triScores = await this.scoreCalculator.calculateAllScores();
-      console.log("Notas TRI calculadas:", triScores);
+      const triResult = await this.scoreCalculator.calculateAllScores();
+      console.log("Nota TRI calculada:", triResult);
 
-      // Armazenar as notas TRI para uso nas abas
-      this.triScores = triScores;
+      // Armazenar o resultado TRI para uso nas abas
+      this.triResult = triResult;
 
       // Aguardar um pouco mais para garantir que a aba geral foi renderizada
       await new Promise((resolve) => setTimeout(resolve, 200));
 
-      // Atualizar interface com as notas TRI se calculadas
-      this.updateTRIScoresDisplay(triScores);
+      // Atualizar interface com a nota TRI se calculada
+      this.updateTRIScoresDisplay(triResult);
     } catch (error) {
-      console.warn("Erro ao calcular notas TRI:", error);
-      this.triScores = null;
+      console.warn("Erro ao calcular nota TRI:", error);
+      this.triResult = null;
     }
 
     // Mostrar modal de salvamento apenas se não estiver carregando um simulado salvo
@@ -218,24 +224,29 @@ export class SimuladoApp {
     this.answers[position] = answer;
   }
 
+  clearAnswer(position) {
+    delete this.answers[position];
+  }
+
   /**
-   * Atualiza a interface com as notas TRI calculadas
-   * @param {Object} triScores - Resultados do cálculo TRI
+   * Atualiza a interface com a nota TRI calculada
+   * @param {Object} triResult - Resultado do cálculo TRI
    */
-  updateTRIScoresDisplay(triScores) {
+  updateTRIScoresDisplay(triResult) {
     console.log(
       "🎯 updateTRIScoresDisplay: INICIANDO atualização da interface"
     );
 
-    if (!triScores || !triScores.scores) {
-      console.log("❌ updateTRIScoresDisplay: Nenhuma nota TRI para exibir");
+    if (!triResult) {
+      console.log(
+        "❌ updateTRIScoresDisplay: Nenhum resultado TRI para exibir"
+      );
       return;
     }
 
-    console.log("✅ updateTRIScoresDisplay: Dados TRI recebidos:", triScores);
     console.log(
-      "📊 updateTRIScoresDisplay: Número de notas:",
-      Object.keys(triScores.scores).length
+      "✅ updateTRIScoresDisplay: Resultado TRI recebido:",
+      triResult
     );
 
     // Função para tentar atualizar a interface
@@ -248,10 +259,6 @@ export class SimuladoApp {
         console.warn(
           "⚠️ updateTRIScoresDisplay: Container 'general-stats-content' não encontrado!"
         );
-        console.log(
-          "🔍 Containers disponíveis:",
-          document.querySelectorAll('[id*="content"]')
-        );
         return false;
       }
 
@@ -259,13 +266,6 @@ export class SimuladoApp {
         "✅ tryUpdateInterface: Container encontrado:",
         generalContainer
       );
-
-      if (Object.keys(triScores.scores).length === 0) {
-        console.log(
-          "⚠️ updateTRIScoresDisplay: Nenhuma nota TRI foi calculada"
-        );
-        return true; // Não é erro, apenas não há dados
-      }
 
       // Remover seção anterior se existir
       const existingSection = generalContainer.querySelector(
@@ -278,90 +278,63 @@ export class SimuladoApp {
 
       console.log("🎨 Criando nova seção TRI...");
 
-      // Criar nova seção de notas TRI
+      // Criar nova seção de nota TRI
       const triSection = document.createElement("div");
       triSection.className = "tri-scores-section";
-      triSection.style.marginTop = "2rem"; // Garantir espaçamento
-      triSection.innerHTML = `
-        <h4><i class="fa fa-calculator"></i> 🎯 Notas TRI Estimadas</h4>
-        <div class="tri-info-header">
-          <p><strong>✨ Calculos com base no padrão de acertos</strong></p>
-        </div>
-        <div class="tri-scores-grid" id="tri-scores-grid">
-          <!-- Notas serão inseridas aqui -->
-        </div>
-      `;
+      triSection.style.marginTop = "2rem";
 
-      generalContainer.appendChild(triSection);
-      console.log("✅ Seção TRI adicionada ao container");
-
-      // Preencher as notas
-      const triGrid = triSection.querySelector("#tri-scores-grid");
-      if (triGrid) {
-        triGrid.innerHTML = "";
-        console.log("📝 Preenchendo notas TRI...");
-
-        Object.entries(triScores.scores).forEach(([areaCode, data]) => {
-          console.log(`💯 Exibindo nota ${areaCode}: ${data.score} pontos`);
-
-          const scoreCard = document.createElement("div");
-          scoreCard.className = "score-card";
-          scoreCard.innerHTML = `
-            <div class="score-area">🎯 ${data.name}</div>
-            <div class="score-value">${data.score.toFixed(1)}</div>
-            <div class="score-subtitle">pontos TRI</div>
-            <div class="score-pattern" title="Padrão de respostas ordenado por dificuldade: ${
-              data.pattern
-            }">
-          }
+      if (triResult.success) {
+        // Sucesso: mostrar nota
+        triSection.innerHTML = `
+          <h4><i class="fa fa-calculator"></i> 🎯 Nota TRI Estimada</h4>
+          <div class="tri-info-header">
+            <p><strong>✨ Cálculo baseado no padrão de acertos</strong></p>
+          </div>
+          <div class="tri-score-display">
+            <div class="score-card single-area">
+              <div class="score-area">🎯 ${triResult.areaName}</div>
+              <div class="score-value">${triResult.score.toFixed(1)}</div>
+              <div class="score-subtitle">pontos TRI</div>
             </div>
-          `;
-          triGrid.appendChild(scoreCard);
-        });
-
-        // Mostrar informações adicionais
-        const infoDiv = document.createElement("div");
-        infoDiv.className = "tri-calculation-info";
-        infoDiv.innerHTML = `
+          </div>
           <div class="calculation-details">
             <h5><i class="fa fa-info-circle"></i> 📋 Detalhes do Cálculo</h5>
             <ul>
-              <li><strong>📅 Ano:</strong> ${triScores.year}</li>
-              <li><strong>📚 Tipo de Prova:</strong> ${triScores.examType}</li>
-              <li><strong>🎯 Áreas Calculadas:</strong> ${
-                triScores.totalCalculated
+              <li><strong>📅 Ano:</strong> ${triResult.year}</li>
+              <li><strong>📚 Área:</strong> ${triResult.areaName}</li>
+              <li><strong>🎯 Modelo:</strong> ${
+                triResult.modelKey || "Padrão"
               }</li>
-              ${
-                triScores.language
-                  ? `<li><strong>🌐 Idioma:</strong> ${triScores.language}</li>`
-                  : ""
-              }
             </ul>
           </div>
         `;
-        triSection.appendChild(infoDiv);
-
-        // Mostrar erros se houver
-        if (triScores.errors.length > 0) {
-          const errorInfo = document.createElement("div");
-          errorInfo.className = "tri-error-info";
-          errorInfo.innerHTML = `
-            <h5><i class="fa fa-exclamation-triangle"></i> ⚠️ Observações</h5>
-            <ul>
-              ${triScores.errors.map((error) => `<li>• ${error}</li>`).join("")}
-            </ul>
-          `;
-          triSection.appendChild(errorInfo);
-        }
+      } else {
+        // Erro: mostrar mensagem de erro
+        triSection.innerHTML = `
+          <h4><i class="fa fa-exclamation-triangle"></i> ⚠️ Nota TRI</h4>
+          <div class="tri-error-display">
+            <div class="error-card">
+              <div class="error-area">🎯 ${triResult.areaName}</div>
+              <div class="error-message">${triResult.error}</div>
+            </div>
+          </div>
+        `;
       }
+
+      generalContainer.appendChild(triSection);
+      console.log("✅ Seção TRI adicionada ao container");
 
       console.log(
         "🎉 updateTRIScoresDisplay: Interface TRI atualizada com SUCESSO!"
       );
 
       // Adicionar destaque visual temporário
-      triSection.style.border = "3px solid #28a745";
-      triSection.style.boxShadow = "0 0 20px rgba(40, 167, 69, 0.3)";
+      triSection.style.border = triResult.success
+        ? "3px solid #28a745"
+        : "3px solid #dc3545";
+      triSection.style.boxShadow = triResult.success
+        ? "0 0 20px rgba(40, 167, 69, 0.3)"
+        : "0 0 20px rgba(220, 53, 69, 0.3)";
 
       setTimeout(() => {
         triSection.style.border = "2px solid var(--primary-color)";
@@ -398,28 +371,88 @@ export class SimuladoApp {
     } else {
       console.log("✅ Interface TRI atualizada na primeira tentativa!");
     }
+  }
 
-    // Log para debug
-    if (triScores.errors.length > 0) {
-      console.warn(
-        "⚠️ Algumas notas TRI não puderam ser calculadas:",
-        triScores.errors
+  /**
+   * Método auxiliar para garantir que a nota TRI seja exibida na aba geral
+   * Pode ser chamado a qualquer momento após o cálculo
+   */
+  ensureTRIScoresDisplay() {
+    if (this.triResult) {
+      console.log(
+        "🔄 ensureTRIScoresDisplay: Re-aplicando nota TRI na interface"
       );
+      this.updateTRIScoresDisplay(this.triResult);
+    } else {
+      console.log("ℹ️ ensureTRIScoresDisplay: Nenhuma nota TRI disponível");
     }
   }
 
   /**
-   * Método auxiliar para garantir que as notas TRI sejam exibidas na aba geral
-   * Pode ser chamado a qualquer momento após o cálculo
+   * Função de debug para analisar modelos TRI disponíveis
+   * Pode ser chamada via console: app.debugTRIModels()
    */
-  ensureTRIScoresDisplay() {
-    if (this.triScores) {
-      console.log(
-        "🔄 ensureTRIScoresDisplay: Re-aplicando notas TRI na interface"
+  debugTRIModels() {
+    console.log("🔍 Analisando disponibilidade dos modelos TRI...");
+    const report = this.scoreCalculator.generateMissingModelsReport();
+    console.log(report);
+
+    // Também retornar o objeto estruturado para análise
+    const analysis = this.scoreCalculator.analyzeModelAvailability();
+    console.log("📊 Dados estruturados:", analysis);
+
+    return analysis;
+  }
+
+  /**
+   * Função de debug para testar um modelo específico
+   * @param {number} year - Ano
+   * @param {string} area - Área (CH, CN, MT, LC0, LC1)
+   */
+  async debugTestModel(year, area) {
+    console.log(`🧪 Testando modelo ${year} - ${area}...`);
+
+    // Mapear área para parâmetros do modelo
+    let targetArea = area;
+    let language = null;
+
+    if (area === "LC0") {
+      targetArea = "LC";
+      language = "0";
+    } else if (area === "LC1") {
+      targetArea = "LC";
+      language = "1";
+    }
+
+    try {
+      const modelExists = await this.scoreCalculator.modelExists(
+        year,
+        targetArea,
+        language
       );
-      this.updateTRIScoresDisplay(this.triScores);
-    } else {
-      console.log("ℹ️ ensureTRIScoresDisplay: Nenhuma nota TRI disponível");
+      console.log(`📄 Modelo existe: ${modelExists}`);
+
+      if (modelExists) {
+        const model = await this.scoreCalculator.loadModel(
+          year,
+          targetArea,
+          language
+        );
+        console.log(`✅ Modelo carregado:`, model ? "Sucesso" : "Falhou");
+
+        if (model) {
+          // Testar com um padrão de exemplo
+          const testPattern = new Array(45)
+            .fill(0)
+            .map(() => (Math.random() > 0.5 ? 1 : 0));
+          const score = model.predictWithArray
+            ? model.predictWithArray(testPattern)
+            : model.predict(testPattern);
+          console.log(`🎯 Teste de predição: ${score}`);
+        }
+      }
+    } catch (error) {
+      console.error(`❌ Erro ao testar modelo:`, error);
     }
   }
 
@@ -445,10 +478,6 @@ export class SimuladoApp {
   }
 
   getTRIScores() {
-    return this.triScores;
-  }
-
-  setAnswer(position, answer) {
-    this.answers[position] = answer;
+    return this.triResult;
   }
 }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Carregamento de Modelos</title>
+</head>
+<body>
+    <h1>Teste de Carregamento de Modelos TRI</h1>
+    <div id="results"></div>
+    
+    <script>
+        class ModelTester {
+            constructor() {
+                this.results = document.getElementById('results');
+                this.loadedModels = new Map();
+            }
+            
+            log(message) {
+                console.log(message);
+                this.results.innerHTML += '<p>' + message + '</p>';
+            }
+            
+            async testModelLoading() {
+                this.log('🔄 Iniciando teste de carregamento de modelos...');
+                
+                // Testar modelos que falharam conforme a imagem
+                const testCases = [
+                    { year: 2024, area: 'MT', language: null },
+                    { year: 2024, area: 'CH', language: null },
+                    { year: 2024, area: 'CN', language: null },
+                    { year: 2024, area: 'LC', language: '0' },
+                    { year: 2024, area: 'LC', language: '1' }
+                ];
+                
+                for (const testCase of testCases) {
+                    try {
+                        await this.testSingleModel(testCase.year, testCase.area, testCase.language);
+                    } catch (error) {
+                        this.log(`❌ Erro no teste ${testCase.year}-${testCase.area}-${testCase.language}: ${error.message}`);
+                    }
+                }
+            }
+            
+            generateModelFileName(year, area, language = null) {
+                let fileName = `modelo_de_nota_${year}_${area}_B`;
+                if (area === "LC" && language !== null) {
+                    fileName += `_${language}`;
+                }
+                return `${fileName}.js`;
+            }
+            
+            async testSingleModel(year, area, language) {
+                const fileName = this.generateModelFileName(year, area, language);
+                const modelPath = `assets/js/models/${fileName}`;
+                const modelKey = `${year}_${area}${language ? "_" + language : ""}`;
+                
+                this.log(`🔍 Testando modelo: ${fileName}`);
+                this.log(`📁 Caminho: ${modelPath}`);
+                
+                // Primeiro, verificar se o arquivo existe
+                try {
+                    const response = await fetch(modelPath, { method: "HEAD" });
+                    if (!response.ok) {
+                        this.log(`❌ Arquivo não encontrado: ${response.status}`);
+                        return;
+                    }
+                    this.log(`✅ Arquivo existe (${response.status})`);
+                } catch (error) {
+                    this.log(`❌ Erro ao verificar arquivo: ${error.message}`);
+                    return;
+                }
+                
+                // Tentar carregar via script tag
+                try {
+                    const model = await this.loadModelViaScript(modelPath, modelKey);
+                    if (model && typeof model.predict === 'function') {
+                        this.log(`✅ Modelo carregado com sucesso: ${modelKey}`);
+                        
+                        // Testar uma predição simples
+                        const testPattern = new Array(45).fill(0);
+                        testPattern[0] = 1; // Primeira questão correta
+                        
+                        const score = model.predictWithArray ? model.predictWithArray(testPattern) : model.predict(testPattern);
+                        this.log(`🎯 Teste de predição: ${score}`);
+                        
+                    } else {
+                        this.log(`❌ Modelo inválido: ${typeof model}`);
+                    }
+                } catch (error) {
+                    this.log(`❌ Erro ao carregar modelo: ${error.message}`);
+                }
+                
+                this.log(`---`);
+            }
+            
+            async loadModelViaScript(modelPath, modelKey) {
+                return new Promise((resolve, reject) => {
+                    const script = document.createElement("script");
+                    script.src = modelPath;
+                    script.type = "text/javascript";
+                    
+                    this.log(`🔄 Carregando script: ${modelPath}`);
+                    
+                    script.onload = () => {
+                        this.log(`📥 Script carregado: ${modelPath}`);
+                        
+                        setTimeout(() => {
+                            try {
+                                const model = window.model;
+                                
+                                if (model && typeof model.predict === "function") {
+                                    this.log(`✅ window.model encontrado e válido`);
+                                    
+                                    // Criar cópia independente
+                                    const modelCopy = {
+                                        predict: model.predict.bind(model),
+                                        predictWithArray: model.predictWithArray ? model.predictWithArray.bind(model) : null,
+                                        getModelInfo: model.getModelInfo ? model.getModelInfo.bind(model) : null,
+                                        _modelKey: modelKey,
+                                        _loadedAt: new Date().toISOString()
+                                    };
+                                    
+                                    this.log(`🔒 Cópia criada para: ${modelKey}`);
+                                    document.head.removeChild(script);
+                                    resolve(modelCopy);
+                                    
+                                } else {
+                                    this.log(`❌ window.model inválido: ${typeof model}`);
+                                    document.head.removeChild(script);
+                                    reject(new Error(`window.model inválido`));
+                                }
+                            } catch (error) {
+                                this.log(`❌ Erro ao processar modelo: ${error.message}`);
+                                document.head.removeChild(script);
+                                reject(error);
+                            }
+                        }, 100);
+                    };
+                    
+                    script.onerror = () => {
+                        this.log(`❌ Erro ao carregar script: ${modelPath}`);
+                        document.head.removeChild(script);
+                        reject(new Error(`Erro ao carregar script: ${modelPath}`));
+                    };
+                    
+                    document.head.appendChild(script);
+                });
+            }
+        }
+        
+        // Executar teste quando a página carregar
+        window.addEventListener('load', async () => {
+            const tester = new ModelTester();
+            await tester.testModelLoading();
+        });
+    </script>
+</body>
+</html>

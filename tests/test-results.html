@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Tela de Resultados</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .results-screen { 
+            border: 2px solid #007acc; 
+            padding: 20px; 
+            margin: 20px 0; 
+            background: #f0f8ff; 
+        }
+        .test-result { 
+            padding: 10px; 
+            margin: 5px 0; 
+            border-left: 3px solid #28a745; 
+            background: #d4edda; 
+        }
+        .error { 
+            border-left-color: #dc3545; 
+            background: #f8d7da; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste da Tela de Resultados</h1>
+    
+    <button onclick="testDisplayResults()">Mostrar Tela de Resultados</button>
+    
+    <div id="test-results"></div>
+    
+    <iframe src="simulado.html" width="100%" height="600" style="border: 1px solid #ccc; margin-top: 20px;"></iframe>
+    
+    <script>
+        function addTestResult(message, isError = false) {
+            const div = document.createElement('div');
+            div.className = `test-result ${isError ? 'error' : ''}`;
+            div.textContent = `${new Date().toLocaleTimeString()}: ${message}`;
+            document.getElementById('test-results').appendChild(div);
+        }
+        
+        function testDisplayResults() {
+            addTestResult('Testando acesso à tela de resultados no iframe...');
+            
+            const iframe = document.querySelector('iframe');
+            if (!iframe) {
+                addTestResult('Iframe não encontrado', true);
+                return;
+            }
+            
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                
+                // Verificar se os elementos existem
+                const configScreen = iframeDoc.getElementById('config-screen');
+                const simuladoScreen = iframeDoc.getElementById('simulado-screen');
+                const resultsScreen = iframeDoc.getElementById('results-screen');
+                
+                addTestResult(`Elementos encontrados - config: ${!!configScreen}, simulado: ${!!simuladoScreen}, results: ${!!resultsScreen}`);
+                
+                if (resultsScreen) {
+                    // Forçar exibição da tela de resultados
+                    if (configScreen) configScreen.style.display = 'none';
+                    if (simuladoScreen) simuladoScreen.style.display = 'none';
+                    resultsScreen.style.display = 'block';
+                    
+                    addTestResult('Tela de resultados forçada a aparecer!');
+                    
+                    // Verificar se tem conteúdo nas abas
+                    const generalTab = iframeDoc.getElementById('tab-geral');
+                    const generalContent = iframeDoc.getElementById('general-stats-content');
+                    
+                    addTestResult(`Aba geral existe: ${!!generalTab}, conteúdo: ${!!generalContent}`);
+                    
+                    if (generalContent) {
+                        addTestResult(`Conteúdo da aba geral: "${generalContent.innerHTML.substring(0, 100)}..."`);
+                    }
+                } else {
+                    addTestResult('Elemento results-screen não encontrado!', true);
+                }
+                
+            } catch (error) {
+                addTestResult(`Erro ao acessar iframe: ${error.message}`, true);
+            }
+        }
+        
+        // Esperar o iframe carregar
+        setTimeout(() => {
+            addTestResult('Iframe carregado, pronto para teste');
+        }, 3000);
+    </script>
+</body>
+</html>

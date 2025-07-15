@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Modal Event Listeners</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 90%;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-danger { background: #dc3545; color: white; }
+        #log {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Modal Event Listeners</h1>
+    
+    <button id="open-modal" class="btn btn-primary">Abrir Modal</button>
+    <button id="clear-log" class="btn btn-secondary">Limpar Log</button>
+    
+    <div id="log"></div>
+    
+    <div id="test-modal" class="modal">
+        <div class="modal-content">
+            <h3>Modal de Teste</h3>
+            <p>Este modal testa os event listeners.</p>
+            <button id="modal-cancel" class="btn btn-secondary">Cancelar</button>
+            <button id="modal-confirm" class="btn btn-danger">Confirmar</button>
+        </div>
+    </div>
+
+    <script>
+        let clickCount = 0;
+        
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            const time = new Date().toLocaleTimeString();
+            logDiv.innerHTML += `[${time}] ${message}<br>`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+        
+        function clearLog() {
+            document.getElementById('log').innerHTML = '';
+            clickCount = 0;
+        }
+        
+        document.getElementById('clear-log').addEventListener('click', clearLog);
+        
+        class TestModalController {
+            showModal() {
+                clickCount++;
+                log(`Chamada ${clickCount}: showModal() iniciada`);
+                
+                const modal = document.getElementById("test-modal");
+                modal.style.display = "flex";
+                modal.classList.add("show");
+                
+                const cancelBtn = document.getElementById("modal-cancel");
+                const confirmBtn = document.getElementById("modal-confirm");
+                
+                const closeModal = () => {
+                    log(`Chamada ${clickCount}: closeModal() executada`);
+                    this.removeEventListeners(cancelBtn, confirmBtn, modal);
+                    
+                    modal.classList.remove("show");
+                    setTimeout(() => (modal.style.display = "none"), 300);
+                };
+                
+                // Remover event listeners anteriores
+                this.removeEventListeners(cancelBtn, confirmBtn, modal);
+                
+                // Criar novos handlers
+                const cancelHandler = () => {
+                    log(`Chamada ${clickCount}: cancelHandler executado`);
+                    closeModal();
+                };
+                const confirmHandler = () => {
+                    log(`Chamada ${clickCount}: confirmHandler executado`);
+                    closeModal();
+                };
+                const modalClickHandler = (e) => {
+                    if (e.target === modal) {
+                        log(`Chamada ${clickCount}: modalClickHandler executado`);
+                        closeModal();
+                    }
+                };
+                const escapeHandler = (e) => {
+                    if (e.key === 'Escape' && modal.classList.contains('show')) {
+                        log(`Chamada ${clickCount}: escapeHandler executado`);
+                        e.preventDefault();
+                        e.stopPropagation();
+                        closeModal();
+                    }
+                };
+                
+                cancelBtn.addEventListener("click", cancelHandler);
+                confirmBtn.addEventListener("click", confirmHandler);
+                modal.addEventListener("click", modalClickHandler);
+                document.addEventListener("keydown", escapeHandler);
+                
+                // Armazenar handlers
+                modal._handlers = { cancelHandler, confirmHandler, modalClickHandler, escapeHandler };
+                
+                log(`Chamada ${clickCount}: Event listeners adicionados`);
+            }
+            
+            removeEventListeners(cancelBtn, confirmBtn, modal) {
+                if (modal._handlers) {
+                    log(`Chamada ${clickCount}: Removendo event listeners`);
+                    
+                    cancelBtn.removeEventListener("click", modal._handlers.cancelHandler);
+                    confirmBtn.removeEventListener("click", modal._handlers.confirmHandler);
+                    modal.removeEventListener("click", modal._handlers.modalClickHandler);
+                    
+                    if (modal._handlers.escapeHandler) {
+                        document.removeEventListener("keydown", modal._handlers.escapeHandler);
+                    }
+                    
+                    delete modal._handlers;
+                    log(`Chamada ${clickCount}: Event listeners removidos`);
+                } else {
+                    log(`Chamada ${clickCount}: Nenhum handler encontrado para remover`);
+                }
+            }
+        }
+        
+        const modalController = new TestModalController();
+        
+        document.getElementById('open-modal').addEventListener('click', () => {
+            log(`Botão "Abrir Modal" clicado`);
+            modalController.showModal();
+        });
+        
+        log('Sistema inicializado');
+    </script>
+</body>
+</html>

@@ -38,19 +38,40 @@ export class SkillsReportCalculator {
     // Processar cada questão
     questions.forEach((question) => {
       const area = question.area;
-      const originalPosition = question.originalPosition;
 
-      // Verificar se existe metadados para esta questão (usar posição da prova azul)
+      // Mapear posição da cor escolhida para posição na prova azul
+      const mappedPosition = this.app.questionGenerator.getMappedPosition(
+        question.position,
+        question.area,
+        config.color,
+        config.year
+      );
+
+      // Verificar se existe metadados para esta questão (usar posição mapeada da prova azul)
       if (
-        !originalPosition ||
+        !mappedPosition ||
         !meta[config.year][area] ||
-        !meta[config.year][area][originalPosition]
+        !meta[config.year][area][mappedPosition]
       ) {
+        console.warn(
+          `Metadados não encontrados para questão ${question.position} (${area}) → posição mapeada: ${mappedPosition}`
+        );
         return;
       }
 
-      const questionMeta = meta[config.year][area][originalPosition];
+      const questionMeta = meta[config.year][area][mappedPosition];
       const hability = questionMeta.hability;
+
+      if (!hability) {
+        console.warn(
+          `Habilidade não encontrada para questão ${question.position} (${area}) → posição mapeada: ${mappedPosition}`
+        );
+        return;
+      }
+
+      console.log(
+        `📚 Questão ${question.position} (${area}) → posição ${mappedPosition} → H${hability}`
+      );
 
       if (!hability) return;
 
@@ -77,20 +98,20 @@ export class SkillsReportCalculator {
       // Verificar resultado da questão
       if (question.cancelled) {
         skillData.cancelled++;
-        // Questões anuladas contam como acerto se o usuário marcou algo
-        if (answers[question.position]) {
-          skillData.correct++;
-        }
+        // Questões anuladas NÃO contam como acerto nem erro
+        // Elas são apenas contabilizadas como anuladas para informação
       } else {
         const correctAnswer =
           this.app.questionGenerator.getCorrectAnswer(question);
         const userAnswer = answers[question.position];
 
-        if (userAnswer === correctAnswer) {
+        if (userAnswer && userAnswer === correctAnswer) {
           skillData.correct++;
-        } else {
+        } else if (userAnswer) {
+          // Só conta como erro se o usuário respondeu algo
           skillData.wrong++;
         }
+        // Se não respondeu nada (userAnswer é undefined/null), não conta nem como certo nem como errado
       }
     });
 
@@ -109,9 +130,15 @@ export class SkillsReportCalculator {
 
       Object.keys(skillsData[area]).forEach((hability) => {
         const skillData = skillsData[area][hability];
+
+        // CORREÇÃO: Calcular porcentagem sobre questões válidas (não anuladas)
+        // Pedagogicamente mais adequado: questões em branco indicam falta de domínio
+        // Antes: acertos / questões_respondidas (ignorava questões em branco)
+        // Agora: acertos / questões_válidas (questões em branco penalizam a porcentagem)
+        const validQuestions = skillData.total - skillData.cancelled;
         const percentage =
-          skillData.total > 0
-            ? Math.round((skillData.correct / skillData.total) * 100)
+          validQuestions > 0
+            ? Math.round((skillData.correct / validQuestions) * 100)
             : 0;
 
         processedData[area].skills[hability] = {

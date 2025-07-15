@@ -20,7 +20,7 @@ export class GeneralTabRenderer extends BaseTabRenderer {
           <div class="stat-card">
             <h4><i class="fa fa-chart-line"></i> Padrão Geral</h4>
             <p class="pattern-preview">${examOrderPattern}</p>
-            <small>Sequência de acertos (1) e erros (0)</small>
+            <small>Sequência: acertos (1), erros (0), anuladas (A)</small>
           </div>
           
           <div class="stat-card">

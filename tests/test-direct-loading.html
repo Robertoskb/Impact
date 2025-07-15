@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Carregamento Direto</title>
+</head>
+<body>
+    <h1>Teste de Carregamento Direto de Modelos</h1>
+    <div id="results"></div>
+    
+    <script>
+        const results = document.getElementById('results');
+        
+        function log(message) {
+            console.log(message);
+            results.innerHTML += '<p>' + message + '</p>';
+        }
+        
+        async function testDirectLoading() {
+            log('🔄 Testando carregamento direto dos modelos...');
+            
+            // Testar carregamento direto do modelo MT 2024
+            try {
+                log('📥 Carregando modelo_de_nota_2024_MT_B.js...');
+                
+                const script = document.createElement('script');
+                script.src = 'assets/js/models/modelo_de_nota_2024_MT_B.js';
+                
+                script.onload = () => {
+                    log('✅ Script MT carregado com sucesso');
+                    
+                    setTimeout(() => {
+                        if (window.model) {
+                            log('✅ window.model disponível');
+                            log(`🧪 Tipo do modelo: ${typeof window.model}`);
+                            log(`🔧 Métodos disponíveis: ${Object.getOwnPropertyNames(window.model)}`);
+                            
+                            if (typeof window.model.predict === 'function') {
+                                log('✅ Método predict disponível');
+                                
+                                // Testar predição
+                                const testPattern = new Array(45).fill(0);
+                                testPattern[0] = 1;
+                                
+                                try {
+                                    const score = window.model.predictWithArray ? 
+                                        window.model.predictWithArray(testPattern) : 
+                                        window.model.predict(testPattern);
+                                    log(`🎯 Teste de predição: ${score}`);
+                                    log('✅ SUCESSO! Modelo MT funciona corretamente');
+                                } catch (predError) {
+                                    log(`❌ Erro na predição: ${predError.message}`);
+                                }
+                            } else {
+                                log('❌ Método predict não disponível');
+                            }
+                        } else {
+                            log('❌ window.model não disponível');
+                        }
+                        
+                        // Testar CN após 2 segundos
+                        setTimeout(testCN, 2000);
+                    }, 100);
+                };
+                
+                script.onerror = () => {
+                    log('❌ Erro ao carregar script MT');
+                    setTimeout(testCN, 1000);
+                };
+                
+                document.head.appendChild(script);
+                
+            } catch (error) {
+                log(`❌ Erro no teste MT: ${error.message}`);
+            }
+        }
+        
+        function testCN() {
+            log('\n🔄 Testando modelo CN...');
+            
+            try {
+                const script = document.createElement('script');
+                script.src = 'assets/js/models/modelo_de_nota_2024_CN_B.js';
+                
+                script.onload = () => {
+                    log('✅ Script CN carregado com sucesso');
+                    
+                    setTimeout(() => {
+                        if (window.model) {
+                            log('✅ window.model disponível para CN');
+                            
+                            if (typeof window.model.predict === 'function') {
+                                log('✅ Método predict disponível para CN');
+                                
+                                // Testar predição
+                                const testPattern = new Array(45).fill(0);
+                                testPattern[0] = 1;
+                                
+                                try {
+                                    const score = window.model.predictWithArray ? 
+                                        window.model.predictWithArray(testPattern) : 
+                                        window.model.predict(testPattern);
+                                    log(`🎯 Teste de predição CN: ${score}`);
+                                    log('✅ SUCESSO! Modelo CN funciona corretamente');
+                                } catch (predError) {
+                                    log(`❌ Erro na predição CN: ${predError.message}`);
+                                }
+                            } else {
+                                log('❌ Método predict não disponível para CN');
+                            }
+                        } else {
+                            log('❌ window.model não disponível para CN');
+                        }
+                    }, 100);
+                };
+                
+                script.onerror = () => {
+                    log('❌ Erro ao carregar script CN');
+                };
+                
+                document.head.appendChild(script);
+                
+            } catch (error) {
+                log(`❌ Erro no teste CN: ${error.message}`);
+            }
+        }
+        
+        // Iniciar teste
+        window.addEventListener('load', testDirectLoading);
+    </script>
+</body>
+</html>
