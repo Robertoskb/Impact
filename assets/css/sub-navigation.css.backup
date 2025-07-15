@@ -278,14 +278,16 @@
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   padding: 3rem 2.5rem;
   border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 123, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
 
 .difficulty-stats-grid::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -336,17 +338,15 @@
 }
 
 .difficulty-stat-card {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.95),
-    rgba(248, 249, 250, 0.9)
-  );
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.9));
   border: none;
   border-radius: 24px;
   padding: 2rem 1.5rem;
   text-align: center;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
   min-height: 180px;
@@ -364,12 +364,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 123, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(0, 123, 255, 0.03) 100%
-  );
+  background: linear-gradient(135deg, 
+    rgba(0, 123, 255, 0.05) 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    rgba(0, 123, 255, 0.03) 100%);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -382,25 +380,22 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 70%
-  );
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    transparent 70%);
   transform: translateX(-100%) translateY(-100%) rotate(45deg);
   transition: transform 0.8s ease;
 }
 
 .difficulty-stat-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.15),
+  box-shadow: 
+    0 20px 40px rgba(0, 123, 255, 0.15),
     0 10px 20px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 1),
-    rgba(240, 248, 255, 0.95)
-  );
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 1), 
+    rgba(240, 248, 255, 0.95));
 }
 
 .difficulty-stat-card:hover::before {
@@ -469,7 +464,8 @@
   display: inline-block;
   position: relative;
   z-index: 2;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3),
+  box-shadow: 
+    0 4px 15px rgba(0, 123, 255, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
   min-width: 80px;
@@ -725,39 +721,39 @@
   .difficulty-analysis {
     padding: 1.5rem;
   }
-
+  
   .difficulty-stats-grid {
     padding: 2rem 1.5rem;
   }
-
+  
   .difficulty-stats-grid h5 {
     font-size: 1.3rem;
     flex-direction: column;
     gap: 0.5rem;
   }
-
+  
   .stats-cards {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     padding: 0;
   }
-
+  
   .difficulty-stat-card {
     padding: 1.5rem 1rem;
     min-height: 160px;
     border-radius: 20px;
   }
-
+  
   .difficulty-stat-card h6 {
     font-size: 0.8rem;
     min-height: 2rem;
     padding: 0.5rem 0.75rem;
   }
-
+  
   .difficulty-stat-card .stat-number {
     font-size: 2rem;
   }
-
+  
   .difficulty-stat-card .stat-percentage {
     font-size: 1.2rem;
     padding: 0.6rem 1.25rem;
@@ -768,78 +764,78 @@
   .difficulty-stats-grid {
     padding: 1.5rem 1rem;
   }
-
+  
   .difficulty-stats-grid h5 {
     font-size: 1.1rem;
   }
-
+  
   .stats-cards {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-
+  
   .difficulty-stat-card {
     padding: 1.25rem 1rem;
     min-height: 140px;
   }
-
+  
   .difficulty-stat-card h6 {
     font-size: 0.75rem;
     padding: 0.5rem;
   }
-
+  
   .difficulty-stat-card .stat-number {
     font-size: 1.8rem;
   }
-
+  
   .difficulty-stat-card .stat-percentage {
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
   }
-
+  
   .pattern-string {
     gap: 0.3rem;
     padding: 1.5rem;
   }
-
+  
   .pattern-string .bit {
     width: 14px;
     height: 14px;
   }
-
+  
   .difficulty-table {
     padding: 1.5rem;
   }
-
+  
   .difficulty-questions-table {
     font-size: 0.85rem;
   }
-
+  
   .difficulty-questions-table th,
   .difficulty-questions-table td {
     padding: 0.75rem 0.5rem;
   }
-
+  
   .difficulty-legend {
     padding: 1rem;
   }
-
+  
   .difficulty-range {
     display: block;
     margin: 0.3rem 0;
     text-align: center;
   }
-
+  
   .level-header {
     flex-direction: column;
     align-items: flex-start;
   }
-
+  
   .level-summary {
     width: 100%;
     justify-content: center;
   }
-
+  
   .difficulty-level-badge,
   .area-badge,
   .answer-badge,
@@ -853,30 +849,30 @@
   .difficulty-stats-grid {
     padding: 1.5rem 1rem;
   }
-
+  
   .difficulty-stats-grid h5 {
     font-size: 1.1rem;
   }
-
+  
   .stats-cards {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-
+  
   .difficulty-stat-card {
     padding: 1.25rem 1rem;
     min-height: 140px;
   }
-
+  
   .difficulty-stat-card h6 {
     font-size: 0.75rem;
     padding: 0.5rem;
   }
-
+  
   .difficulty-stat-card .stat-number {
     font-size: 1.8rem;
   }
-
+  
   .difficulty-stat-card .stat-percentage {
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
@@ -1862,12 +1858,14 @@
 }
 
 @keyframes cardGlow {
-  0%,
-  100% {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  0%, 100% {
+    box-shadow: 
+      0 4px 20px rgba(0, 0, 0, 0.08),
+      0 1px 3px rgba(0, 0, 0, 0.05);
   }
   50% {
-    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.15),
+    box-shadow: 
+      0 8px 30px rgba(0, 123, 255, 0.15),
       0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }
@@ -1899,8 +1897,7 @@
 }
 
 @keyframes pulse {
-  0%,
-  100% {
+  0%, 100% {
     transform: scale(1);
   }
   50% {
@@ -1921,7 +1918,9 @@
 
 /* Efeito de hover para o container principal */
 .difficulty-stats-grid:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.06);
   transform: translateY(-2px);
 }
 

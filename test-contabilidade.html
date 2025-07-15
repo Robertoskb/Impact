@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Contabilidade</title>
+</head>
+<body>
+    <h1>Teste de Contabilidade de Acertos</h1>
+    <div id="output"></div>
+    
+    <script>
+        // Teste da lógica de contabilidade de acertos
+        console.log("🧪 TESTE: Verificação de Contabilidade de Acertos");
+        
+        // Simular um cenário real
+        const testData = {
+          config: {
+            year: 2023,
+            color: "amarela",
+            area: "MT",
+            type: "MT"
+          },
+          
+          positions: {
+            2023: {
+              MT: {
+                136: { AZUL: 136, AMARELA: 145, BRANCA: 138, ROSA: 142 },
+                137: { AZUL: 137, AMARELA: 146, BRANCA: 139, ROSA: 143 }
+              }
+            }
+          },
+          
+          meta: {
+            2023: {
+              MT: {
+                136: { answer: "A", difficulty: 0.5, hability: "H1" },
+                137: { answer: "B", difficulty: 0.7, hability: "H2" }
+              }
+            }
+          },
+          
+          userAnswers: {
+            145: "A", // Correto
+            146: "C", // Incorreto (gabarito é B)
+            147: "B"  // Anulada (sem mapeamento)
+          }
+        };
+        
+        function findMappedPosition(position, color, positionsData) {
+          for (const [bluePos, colorMap] of Object.entries(positionsData)) {
+            if (colorMap[color] === position) {
+              return parseInt(bluePos);
+            }
+          }
+          return null;
+        }
+        
+        function testScoring() {
+          let output = document.getElementById('output');
+          let html = '<h2>Resultados do Teste:</h2>';
+          
+          let correct = 0;
+          let incorrect = 0;
+          let cancelled = 0;
+          
+          Object.entries(testData.userAnswers).forEach(([position, userAnswer]) => {
+            position = parseInt(position);
+            html += `<p><strong>Questão ${position} (prova amarela): "${userAnswer}"</strong></p>`;
+            
+            const mappedPos = findMappedPosition(position, "AMARELA", testData.positions[2023].MT);
+            
+            if (!mappedPos) {
+              html += `<p style="color: orange;">  → ANULADA: Sem mapeamento</p>`;
+              cancelled++;
+              correct++; // Anuladas respondidas contam como acerto
+              return;
+            }
+            
+            html += `<p>  → Mapeada para posição azul: ${mappedPos}</p>`;
+            
+            const metaData = testData.meta[2023].MT[mappedPos];
+            if (!metaData) {
+              html += `<p style="color: orange;">  → ANULADA: Não existe no meta.json</p>`;
+              cancelled++;
+              correct++; // Anuladas respondidas contam como acerto
+              return;
+            }
+            
+            const correctAnswer = metaData.answer;
+            html += `<p>  → Gabarito: ${correctAnswer}</p>`;
+            
+            if (userAnswer === correctAnswer) {
+              html += `<p style="color: green;">  → CORRETO ✅</p>`;
+              correct++;
+            } else {
+              html += `<p style="color: red;">  → INCORRETO ❌</p>`;
+              incorrect++;
+            }
+          });
+          
+          html += '<h3>Resultado Final:</h3>';
+          html += `<p>Corretas: ${correct}</p>`;
+          html += `<p>Incorretas: ${incorrect}</p>`;
+          html += `<p>Anuladas: ${cancelled}</p>`;
+          
+          html += '<h3>Resultado Esperado:</h3>';
+          html += '<p>- Questão 145 → Correto (A = A)</p>';
+          html += '<p>- Questão 146 → Incorreto (C ≠ B)</p>';
+          html += '<p>- Questão 147 → Anulada (conta como acerto)</p>';
+          html += '<p>- TOTAL: 2 corretas, 1 incorreta</p>';
+          
+          output.innerHTML = html;
+        }
+        
+        testScoring();
+    </script>
+</body>
+</html>

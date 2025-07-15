@@ -81,31 +81,130 @@ export class PatternsTabRenderer extends BaseTabRenderer {
 
     return `
       <div class="pattern-card">
-        <h5><i class="fa fa-chart-line"></i> Sequências</h5>
+        <h5><i class="fa fa-chart-line"></i> Análise de Sequências</h5>
         
-        <div class="sequence-stats">
-          <div class="stat-item">
-            <strong>Maior sequência de acertos:</strong>
-            <span class="stat-value correct">${
-              sequences.maxCorrectStreak
-            }</span>
-          </div>
-          <div class="stat-item">
-            <strong>Maior sequência de erros:</strong>
-            <span class="stat-value incorrect">${
-              sequences.maxIncorrectStreak
-            }</span>
-          </div>
-          <div class="stat-item">
-            <strong>Alternâncias:</strong>
-            <span class="stat-value">${sequences.alternations}</span>
+        <div class="sequence-summary" style="margin-bottom: 1.5rem;">
+          <div class="summary-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div class="summary-card success" style="
+              background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+              border: 1px solid #b8dabc;
+              border-radius: 12px;
+              padding: 1.5rem 1rem;
+              text-align: center;
+              box-shadow: 0 4px 8px rgba(40, 167, 69, 0.1);
+              transition: transform 0.2s ease, box-shadow 0.2s ease;
+            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(40, 167, 69, 0.15)'" 
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(40, 167, 69, 0.1)'">
+              <div class="card-icon" style="margin-bottom: 0.75rem;">
+                <i class="fa fa-trophy" style="
+                  font-size: 2rem;
+                  color: #28a745;
+                  background: rgba(40, 167, 69, 0.1);
+                  width: 3.5rem;
+                  height: 3.5rem;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                "></i>
+              </div>
+              <div class="card-content">
+                <div class="card-value" style="
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: #155724;
+                  margin-bottom: 0.25rem;
+                ">${sequences.maxCorrectStreak}</div>
+                <div class="card-label" style="
+                  font-size: 0.875rem;
+                  color: #155724;
+                  font-weight: 500;
+                  line-height: 1.3;
+                ">Maior sequência<br>de acertos</div>
+              </div>
+            </div>
+            
+            <div class="summary-card danger" style="
+              background: linear-gradient(135deg, #f8d7da 0%, #f1b0b7 100%);
+              border: 1px solid #f5c6cb;
+              border-radius: 12px;
+              padding: 1.5rem 1rem;
+              text-align: center;
+              box-shadow: 0 4px 8px rgba(220, 53, 69, 0.1);
+              transition: transform 0.2s ease, box-shadow 0.2s ease;
+            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(220, 53, 69, 0.15)'" 
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(220, 53, 69, 0.1)'">
+              <div class="card-icon" style="margin-bottom: 0.75rem;">
+                <i class="fa fa-exclamation-triangle" style="
+                  font-size: 2rem;
+                  color: #dc3545;
+                  background: rgba(220, 53, 69, 0.1);
+                  width: 3.5rem;
+                  height: 3.5rem;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                "></i>
+              </div>
+              <div class="card-content">
+                <div class="card-value" style="
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: #721c24;
+                  margin-bottom: 0.25rem;
+                ">${sequences.maxIncorrectStreak}</div>
+                <div class="card-label" style="
+                  font-size: 0.875rem;
+                  color: #721c24;
+                  font-weight: 500;
+                  line-height: 1.3;
+                ">Maior sequência<br>de erros</div>
+              </div>
+            </div>
+            
+            <div class="summary-card info" style="
+              background: linear-gradient(135deg, #cce7ff 0%, #b3d7ff 100%);
+              border: 1px solid #b8daff;
+              border-radius: 12px;
+              padding: 1.5rem 1rem;
+              text-align: center;
+              box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
+              transition: transform 0.2s ease, box-shadow 0.2s ease;
+            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0, 123, 255, 0.15)'" 
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0, 123, 255, 0.1)'">
+              <div class="card-icon" style="margin-bottom: 0.75rem;">
+                <i class="fa fa-arrows-alt-h" style="
+                  font-size: 2rem;
+                  color: #007bff;
+                  background: rgba(0, 123, 255, 0.1);
+                  width: 3.5rem;
+                  height: 3.5rem;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                "></i>
+              </div>
+              <div class="card-content">
+                <div class="card-value" style="
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: #004085;
+                  margin-bottom: 0.25rem;
+                ">${sequences.alternations}</div>
+                <div class="card-label" style="
+                  font-size: 0.875rem;
+                  color: #004085;
+                  font-weight: 500;
+                  line-height: 1.3;
+                ">Mudanças entre<br>acerto/erro</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="sequence-details">
-          <h6>Sequências Notáveis</h6>
-          ${this.renderNotableSequences(sequences)}
-        </div>
+        ${this.renderDetailedSequences(sequences)}
       </div>
     `;
   }
@@ -208,53 +307,287 @@ export class PatternsTabRenderer extends BaseTabRenderer {
     };
   }
 
-  renderNotableSequences(sequences) {
-    let html = "";
+  renderDetailedSequences(sequences) {
+    // Se não há sequências notáveis, mostrar mensagem
+    if (
+      sequences.correctStreaks.length === 0 &&
+      sequences.incorrectStreaks.length === 0
+    ) {
+      return `
+        <div class="no-sequences" style="
+          text-align: center;
+          padding: 2rem;
+          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+          border-radius: 12px;
+          border: 1px solid #dee2e6;
+        ">
+          <i class="fa fa-info-circle" style="
+            font-size: 2.5rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+          "></i>
+          <div style="
+            font-size: 1.1rem;
+            color: #495057;
+            font-weight: 500;
+          ">Nenhuma sequência significativa identificada</div>
+        </div>
+      `;
+    }
 
-    // Maiores sequências de acertos
+    let html = `<div class="sequences-container" style="display: grid; gap: 1.5rem;">`;
+
+    // Sequências de acertos
     if (sequences.correctStreaks.length > 0) {
       html += `
-        <div class="sequence-group">
-          <h6>Maiores Sequências de Acertos</h6>
-          ${sequences.correctStreaks
-            .slice(0, 3)
-            .map(
-              (streak) => `
-            <div class="sequence-item correct">
-              <span>${streak.length} acertos consecutivos</span>
-              <small>Questões ${streak.start + 1} - ${streak.end + 1}</small>
-            </div>
-          `
-            )
-            .join("")}
+        <div class="sequence-section" style="
+          background: linear-gradient(135deg, #f8fff9 0%, #f0f9f0 100%);
+          border: 1px solid #d4edda;
+          border-radius: 12px;
+          padding: 1.5rem;
+          box-shadow: 0 2px 8px rgba(40, 167, 69, 0.08);
+        ">
+          <div class="section-header success" style="
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #d4edda;
+          ">
+            <i class="fa fa-check-circle" style="
+              font-size: 1.25rem;
+              color: #28a745;
+              margin-right: 0.5rem;
+            "></i>
+            <h6 style="
+              margin: 0;
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: #155724;
+            ">Sequências de Acertos</h6>
+          </div>
+          <div class="sequence-items" style="display: grid; gap: 0.75rem;">
+            ${sequences.correctStreaks
+              .slice(0, 3)
+              .map(
+                (streak, index) => `
+                <div class="sequence-row ${index === 0 ? "best" : ""}" style="
+                  display: flex;
+                  align-items: center;
+                  padding: 1rem;
+                  background: ${
+                    index === 0
+                      ? "linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%)"
+                      : "#ffffff"
+                  };
+                  border: 1px solid ${index === 0 ? "#b8dabc" : "#e9ecef"};
+                  border-radius: 8px;
+                  transition: all 0.2s ease;
+                  ${
+                    index === 0
+                      ? "box-shadow: 0 3px 12px rgba(40, 167, 69, 0.15);"
+                      : ""
+                  }
+                " onmouseover="this.style.transform='translateX(4px)'; this.style.boxShadow='0 4px 16px rgba(40, 167, 69, 0.12)'" 
+                   onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='${
+                     index === 0
+                       ? "0 3px 12px rgba(40, 167, 69, 0.15)"
+                       : "0 2px 8px rgba(0, 0, 0, 0.1)"
+                   }'">
+                  <div class="sequence-badge success" style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 4rem;
+                    height: 4rem;
+                    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+                    border-radius: 50%;
+                    margin-right: 1rem;
+                    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+                  ">
+                    <span class="badge-number" style="
+                      font-size: 1.25rem;
+                      font-weight: 700;
+                      color: white;
+                      line-height: 1;
+                    ">${streak.length}</span>
+                    <span class="badge-label" style="
+                      font-size: 0.625rem;
+                      color: rgba(255, 255, 255, 0.9);
+                      text-transform: uppercase;
+                      font-weight: 600;
+                      letter-spacing: 0.5px;
+                    ">acertos</span>
+                  </div>
+                  <div class="sequence-info" style="flex: 1;">
+                    <div class="sequence-description" style="
+                      font-size: 1rem;
+                      font-weight: 600;
+                      color: #155724;
+                      margin-bottom: 0.25rem;
+                    ">
+                      ${streak.length} questões corretas consecutivas
+                    </div>
+                    <div class="sequence-position" style="
+                      display: flex;
+                      align-items: center;
+                      font-size: 0.875rem;
+                      color: #6c757d;
+                    ">
+                      <i class="fa fa-map-marker-alt" style="
+                        margin-right: 0.5rem;
+                        color: #28a745;
+                      "></i>
+                      Questões ${streak.start + 1} até ${streak.end + 1}
+                    </div>
+                  </div>
+                  ${
+                    index === 0
+                      ? `<div class="best-indicator" style="
+                    margin-left: 1rem;
+                  "><i class="fa fa-star" style="
+                    font-size: 1.25rem;
+                    color: #ffc107;
+                    filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));
+                  "></i></div>`
+                      : ""
+                  }
+                </div>
+              `
+              )
+              .join("")}
+          </div>
         </div>
       `;
     }
 
-    // Maiores sequências de erros
+    // Sequências de erros
     if (sequences.incorrectStreaks.length > 0) {
       html += `
-        <div class="sequence-group">
-          <h6>Maiores Sequências de Erros</h6>
-          ${sequences.incorrectStreaks
-            .slice(0, 3)
-            .map(
-              (streak) => `
-            <div class="sequence-item incorrect">
-              <span>${streak.length} erros consecutivos</span>
-              <small>Questões ${streak.start + 1} - ${streak.end + 1}</small>
-            </div>
-          `
-            )
-            .join("")}
+        <div class="sequence-section" style="
+          background: linear-gradient(135deg, #fff5f5 0%, #fef0f0 100%);
+          border: 1px solid #f8d7da;
+          border-radius: 12px;
+          padding: 1.5rem;
+          box-shadow: 0 2px 8px rgba(220, 53, 69, 0.08);
+        ">
+          <div class="section-header danger" style="
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #f8d7da;
+          ">
+            <i class="fa fa-times-circle" style="
+              font-size: 1.25rem;
+              color: #dc3545;
+              margin-right: 0.5rem;
+            "></i>
+            <h6 style="
+              margin: 0;
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: #721c24;
+            ">Sequências de Erros</h6>
+          </div>
+          <div class="sequence-items" style="display: grid; gap: 0.75rem;">
+            ${sequences.incorrectStreaks
+              .slice(0, 3)
+              .map(
+                (streak, index) => `
+                <div class="sequence-row ${index === 0 ? "worst" : ""}" style="
+                  display: flex;
+                  align-items: center;
+                  padding: 1rem;
+                  background: ${
+                    index === 0
+                      ? "linear-gradient(135deg, #f8d7da 0%, #f1b0b7 100%)"
+                      : "#ffffff"
+                  };
+                  border: 1px solid ${index === 0 ? "#f5c6cb" : "#e9ecef"};
+                  border-radius: 8px;
+                  transition: all 0.2s ease;
+                  ${
+                    index === 0
+                      ? "box-shadow: 0 3px 12px rgba(220, 53, 69, 0.15);"
+                      : ""
+                  }
+                " onmouseover="this.style.transform='translateX(4px)'; this.style.boxShadow='0 4px 16px rgba(220, 53, 69, 0.12)'" 
+                   onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='${
+                     index === 0
+                       ? "0 3px 12px rgba(220, 53, 69, 0.15)"
+                       : "0 2px 8px rgba(0, 0, 0, 0.1)"
+                   }'">
+                  <div class="sequence-badge danger" style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 4rem;
+                    height: 4rem;
+                    background: linear-gradient(135deg, #dc3545 0%, #e74c3c 100%);
+                    border-radius: 50%;
+                    margin-right: 1rem;
+                    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+                  ">
+                    <span class="badge-number" style="
+                      font-size: 1.25rem;
+                      font-weight: 700;
+                      color: white;
+                      line-height: 1;
+                    ">${streak.length}</span>
+                    <span class="badge-label" style="
+                      font-size: 0.625rem;
+                      color: rgba(255, 255, 255, 0.9);
+                      text-transform: uppercase;
+                      font-weight: 600;
+                      letter-spacing: 0.5px;
+                    ">erros</span>
+                  </div>
+                  <div class="sequence-info" style="flex: 1;">
+                    <div class="sequence-description" style="
+                      font-size: 1rem;
+                      font-weight: 600;
+                      color: #721c24;
+                      margin-bottom: 0.25rem;
+                    ">
+                      ${streak.length} questões incorretas consecutivas
+                    </div>
+                    <div class="sequence-position" style="
+                      display: flex;
+                      align-items: center;
+                      font-size: 0.875rem;
+                      color: #6c757d;
+                    ">
+                      <i class="fa fa-map-marker-alt" style="
+                        margin-right: 0.5rem;
+                        color: #dc3545;
+                      "></i>
+                      Questões ${streak.start + 1} até ${streak.end + 1}
+                    </div>
+                  </div>
+                  ${
+                    index === 0
+                      ? `<div class="worst-indicator" style="
+                    margin-left: 1rem;
+                  "><i class="fa fa-exclamation" style="
+                    font-size: 1.25rem;
+                    color: #dc3545;
+                    filter: drop-shadow(0 2px 4px rgba(220, 53, 69, 0.3));
+                  "></i></div>`
+                      : ""
+                  }
+                </div>
+              `
+              )
+              .join("")}
+          </div>
         </div>
       `;
     }
 
-    if (!html) {
-      html = "<p>Nenhuma sequência notável encontrada.</p>";
-    }
-
+    html += `</div>`;
     return html;
   }
 
@@ -449,13 +782,6 @@ export class PatternsTabRenderer extends BaseTabRenderer {
             </div>
           </div>
         </div>
-        
-        <div class="temporal-analysis-text">
-          <small>
-            <strong>Interpretação:</strong> 
-            ${this.analyzeTemporalPerformance(thirds)}
-          </small>
-        </div>
       </div>
     `;
   }
@@ -490,9 +816,9 @@ export class PatternsTabRenderer extends BaseTabRenderer {
     const meta = this.app.getMeta();
 
     // Obter notas TRI calculadas do app
-    const triScoresData = this.app.triScores;
+    const triResult = this.app.getTRIScores();
 
-    if (!triScoresData || !triScoresData.scores) {
+    if (!triResult || !triResult.success || !triResult.score) {
       return `
         <div class="pattern-card">
           <h5><i class="fa fa-chart-area"></i> Análise de Consistência TRI</h5>
@@ -503,42 +829,39 @@ export class PatternsTabRenderer extends BaseTabRenderer {
       `;
     }
 
-    // Analisar inconsistências para cada área
-    const areas = [...new Set(questions.map((q) => q.area))];
+    // Analisar inconsistências para a área do simulado
+    const area = triResult.areaCode;
+    const areaQuestions = questions.filter((q) => q.area === area);
+
+    if (areaQuestions.length === 0) {
+      return `
+        <div class="pattern-card">
+          <h5><i class="fa fa-chart-area"></i> Análise de Consistência TRI</h5>
+          <div class="consistency-area">
+            <p>Nenhuma questão encontrada para análise de consistência.</p>
+          </div>
+        </div>
+      `;
+    }
+
+    const userScore = triResult.score;
+    const userTheta = (userScore - 500) / 100; // Converter nota para parâmetro θ (theta)
+
+    const inconsistencies = this.analyzeAreaInconsistencies(
+      areaQuestions,
+      answers,
+      userTheta,
+      meta,
+      config
+    );
+
     let html = `
       <div class="pattern-card">
         <h5><i class="fa fa-chart-area"></i> Análise de Consistência TRI</h5>
+        ${this.renderAreaConsistency(area, inconsistencies, userScore)}
+      </div>
     `;
 
-    areas.forEach((area) => {
-      const areaQuestions = questions.filter((q) => q.area === area);
-      const areaScore = triScoresData.scores[area];
-
-      if (!areaScore) {
-        html += `
-          <div class="consistency-area">
-            <h6><i class="fa fa-chart-bar"></i> ${this.getAreaName(area)}</h6>
-            <p>Nota TRI não disponível para esta área.</p>
-          </div>
-        `;
-        return;
-      }
-
-      const userScore = areaScore.score || 500; // Fallback para 500 se não houver nota
-      const userTheta = (userScore - 500) / 100; // Converter nota para parâmetro θ (theta)
-
-      const inconsistencies = this.analyzeAreaInconsistencies(
-        areaQuestions,
-        answers,
-        userTheta,
-        meta,
-        config
-      );
-
-      html += this.renderAreaConsistency(area, inconsistencies, userScore);
-    });
-
-    html += `</div>`;
     return html;
   }
 
@@ -727,46 +1050,6 @@ export class PatternsTabRenderer extends BaseTabRenderer {
       return "Desempenho moderadamente inconsistente. Revise estratégias de resolução.";
     } else {
       return "Desempenho inconsistente. Pode indicar problemas de concentração, chutes ou gaps de conhecimento.";
-    }
-  }
-
-  analyzeTemporalPerformance(thirds) {
-    const performances = [
-      thirds.first.percentage,
-      thirds.second.percentage,
-      thirds.third.percentage,
-    ];
-    const maxPerf = Math.max(...performances);
-    const minPerf = Math.min(...performances);
-    const difference = maxPerf - minPerf;
-
-    if (difference < 10) {
-      return "Desempenho consistente ao longo da prova, sem sinais significativos de fadiga ou melhora.";
-    }
-
-    // Identificar padrão
-    if (
-      thirds.first.percentage > thirds.second.percentage &&
-      thirds.second.percentage > thirds.third.percentage
-    ) {
-      return "Declínio progressivo: possível fadiga mental ou redução da concentração ao longo da prova.";
-    } else if (
-      thirds.first.percentage < thirds.second.percentage &&
-      thirds.second.percentage < thirds.third.percentage
-    ) {
-      return "Melhora progressiva: aquecimento gradual ou estratégia de acelerar no final da prova.";
-    } else if (
-      thirds.second.percentage < thirds.first.percentage &&
-      thirds.second.percentage < thirds.third.percentage
-    ) {
-      return "Queda no meio: possível perda de foco na parte central, com recuperação no final.";
-    } else if (
-      thirds.second.percentage > thirds.first.percentage &&
-      thirds.second.percentage > thirds.third.percentage
-    ) {
-      return "Pico no meio: melhor desempenho na parte central, com início e final mais fracos.";
-    } else {
-      return "Padrão irregular: desempenho varia significativamente entre as seções da prova.";
     }
   }
 }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Questões Anuladas na Análise de Dificuldade</title>
+</head>
+<body>
+    <h1>Teste: Questões Anuladas na Análise de Dificuldade</h1>
+    <div id="output"></div>
+    
+    <script>
+        console.log("🧪 TESTE: Questões Anuladas na Análise de Dificuldade");
+        
+        // Simular questões com algumas anuladas
+        const testQuestions = [
+            // Questões válidas com dificuldade
+            {
+                position: 145,
+                originalPosition: 136,
+                area: "MT",
+                cancelled: false,
+                difficulty: 580, // Fácil
+                difficultyLevel: "Fácil"
+            },
+            {
+                position: 146,
+                originalPosition: 137,
+                area: "MT", 
+                cancelled: false,
+                difficulty: 720, // Média
+                difficultyLevel: "Média"
+            },
+            // Questão anulada (não deve ter dados de dificuldade)
+            {
+                position: 147,
+                originalPosition: null, // Sem mapeamento
+                area: "MT",
+                cancelled: true,
+                difficulty: null, // DEVE SER NULL
+                difficultyLevel: "Anulada" // DEVE SER "Anulada"
+            },
+            {
+                position: 148,
+                originalPosition: 139,
+                area: "MT",
+                cancelled: false,
+                difficulty: 850, // Muito difícil
+                difficultyLevel: "Muito difícil"
+            },
+            // Outra questão anulada
+            {
+                position: 149,
+                originalPosition: null, // Sem mapeamento
+                area: "MT",
+                cancelled: true,
+                difficulty: null, // DEVE SER NULL
+                difficultyLevel: "Anulada" // DEVE SER "Anulada"
+            }
+        ];
+        
+        function testDifficultyGrouping() {
+            let output = document.getElementById('output');
+            let html = '<h2>Teste de Agrupamento por Dificuldade:</h2>';
+            
+            // Agrupar por nível de dificuldade
+            const groups = {};
+            testQuestions.forEach((q) => {
+                if (!groups[q.difficultyLevel]) {
+                    groups[q.difficultyLevel] = { total: 0, questions: [] };
+                }
+                groups[q.difficultyLevel].total++;
+                groups[q.difficultyLevel].questions.push(q);
+            });
+            
+            html += '<h3>Grupos encontrados:</h3>';
+            
+            const difficultyOrder = ["Fácil", "Média", "Difícil", "Muito difícil", "Anulada"];
+            
+            difficultyOrder.forEach(level => {
+                if (groups[level]) {
+                    const group = groups[level];
+                    html += `<div style="margin-bottom: 15px; padding: 10px; border: 1px solid #ccc;">`;
+                    html += `<h4>${level} (${group.total} questões)</h4>`;
+                    
+                    group.questions.forEach(q => {
+                        const diffDisplay = q.cancelled ? "N/A (Anulada)" : (q.difficulty || "N/A");
+                        html += `<p>  → Questão ${q.position}: Dificuldade = ${diffDisplay}</p>`;
+                    });
+                    
+                    html += `</div>`;
+                }
+            });
+            
+            html += '<h3>✅ Verificações:</h3>';
+            html += '<ul>';
+            
+            // Verificar se questões anuladas não têm dados de dificuldade
+            const cancelledQuestions = testQuestions.filter(q => q.cancelled);
+            const cancelledWithDifficulty = cancelledQuestions.filter(q => q.difficulty !== null);
+            
+            if (cancelledWithDifficulty.length === 0) {
+                html += '<li style="color: green;">✅ CORRETO: Nenhuma questão anulada tem dados de dificuldade</li>';
+            } else {
+                html += `<li style="color: red;">❌ ERRO: ${cancelledWithDifficulty.length} questões anuladas têm dados de dificuldade indevidos</li>`;
+            }
+            
+            // Verificar se questões anuladas estão marcadas como "Anulada"
+            const cancelledWithWrongLevel = cancelledQuestions.filter(q => q.difficultyLevel !== "Anulada");
+            
+            if (cancelledWithWrongLevel.length === 0) {
+                html += '<li style="color: green;">✅ CORRETO: Todas as questões anuladas estão marcadas como "Anulada"</li>';
+            } else {
+                html += `<li style="color: red;">❌ ERRO: ${cancelledWithWrongLevel.length} questões anuladas não estão marcadas como "Anulada"</li>`;
+            }
+            
+            // Verificar se questões válidas têm dados corretos
+            const validQuestions = testQuestions.filter(q => !q.cancelled);
+            const validWithoutDifficulty = validQuestions.filter(q => q.difficulty === null);
+            
+            if (validWithoutDifficulty.length === 0) {
+                html += '<li style="color: green;">✅ CORRETO: Todas as questões válidas têm dados de dificuldade</li>';
+            } else {
+                html += `<li style="color: red;">❌ ERRO: ${validWithoutDifficulty.length} questões válidas não têm dados de dificuldade</li>`;
+            }
+            
+            html += '</ul>';
+            
+            html += '<h3>📊 Estatísticas esperadas:</h3>';
+            html += '<ul>';
+            html += '<li>Fácil: 1 questão</li>';
+            html += '<li>Média: 1 questão</li>';
+            html += '<li>Muito difícil: 1 questão</li>';
+            html += '<li>Anulada: 2 questões (sempre contam como acerto se respondidas)</li>';
+            html += '</ul>';
+            
+            output.innerHTML = html;
+        }
+        
+        testDifficultyGrouping();
+    </script>
+</body>
+</html>

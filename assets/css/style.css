@@ -283,4 +283,21 @@ a:hover {
     max-width: 1140px;
   }
 }
+
 /* Container */
+
+/* Answer Sheet Cards Hover Effects */
+.summary-card-correct:hover,
+.summary-card-incorrect:hover,
+.summary-card-blank:hover,
+.summary-card-accuracy:hover,
+.summary-card-cancelled:hover,
+.summary-item:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.answer-sheet-table tr:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

@@ -144,28 +144,33 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
       let difficulty = null;
       let difficultyLevel = "Desconhecida";
 
-      // Tentar obter dificuldade dos metadados
-      // Usar originalPosition (posição na prova azul) para buscar no meta.json
-      const metaPosition = question.originalPosition;
-      if (
-        metaPosition &&
-        meta[config.year] &&
-        meta[config.year][question.area] &&
-        meta[config.year][question.area][metaPosition]
-      ) {
-        const metaData = meta[config.year][question.area][metaPosition];
+      // CORREÇÃO: Questões anuladas não devem ter dados de dificuldade
+      if (question.cancelled) {
+        difficultyLevel = "Anulada";
+      } else {
+        // Tentar obter dificuldade dos metadados apenas para questões válidas
+        // Usar originalPosition (posição na prova azul) para buscar no meta.json
+        const metaPosition = question.originalPosition;
+        if (
+          metaPosition &&
+          meta[config.year] &&
+          meta[config.year][question.area] &&
+          meta[config.year][question.area][metaPosition]
+        ) {
+          const metaData = meta[config.year][question.area][metaPosition];
 
-        // Calcular dificuldade usando parâmetros da TRI: 100*B + 500
-        if (metaData.difficulty !== null && metaData.difficulty !== undefined) {
-          difficulty = 100 * metaData.difficulty + 500;
-          hasDifficultyData = true;
+          // Calcular dificuldade usando parâmetros da TRI: 100*B + 500
+          if (metaData.difficulty !== null && metaData.difficulty !== undefined) {
+            difficulty = 100 * metaData.difficulty + 500;
+            hasDifficultyData = true;
 
-          // Classificar por nível baseado na escala TRI (seguindo padrão do app.js)
-          if (difficulty < 550.0) difficultyLevel = "Muito fácil";
-          else if (difficulty < 650.0) difficultyLevel = "Fácil";
-          else if (difficulty < 750.0) difficultyLevel = "Média";
-          else if (difficulty < 850.0) difficultyLevel = "Difícil";
-          else difficultyLevel = "Muito difícil";
+            // Classificar por nível baseado na escala TRI (seguindo padrão do app.js)
+            if (difficulty < 550.0) difficultyLevel = "Muito fácil";
+            else if (difficulty < 650.0) difficultyLevel = "Fácil";
+            else if (difficulty < 750.0) difficultyLevel = "Média";
+            else if (difficulty < 850.0) difficultyLevel = "Difícil";
+            else difficultyLevel = "Muito difícil";
+          }
         }
       }
 
@@ -211,18 +216,21 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
 
     let html = `
       <div class="difficulty-stats-grid">
-        <h5>${
-          hasDifficultyData
-            ? "Desempenho por Nível de Dificuldade"
-            : "Desempenho por Posição na Prova"
-        }</h5>
+        <h5>
+          <i class="fa fa-chart-line"></i>
+          ${
+            hasDifficultyData
+              ? "Desempenho por Nível de Dificuldade"
+              : "Desempenho por Posição na Prova"
+          }
+        </h5>
         <div class="stats-cards">
     `;
 
     // Definir ordem correta dos níveis de dificuldade
     const difficultyOrder = hasDifficultyData
-      ? ["Muito fácil", "Fácil", "Média", "Difícil", "Muito difícil"]
-      : ["Início da Prova", "Meio da Prova", "Fim da Prova"];
+      ? ["Muito fácil", "Fácil", "Média", "Difícil", "Muito difícil", "Anulada"]
+      : ["Início da Prova", "Meio da Prova", "Fim da Prova", "Anulada"];
 
     // Ordenar grupos pela ordem correta
     const sortedGroups = difficultyOrder
@@ -231,11 +239,40 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
 
     sortedGroups.forEach(([level, data]) => {
       const percentage = Math.round((data.correct / data.total) * 100);
+
+      // Determinar ícone baseado no nível
+      let iconClass = "fa-chart-bar";
+      let shortLevel = level; // Versão abreviada para evitar quebra
+
+      if (hasDifficultyData || level === "Anulada") {
+        if (level === "Muito fácil") {
+          iconClass = "fa-smile";
+          shortLevel = "M. Fácil";
+        } else if (level === "Fácil") {
+          iconClass = "fa-check-circle";
+          shortLevel = "Fácil";
+        } else if (level === "Média") {
+          iconClass = "fa-minus-circle";
+          shortLevel = "Média";
+        } else if (level === "Difícil") {
+          iconClass = "fa-exclamation-triangle";
+          shortLevel = "Difícil";
+        } else if (level === "Muito difícil") {
+          iconClass = "fa-times-circle";
+          shortLevel = "M. Difícil";
+        } else if (level === "Anulada") {
+          iconClass = "fa-ban";
+          shortLevel = "Anulada";
+        }
+      }
+
       html += `
         <div class="difficulty-stat-card">
-          <h6>${level}</h6>
-          <div class="stat-number">${data.correct}/${data.total}</div>
-          <div class="stat-percentage">${percentage}%</div>
+          <h6><i class="fa ${iconClass}"></i> ${shortLevel}</h6>
+          <div class="stat-content">
+            <div class="stat-number">${data.correct}/${data.total}</div>
+            <div class="stat-percentage">${percentage}%</div>
+          </div>
         </div>
       `;
     });
@@ -251,10 +288,14 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
   renderDifficultyPattern(difficultyData) {
     const { questions, hasDifficultyData } = difficultyData;
 
-    // Ordenar por dificuldade
-    let sortedQuestions;
+    // Separar questões anuladas das questões válidas
+    const validQuestions = questions.filter(q => !q.cancelled);
+    const cancelledQuestions = questions.filter(q => q.cancelled);
+
+    // Ordenar questões válidas por dificuldade
+    let sortedValidQuestions;
     if (hasDifficultyData) {
-      sortedQuestions = [...questions].sort((a, b) => {
+      sortedValidQuestions = [...validQuestions].sort((a, b) => {
         if (a.difficulty !== null && b.difficulty !== null) {
           return a.difficulty - b.difficulty;
         }
@@ -264,8 +305,14 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
       });
     } else {
       // Se não há dados de dificuldade, manter ordem da prova
-      sortedQuestions = questions;
+      sortedValidQuestions = validQuestions;
     }
+
+    // Questões anuladas ficam por último, ordenadas por posição
+    const sortedCancelledQuestions = [...cancelledQuestions].sort((a, b) => a.originalPosition - b.originalPosition);
+
+    // Combinar questões válidas + anuladas
+    const sortedQuestions = [...sortedValidQuestions, ...sortedCancelledQuestions];
 
     const pattern = sortedQuestions
       .map((q) => {
@@ -276,22 +323,38 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
 
     return `
       <div class="difficulty-pattern">
-        <h5>${
-          hasDifficultyData
-            ? "Padrão Ordenado por Dificuldade (Fácil → Difícil)"
-            : "Padrão na Ordem da Prova"
-        }</h5>
+        <h5>
+          <i class="fa fa-sort-amount-up"></i>
+          ${
+            hasDifficultyData
+              ? "Padrão Ordenado por Dificuldade (Fácil → Difícil)"
+              : "Padrão na Ordem da Prova"
+          }
+        </h5>
         <div class="pattern-string">
           ${pattern
             .split("")
-            .map((bit) => `<span class="bit bit-${bit}">${bit}</span>`)
+            .map(
+              (bit, index) =>
+                `<span class="bit bit-${bit}" title="${
+                  bit === "1" ? "Acerto" : bit === "0" ? "Erro" : "Anulada"
+                }" data-position="${index + 1}"></span>`
+            )
             .join("")}
         </div>
-        <small>${
-          hasDifficultyData
-            ? "Questões ordenadas da mais fácil para a mais difícil com base nos metadados (C=anulada, 1=acerto, 0=erro)"
-            : "Padrão na ordem que as questões apareceram na prova (C=anulada, 1=acerto, 0=erro)"
-        }</small>
+        <small>
+          <i class="fa fa-info-circle"></i>
+          ${
+            hasDifficultyData
+              ? "Questões ordenadas da mais fácil para a mais difícil com base nos metadados TRI"
+              : "Padrão na ordem que as questões apareceram na prova"
+          }
+          <br><br>
+          <strong>Legenda:</strong> 
+          <span class="bit bit-1" style="display: inline-block; margin: 0 4px; width: 12px; height: 12px; border-radius: 50%;"></span> <strong>Verde</strong> = Acerto |
+          <span class="bit bit-0" style="display: inline-block; margin: 0 4px; width: 12px; height: 12px; border-radius: 50%;"></span> <strong>Vermelho</strong> = Erro |
+          <span class="bit bit-C" style="display: inline-block; margin: 0 4px; width: 12px; height: 12px; border-radius: 50%;"></span> <strong>Cinza</strong> = Anulada
+        </small>
       </div>
     `;
   }
@@ -299,10 +362,14 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
   renderDifficultyTable(difficultyData) {
     const { questions, hasDifficultyData } = difficultyData;
 
-    // Ordenar questões por dificuldade para exibir na tabela
-    let sortedQuestions;
+    // Separar questões anuladas das questões válidas
+    const validQuestions = questions.filter(q => !q.cancelled);
+    const cancelledQuestions = questions.filter(q => q.cancelled);
+
+    // Ordenar questões válidas por dificuldade para exibir na tabela
+    let sortedValidQuestions;
     if (hasDifficultyData) {
-      sortedQuestions = [...questions].sort((a, b) => {
+      sortedValidQuestions = [...validQuestions].sort((a, b) => {
         if (a.difficulty !== null && b.difficulty !== null) {
           return a.difficulty - b.difficulty; // Ordem crescente (mais fácil primeiro)
         }
@@ -312,53 +379,93 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
       });
     } else {
       // Se não há dados de dificuldade, manter ordem da prova
-      sortedQuestions = questions;
+      sortedValidQuestions = validQuestions;
     }
+
+    // Questões anuladas ficam por último, ordenadas por posição
+    const sortedCancelledQuestions = [...cancelledQuestions].sort((a, b) => a.originalPosition - b.originalPosition);
+
+    // Combinar questões válidas + anuladas
+    const sortedQuestions = [...sortedValidQuestions, ...sortedCancelledQuestions];
 
     let html = `
       <div class="difficulty-table">
-        <h5>Detalhamento das Questões ${
-          hasDifficultyData ? "(Ordenadas por Dificuldade)" : ""
-        }</h5>
+        <h5>
+          <i class="fa fa-table"></i>
+          Detalhamento das Questões ${
+            hasDifficultyData ? "(Ordenadas por Dificuldade)" : ""
+          }
+        </h5>
         <div class="table-responsive">
           <table class="difficulty-questions-table">
             <thead>
               <tr>
-                <th>Questão</th>
-                <th>${hasDifficultyData ? "Dificuldade (TRI)" : "Posição"}</th>
-                <th>Nível</th>
-                <th>Área</th>
-                <th>Sua Resposta</th>
-                <th>Gabarito</th>
-                <th>Status</th>
+                <th><i class="fa fa-hashtag"></i> Questão</th>
+                <th><i class="fa fa-signal"></i> ${
+                  hasDifficultyData ? "Dificuldade (TRI)" : "Posição"
+                }</th>
+                <th><i class="fa fa-layer-group"></i> Nível</th>
+                <th><i class="fa fa-book"></i> Área</th>
+                <th><i class="fa fa-user-edit"></i> Sua Resposta</th>
+                <th><i class="fa fa-check-circle"></i> Gabarito</th>
+                <th><i class="fa fa-flag"></i> Status</th>
               </tr>
             </thead>
             <tbody>
     `;
 
     sortedQuestions.forEach((question) => {
-      const statusClass = question.isCorrect
+      const statusClass = question.cancelled
+        ? "answer-cancelled"
+        : question.isCorrect
         ? "answer-correct"
         : "answer-wrong";
-      const status = question.isCorrect ? "Correto" : "Incorreto";
+
+      const status = question.cancelled
+        ? "Anulada"
+        : question.isCorrect
+        ? "Correto"
+        : "Incorreto";
+
+      const statusIcon = question.cancelled
+        ? "fa-ban"
+        : question.isCorrect
+        ? "fa-check"
+        : "fa-times";
 
       html += `
         <tr class="${statusClass}">
-          <td>${question.questionNumber}</td>
+          <td><strong>${question.questionNumber}</strong></td>
           <td>
             ${
-              hasDifficultyData
+              question.cancelled
+                ? "<span class='text-muted'>N/A</span>"
+                : hasDifficultyData
                 ? question.difficulty !== null
-                  ? `${Math.round(question.difficulty)}`
-                  : "N/A"
+                  ? `<span class="difficulty-score">${Math.round(
+                      question.difficulty
+                    )}</span>`
+                  : "<span class='text-muted'>N/A</span>"
                 : question.difficultyLevel
             }
           </td>
-          <td>${question.difficultyLevel}</td>
-          <td>${question.area}</td>
-          <td>${question.userAnswer}</td>
-          <td>${question.correctAnswer}</td>
-          <td>${status}</td>
+          <td>
+            <span class="difficulty-level-badge level-${question.difficultyLevel
+              .toLowerCase()
+              .replace(/\s+/g, "-")}">
+              ${question.difficultyLevel}
+            </span>
+          </td>
+          <td><span class="area-badge">${question.area}</span></td>
+          <td><span class="answer-badge">${question.userAnswer}</span></td>
+          <td><span class="answer-badge correct-answer">${
+            question.correctAnswer
+          }</span></td>
+          <td>
+            <span class="status-badge status-${statusClass}">
+              <i class="fa ${statusIcon}"></i> ${status}
+            </span>
+          </td>
         </tr>
       `;
     });
@@ -371,7 +478,13 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
           hasDifficultyData
             ? `
           <div class="difficulty-legend">
-            <small><strong>Escala TRI:</strong> Muito fácil (<550), Fácil (550-649), Média (650-749), Difícil (750-849), Muito difícil (≥850)</small>
+            <i class="fa fa-info-circle"></i>
+            <strong>Escala TRI de Dificuldade:</strong>
+            <span class="difficulty-range very-easy">Muito fácil (&lt;550)</span>
+            <span class="difficulty-range easy">Fácil (550-649)</span>
+            <span class="difficulty-range medium">Média (650-749)</span>
+            <span class="difficulty-range hard">Difícil (750-849)</span>
+            <span class="difficulty-range very-hard">Muito difícil (≥850)</span>
           </div>
         `
             : ""
