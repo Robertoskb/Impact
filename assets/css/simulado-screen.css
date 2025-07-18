@@ -205,7 +205,8 @@
   font-family: var(--font-family);
 }
 
-.clear-btn {
+.clear-btn,
+.apply-btn {
   padding: 0.5rem;
   border: 2px solid rgba(255, 255, 255, 0.3);
   background: transparent;
@@ -216,7 +217,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.3rem;
   min-width: 40px;
+  font-size: 0.85rem;
+}
+
+.apply-btn {
+  background: rgba(40, 167, 69, 0.2);
+  border-color: rgba(40, 167, 69, 0.5);
+  color: #28a745;
+  min-width: auto;
+  padding: 0.5rem 0.75rem;
+}
+
+.apply-btn:hover {
+  background: #28a745;
+  border-color: #28a745;
+  color: white;
 }
 
 .clear-btn:hover {
@@ -244,6 +261,22 @@
 
   .gabarito-input-container label {
     font-size: 0.85rem;
+  }
+
+  .gabarito-input-container .input-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .apply-btn {
+    order: 1;
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .clear-btn {
+    order: 2;
+    min-width: 50px;
   }
 
   #gabarito-input {

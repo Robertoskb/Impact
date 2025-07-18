@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Botão Aplicar na Entrada Rápida de Gabarito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .demo-section {
+            background: #007bff;
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            margin: 15px 0;
+        }
+        .input-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .gabarito-input {
+            flex: 1;
+            padding: 0.5rem 0.75rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-family: "Courier New", monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .gabarito-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: none;
+            letter-spacing: normal;
+            font-family: Arial, sans-serif;
+        }
+        .apply-btn {
+            background: rgba(40, 167, 69, 0.2);
+            border: 2px solid rgba(40, 167, 69, 0.5);
+            color: #28a745;
+            padding: 0.5rem 0.75rem;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+        .apply-btn:hover {
+            background: #28a745;
+            border-color: #28a745;
+            color: white;
+        }
+        .clear-btn {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            min-width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .clear-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .fa {
+            margin-right: 3px;
+        }
+        .problem {
+            background-color: #f8d7da;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #dc3545;
+        }
+        .solution {
+            background-color: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #28a745;
+        }
+        .feature-list {
+            background-color: #e2e3e5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .mobile-note {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+        }
+        @media (max-width: 768px) {
+            .input-row {
+                flex-wrap: wrap;
+            }
+            .apply-btn {
+                order: 1;
+                flex: 1;
+                min-width: 100px;
+                justify-content: center;
+            }
+            .clear-btn {
+                order: 2;
+                min-width: 50px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Teste - Botão "Aplicar" na Entrada Rápida de Gabarito</h1>
+        
+        <div class="test-section">
+            <div class="test-title">Problema Identificado</div>
+            <div class="problem">
+                <strong>❌ Problema:</strong> A entrada rápida de gabarito não funcionava corretamente em dispositivos móveis.
+                <ul>
+                    <li>Eventos de <code>input</code> e <code>paste</code> podem ter comportamento inconsistente no mobile</li>
+                    <li>Usuários móveis não conseguiam aplicar o gabarito digitado</li>
+                    <li>Falta de feedback visual de que a ação foi aplicada</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Solução Implementada</div>
+            <div class="solution">
+                <strong>✅ Solução:</strong> Adicionado botão "Aplicar" para garantir funcionalidade cross-platform.
+                <ul>
+                    <li>Botão dedicado para aplicar o gabarito manualmente</li>
+                    <li>Detecção automática de dispositivos móveis</li>
+                    <li>Aplicação automática mantida apenas para desktop</li>
+                    <li>Tecla Enter também aplica o gabarito</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Demonstração Visual</div>
+            
+            <div class="demo-section">
+                <label>
+                    <i class="fa fa-keyboard"></i> Entrada Rápida de Gabarito:
+                </label>
+                <div class="input-row">
+                    <input 
+                        class="gabarito-input"
+                        type="text" 
+                        placeholder="Ex: ABCDE.X*AB..." 
+                        maxlength="45"
+                        value="ABCDEX.*ABC"
+                    >
+                    <button class="apply-btn">
+                        <i class="fa fa-check"></i> Aplicar
+                    </button>
+                    <button class="clear-btn">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Funcionalidades Implementadas</div>
+            <div class="feature-list">
+                <h4>Comportamento do Sistema:</h4>
+                <ul>
+                    <li><strong>Desktop:</strong> Aplicação automática conforme o usuário digita + botão "Aplicar"</li>
+                    <li><strong>Mobile:</strong> Apenas botão "Aplicar" (sem aplicação automática)</li>
+                    <li><strong>Tecla Enter:</strong> Aplica o gabarito em qualquer dispositivo</li>
+                    <li><strong>Validação:</strong> Aceita apenas A, B, C, D, E, X, ., *</li>
+                    <li><strong>Botão Limpar:</strong> Remove todas as respostas</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Detecção de Mobile</div>
+            <div class="mobile-note">
+                <strong>📱 Lógica de Detecção:</strong>
+                <ul>
+                    <li>User Agent: Android, iOS, etc.</li>
+                    <li>Largura da tela: ≤ 768px</li>
+                    <li>Se detectado como mobile, a aplicação automática é desabilitada</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Mudanças no Código</div>
+            
+            <h4>1. HTML (simulado.html)</h4>
+            <pre style="background: #f8f9fa; padding: 10px; border-radius: 5px; font-size: 12px; overflow-x: auto;">
+&lt;div class="input-row"&gt;
+    &lt;input id="gabarito-input" .../&gt;
+    &lt;button id="apply-gabarito" class="apply-btn"&gt;
+        &lt;i class="fa fa-check"&gt;&lt;/i&gt; Aplicar
+    &lt;/button&gt;
+    &lt;button id="clear-gabarito" class="clear-btn"&gt;...&lt;/button&gt;
+&lt;/div&gt;
+            </pre>
+            
+            <h4>2. CSS (simulado-screen.css)</h4>
+            <pre style="background: #f8f9fa; padding: 10px; border-radius: 5px; font-size: 12px; overflow-x: auto;">
+.apply-btn {
+    background: rgba(40, 167, 69, 0.2);
+    border-color: rgba(40, 167, 69, 0.5);
+    color: #28a745;
+    /* ... estilos do botão */
+}
+
+@media (max-width: 768px) {
+    .apply-btn { order: 1; flex: 1; }
+    .clear-btn { order: 2; }
+}
+            </pre>
+            
+            <h4>3. JavaScript (UIController.js)</h4>
+            <pre style="background: #f8f9fa; padding: 10px; border-radius: 5px; font-size: 12px; overflow-x: auto;">
+setupGabaritoInput() {
+    const applyBtn = document.getElementById("apply-gabarito");
+    
+    // Aplicação automática apenas em desktop
+    if (!this.isMobile()) {
+        this.applyGabaritoToQuestions(value);
+    }
+    
+    // Botão aplicar
+    applyBtn.addEventListener("click", () => {
+        this.applyGabaritoToQuestions(gabaritoInput.value);
+    });
+}
+
+isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+    ) || window.innerWidth <= 768;
+}
+            </pre>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Status da Implementação</div>
+            <div style="background-color: #d4edda; padding: 15px; border-radius: 5px;">
+                <strong style="color: #155724;">✅ CONCLUÍDO:</strong> Botão "Aplicar" adicionado com sucesso!
+                <br><br>
+                <strong>Arquivos modificados:</strong>
+                <ul>
+                    <li>✅ simulado.html - Adicionado botão "Aplicar"</li>
+                    <li>✅ simulado-screen.css - Estilos do botão e responsividade</li>
+                    <li>✅ UIController.js - Lógica de detecção mobile e eventos</li>
+                </ul>
+                <br>
+                <strong>Funcionalidades:</strong>
+                <ul>
+                    <li>✅ Botão "Aplicar" funcional</li>
+                    <li>✅ Detecção de dispositivos móveis</li>
+                    <li>✅ Aplicação automática mantida no desktop</li>
+                    <li>✅ Enter também aplica o gabarito</li>
+                    <li>✅ Design responsivo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

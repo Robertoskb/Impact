@@ -146,6 +146,7 @@ export class UIController {
   setupGabaritoInput() {
     const gabaritoInput = document.getElementById("gabarito-input");
     const clearBtn = document.getElementById("clear-gabarito");
+    const applyBtn = document.getElementById("apply-gabarito");
 
     if (gabaritoInput) {
       // Filtrar entrada para permitir A, B, C, D, E e caracteres especiais (X, ., *)
@@ -155,8 +156,10 @@ export class UIController {
         value = value.replace(/[^ABCDEX.*]/g, "");
         e.target.value = value;
 
-        // Aplicar gabarito às questões
-        this.applyGabaritoToQuestions(value);
+        // Aplicar gabarito às questões (apenas em desktop)
+        if (!this.isMobile()) {
+          this.applyGabaritoToQuestions(value);
+        }
       });
 
       // Também aplicar quando colar texto
@@ -165,8 +168,17 @@ export class UIController {
           let value = e.target.value.toUpperCase();
           value = value.replace(/[^ABCDEX.*]/g, "");
           e.target.value = value;
-          this.applyGabaritoToQuestions(value);
+          if (!this.isMobile()) {
+            this.applyGabaritoToQuestions(value);
+          }
         }, 0);
+      });
+
+      // Enter também aplica o gabarito
+      gabaritoInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          this.applyGabaritoToQuestions(gabaritoInput.value);
+        }
       });
     }
 
@@ -175,6 +187,14 @@ export class UIController {
         if (gabaritoInput) {
           gabaritoInput.value = "";
           this.clearAllAnswers();
+        }
+      });
+    }
+
+    if (applyBtn) {
+      applyBtn.addEventListener("click", () => {
+        if (gabaritoInput) {
+          this.applyGabaritoToQuestions(gabaritoInput.value);
         }
       });
     }
@@ -1621,5 +1641,11 @@ export class UIController {
     // Remover pontos do final (questões não respondidas)
     gabarito = gabarito.replace(/\.+$/, "");
     gabaritoInput.value = gabarito;
+  }
+
+  isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) || window.innerWidth <= 768;
   }
 }
