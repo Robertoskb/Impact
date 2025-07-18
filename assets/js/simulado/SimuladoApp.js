@@ -165,10 +165,6 @@ export class SimuladoApp {
     }
   }
 
-  reviewAnswers() {
-    this.uiController.showReviewMode();
-  }
-
   // Métodos para simulados salvos
   loadSavedSimulado(simuladoId) {
     const simuladoData = this.savedSimuladosManager.loadSimulado(simuladoId);

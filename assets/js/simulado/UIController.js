@@ -131,12 +131,9 @@ export class UIController {
 
     const newSimuladoBtn = document.getElementById("new-simulado");
     if (newSimuladoBtn) {
-      newSimuladoBtn.addEventListener("click", () => this.app.newSimulado());
-    }
-
-    const reviewBtn = document.getElementById("review-answers");
-    if (reviewBtn) {
-      reviewBtn.addEventListener("click", () => this.app.reviewAnswers());
+      newSimuladoBtn.addEventListener("click", () => {
+        window.location.reload();
+      });
     }
 
     // Entrada rápida de gabarito
@@ -700,79 +697,6 @@ export class UIController {
         // Atualizar entrada de gabarito
         setTimeout(() => this.updateGabaritoFromAnswers(), 0);
       });
-    });
-  }
-
-  showReviewMode() {
-    this.showSimuladoScreen();
-
-    const answers = this.app.getAnswers();
-    Object.keys(answers).forEach((position) => {
-      const radio = document.querySelector(
-        `input[name="question_${position}"][value="${answers[position]}"]`
-      );
-      if (radio) {
-        radio.checked = true;
-        radio.closest(".alternative").classList.add("selected");
-      }
-    });
-
-    document.querySelectorAll('input[type="radio"]').forEach((radio) => {
-      radio.disabled = true;
-    });
-
-    // Esconder entrada de gabarito no modo revisão
-    this.hideGabaritoInput();
-
-    // Mudar apenas o texto e função do botão para modo revisão
-    this.setReviewModeButton();
-  }
-
-  setReviewModeButton() {
-    const finishBtn = document.getElementById("finish-simulado");
-    finishBtn.innerHTML =
-      '<i class="fa fa-arrow-left"></i> Voltar aos Resultados';
-
-    // Armazenar o handler atual para poder remover depois
-    if (!finishBtn._originalHandler) {
-      finishBtn._originalHandler = () => this.app.finishSimulado();
-    }
-
-    // Remover handler original
-    finishBtn.removeEventListener("click", finishBtn._originalHandler);
-
-    // Criar handler para modo revisão
-    const reviewHandler = () => {
-      this.restoreNormalModeButton();
-      this.showResultsScreen();
-    };
-
-    // Armazenar handler de revisão para poder remover depois
-    finishBtn._reviewHandler = reviewHandler;
-
-    // Adicionar handler de revisão
-    finishBtn.addEventListener("click", reviewHandler);
-  }
-
-  restoreNormalModeButton() {
-    const finishBtn = document.getElementById("finish-simulado");
-    finishBtn.innerHTML = '<i class="fa fa-check"></i> Finalizar Simulado';
-
-    // Remover handler de revisão
-    if (finishBtn._reviewHandler) {
-      finishBtn.removeEventListener("click", finishBtn._reviewHandler);
-      delete finishBtn._reviewHandler;
-    }
-
-    // Restaurar handler original
-    if (!finishBtn._originalHandler) {
-      finishBtn._originalHandler = () => this.app.finishSimulado();
-    }
-    finishBtn.addEventListener("click", finishBtn._originalHandler);
-
-    // Habilitar radios novamente
-    document.querySelectorAll('input[type="radio"]').forEach((radio) => {
-      radio.disabled = false;
     });
   }
 
