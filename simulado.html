@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Botão de menu para mobile -->
     <button id="menuToggleBtn" class="menu-toggle">
@@ -37,7 +39,8 @@
                     <li><a href="index.html" class="menu-link"><i class="fa fa-home"></i> Início</a></li>
                     <li><a href="simulado.html" class="menu-link active"><i class="fa fa-edit"></i> Simulados</a></li>
                     <li><a href="#" class="menu-link"><i class="fa fa-cog"></i> Configurações</a></li>
-                    <li><a href="#" id="toggleTheme" class="menu-link"><i class="fa fa-adjust"></i> Tema Light/Dark</a></li>
+                    <li><a href="#" id="toggleTheme" class="menu-link"><i class="fa fa-adjust"></i> Tema Light/Dark</a>
+                    </li>
                     <li><a href="#" class="menu-link"><i class="fa fa-question-circle"></i> Ajuda</a></li>
                     <li><a href="#" class="menu-link"><i class="fa fa-info-circle"></i> Sobre</a></li>
                 </ul>
@@ -49,10 +52,10 @@
             <div id="config-screen" class="config-screen">
                 <div class="container">
                     <h1><i class="fa fa-edit"></i> Simulados ENEM</h1>
-                    
+
                     <div class="config-card">
                         <h2>Configurar Simulado</h2>
-                        
+
                         <div class="config-section">
                             <h3><i class="fa fa-calendar"></i> Selecionar Ano</h3>
                             <div id="year-selection" class="year-buttons">
@@ -137,7 +140,7 @@
                                 <i class="fa fa-arrow-left"></i> Voltar
                             </button>
                         </div>
-                        
+
                         <div class="saved-stats">
                             <div class="stat-item">
                                 <span class="stat-number" id="total-saved">0</span>
@@ -184,13 +187,9 @@
                                     <i class="fa fa-keyboard"></i> Entrada Rápida de Gabarito:
                                 </label>
                                 <div class="input-row">
-                                    <input 
-                                        type="text" 
-                                        id="gabarito-input" 
-                                        placeholder="Ex: ABCDE.X*AB..." 
+                                    <input type="text" id="gabarito-input" placeholder="Ex: ABCDE.X*AB..."
                                         title="Digite as respostas (A, B, C, D, E) ou use X, ., * para questões em branco"
-                                        maxlength="45"
-                                    >
+                                        maxlength="45">
                                     <button id="apply-gabarito" class="apply-btn" title="Aplicar gabarito">
                                         <i class="fa fa-check"></i> Aplicar
                                     </button>
@@ -223,7 +222,7 @@
                 <div class="container">
                     <div class="results-card">
                         <h2><i class="fa fa-chart-bar"></i> Resultado do Simulado</h2>
-                        
+
                         <!-- Navegação por Abas -->
                         <div class="results-tabs">
                             <button class="tab-button active" data-tab="geral">
@@ -269,7 +268,7 @@
                                         <span id="performance" class="result-value">0%</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="general-stats">
                                     <h3><i class="fa fa-chart-bar"></i> Estatísticas Gerais</h3>
                                     <div id="general-stats-content">
@@ -313,11 +312,12 @@
                             </div>
                         </div>
 
-                        <div class="results-actions">
+                        <!-- bugs para corrigir -->
+                        <!-- <div class="results-actions">
                             <button id="new-simulado" class="new-simulado-btn">
                                 <i class="fa fa-plus"></i> Novo Simulado
                             </button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -332,7 +332,8 @@
             </div>
             <div class="modal-body">
                 <p>Tem certeza que deseja finalizar o simulado?</p>
-                <p class="modal-warning">Após finalizar, você verá o resultado e não poderá mais alterar suas respostas.</p>
+                <p class="modal-warning">Após finalizar, você verá o resultado e não poderá mais alterar suas respostas.
+                </p>
             </div>
             <div class="modal-actions">
                 <button id="finish-cancel" class="modal-btn cancel-btn">
@@ -374,7 +375,8 @@
             </div>
             <div class="modal-body">
                 <p>Deseja salvar este simulado para poder revisar os resultados mais tarde?</p>
-                <p class="modal-info">Você poderá acessar todos os dados e análises novamente através de "Ver Simulados Salvos".</p>
+                <p class="modal-info">Você poderá acessar todos os dados e análises novamente através de "Ver Simulados
+                    Salvos".</p>
             </div>
             <div class="modal-actions">
                 <button id="save-cancel" class="modal-btn cancel-btn">
@@ -410,4 +412,5 @@
 
     <script type="module" src="assets/js/simulado-main.js"></script>
 </body>
+
 </html>
