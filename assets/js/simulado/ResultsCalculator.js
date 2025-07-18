@@ -41,10 +41,7 @@ export class ResultsCalculator {
 
       if (isCancelled) {
         cancelledQuestions++;
-        // Para questões anuladas, só conta como acerto se o usuário respondeu
-        if (answers[question.position]) {
-          correctAnswers++;
-        }
+        // Questões anuladas não contam como acerto na estatística final
       } else {
         if (isCorrect) {
           correctAnswers++;
@@ -241,24 +238,21 @@ export class ResultsCalculator {
   }
 
   calculateStatistics(totalQuestions, correctAnswers, cancelledQuestions) {
-    // Questões respondidas = total - anuladas
-    const answeredQuestions = totalQuestions - cancelledQuestions;
+    // Questões válidas para resposta = total - anuladas
+    const validQuestions = totalQuestions - cancelledQuestions;
 
-    // Acertos reais = acertos totais - anuladas (que sempre contam como acerto)
-    const realCorrectAnswers = correctAnswers - cancelledQuestions;
+    // Erros = questões válidas - acertos
+    const wrongAnswers = validQuestions - correctAnswers;
 
-    // Erros = questões respondidas - acertos reais
-    const wrongAnswers = answeredQuestions - realCorrectAnswers;
-
-    // Performance = acertos reais / questões respondidas
+    // Performance = acertos / questões válidas
     const performance =
-      answeredQuestions > 0
-        ? Math.round((realCorrectAnswers / answeredQuestions) * 100)
+      validQuestions > 0
+        ? Math.round((correctAnswers / validQuestions) * 100)
         : 0;
 
     return {
       totalQuestions,
-      correctAnswers, // Total de acertos (incluindo anuladas)
+      correctAnswers, // Acertos reais (não incluem anuladas)
       wrongAnswers,
       cancelledQuestions,
       performance,
@@ -293,7 +287,7 @@ export class ResultsCalculator {
     console.log("Posições das anuladas:", this.cancelledPositions);
     console.log("=== ESTATÍSTICAS PARA O USUÁRIO ===");
     console.log(`Total de questões: ${stats.totalQuestions}`);
-    console.log(`Acertos (incluindo anuladas): ${stats.correctAnswers}`);
+    console.log(`Acertos (excluindo anuladas): ${stats.correctAnswers}`);
     console.log(`Erros: ${stats.wrongAnswers}`);
     console.log(`Anuladas: ${stats.cancelledQuestions}`);
     console.log(`Performance: ${stats.performance}%`);

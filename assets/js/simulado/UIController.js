@@ -138,6 +138,111 @@ export class UIController {
     if (reviewBtn) {
       reviewBtn.addEventListener("click", () => this.app.reviewAnswers());
     }
+
+    // Entrada rápida de gabarito
+    this.setupGabaritoInput();
+  }
+
+  setupGabaritoInput() {
+    const gabaritoInput = document.getElementById("gabarito-input");
+    const clearBtn = document.getElementById("clear-gabarito");
+
+    if (gabaritoInput) {
+      // Filtrar entrada para permitir A, B, C, D, E e caracteres especiais (X, ., *)
+      gabaritoInput.addEventListener("input", (e) => {
+        let value = e.target.value.toUpperCase();
+        // Permitir letras A, B, C, D, E e caracteres especiais X, ., *
+        value = value.replace(/[^ABCDEX.*]/g, "");
+        e.target.value = value;
+
+        // Aplicar gabarito às questões
+        this.applyGabaritoToQuestions(value);
+      });
+
+      // Também aplicar quando colar texto
+      gabaritoInput.addEventListener("paste", (e) => {
+        setTimeout(() => {
+          let value = e.target.value.toUpperCase();
+          value = value.replace(/[^ABCDEX.*]/g, "");
+          e.target.value = value;
+          this.applyGabaritoToQuestions(value);
+        }, 0);
+      });
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        if (gabaritoInput) {
+          gabaritoInput.value = "";
+          this.clearAllAnswers();
+        }
+      });
+    }
+  }
+
+  applyGabaritoToQuestions(gabarito) {
+    const questions = this.app.getQuestions();
+
+    for (let i = 0; i < gabarito.length && i < questions.length; i++) {
+      const question = questions[i];
+      const answer = gabarito[i];
+
+      // Limpar seleções anteriores da questão primeiro
+      const questionDiv = document
+        .querySelector(
+          `.question-card input[name="question_${question.position}"]`
+        )
+        ?.closest(".question-card");
+      if (questionDiv) {
+        questionDiv.querySelectorAll(".alternative").forEach((alt) => {
+          alt.classList.remove("selected");
+        });
+
+        // Desmarcar todos os radios da questão
+        questionDiv.querySelectorAll('input[type="radio"]').forEach((radio) => {
+          radio.checked = false;
+        });
+      }
+
+      // Se for uma resposta válida (A, B, C, D, E), marcar a opção
+      if (["A", "B", "C", "D", "E"].includes(answer)) {
+        const radio = document.querySelector(
+          `input[name="question_${question.position}"][value="${answer}"]`
+        );
+
+        if (radio) {
+          // Marcar a nova resposta
+          radio.checked = true;
+          radio.closest(".alternative").classList.add("selected");
+
+          // Salvar a resposta no app
+          this.app.setAnswer(question.position, answer);
+        }
+      } else if (["X", ".", "*"].includes(answer)) {
+        // Para caracteres especiais (X, ., *), apenas limpar a resposta
+        this.app.clearAnswer(question.position);
+      }
+    }
+  }
+
+  clearAllAnswers() {
+    // Limpar todas as seleções visuais
+    document.querySelectorAll(".alternative.selected").forEach((alt) => {
+      alt.classList.remove("selected");
+    });
+
+    // Desmarcar todos os radios
+    document
+      .querySelectorAll('input[type="radio"][name^="question_"]')
+      .forEach((radio) => {
+        radio.checked = false;
+      });
+
+    // Limpar respostas no app
+    const questions = this.app.getQuestions();
+    questions.forEach((question) => {
+      this.app.clearAnswer(question.position);
+    });
   }
 
   initTheme() {
@@ -428,6 +533,9 @@ export class UIController {
     document.getElementById(
       "simulado-color"
     ).textContent = `Cor: ${this.getColorName(config.color)}`;
+
+    // Garantir que a entrada de gabarito seja mostrada (pode ter sido escondida no modo revisão)
+    this.showGabaritoInput();
   }
 
   showConfigScreen() {
@@ -557,6 +665,9 @@ export class UIController {
         });
         alternative.classList.add("selected");
         this.app.setAnswer(question.position, radio.value);
+
+        // Atualizar entrada de gabarito
+        setTimeout(() => this.updateGabaritoFromAnswers(), 0);
       });
 
       radio.addEventListener("change", (e) => {
@@ -565,6 +676,9 @@ export class UIController {
         });
         e.target.closest(".alternative").classList.add("selected");
         this.app.setAnswer(question.position, e.target.value);
+
+        // Atualizar entrada de gabarito
+        setTimeout(() => this.updateGabaritoFromAnswers(), 0);
       });
     });
   }
@@ -586,6 +700,9 @@ export class UIController {
     document.querySelectorAll('input[type="radio"]').forEach((radio) => {
       radio.disabled = true;
     });
+
+    // Esconder entrada de gabarito no modo revisão
+    this.hideGabaritoInput();
 
     // Mudar apenas o texto e função do botão para modo revisão
     this.setReviewModeButton();
@@ -655,6 +772,9 @@ export class UIController {
     if (languageSection) {
       languageSection.style.display = "none";
     }
+
+    // Limpar entrada de gabarito
+    this.clearGabaritoInput();
 
     this.app.currentConfig = {
       year: null,
@@ -1452,5 +1572,54 @@ export class UIController {
     header.addEventListener("touchstart", dragStart, false);
     document.addEventListener("touchend", dragEnd, false);
     document.addEventListener("touchmove", drag, false);
+  }
+
+  hideGabaritoInput() {
+    const gabaritoContainer = document.querySelector(
+      ".gabarito-input-container"
+    );
+    if (gabaritoContainer) {
+      gabaritoContainer.style.display = "none";
+    }
+  }
+
+  showGabaritoInput() {
+    const gabaritoContainer = document.querySelector(
+      ".gabarito-input-container"
+    );
+    if (gabaritoContainer) {
+      gabaritoContainer.style.display = "flex";
+    }
+  }
+
+  clearGabaritoInput() {
+    const gabaritoInput = document.getElementById("gabarito-input");
+    if (gabaritoInput) {
+      gabaritoInput.value = "";
+    }
+  }
+
+  updateGabaritoFromAnswers() {
+    const gabaritoInput = document.getElementById("gabarito-input");
+    if (!gabaritoInput) return;
+
+    const questions = this.app.getQuestions();
+    const answers = this.app.getAnswers();
+    let gabarito = "";
+
+    // Criar string de gabarito baseada nas respostas atuais
+    questions.forEach((question) => {
+      const answer = answers[question.position];
+      if (answer && ["A", "B", "C", "D", "E"].includes(answer)) {
+        gabarito += answer;
+      } else {
+        // Se não há resposta, usar '.' como placeholder
+        gabarito += ".";
+      }
+    });
+
+    // Remover pontos do final (questões não respondidas)
+    gabarito = gabarito.replace(/\.+$/, "");
+    gabaritoInput.value = gabarito;
   }
 }

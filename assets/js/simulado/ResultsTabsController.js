@@ -1,5 +1,4 @@
 import { GeneralTabRenderer } from "./tabs/GeneralTabRenderer.js";
-import { AreasTabRenderer } from "./tabs/AreasTabRenderer.js";
 import { DifficultyTabRenderer } from "./tabs/DifficultyTabRenderer.js";
 import { PatternsTabRenderer } from "./tabs/PatternsTabRenderer.js";
 import { AnswerSheetTabRenderer } from "./tabs/AnswerSheetTabRenderer.js";
@@ -17,7 +16,6 @@ export class ResultsTabsController {
       this.renderers = {
         geral: new GeneralTabRenderer(app),
         habilidades: null, // Gerenciado pelo SkillsReportCalculator
-        areas: new AreasTabRenderer(app),
         dificuldade: new DifficultyTabRenderer(app),
         padroes: new PatternsTabRenderer(app),
         gabarito: new AnswerSheetTabRenderer(app),

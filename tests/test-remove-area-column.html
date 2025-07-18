@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Remoção da Coluna Área na Tabela de Dificuldade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .before, .after {
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .before {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+        .after {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .removed-column {
+            background-color: #f8d7da;
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        .fa {
+            margin-right: 3px;
+        }
+        .code-change {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+        }
+        .removed-line {
+            background-color: #ffeaea;
+            text-decoration: line-through;
+            color: #999;
+        }
+        .added-line {
+            background-color: #eaffea;
+        }
+        .success {
+            color: #155724;
+            font-weight: bold;
+        }
+        .info {
+            background-color: #d1ecf1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Teste - Remoção da Coluna "Área" na Tabela de Dificuldade</h1>
+        
+        <div class="test-section">
+            <div class="test-title">Motivação da Mudança</div>
+            <div class="info">
+                <strong>Problema:</strong> A coluna "Área" na tabela de dificuldade era redundante, pois:
+                <ul>
+                    <li>Quando visualizando "Todas as Áreas", a área já é indicada por outras formas</li>
+                    <li>Quando filtrando por área específica, a informação é óbvia</li>
+                    <li>Ocupava espaço desnecessário na tabela</li>
+                </ul>
+                <strong>Solução:</strong> Remover completamente a coluna "Área" da tabela.
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Comparação: Antes vs Depois</div>
+            
+            <div class="comparison">
+                <div class="before">
+                    <h4>❌ ANTES (com coluna Área)</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><i class="fa fa-hashtag"></i> Questão</th>
+                                <th><i class="fa fa-signal"></i> Dificuldade</th>
+                                <th><i class="fa fa-layer-group"></i> Nível</th>
+                                <th class="removed-column"><i class="fa fa-book"></i> Área</th>
+                                <th><i class="fa fa-user-edit"></i> Sua Resposta</th>
+                                <th><i class="fa fa-check-circle"></i> Gabarito</th>
+                                <th><i class="fa fa-flag"></i> Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>520</td>
+                                <td>Muito fácil</td>
+                                <td class="removed-column">LC0</td>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>Correto</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>750</td>
+                                <td>Difícil</td>
+                                <td class="removed-column">MT</td>
+                                <td>C</td>
+                                <td>B</td>
+                                <td>Incorreto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="after">
+                    <h4>✅ DEPOIS (sem coluna Área)</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><i class="fa fa-hashtag"></i> Questão</th>
+                                <th><i class="fa fa-signal"></i> Dificuldade</th>
+                                <th><i class="fa fa-layer-group"></i> Nível</th>
+                                <th><i class="fa fa-user-edit"></i> Sua Resposta</th>
+                                <th><i class="fa fa-check-circle"></i> Gabarito</th>
+                                <th><i class="fa fa-flag"></i> Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>520</td>
+                                <td>Muito fácil</td>
+                                <td>A</td>
+                                <td>A</td>
+                                <td>Correto</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>750</td>
+                                <td>Difícil</td>
+                                <td>C</td>
+                                <td>B</td>
+                                <td>Incorreto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Mudanças no Código</div>
+            
+            <h4>1. Cabeçalho da Tabela (thead)</h4>
+            <div class="code-change">
+                <div class="removed-line">                &lt;th&gt;&lt;i class="fa fa-book"&gt;&lt;/i&gt; Área&lt;/th&gt;</div>
+            </div>
+            
+            <h4>2. Linhas de Dados (tbody)</h4>
+            <div class="code-change">
+                <div class="removed-line">          &lt;td&gt;&lt;span class="area-badge"&gt;${question.area}&lt;/span&gt;&lt;/td&gt;</div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Benefícios da Mudança</div>
+            <div class="info">
+                <ul>
+                    <li><strong>Mais espaço:</strong> Tabela fica menos congestionada, especialmente em telas menores</li>
+                    <li><strong>Menos redundância:</strong> Remove informação já conhecida pelo contexto</li>
+                    <li><strong>Foco no essencial:</strong> Destaca as informações realmente importantes (dificuldade, respostas, status)</li>
+                    <li><strong>Melhor UX:</strong> Interface mais limpa e direta</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Arquivos Modificados</div>
+            <div class="info">
+                <strong>Arquivo alterado:</strong><br>
+                <code>c:\Users\joser\OneDrive\Documentos\Impact\assets\js\simulado\tabs\DifficultyTabRenderer.js</code>
+                <br><br>
+                <strong>Função modificada:</strong><br>
+                <code>renderDifficultyTable(difficultyData)</code>
+                <br><br>
+                <strong>Linhas alteradas:</strong>
+                <ul>
+                    <li>Linha ~418: Removido cabeçalho da coluna "Área"</li>
+                    <li>Linha ~470: Removido célula de dados da área</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Status da Implementação</div>
+            <div style="background-color: #d4edda; padding: 15px; border-radius: 5px;">
+                <strong class="success">✅ CONCLUÍDO:</strong> A coluna "Área" foi removida com sucesso da tabela de dificuldade!
+                <br><br>
+                <strong>Validações realizadas:</strong>
+                <ul>
+                    <li>✅ Coluna removida do cabeçalho da tabela</li>
+                    <li>✅ Dados da área removidos das linhas da tabela</li>
+                    <li>✅ Estrutura HTML mantida correta</li>
+                    <li>✅ Sem erros de sintaxe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

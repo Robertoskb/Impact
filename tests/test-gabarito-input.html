@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Entrada de Gabarito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .gabarito-input-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: #2196F3;
+            border-radius: 8px;
+            color: white;
+        }
+        .gabarito-input-container label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .input-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        #gabarito-input {
+            flex: 1;
+            padding: 0.5rem 0.75rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        #gabarito-input:focus {
+            outline: none;
+            border-color: white;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        #gabarito-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .clear-btn {
+            padding: 0.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            min-width: 40px;
+        }
+        .clear-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .question-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #2196F3;
+        }
+        .question-number {
+            font-weight: bold;
+            color: #2196F3;
+            margin-bottom: 10px;
+        }
+        .alternatives {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .alternative {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .alternative:hover {
+            background: #f0f0f0;
+            border-color: #2196F3;
+        }
+        .alternative.selected {
+            background: #e3f2fd;
+            border-color: #2196F3;
+        }
+        .alternative-letter {
+            font-weight: bold;
+            color: #2196F3;
+            min-width: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f5e8;
+            border-radius: 5px;
+            border-left: 4px solid #4caf50;
+        }
+        .error {
+            background: #ffebee;
+            border-left-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Teste da Entrada de Gabarito</h1>
+        <p>Este é um teste para verificar a funcionalidade da entrada rápida de gabarito.</p>
+        
+        <!-- Simulação da entrada de gabarito -->
+        <div class="gabarito-input-container">
+            <label for="gabarito-input">
+                <i>⌨️</i> Entrada Rápida de Gabarito:
+            </label>
+            <div class="input-row">
+                <input 
+                    type="text" 
+                    id="gabarito-input" 
+                    placeholder="Ex: ABCDE.X*AB..." 
+                    title="Digite as respostas (A, B, C, D, E) ou use X, ., * para questões em branco"
+                    maxlength="45"
+                >
+                <button id="clear-gabarito" class="clear-btn" title="Limpar gabarito">
+                    ✖️
+                </button>
+            </div>
+        </div>
+
+        <!-- Simulação de algumas questões -->
+        <div id="questions-container">
+            <div class="question-card" data-position="1">
+                <div class="question-number">Questão 1</div>
+                <div class="alternatives">
+                    <label class="alternative" data-letter="A">
+                        <input type="radio" name="question_1" value="A">
+                        <span class="alternative-letter">A</span>
+                        <span>Alternativa A</span>
+                    </label>
+                    <label class="alternative" data-letter="B">
+                        <input type="radio" name="question_1" value="B">
+                        <span class="alternative-letter">B</span>
+                        <span>Alternativa B</span>
+                    </label>
+                    <label class="alternative" data-letter="C">
+                        <input type="radio" name="question_1" value="C">
+                        <span class="alternative-letter">C</span>
+                        <span>Alternativa C</span>
+                    </label>
+                    <label class="alternative" data-letter="D">
+                        <input type="radio" name="question_1" value="D">
+                        <span class="alternative-letter">D</span>
+                        <span>Alternativa D</span>
+                    </label>
+                    <label class="alternative" data-letter="E">
+                        <input type="radio" name="question_1" value="E">
+                        <span class="alternative-letter">E</span>
+                        <span>Alternativa E</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card" data-position="2">
+                <div class="question-number">Questão 2</div>
+                <div class="alternatives">
+                    <label class="alternative" data-letter="A">
+                        <input type="radio" name="question_2" value="A">
+                        <span class="alternative-letter">A</span>
+                        <span>Alternativa A</span>
+                    </label>
+                    <label class="alternative" data-letter="B">
+                        <input type="radio" name="question_2" value="B">
+                        <span class="alternative-letter">B</span>
+                        <span>Alternativa B</span>
+                    </label>
+                    <label class="alternative" data-letter="C">
+                        <input type="radio" name="question_2" value="C">
+                        <span class="alternative-letter">C</span>
+                        <span>Alternativa C</span>
+                    </label>
+                    <label class="alternative" data-letter="D">
+                        <input type="radio" name="question_2" value="D">
+                        <span class="alternative-letter">D</span>
+                        <span>Alternativa D</span>
+                    </label>
+                    <label class="alternative" data-letter="E">
+                        <input type="radio" name="question_2" value="E">
+                        <span class="alternative-letter">E</span>
+                        <span>Alternativa E</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card" data-position="3">
+                <div class="question-number">Questão 3</div>
+                <div class="alternatives">
+                    <label class="alternative" data-letter="A">
+                        <input type="radio" name="question_3" value="A">
+                        <span class="alternative-letter">A</span>
+                        <span>Alternativa A</span>
+                    </label>
+                    <label class="alternative" data-letter="B">
+                        <input type="radio" name="question_3" value="B">
+                        <span class="alternative-letter">B</span>
+                        <span>Alternativa B</span>
+                    </label>
+                    <label class="alternative" data-letter="C">
+                        <input type="radio" name="question_3" value="C">
+                        <span class="alternative-letter">C</span>
+                        <span>Alternativa C</span>
+                    </label>
+                    <label class="alternative" data-letter="D">
+                        <input type="radio" name="question_3" value="D">
+                        <span class="alternative-letter">D</span>
+                        <span>Alternativa D</span>
+                    </label>
+                    <label class="alternative" data-letter="E">
+                        <input type="radio" name="question_3" value="E">
+                        <span class="alternative-letter">E</span>
+                        <span>Alternativa E</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="result" class="result" style="display: none;">
+            <h3>Resultado do Teste:</h3>
+            <p id="result-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // Simulação simplificada da funcionalidade
+        const gabaritoInput = document.getElementById('gabarito-input');
+        const clearBtn = document.getElementById('clear-gabarito');
+        const result = document.getElementById('result');
+        const resultText = document.getElementById('result-text');
+
+        // Filtrar entrada para permitir A, B, C, D, E e caracteres especiais
+        gabaritoInput.addEventListener('input', (e) => {
+            let value = e.target.value.toUpperCase();
+            // Permitir letras A, B, C, D, E e caracteres especiais X, ., *
+            value = value.replace(/[^ABCDEX.*]/g, '');
+            e.target.value = value;
+            
+            // Aplicar gabarito às questões
+            applyGabaritoToQuestions(value);
+            showResult(value);
+        });
+
+        // Também aplicar quando colar texto
+        gabaritoInput.addEventListener('paste', (e) => {
+            setTimeout(() => {
+                let value = e.target.value.toUpperCase();
+                value = value.replace(/[^ABCDEX.*]/g, '');
+                e.target.value = value;
+                applyGabaritoToQuestions(value);
+                showResult(value);
+            }, 0);
+        });
+
+        // Botão limpar
+        clearBtn.addEventListener('click', () => {
+            gabaritoInput.value = '';
+            clearAllAnswers();
+            result.style.display = 'none';
+        });
+
+        function applyGabaritoToQuestions(gabarito) {
+            const questions = document.querySelectorAll('.question-card');
+            
+            questions.forEach((questionCard, index) => {
+                // Limpar seleções anteriores da questão primeiro
+                questionCard.querySelectorAll('.alternative').forEach(alt => {
+                    alt.classList.remove('selected');
+                });
+                questionCard.querySelectorAll('input[type="radio"]').forEach(radio => {
+                    radio.checked = false;
+                });
+                
+                if (index < gabarito.length) {
+                    const answer = gabarito[index];
+                    
+                    // Se for uma resposta válida (A, B, C, D, E), marcar a opção
+                    if (['A', 'B', 'C', 'D', 'E'].includes(answer)) {
+                        const radio = questionCard.querySelector(`input[value="${answer}"]`);
+                        
+                        if (radio) {
+                            // Marcar a nova resposta
+                            radio.checked = true;
+                            radio.closest('.alternative').classList.add('selected');
+                        }
+                    }
+                    // Para caracteres especiais (X, ., *), não marcar nada (questão fica em branco)
+                }
+            });
+        }
+
+        function clearAllAnswers() {
+            // Limpar todas as seleções visuais
+            document.querySelectorAll('.alternative.selected').forEach(alt => {
+                alt.classList.remove('selected');
+            });
+            
+            // Desmarcar todos os radios
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.checked = false;
+            });
+        }
+
+        function showResult(gabarito) {
+            if (gabarito.length > 0) {
+                result.style.display = 'block';
+                result.className = 'result';
+                
+                const validAnswers = gabarito.replace(/[X.*]/g, '').length;
+                const blankAnswers = gabarito.replace(/[ABCDE]/g, '').length;
+                
+                resultText.innerHTML = `
+                    <strong>Gabarito digitado:</strong> ${gabarito}<br>
+                    <strong>Respostas válidas:</strong> ${validAnswers}<br>
+                    <strong>Questões em branco:</strong> ${blankAnswers}<br>
+                    <strong>Total processado:</strong> ${gabarito.length} de 3<br>
+                    <strong>Caracteres aceitos:</strong> A, B, C, D, E (respostas) | X, ., * (em branco)
+                `;
+            } else {
+                result.style.display = 'none';
+            }
+        }
+
+        // Adicionar event listeners para cliques manuais nas alternativas
+        document.querySelectorAll('.alternative').forEach(alternative => {
+            alternative.addEventListener('click', (e) => {
+                if (e.target.type === 'radio') return;
+                
+                const radio = alternative.querySelector('input[type="radio"]');
+                const questionCard = alternative.closest('.question-card');
+                
+                radio.checked = true;
+                questionCard.querySelectorAll('.alternative').forEach(alt => {
+                    alt.classList.remove('selected');
+                });
+                alternative.classList.add('selected');
+                
+                // Atualizar entrada de gabarito baseado nas respostas marcadas
+                updateGabaritoFromAnswers();
+            });
+        });
+
+        function updateGabaritoFromAnswers() {
+            const questions = document.querySelectorAll('.question-card');
+            let gabarito = '';
+            
+            questions.forEach(questionCard => {
+                const checkedRadio = questionCard.querySelector('input[type="radio"]:checked');
+                if (checkedRadio) {
+                    gabarito += checkedRadio.value;
+                } else {
+                    gabarito += '.'; // Usar ponto para questões não respondidas
+                }
+            });
+            
+            // Remover pontos do final
+            gabarito = gabarito.replace(/\.+$/, '');
+            gabaritoInput.value = gabarito;
+            if (gabarito) {
+                showResult(gabarito);
+            }
+        }
+    </script>
+</body>
+</html>

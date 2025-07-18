@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Contagem de Acertos (Excluindo Anuladas)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .scenario {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .scenario h3 {
+            color: #2196F3;
+            margin-top: 0;
+        }
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .question-item {
+            text-align: center;
+            padding: 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .correct {
+            background: #4caf50;
+            color: white;
+        }
+        .wrong {
+            background: #f44336;
+            color: white;
+        }
+        .cancelled {
+            background: #ff9800;
+            color: white;
+        }
+        .unanswered {
+            background: #e0e0e0;
+            color: #666;
+        }
+        .stats {
+            background: #f8f9fa;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .stats-old {
+            background: #ffebee;
+            border-left-color: #f44336;
+        }
+        .stats-new {
+            background: #e8f5e8;
+            border-left-color: #4caf50;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧮 Teste: Contagem de Acertos (Excluindo Questões Anuladas)</h1>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color correct"></div>
+                <span>Acerto</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color wrong"></div>
+                <span>Erro</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color cancelled"></div>
+                <span>Anulada</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color unanswered"></div>
+                <span>Não respondida</span>
+            </div>
+        </div>
+
+        <!-- Cenário 1 -->
+        <div class="scenario">
+            <h3>📝 Cenário 1: Simulado com 10 questões (2 anuladas)</h3>
+            <div class="questions-grid">
+                <div class="question-item correct">Q1: ✓</div>
+                <div class="question-item wrong">Q2: ✗</div>
+                <div class="question-item correct">Q3: ✓</div>
+                <div class="question-item cancelled">Q4: ⚠️</div>
+                <div class="question-item correct">Q5: ✓</div>
+                <div class="question-item wrong">Q6: ✗</div>
+                <div class="question-item cancelled">Q7: ⚠️</div>
+                <div class="question-item correct">Q8: ✓</div>
+                <div class="question-item unanswered">Q9: -</div>
+                <div class="question-item correct">Q10: ✓</div>
+            </div>
+            
+            <div class="stats stats-old">
+                <h4>❌ Cálculo ANTIGO (incorreto):</h4>
+                <p><strong>Acertos:</strong> 5 válidos + 2 anuladas = 7</p>
+                <p><strong>Total de questões:</strong> 10</p>
+                <p><strong>Aproveitamento:</strong> 7/10 = 70%</p>
+                <p><em>❗ Problema: Inclui anuladas como acerto</em></p>
+            </div>
+
+            <div class="stats stats-new">
+                <h4>✅ Cálculo NOVO (correto):</h4>
+                <p><strong>Acertos:</strong> 5 (apenas válidas)</p>
+                <p><strong>Questões válidas:</strong> 8 (10 - 2 anuladas)</p>
+                <p><strong>Erros:</strong> 3 (8 - 5)</p>
+                <p><strong>Aproveitamento:</strong> 5/8 = 62.5%</p>
+                <p><em>✅ Correto: Anuladas não contam como acerto</em></p>
+            </div>
+        </div>
+
+        <!-- Cenário 2 -->
+        <div class="scenario">
+            <h3>📝 Cenário 2: Simulado com 45 questões (3 anuladas)</h3>
+            <div class="questions-grid">
+                <!-- Primeiras 15 questões -->
+                <div class="question-item correct">Q1: ✓</div>
+                <div class="question-item correct">Q2: ✓</div>
+                <div class="question-item wrong">Q3: ✗</div>
+                <div class="question-item correct">Q4: ✓</div>
+                <div class="question-item wrong">Q5: ✗</div>
+                <div class="question-item cancelled">Q6: ⚠️</div>
+                <div class="question-item correct">Q7: ✓</div>
+                <div class="question-item correct">Q8: ✓</div>
+                <div class="question-item wrong">Q9: ✗</div>
+                <div class="question-item correct">Q10: ✓</div>
+                <div class="question-item correct">Q11: ✓</div>
+                <div class="question-item correct">Q12: ✓</div>
+                <div class="question-item cancelled">Q13: ⚠️</div>
+                <div class="question-item wrong">Q14: ✗</div>
+                <div class="question-item correct">Q15: ✓</div>
+                <!-- Simulação do restante -->
+                <div style="grid-column: 1/-1; text-align: center; padding: 20px; background: #f0f0f0; border-radius: 5px;">
+                    ... (30 questões no meio) ...
+                    <br><small>20 acertos, 10 erros</small>
+                </div>
+                <!-- Últimas questões -->
+                <div class="question-item wrong">Q43: ✗</div>
+                <div class="question-item correct">Q44: ✓</div>
+                <div class="question-item cancelled">Q45: ⚠️</div>
+            </div>
+            
+            <div class="stats stats-old">
+                <h4>❌ Cálculo ANTIGO (incorreto):</h4>
+                <p><strong>Acertos:</strong> 29 válidos + 3 anuladas = 32</p>
+                <p><strong>Total de questões:</strong> 45</p>
+                <p><strong>Aproveitamento:</strong> 32/45 = 71.1%</p>
+                <p><em>❗ Problema: Artificialmente infla a nota</em></p>
+            </div>
+
+            <div class="stats stats-new">
+                <h4>✅ Cálculo NOVO (correto):</h4>
+                <p><strong>Acertos:</strong> 29 (apenas válidas)</p>
+                <p><strong>Questões válidas:</strong> 42 (45 - 3 anuladas)</p>
+                <p><strong>Erros:</strong> 13 (42 - 29)</p>
+                <p><strong>Aproveitamento:</strong> 29/42 = 69.0%</p>
+                <p><em>✅ Correto: Reflete o desempenho real</em></p>
+            </div>
+        </div>
+
+        <!-- Cenário 3 -->
+        <div class="scenario">
+            <h3>📝 Cenário 3: Caso extremo - Todas anuladas</h3>
+            <div class="questions-grid">
+                <div class="question-item cancelled">Q1: ⚠️</div>
+                <div class="question-item cancelled">Q2: ⚠️</div>
+                <div class="question-item cancelled">Q3: ⚠️</div>
+                <div class="question-item cancelled">Q4: ⚠️</div>
+                <div class="question-item cancelled">Q5: ⚠️</div>
+            </div>
+            
+            <div class="stats stats-old">
+                <h4>❌ Cálculo ANTIGO (incorreto):</h4>
+                <p><strong>Acertos:</strong> 5 (todas anuladas)</p>
+                <p><strong>Aproveitamento:</strong> 5/5 = 100%</p>
+                <p><em>❗ Problema: 100% sem responder nada</em></p>
+            </div>
+
+            <div class="stats stats-new">
+                <h4>✅ Cálculo NOVO (correto):</h4>
+                <p><strong>Acertos:</strong> 0</p>
+                <p><strong>Questões válidas:</strong> 0</p>
+                <p><strong>Aproveitamento:</strong> 0% (indeterminado)</p>
+                <p><em>✅ Correto: Não há questões válidas para avaliar</em></p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h3>📊 Resumo da Correção</h3>
+            <ul>
+                <li><strong>Problema identificado:</strong> Questões anuladas eram contadas como acertos</li>
+                <li><strong>Solução implementada:</strong> Questões anuladas são excluídas da contagem de acertos</li>
+                <li><strong>Cálculo de aproveitamento:</strong> Acertos ÷ Questões válidas (total - anuladas)</li>
+                <li><strong>Impacto:</strong> Percentual mais preciso e justo do desempenho real</li>
+                <li><strong>Questões anuladas:</strong> Continuam sendo mostradas separadamente para transparência</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

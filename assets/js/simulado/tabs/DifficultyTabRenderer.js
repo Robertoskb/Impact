@@ -273,8 +273,12 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
         <div class="difficulty-stat-card">
           <h6><i class="fa ${iconClass}"></i> ${shortLevel}</h6>
           <div class="stat-content">
-            <div class="stat-number">${data.correct}/${data.total}</div>
-            <div class="stat-percentage">${percentage}%</div>
+            <div class="stat-number">${
+              level === "Anulada" ? data.total : `${data.correct}/${data.total}`
+            }</div>
+            <div class="stat-percentage">${
+              level === "Anulada" ? "questões" : `${percentage}%`
+            }</div>
           </div>
         </div>
       `;
@@ -418,7 +422,6 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
                   hasDifficultyData ? "Dificuldade (TRI)" : "Posição"
                 }</th>
                 <th><i class="fa fa-layer-group"></i> Nível</th>
-                <th><i class="fa fa-book"></i> Área</th>
                 <th><i class="fa fa-user-edit"></i> Sua Resposta</th>
                 <th><i class="fa fa-check-circle"></i> Gabarito</th>
                 <th><i class="fa fa-flag"></i> Status</th>
@@ -469,7 +472,6 @@ export class DifficultyTabRenderer extends BaseTabRenderer {
               ${question.difficultyLevel}
             </span>
           </td>
-          <td><span class="area-badge">${question.area}</span></td>
           <td><span class="answer-badge">${question.userAnswer}</span></td>
           <td><span class="answer-badge correct-answer">${
             question.correctAnswer

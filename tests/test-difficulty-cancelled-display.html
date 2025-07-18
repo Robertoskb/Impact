@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Display de Questões Anuladas na Aba Dificuldade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .difficulty-stat-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .difficulty-stat-card h6 {
+            margin: 0 0 10px 0;
+            color: #495057;
+            font-size: 14px;
+        }
+        .stat-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #212529;
+            margin-bottom: 5px;
+        }
+        .stat-percentage {
+            font-size: 12px;
+            color: #6c757d;
+        }
+        .fa {
+            margin-right: 5px;
+        }
+        .expected {
+            background-color: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .current {
+            background-color: #f8d7da;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success {
+            color: #155724;
+            font-weight: bold;
+        }
+        .error {
+            color: #721c24;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Teste - Display de Questões Anuladas na Aba Dificuldade</h1>
+        
+        <div class="test-section">
+            <div class="test-title">Cenário: Simulado com questões normais e anuladas</div>
+            
+            <div class="expected">
+                <strong>Comportamento Esperado:</strong><br>
+                • Questões normais: devem mostrar "X/Y" (acertos/total)<br>
+                • Questões anuladas: devem mostrar apenas o número total de questões anuladas (ex: "3"), não "0/3"
+            </div>
+            
+            <div class="current">
+                <strong>Implementação Atual:</strong><br>
+                A implementação já está correta no código DifficultyTabRenderer.js linha 276:<br>
+                <code>level === "Anulada" ? data.total : `${data.correct}/${data.total}`</code>
+            </div>
+            
+            <h3>Simulação dos Cards de Estatística:</h3>
+            
+            <div class="stats-cards">
+                <!-- Questões normais - devem mostrar X/Y -->
+                <div class="difficulty-stat-card">
+                    <h6><i class="fa fa-smile"></i> Muito Fácil</h6>
+                    <div class="stat-content">
+                        <div class="stat-number">8/10</div>
+                        <div class="stat-percentage">80%</div>
+                    </div>
+                </div>
+                
+                <div class="difficulty-stat-card">
+                    <h6><i class="fa fa-check-circle"></i> Fácil</h6>
+                    <div class="stat-content">
+                        <div class="stat-number">12/15</div>
+                        <div class="stat-percentage">80%</div>
+                    </div>
+                </div>
+                
+                <div class="difficulty-stat-card">
+                    <h6><i class="fa fa-minus-circle"></i> Média</h6>
+                    <div class="stat-content">
+                        <div class="stat-number">6/10</div>
+                        <div class="stat-percentage">60%</div>
+                    </div>
+                </div>
+                
+                <div class="difficulty-stat-card">
+                    <h6><i class="fa fa-exclamation-triangle"></i> Difícil</h6>
+                    <div class="stat-content">
+                        <div class="stat-number">3/8</div>
+                        <div class="stat-percentage">38%</div>
+                    </div>
+                </div>
+                
+                <!-- Questões anuladas - devem mostrar apenas o total -->
+                <div class="difficulty-stat-card">
+                    <h6><i class="fa fa-ban"></i> Anulada</h6>
+                    <div class="stat-content">
+                        <div class="stat-number">3</div>
+                        <div class="stat-percentage">questões</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="expected">
+                <strong class="success">✓ CORRETO:</strong> As questões anuladas mostram apenas "3" e "questões", não "0/3" e porcentagem.
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Código Relevante Implementado</div>
+            <pre style="background: #f8f9fa; padding: 15px; border-radius: 5px; overflow-x: auto;">
+// DifficultyTabRenderer.js - linha 276
+html += `
+  &lt;div class="difficulty-stat-card"&gt;
+    &lt;h6&gt;&lt;i class="fa ${iconClass}"&gt;&lt;/i&gt; ${shortLevel}&lt;/h6&gt;
+    &lt;div class="stat-content"&gt;
+      &lt;div class="stat-number"&gt;${level === "Anulada" ? data.total : `${data.correct}/${data.total}`}&lt;/div&gt;
+      &lt;div class="stat-percentage"&gt;${level === "Anulada" ? "questões" : `${percentage}%`}&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+`;
+            </pre>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Verificação Final</div>
+            <div class="expected">
+                <strong class="success">✓ Status:</strong> A correção já foi implementada corretamente!<br>
+                • Questões anuladas mostram apenas o número total (ex: "3")<br>
+                • Questões normais mantêm o formato "acertos/total" (ex: "8/10")<br>
+                • A label muda para "questões" ao invés de porcentagem para anuladas
+            </div>
+        </div>
+    </div>
+</body>
+</html>

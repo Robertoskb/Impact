@@ -179,6 +179,23 @@
                             </div>
                         </div>
                         <div class="simulado-actions">
+                            <div class="gabarito-input-container">
+                                <label for="gabarito-input">
+                                    <i class="fa fa-keyboard"></i> Entrada Rápida de Gabarito:
+                                </label>
+                                <div class="input-row">
+                                    <input 
+                                        type="text" 
+                                        id="gabarito-input" 
+                                        placeholder="Ex: ABCDE.X*AB..." 
+                                        title="Digite as respostas (A, B, C, D, E) ou use X, ., * para questões em branco"
+                                        maxlength="45"
+                                    >
+                                    <button id="clear-gabarito" class="clear-btn" title="Limpar gabarito">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <button id="finish-simulado" class="finish-btn">
                                 <i class="fa fa-check"></i> Finalizar
                             </button>
@@ -211,9 +228,6 @@
                             </button>
                             <button class="tab-button" data-tab="habilidades">
                                 <i class="fa fa-chart-pie"></i> Habilidades
-                            </button>
-                            <button class="tab-button" data-tab="areas">
-                                <i class="fa fa-layer-group"></i> Por Área
                             </button>
                             <button class="tab-button" data-tab="dificuldade">
                                 <i class="fa fa-signal"></i> Dificuldade
@@ -268,14 +282,6 @@
                                     <div id="skills-container" class="skills-container">
                                         <!-- Conteúdo será gerado dinamicamente -->
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Aba Por Área -->
-                            <div id="tab-areas" class="tab-panel">
-                                <h3><i class="fa fa-layer-group"></i> Desempenho por Área</h3>
-                                <div id="areas-container" class="areas-container">
-                                    <!-- Conteúdo será gerado dinamicamente -->
                                 </div>
                             </div>
 

@@ -22,9 +22,17 @@ export class SavedSimuladosManager {
     simuladoData.title = this.generateTitle(simuladoData.config);
     simuladoData.questionsCount = simuladoData.questions.length;
 
-    // Calcular acertos para preview
+    // Calcular acertos para preview (excluindo questões anuladas)
     let correctAnswers = 0;
+    let validQuestions = 0;
+
     simuladoData.questions.forEach((question) => {
+      // Pular questões anuladas
+      if (question.cancelled) {
+        return;
+      }
+
+      validQuestions++;
       const userAnswer = simuladoData.answers[question.position];
       const correctAnswer =
         this.app.questionGenerator.getCorrectAnswer(question);
@@ -34,9 +42,11 @@ export class SavedSimuladosManager {
     });
 
     simuladoData.correctAnswers = correctAnswers;
-    simuladoData.performance = Math.round(
-      (correctAnswers / simuladoData.questionsCount) * 100
-    );
+    simuladoData.validQuestions = validQuestions;
+    simuladoData.performance =
+      validQuestions > 0
+        ? Math.round((correctAnswers / validQuestions) * 100)
+        : 0;
 
     const savedSimulados = this.getSavedSimulados();
     savedSimulados.push(simuladoData);

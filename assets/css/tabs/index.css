@@ -7,7 +7,6 @@
 @import "./base.css";
 
 /* Tabs específicas */
-@import "./areas-tab.css";
 @import "./difficulty-tab.css";
 @import "./answer-sheet-tab.css";
 @import "./patterns-tab.css";
