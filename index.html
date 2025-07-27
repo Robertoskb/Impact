@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Alto Impacto</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Botão de menu para mobile -->
+    <button id="menuToggleBtn" class="menu-toggle">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div class="layout">
+        <!-- Menu lateral -->
+        <aside id="sidebar" class="sidebar">
+            <h2 class="menu-title">Menu</h2>
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="index.html" class="menu-link active"><i class="fa fa-home"></i> Início</a></li>
+                    <li><a href="simulado.html" class="menu-link"><i class="fa fa-edit"></i> Simulados</a></li>
+                    <li><a href="#" class="menu-link"><i class="fa fa-cog"></i> Configurações</a></li>
+                    <li><a href="#" id="toggleTheme" class="menu-link"><i class="fa fa-adjust"></i> Tema Light/Dark</a></li>
+                    <li><a href="#" class="menu-link"><i class="fa fa-question-circle"></i> Ajuda</a></li>
+                    <li><a href="#" class="menu-link"><i class="fa fa-info-circle"></i> Sobre</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- Conteúdo principal -->
+        <div class="content" id="content">
+            <header>
+                <div class="container">
+                    <div class="filter-header">
+                        <div id="filter-container" class="filter-container">
+                            <!-- Atualizado: Seção de anos dinâmica -->
+                            <div id="year-filters" class="filter-group">
+                                <strong>Anos</strong>
+                                <br>
+                            </div>
+                            <div class="filter-group">
+                                <strong>Área</strong>
+								<br>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="LC0">Linguagens e Códigos - Inglês</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="LC1">Linguagens e Códigos - Espanhol</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="CH">Ciências Humanas</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="CN">Ciências da Natureza</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="area" data-value="MT">Matemática</button>
+                            </div>
+                            <div class="filter-group">
+                                <strong>Acertos (só 1)</strong>
+								<br>
+                                <button class="btn btn-outline-primary active" type="button" data-filter="acertos" data-value="20">20 acertos</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="acertos" data-value="25">25 acertos</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="acertos" data-value="30">30 acertos</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="acertos" data-value="35">35 acertos</button>
+                                <button class="btn btn-outline-primary" type="button" data-filter="acertos" data-value="40">40 acertos</button>
+                            </div>
+                            <!-- Grupo de busca permanece inalterado -->
+                            <div class="filter-group">
+                                <strong>Buscar</strong>
+								<br>
+                                <div class="filter-search">
+                                    <input id="search" type="text" placeholder="Pesquisar questão...">
+                                    <span class="input-icon"><i class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+                            <!-- Botão para carregar questões -->
+                            <button id="carregarBtn" class="load-btn">
+                                <i class="fa fa-sync-alt"></i> Carregar Questões
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <div id="results" class="results"></div>
+                </div>
+            </main>
+            <footer>
+                <div class="container">
+                    <!-- conteúdo -->
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
