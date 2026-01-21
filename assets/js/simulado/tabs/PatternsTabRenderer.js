@@ -73,46 +73,85 @@ export class PatternsTabRenderer extends BaseTabRenderer {
     });
   }
 
-  render() {
+  render(resultsData = null) {
+    console.log("PatternsTabRenderer.render() CHAMADO!", {
+      resultsData,
+      questions: this.app.getQuestions()?.length,
+      answers: Object.keys(this.app.getAnswers() || {}).length,
+    });
+
     const container = document.getElementById("patterns-container");
-    if (!container) return;
+    if (!container) {
+      console.error(
+        "PatternsTabRenderer: Container 'patterns-container' não encontrado!"
+      );
+      return;
+    }
+
+    console.log("PatternsTabRenderer: Container encontrado:", container);
 
     const questions = this.app.getQuestions();
     const answers = this.app.getAnswers();
 
+    if (!questions || questions.length === 0) {
+      container.innerHTML = `
+        <div class="no-data-message" style="
+          text-align: center;
+          padding: 3rem;
+          background: var(--bg-secondary);
+          border-radius: 12px;
+          border: 1px solid var(--border-color);
+        ">
+          <i class="fa fa-info-circle" style="
+            font-size: 3rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+          "></i>
+          <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Dados não disponíveis</h3>
+          <p style="color: var(--text-secondary);">Complete um simulado para ver a análise de padrões.</p>
+        </div>
+      `;
+      return;
+    }
+
+    console.log(
+      "PatternsTabRenderer: Renderizando com",
+      questions.length,
+      "questões"
+    );
+
     // Obter string de respostas
     const answerString = this.getAnswerString(questions, answers);
+
+    console.log("PatternsTabRenderer: answerString =", answerString);
+
+    if (!answerString || answerString.length === 0) {
+      container.innerHTML = `
+        <div class="no-answers-message" style="
+          text-align: center;
+          padding: 3rem;
+          background: var(--bg-secondary);
+          border-radius: 12px;
+          border: 1px solid var(--border-color);
+        ">
+          <i class="fa fa-exclamation-triangle" style="
+            font-size: 3rem;
+            color: var(--warning-color);
+            margin-bottom: 1rem;
+          "></i>
+          <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Respostas não encontradas</h3>
+          <p style="color: var(--text-secondary);">Responda algumas questões para ver a análise de padrões.</p>
+        </div>
+      `;
+      return;
+    }
 
     let html = `
       <div class="patterns-analysis">
         <h4><i class="fa fa-search"></i> Análise de Padrões</h4>
         
-        <div class="pattern-overview">
-          <div class="pattern-display">
-            <h5>Padrão de Respostas</h5>
-            <div class="answer-pattern">
-              ${answerString
-                .split("")
-                .map((bit, index) => {
-                  const questionNum = index + 1;
-                  let title, status;
-                  if (bit === "C") {
-                    title = `Questão ${questionNum}: Anulada`;
-                    status = "Anulada";
-                  } else if (bit === "1") {
-                    title = `Questão ${questionNum}: Correta`;
-                    status = "Correta";
-                  } else {
-                    title = `Questão ${questionNum}: Incorreta`;
-                    status = "Incorreta";
-                  }
-                  return `<span class="bit bit-${bit}" title="${title}"></span>`;
-                })
-                .join("")}
-            </div>
-          </div>
-        </div>
-
+        ${this.renderResponsePattern(answerString)}
+        
         <div class="patterns-grid">
           ${this.renderTRIConsistencyAnalysis(questions, answers)}
           ${this.renderTemporalPatterns(answerString)}
@@ -141,6 +180,34 @@ export class PatternsTabRenderer extends BaseTabRenderer {
         return isCorrect ? "1" : "0";
       })
       .join("");
+  }
+
+  renderResponsePattern(answerString) {
+    return `
+      <div class="pattern-card">
+        <h5>Padrão de Respostas</h5>
+        <div class="answer-pattern">
+          ${answerString
+            .split("")
+            .map((bit, index) => {
+              const questionNum = index + 1;
+              let title, status;
+              if (bit === "C") {
+                title = `Questão ${questionNum}: Anulada`;
+                status = "Anulada";
+              } else if (bit === "1") {
+                title = `Questão ${questionNum}: Correta`;
+                status = "Correta";
+              } else {
+                title = `Questão ${questionNum}: Incorreta`;
+                status = "Incorreta";
+              }
+              return `<span class="bit bit-${bit}" title="${title}"></span>`;
+            })
+            .join("")}
+        </div>
+      </div>
+    `;
   }
 
   renderSequencePatterns(answerString) {

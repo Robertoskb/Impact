@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .about-description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-section {
+            margin-bottom: 30px;
+        }
+
+        .about-subtitle {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .about-features {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .about-features li {
+            margin-bottom: 10px;
+        }
+
+        .exemple-note {
+            background-color: #4e5155;
+            border-left: 4px solid #007bff;
+            padding: 10px 15px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="menuToggleBtn" class="menu-toggle">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div class="layout">
+        <!-- Menu lateral -->
+        <aside id="sidebar" class="sidebar">
+            <h2 class="menu-title">Menu</h2>
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="index.html" class="menu-link"><i class="fa fa-home"></i> Início</a></li>
+                    <!-- <li><a href="#" class="menu-link"><i class="fa fa-cog"></i> Configurações</a></li> -->
+                    <li><a href="#" id="toggleTheme" class="menu-link"><i class="fa fa-adjust"></i> Tema Light/Dark</a>
+                    </li>
+                    <li><a href="about.html" class="menu-link active"><i class="fa fa-info-circle"></i> Sobre</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+        <!-- Conteúdo principal -->
+        <div class="content" id="content">
+            <header>
+                <div class="about-container">
+                    <h1 class="about-title">Sobre Esta Aplicação</h1>
+                    <p class="about-description">
+                        Esta aplicação foi desenvolvida para fornecer questões de alto impacto para estudantes e
+                        educadores.
+                        Nosso objetivo é ajudar na preparação para ENEM e melhorar o aprendizado nas diferentes áreas do
+                        conhecimento.
+                    </p>
+                    <section class="about-section">
+                        <!-- teoria -->
+                        <h2 class="about-subtitle"><i class="fa fa-book"></i> Teoria por Trás da Aplicação</h2>
+                        <p>
+                            A aplicação contem uma base de dados com questões selecionadas com base em sua relevância e
+                            impacto no
+                            desempenho dos estudantes na TRI (Teoria de Resposta ao Item).
+                            Utilizamos análises estatísticas para identificar quais
+                            questões têm maior correlação com a pontuação final dos candidatos, e
+                            descobrimos que, para cada faixa de acertos, existem itens que se destacam por sua
+                            capacidade de
+                            reduzir significativamente a nota final do aluno quando respondidos incorretamente.
+                            Ao focar nessas questões de alto impacto, os estudantes podem otimizar seu estudo e
+                            melhorar seu desempenho geral no exame.
+                        </p>
+
+                    </section>
+
+                    <section class="about-section">
+                        <!-- Questões de alto impacto -->
+                        <h2 class="about-subtitle"><i class="fa fa-question-circle"></i> Questões de Alto Impacto</h2>
+                        <p>
+                            As questões de alto impacto são aquelas que, quando respondidas incorretamente, têm um
+                            efeito desproporcionalmente grande na pontuação final do estudante. O impacto de uma
+                            questão é dado pelo percentual de candidatos que obtiveram um determinado número de acerto,
+                            que erraram aquela questão específica, e que tiveram uma queda significativa
+                            na nota final do exame em relação a pontuação média para aquela faixa de acertos.
+                        </p>
+                        <br>
+                        <p>
+                            Na medida em que os candidatos respondem corretamente as questões de alto impacto, a
+                            probabilidade
+                            de obter uma pontuação elevada aumenta consideravelmente. Portanto, ao focar no estudo
+                            dessas
+                            questões, os estudantes podem maximizar sua eficiência de estudo e melhorar suas chances de
+                            sucesso no
+                            ENEM e entrar na faculdade.
+                        </p>
+                    </section>
+
+                    <section class="about-section">
+                        <!-- Sugestão de Estudos -->
+                        <h2 class="about-subtitle"><i class="fa fa-lightbulb"></i> Sugestão de Estudos</h2>
+                        <p>
+                            Essa aplicação não busca substituir um estudo completo e aprofundado dos conteúdos do ENEM,
+                            mas sim
+                            fornecer uma ferramenta adicional para otimizar o tempo de estudo dos estudantes. O estudo
+                            por
+                            questões faz parte de uma estratégia mais ampla de preparação para o exame, que deve incluir
+                            a revisão dos
+                            conteúdos, a prática de redação e a resolução de simulados completos. Como o ENEM costuma
+                            repetir
+                            temas e estilos de questões ao longo dos anos, focar nas questões de alto impacto pode
+                            ajudar os estudantes a
+                            identificar padrões e se familiarizar com o formato do exame. Portanto, recomendamos que os
+                            estudantes utilizem esta
+                            aplicação como método de revisão de questões após a realização de simulados completos e
+                            estudo dos conteúdos.
+                        </p>
+
+                        <p class="exemple-note">
+                            <strong>Exemplo:</strong> Se um estudante realizou um simulado de Matemática do Enem 2024 e
+                            obteve 30 acertos,
+                            ele pode utilizar esta aplicação para revisar as questões de alto impacto correspondentes a
+                            essa faixa de acertos,
+                            e também analisar as questões de alto impacto das faixas de 35 e 40 acertos para identificar
+                            áreas onde pode melhorar ainda mais.
+                        </p>
+
+                    </section>
+
+                    <section class="about-section">
+                        <h2 class="about-subtitle"><i class="fa fa-envelope"></i> Contato</h2>
+                        <p>
+                            Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato
+                            conosco
+                            através do email: <a href="mailto:performanceenem@gmail.com">performanceenem@gmail.com</a>
+                        </p>
+                    </section>
+                </div>
+            </header>
+        </div>
+    </div>
+    <script src="assets/js/app.js"></script>
+
+
+</body>
+
+</html>
